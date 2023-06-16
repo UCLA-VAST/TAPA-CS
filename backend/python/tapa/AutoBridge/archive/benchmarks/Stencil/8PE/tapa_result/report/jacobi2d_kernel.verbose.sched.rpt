@@ -1,0 +1,156 @@
+
+
+================================================================
+== Vivado HLS Report for 'jacobi2d_kernel'
+================================================================
+* Date:           Sun May 24 23:13:16 2020
+
+* Version:        2019.2 (Build 2698951 on Thu Oct 24 19:15:34 MDT 2019)
+* Project:        project
+* Solution:       jacobi2d_kernel
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 3.33 ns | 1.000 ns |   0.42 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1| 3.330 ns | 3.330 ns |    1|    1|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 3 [1/1] (1.00ns)   --->   "%input_size_dim_1_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %input_size_dim_1) nounwind"   --->   Operation 3 'read' 'input_size_dim_1_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 4 [1/1] (1.00ns)   --->   "%input_size_dim_0_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %input_size_dim_0) nounwind"   --->   Operation 4 'read' 'input_size_dim_0_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 5 [1/1] (1.00ns)   --->   "%tile_num_dim_0_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %tile_num_dim_0) nounwind"   --->   Operation 5 'read' 'tile_num_dim_0_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 6 [1/1] (1.00ns)   --->   "%tile_data_num_read = call i64 @_ssdm_op_Read.s_axilite.i64(i64 %tile_data_num) nounwind"   --->   Operation 6 'read' 'tile_data_num_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%coalesced_data_num_read = call i64 @_ssdm_op_Read.s_axilite.i64(i64 %coalesced_data_num) nounwind"   --->   Operation 7 'read' 'coalesced_data_num_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 8 [1/1] (1.00ns)   --->   "%var_input_0_0_read = call i64 @_ssdm_op_Read.s_axilite.i64(i64 %var_input_0_0) nounwind"   --->   Operation 8 'read' 'var_input_0_0_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 9 [1/1] (1.00ns)   --->   "%var_output_0_0_read = call i64 @_ssdm_op_Read.s_axilite.i64(i64 %var_output_0_0) nounwind"   --->   Operation 9 'read' 'var_output_0_0_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%var_output_0_0_assign = alloca i64, align 8"   --->   Operation 10 'alloca' 'var_output_0_0_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%var_input_0_0_assign = alloca i64, align 8"   --->   Operation 11 'alloca' 'var_input_0_0_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%coalesced_data_num_assign = alloca i64, align 8"   --->   Operation 12 'alloca' 'coalesced_data_num_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tile_data_num_assign = alloca i64, align 8"   --->   Operation 13 'alloca' 'tile_data_num_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tile_num_dim_0_assign = alloca i32, align 4"   --->   Operation 14 'alloca' 'tile_num_dim_0_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%input_size_dim_0_assign = alloca i32, align 4"   --->   Operation 15 'alloca' 'input_size_dim_0_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%input_size_dim_1_assign = alloca i32, align 4"   --->   Operation 16 'alloca' 'input_size_dim_1_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "store i64 %var_output_0_0_read, i64* %var_output_0_0_assign, align 8"   --->   Operation 17 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "store i64 %var_input_0_0_read, i64* %var_input_0_0_assign, align 8"   --->   Operation 18 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "store i64 %coalesced_data_num_read, i64* %coalesced_data_num_assign, align 8"   --->   Operation 19 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "store i64 %tile_data_num_read, i64* %tile_data_num_assign, align 8"   --->   Operation 20 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "store i32 %tile_num_dim_0_read, i32* %tile_num_dim_0_assign, align 4"   --->   Operation 21 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "store i32 %input_size_dim_0_read, i32* %input_size_dim_0_assign, align 4"   --->   Operation 22 'store' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "store i32 %input_size_dim_1_read, i32* %input_size_dim_1_assign, align 4"   --->   Operation 23 'store' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %var_output_0_0) nounwind, !map !14"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %var_input_0_0) nounwind, !map !20"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %coalesced_data_num) nounwind, !map !24"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i64 %tile_data_num) nounwind, !map !28"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %tile_num_dim_0) nounwind, !map !32"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %input_size_dim_0) nounwind, !map !36"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %input_size_dim_1) nounwind, !map !40"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([16 x i8]* @jacobi2d_kernel_str) nounwind"   --->   Operation 31 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64 %var_output_0_0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [8 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:46]   --->   Operation 32 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64 %var_input_0_0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [8 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:47]   --->   Operation 33 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64 %coalesced_data_num, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [8 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:48]   --->   Operation 34 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i64 %tile_data_num, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [8 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:49]   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %tile_num_dim_0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [8 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:50]   --->   Operation 36 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %input_size_dim_0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [8 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:51]   --->   Operation 37 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %input_size_dim_1, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [8 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:52]   --->   Operation 38 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [8 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:53]   --->   Operation 39 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%val_0 = load volatile i64* %var_output_0_0_assign, align 8" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:55]   --->   Operation 40 'load' 'val_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%val1_0 = load volatile i64* %var_input_0_0_assign, align 8" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:56]   --->   Operation 41 'load' 'val1_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%val2_0 = load volatile i64* %coalesced_data_num_assign, align 8" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:57]   --->   Operation 42 'load' 'val2_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%val3_0 = load volatile i64* %tile_data_num_assign, align 8" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:58]   --->   Operation 43 'load' 'val3_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%val4_0 = load volatile i32* %tile_num_dim_0_assign, align 4" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:59]   --->   Operation 44 'load' 'val4_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%val5_0 = load volatile i32* %input_size_dim_0_assign, align 4" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:60]   --->   Operation 45 'load' 'val5_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%val6_0 = load volatile i32* %input_size_dim_1_assign, align 4" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:61]   --->   Operation 46 'load' 'val6_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "ret void" [/home/einsx7/pr/application/soda_U250/orig/dac_iter8/tlpc_result/cpp/jacobi2d_kernel.cpp:62]   --->   Operation 47 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.416ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'input_size_dim_1' [16]  (1 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

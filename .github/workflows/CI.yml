@@ -1,0 +1,194 @@
+name: CI
+
+on:
+  push:
+    tags:
+      - "*"
+    branches-ignore:
+      - "**/docs?"
+  pull_request:
+    branches-ignore:
+      - "**/docs?"
+
+jobs:
+  build-cpp:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, ubuntu-20.04]
+
+    steps:
+      - name: Checkout myself
+        uses: actions/checkout@v1
+      - name: Restore timestamp for patched clang files
+        run: |
+          for file in backend/clang/*; do
+            touch "${file}" \
+              --date="$(git log --max-count=1 --pretty=format:%cD -- "${file}")"
+          done
+      - name: Install dependencies
+        run: |
+          sudo apt-get purge -y libgcc-*-dev || true
+          ./.github/scripts/install-build-deps.sh
+          ./.github/scripts/setup-github-hosted.sh
+      - name: Configure myself
+        run: cmake -S . -B build -D CMAKE_BUILD_TYPE=Release
+      - name: Cache llvm-src
+        uses: actions/cache@v3
+        with:
+          path: build/_deps/llvm-src
+          key: ${{ matrix.os }}-llvm-src-202206-2
+      - name: Cache llvm-build
+        uses: actions/cache@v3
+        with:
+          path: build/_deps/llvm-build
+          key: ${{ matrix.os }}-llvm-build-202206-2
+      - name: Cache llvm-subbuild
+        uses: actions/cache@v3
+        with:
+          path: build/_deps/llvm-subbuild
+          key: ${{ matrix.os }}-llvm-subbuild-202206-2
+      - name: Build myself
+        run: cmake --build build --target all
+      - name: Test myself
+        run: cmake --build build --target test
+      - name: Package myself
+        run: cmake --build build --target package
+      - name: Upload deb package
+        uses: actions/upload-artifact@v3
+        with:
+          name: tapa-cpp-${{ matrix.os }}
+          path: build/*.deb
+
+  release-cpp:
+    if: github.event_name == 'push' && github.repository == 'Blaok/tapa' && startsWith(github.event.ref, 'refs/tags')
+    runs-on: ${{ matrix.os }}
+    concurrency: release-cpp
+    strategy:
+      matrix:
+        os:
+          - ubuntu-18.04
+          - ubuntu-20.04
+    needs:
+      - build-cpp
+    steps:
+      - name: Checkout myself
+        uses: actions/checkout@v3
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: tapa-cpp-${{ matrix.os }}
+          path: build
+      - name: Cache APT database
+        uses: actions/cache@v3
+        with:
+          path: apt-db-cache
+          key: ${{ runner.os }}-apt-db-cache
+      - name: Update APT repository
+        run: ./.github/scripts/upload-apt-repo.sh
+        env:
+          BUILD_DIR: build
+          CACHE_DIR: apt-db-cache
+          LABEL: Extending High-Level Synthesis for Task-Parallel Programs
+          GPG_KEY: ${{ secrets.GPG_KEY }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+
+  build-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - name: Install build
+        run: pip install --upgrade build
+      - name: Checkout myself
+        uses: actions/checkout@v3
+      - name: Build myself
+        run: python -m build backend/python
+      - name: Upload whl package
+        uses: actions/upload-artifact@v3
+        with:
+          name: tapa-python
+          path: backend/python/dist/*.whl
+      - name: Publish to PyPI
+        if: github.event_name == 'push' && github.repository == 'Blaok/tapa' && startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          user: __token__
+          password: ${{ secrets.pypi_password }}
+          packages_dir: backend/python/dist/
+
+  cosim:
+    if: github.repository == 'UCLA-VAST/tapa'
+
+    needs:
+      - build-cpp
+      - build-python
+
+    runs-on:
+      - self-hosted
+      - Linux
+      - xilinx-tools
+
+    strategy:
+      fail-fast: false
+      matrix:
+        xocl-platform:
+          - xilinx_u250_xdma_201830_2
+        xocl-version:
+          - "2020.2"
+          - "2021.1"
+          - "2021.2"
+        include:
+          # Test different tool versions
+          - xocl-platform: xilinx_u250_xdma_201830_2
+          # Test a platform that does not support floorplanning yet
+          - xocl-platform: xilinx_u200_xdma_201830_2
+            xocl-version: "2021.2"
+          # Vitis 2022.1 requires this platform
+          - xocl-platform: xilinx_u250_gen3x16_xdma_4_1_202210_1
+            xocl-version: "2022.1"
+
+    env:
+      XILINX_HLS: /opt/tools/xilinx/Vitis_HLS/${{ matrix.xocl-version }}
+      XILINX_VITIS: /opt/tools/xilinx/Vitis/${{ matrix.xocl-version }}
+      XILINX_VIVADO: /opt/tools/xilinx/Vivado/${{ matrix.xocl-version }}
+
+    steps:
+      - name: Checkout myself
+        uses: actions/checkout@v1
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+      - name: Install dependencies
+        run: |
+          .github/scripts/setup-self-hosted.sh
+
+          sudo apt-get update
+          eval "$(grep ^VERSION_ID /etc/os-release)"
+          sudo apt-get install -y --no-install-recommends -f \
+            ./artifacts/tapa-cpp-ubuntu-"${VERSION_ID}"/*.deb
+          python3 -m pip install artifacts/tapa-python/*.whl
+          sudo apt-get install -y --no-install-recommends \
+            xilinx-u200-xdma-dev \
+            xilinx-u250-xdma-dev \
+            xilinx-u250-gen3x16-xdma-4.1-202210-1-dev \
+
+      - name: Configure apps
+        run: |
+          for app in apps/*; do
+            [[ ! -d "${app}" ]] && continue
+            cmake \
+              -S "${app}" \
+              -B "${app}"/build \
+              -D PLATFORM=${{ matrix.xocl-platform }}
+          done
+      - name: Test apps
+        run: |
+          source ${XILINX_VITIS}/settings64.sh
+          # Run all apps in parallel, each with a parallelism of $(nproc).
+          parallel -ij100 \
+            make -C apps/{}/build {}-cosim -j $(nproc) \
+            -- $(find apps -mindepth 1 -maxdepth 1 -type d -printf "%f\n")

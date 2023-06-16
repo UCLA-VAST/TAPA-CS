@@ -1,0 +1,588 @@
+I0518 01:48:37.847 tapa.util:162] logging level set to INFO
+I0518 01:48:37.847 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0518 01:48:37.848 tapa.tapac:496] Python recursion limit set to 3000
+I0518 01:48:37.848 tapa.tapac:416] Executing all steps of tapac
+I0518 01:48:37.875 tapa.tapac:508] Floorplan DSE is enabled
+I0518 01:48:37.875 tapa.floorplan_dse:230] 
+I0518 01:48:37.875 tapa.floorplan_dse:231] -----------------------------------------------------------------------------
+I0518 01:48:37.875 tapa.floorplan_dse:234] DSE preparation: synthesize each task into RTL
+I0518 01:48:37.875 tapa.floorplan_dse:235] -----------------------------------------------------------------------------
+I0518 01:48:37.875 tapa.floorplan_dse:238] 
+I0518 01:48:38.168 tapa.util:162] logging level set to INFO
+I0518 01:48:38.168 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0518 01:48:38.168 tapa.tapac:496] Python recursion limit set to 3000
+I0518 01:48:38.168 tapa.tapac:412] Step 0: run_tapacc is enabled.
+I0518 01:48:38.168 tapa.tapac:412] Step 1: run_hls is enabled.
+I0518 01:48:38.168 tapa.tapac:412] Step 2: generate_task_rtl is enabled.
+W0518 01:48:38.168 tapa.tapac:414] Step 3: run_floorplanning is *SKIPPED*.
+W0518 01:48:38.168 tapa.tapac:414] Step 4: generate_top_rtl is *SKIPPED*.
+W0518 01:48:38.168 tapa.tapac:414] Step 5: pack_xo is *SKIPPED*.
+I0518 01:48:38.263 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:596:5: warning: unused stream: fifo_Y_AX
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_AX("fifo_Y_AX");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:598:5: warning: unused stream: fifo_Y_alpha_AX
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_alpha_AX("fifo_Y_alpha_AX");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:600:5: warning: unused stream: fifo_Y_in
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_in("fifo_Y_in");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:602:5: warning: unused stream: fifo_Y_in_beta
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_in_beta("fifo_Y_in_beta");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:604:5: warning: unused stream: fifo_Y_out
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_out("fifo_Y_out");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[0]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[10]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[11]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[12]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[13]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[14]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[15]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[1]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[2]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[3]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[4]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[5]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[6]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[7]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[8]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:592:5: warning: unused stream: fifo_Y_pe[9]
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:594:5: warning: unused stream: fifo_Y_pe_abd[0]
+    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd("fifo_Y_pe_abd");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:594:5: warning: unused stream: fifo_Y_pe_abd[1]
+    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd("fifo_Y_pe_abd");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:594:5: warning: unused stream: fifo_Y_pe_abd[2]
+    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd("fifo_Y_pe_abd");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:594:5: warning: unused stream: fifo_Y_pe_abd[3]
+    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd("fifo_Y_pe_abd");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:594:5: warning: unused stream: fifo_Y_pe_abd[4]
+    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd("fifo_Y_pe_abd");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:594:5: warning: unused stream: fifo_Y_pe_abd[5]
+    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd("fifo_Y_pe_abd");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:594:5: warning: unused stream: fifo_Y_pe_abd[6]
+    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd("fifo_Y_pe_abd");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/kernel_1.cpp:594:5: warning: unused stream: fifo_Y_pe_abd[7]
+    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd("fifo_Y_pe_abd");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+29 warnings generated.
+I0518 01:48:46.784 tapa.core:179] extracting HLS C++ files
+I0518 01:48:46.797 tapa.core:201] running HLS
+I0518 01:48:46.803 tapa.core:237] spawn 32 workers for parallel HLS synthesis of the tasks
+I0518 01:49:29.272 tapa.core:252] extracting RTL files
+I0518 01:49:29.362 tapa.core:283] parsing RTL files and populating tasks
+I0518 01:49:30.956 tapa.core:292] parsing Mmap2Stream_1
+I0518 01:49:30.966 tapa.core:296] populating Mmap2Stream_1
+I0518 01:49:30.966 tapa.core:292] parsing Mmap2Stream_2
+I0518 01:49:30.974 tapa.core:296] populating Mmap2Stream_2
+I0518 01:49:30.974 tapa.core:292] parsing PEG_Xvec
+I0518 01:49:30.975 tapa.core:296] populating PEG_Xvec
+I0518 01:49:30.975 tapa.core:292] parsing Stream2Mmap_1
+I0518 01:49:30.976 tapa.core:296] populating Stream2Mmap_1
+I0518 01:49:30.976 tapa.core:292] parsing Stream2Mmap_2
+I0518 01:49:30.977 tapa.core:296] populating Stream2Mmap_2
+I0518 01:49:30.977 tapa.core:292] parsing black_hole_float_v16
+I0518 01:49:30.978 tapa.core:296] populating black_hole_float_v16
+I0518 01:49:30.978 tapa.core:292] parsing black_hole_int
+I0518 01:49:30.980 tapa.core:296] populating black_hole_int
+I0518 01:49:30.980 tapa.core:292] parsing read_A
+I0518 01:49:30.981 tapa.core:296] populating read_A
+I0518 01:49:30.981 tapa.core:292] parsing read_X
+I0518 01:49:30.982 tapa.core:296] populating read_X
+I0518 01:49:30.982 tapa.core:292] parsing read_edge_list_ptr
+I0518 01:49:30.983 tapa.core:296] populating read_edge_list_ptr
+I0518 01:49:30.983 tapa.core:292] parsing Serpens
+I0518 01:49:30.984 tapa.core:296] populating Serpens
+I0518 01:49:30.995 tapa.core:300] instrumenting upper-level RTL
+I0518 01:49:30.995 tapa.floorplan:475] generating post-synthesis resource utilization reports
+I0518 01:49:30.995 tapa.floorplan:476] this step runs logic synthesis of each task for accurate area info, it may take a while
+I0518 01:49:31.000 tapa.floorplan:480] spawn 8 workers for parallel logic synthesis. use --max-parallel-synth-jobs to enable more workers.
+I0518 01:55:11.950 tapa.floorplan_dse:230] 
+I0518 01:55:11.950 tapa.floorplan_dse:231] -----------------------------------------------------------------------------
+I0518 01:55:11.950 tapa.floorplan_dse:234] Start generating design point 1 with --max-slr-width-limit 15000
+I0518 01:55:11.950 tapa.floorplan_dse:235] -----------------------------------------------------------------------------
+I0518 01:55:11.950 tapa.floorplan_dse:238] 
+I0518 01:55:12.729 tapa.util:162] logging level set to INFO
+I0518 01:55:12.729 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0518 01:55:12.729 tapa.tapac:496] Python recursion limit set to 3000
+W0518 01:55:12.729 tapa.tapac:414] Step 0: run_tapacc is *SKIPPED*.
+W0518 01:55:12.730 tapa.tapac:414] Step 1: run_hls is *SKIPPED*.
+I0518 01:55:12.730 tapa.tapac:412] Step 2: generate_task_rtl is enabled.
+I0518 01:55:12.730 tapa.tapac:412] Step 3: run_floorplanning is enabled.
+I0518 01:55:12.730 tapa.tapac:412] Step 4: generate_top_rtl is enabled.
+I0518 01:55:12.730 tapa.tapac:412] Step 5: pack_xo is enabled.
+I0518 01:55:12.748 tapa.core:252] extracting RTL files
+I0518 01:55:12.818 tapa.core:283] parsing RTL files and populating tasks
+I0518 01:55:14.308 tapa.core:292] parsing Mmap2Stream_1
+I0518 01:55:14.325 tapa.core:296] populating Mmap2Stream_1
+I0518 01:55:14.326 tapa.core:292] parsing Mmap2Stream_2
+I0518 01:55:14.336 tapa.core:296] populating Mmap2Stream_2
+I0518 01:55:14.336 tapa.core:292] parsing PEG_Xvec
+I0518 01:55:14.337 tapa.core:296] populating PEG_Xvec
+I0518 01:55:14.337 tapa.core:292] parsing Stream2Mmap_1
+I0518 01:55:14.338 tapa.core:296] populating Stream2Mmap_1
+I0518 01:55:14.464 tapa.core:292] parsing Stream2Mmap_2
+I0518 01:55:14.465 tapa.core:296] populating Stream2Mmap_2
+I0518 01:55:14.465 tapa.core:292] parsing black_hole_float_v16
+I0518 01:55:14.465 tapa.core:296] populating black_hole_float_v16
+I0518 01:55:14.465 tapa.core:292] parsing black_hole_int
+I0518 01:55:14.465 tapa.core:296] populating black_hole_int
+I0518 01:55:14.466 tapa.core:292] parsing read_A
+I0518 01:55:14.466 tapa.core:296] populating read_A
+I0518 01:55:14.466 tapa.core:292] parsing read_X
+I0518 01:55:14.467 tapa.core:296] populating read_X
+I0518 01:55:14.467 tapa.core:292] parsing read_edge_list_ptr
+I0518 01:55:14.468 tapa.core:296] populating read_edge_list_ptr
+I0518 01:55:14.525 tapa.core:292] parsing Serpens
+I0518 01:55:14.526 tapa.core:296] populating Serpens
+I0518 01:55:14.536 tapa.core:300] instrumenting upper-level RTL
+I0518 01:55:14.537 tapa.floorplan:475] generating post-synthesis resource utilization reports
+I0518 01:55:14.537 tapa.floorplan:476] this step runs logic synthesis of each task for accurate area info, it may take a while
+I0518 01:55:14.546 tapa.floorplan:480] spawn 8 workers for parallel logic synthesis. use --max-parallel-synth-jobs to enable more workers.
+I0518 01:55:14.575 tapa.core:336] Running floorplanning
+I0518 01:55:14.575 tapa.floorplan:47] mulit_fpga from floorplan
+I0518 01:55:14.575 tapa.floorplan:48] None
+I0518 01:55:14.578 tapa.task_graph:36] PE_inst[0]
+I0518 01:55:14.578 tapa.task_graph:37] get_instance read_edge_list_ptr_0
+I0518 01:55:14.578 tapa.task_graph:38] get_instance PEG_Xvec_0
+I0518 01:55:14.578 tapa.task_graph:36] PE_inst[10]
+I0518 01:55:14.578 tapa.task_graph:37] get_instance PEG_Xvec_9
+I0518 01:55:14.578 tapa.task_graph:38] get_instance PEG_Xvec_10
+I0518 01:55:14.578 tapa.task_graph:36] PE_inst[11]
+I0518 01:55:14.578 tapa.task_graph:37] get_instance PEG_Xvec_10
+I0518 01:55:14.578 tapa.task_graph:38] get_instance PEG_Xvec_11
+I0518 01:55:14.579 tapa.task_graph:36] PE_inst[12]
+I0518 01:55:14.579 tapa.task_graph:37] get_instance PEG_Xvec_11
+I0518 01:55:14.579 tapa.task_graph:38] get_instance PEG_Xvec_12
+I0518 01:55:14.579 tapa.task_graph:36] PE_inst[13]
+I0518 01:55:14.579 tapa.task_graph:37] get_instance PEG_Xvec_12
+I0518 01:55:14.579 tapa.task_graph:38] get_instance PEG_Xvec_13
+I0518 01:55:14.579 tapa.task_graph:36] PE_inst[14]
+I0518 01:55:14.579 tapa.task_graph:37] get_instance PEG_Xvec_13
+I0518 01:55:14.579 tapa.task_graph:38] get_instance PEG_Xvec_14
+I0518 01:55:14.579 tapa.task_graph:36] PE_inst[15]
+I0518 01:55:14.579 tapa.task_graph:37] get_instance PEG_Xvec_14
+I0518 01:55:14.579 tapa.task_graph:38] get_instance PEG_Xvec_15
+I0518 01:55:14.580 tapa.task_graph:36] PE_inst[16]
+I0518 01:55:14.580 tapa.task_graph:37] get_instance PEG_Xvec_15
+I0518 01:55:14.580 tapa.task_graph:38] get_instance black_hole_int_0
+I0518 01:55:14.580 tapa.task_graph:36] PE_inst[1]
+I0518 01:55:14.580 tapa.task_graph:37] get_instance PEG_Xvec_0
+I0518 01:55:14.580 tapa.task_graph:38] get_instance PEG_Xvec_1
+I0518 01:55:14.580 tapa.task_graph:36] PE_inst[2]
+I0518 01:55:14.580 tapa.task_graph:37] get_instance PEG_Xvec_1
+I0518 01:55:14.580 tapa.task_graph:38] get_instance PEG_Xvec_2
+I0518 01:55:14.580 tapa.task_graph:36] PE_inst[3]
+I0518 01:55:14.580 tapa.task_graph:37] get_instance PEG_Xvec_2
+I0518 01:55:14.580 tapa.task_graph:38] get_instance PEG_Xvec_3
+I0518 01:55:14.581 tapa.task_graph:36] PE_inst[4]
+I0518 01:55:14.581 tapa.task_graph:37] get_instance PEG_Xvec_3
+I0518 01:55:14.581 tapa.task_graph:38] get_instance PEG_Xvec_4
+I0518 01:55:14.581 tapa.task_graph:36] PE_inst[5]
+I0518 01:55:14.581 tapa.task_graph:37] get_instance PEG_Xvec_4
+I0518 01:55:14.581 tapa.task_graph:38] get_instance PEG_Xvec_5
+I0518 01:55:14.581 tapa.task_graph:36] PE_inst[6]
+I0518 01:55:14.581 tapa.task_graph:37] get_instance PEG_Xvec_5
+I0518 01:55:14.581 tapa.task_graph:38] get_instance PEG_Xvec_6
+I0518 01:55:14.581 tapa.task_graph:36] PE_inst[7]
+I0518 01:55:14.581 tapa.task_graph:37] get_instance PEG_Xvec_6
+I0518 01:55:14.581 tapa.task_graph:38] get_instance PEG_Xvec_7
+I0518 01:55:14.582 tapa.task_graph:36] PE_inst[8]
+I0518 01:55:14.582 tapa.task_graph:37] get_instance PEG_Xvec_7
+I0518 01:55:14.582 tapa.task_graph:38] get_instance PEG_Xvec_8
+I0518 01:55:14.582 tapa.task_graph:36] PE_inst[9]
+I0518 01:55:14.582 tapa.task_graph:37] get_instance PEG_Xvec_8
+I0518 01:55:14.582 tapa.task_graph:38] get_instance PEG_Xvec_9
+I0518 01:55:14.582 tapa.task_graph:36] Yvec_inst[0]
+I0518 01:55:14.582 tapa.task_graph:37] get_instance PEG_Xvec_0
+I0518 01:55:14.582 tapa.task_graph:38] get_instance Stream2Mmap_1_0
+I0518 01:55:14.582 tapa.task_graph:36] Yvec_inst[10]
+I0518 01:55:14.582 tapa.task_graph:37] get_instance PEG_Xvec_10
+I0518 01:55:14.582 tapa.task_graph:38] get_instance Stream2Mmap_1_10
+I0518 01:55:14.583 tapa.task_graph:36] Yvec_inst[11]
+I0518 01:55:14.583 tapa.task_graph:37] get_instance PEG_Xvec_11
+I0518 01:55:14.583 tapa.task_graph:38] get_instance Stream2Mmap_1_11
+I0518 01:55:14.583 tapa.task_graph:36] Yvec_inst[12]
+I0518 01:55:14.583 tapa.task_graph:37] get_instance PEG_Xvec_12
+I0518 01:55:14.583 tapa.task_graph:38] get_instance Stream2Mmap_1_12
+I0518 01:55:14.583 tapa.task_graph:36] Yvec_inst[13]
+I0518 01:55:14.583 tapa.task_graph:37] get_instance PEG_Xvec_13
+I0518 01:55:14.583 tapa.task_graph:38] get_instance Stream2Mmap_1_13
+I0518 01:55:14.583 tapa.task_graph:36] Yvec_inst[14]
+I0518 01:55:14.583 tapa.task_graph:37] get_instance PEG_Xvec_14
+I0518 01:55:14.583 tapa.task_graph:38] get_instance Stream2Mmap_1_14
+I0518 01:55:14.584 tapa.task_graph:36] Yvec_inst[15]
+I0518 01:55:14.584 tapa.task_graph:37] get_instance PEG_Xvec_15
+I0518 01:55:14.584 tapa.task_graph:38] get_instance Stream2Mmap_1_15
+I0518 01:55:14.584 tapa.task_graph:36] Yvec_inst[1]
+I0518 01:55:14.584 tapa.task_graph:37] get_instance PEG_Xvec_1
+I0518 01:55:14.584 tapa.task_graph:38] get_instance Stream2Mmap_1_1
+I0518 01:55:14.584 tapa.task_graph:36] Yvec_inst[2]
+I0518 01:55:14.584 tapa.task_graph:37] get_instance PEG_Xvec_2
+I0518 01:55:14.584 tapa.task_graph:38] get_instance Stream2Mmap_1_2
+I0518 01:55:14.584 tapa.task_graph:36] Yvec_inst[3]
+I0518 01:55:14.584 tapa.task_graph:37] get_instance PEG_Xvec_3
+I0518 01:55:14.584 tapa.task_graph:38] get_instance Stream2Mmap_1_3
+I0518 01:55:14.585 tapa.task_graph:36] Yvec_inst[4]
+I0518 01:55:14.585 tapa.task_graph:37] get_instance PEG_Xvec_4
+I0518 01:55:14.585 tapa.task_graph:38] get_instance Stream2Mmap_1_4
+I0518 01:55:14.585 tapa.task_graph:36] Yvec_inst[5]
+I0518 01:55:14.585 tapa.task_graph:37] get_instance PEG_Xvec_5
+I0518 01:55:14.585 tapa.task_graph:38] get_instance Stream2Mmap_1_5
+I0518 01:55:14.585 tapa.task_graph:36] Yvec_inst[6]
+I0518 01:55:14.585 tapa.task_graph:37] get_instance PEG_Xvec_6
+I0518 01:55:14.585 tapa.task_graph:38] get_instance Stream2Mmap_1_6
+I0518 01:55:14.585 tapa.task_graph:36] Yvec_inst[7]
+I0518 01:55:14.585 tapa.task_graph:37] get_instance PEG_Xvec_7
+I0518 01:55:14.585 tapa.task_graph:38] get_instance Stream2Mmap_1_7
+I0518 01:55:14.585 tapa.task_graph:36] Yvec_inst[8]
+I0518 01:55:14.586 tapa.task_graph:37] get_instance PEG_Xvec_8
+I0518 01:55:14.586 tapa.task_graph:38] get_instance Stream2Mmap_1_8
+I0518 01:55:14.586 tapa.task_graph:36] Yvec_inst[9]
+I0518 01:55:14.586 tapa.task_graph:37] get_instance PEG_Xvec_9
+I0518 01:55:14.586 tapa.task_graph:38] get_instance Stream2Mmap_1_9
+I0518 01:55:14.586 tapa.task_graph:36] fifo_A[0]
+I0518 01:55:14.586 tapa.task_graph:37] get_instance read_A_0
+I0518 01:55:14.586 tapa.task_graph:38] get_instance PEG_Xvec_0
+I0518 01:55:14.586 tapa.task_graph:36] fifo_A[10]
+I0518 01:55:14.586 tapa.task_graph:37] get_instance read_A_10
+I0518 01:55:14.586 tapa.task_graph:38] get_instance PEG_Xvec_10
+I0518 01:55:14.586 tapa.task_graph:36] fifo_A[11]
+I0518 01:55:14.587 tapa.task_graph:37] get_instance read_A_11
+I0518 01:55:14.587 tapa.task_graph:38] get_instance PEG_Xvec_11
+I0518 01:55:14.587 tapa.task_graph:36] fifo_A[12]
+I0518 01:55:14.587 tapa.task_graph:37] get_instance read_A_12
+I0518 01:55:14.587 tapa.task_graph:38] get_instance PEG_Xvec_12
+I0518 01:55:14.587 tapa.task_graph:36] fifo_A[13]
+I0518 01:55:14.587 tapa.task_graph:37] get_instance read_A_13
+I0518 01:55:14.587 tapa.task_graph:38] get_instance PEG_Xvec_13
+I0518 01:55:14.587 tapa.task_graph:36] fifo_A[14]
+I0518 01:55:14.587 tapa.task_graph:37] get_instance read_A_14
+I0518 01:55:14.587 tapa.task_graph:38] get_instance PEG_Xvec_14
+I0518 01:55:14.587 tapa.task_graph:36] fifo_A[15]
+I0518 01:55:14.587 tapa.task_graph:37] get_instance read_A_15
+I0518 01:55:14.588 tapa.task_graph:38] get_instance PEG_Xvec_15
+I0518 01:55:14.588 tapa.task_graph:36] fifo_A[1]
+I0518 01:55:14.588 tapa.task_graph:37] get_instance read_A_1
+I0518 01:55:14.588 tapa.task_graph:38] get_instance PEG_Xvec_1
+I0518 01:55:14.588 tapa.task_graph:36] fifo_A[2]
+I0518 01:55:14.588 tapa.task_graph:37] get_instance read_A_2
+I0518 01:55:14.588 tapa.task_graph:38] get_instance PEG_Xvec_2
+I0518 01:55:14.588 tapa.task_graph:36] fifo_A[3]
+I0518 01:55:14.588 tapa.task_graph:37] get_instance read_A_3
+I0518 01:55:14.588 tapa.task_graph:38] get_instance PEG_Xvec_3
+I0518 01:55:14.588 tapa.task_graph:36] fifo_A[4]
+I0518 01:55:14.588 tapa.task_graph:37] get_instance read_A_4
+I0518 01:55:14.588 tapa.task_graph:38] get_instance PEG_Xvec_4
+I0518 01:55:14.589 tapa.task_graph:36] fifo_A[5]
+I0518 01:55:14.589 tapa.task_graph:37] get_instance read_A_5
+I0518 01:55:14.589 tapa.task_graph:38] get_instance PEG_Xvec_5
+I0518 01:55:14.589 tapa.task_graph:36] fifo_A[6]
+I0518 01:55:14.589 tapa.task_graph:37] get_instance read_A_6
+I0518 01:55:14.589 tapa.task_graph:38] get_instance PEG_Xvec_6
+I0518 01:55:14.589 tapa.task_graph:36] fifo_A[7]
+I0518 01:55:14.589 tapa.task_graph:37] get_instance read_A_7
+I0518 01:55:14.589 tapa.task_graph:38] get_instance PEG_Xvec_7
+I0518 01:55:14.589 tapa.task_graph:36] fifo_A[8]
+I0518 01:55:14.589 tapa.task_graph:37] get_instance read_A_8
+I0518 01:55:14.589 tapa.task_graph:38] get_instance PEG_Xvec_8
+I0518 01:55:14.589 tapa.task_graph:36] fifo_A[9]
+I0518 01:55:14.590 tapa.task_graph:37] get_instance read_A_9
+I0518 01:55:14.590 tapa.task_graph:38] get_instance PEG_Xvec_9
+I0518 01:55:14.590 tapa.task_graph:36] fifo_X_pe[0]
+I0518 01:55:14.590 tapa.task_graph:37] get_instance read_X_0
+I0518 01:55:14.590 tapa.task_graph:38] get_instance PEG_Xvec_0
+I0518 01:55:14.590 tapa.task_graph:36] fifo_X_pe[10]
+I0518 01:55:14.590 tapa.task_graph:37] get_instance PEG_Xvec_9
+I0518 01:55:14.590 tapa.task_graph:38] get_instance PEG_Xvec_10
+I0518 01:55:14.590 tapa.task_graph:36] fifo_X_pe[11]
+I0518 01:55:14.590 tapa.task_graph:37] get_instance PEG_Xvec_10
+I0518 01:55:14.590 tapa.task_graph:38] get_instance PEG_Xvec_11
+I0518 01:55:14.590 tapa.task_graph:36] fifo_X_pe[12]
+I0518 01:55:14.591 tapa.task_graph:37] get_instance PEG_Xvec_11
+I0518 01:55:14.591 tapa.task_graph:38] get_instance PEG_Xvec_12
+I0518 01:55:14.591 tapa.task_graph:36] fifo_X_pe[13]
+I0518 01:55:14.591 tapa.task_graph:37] get_instance PEG_Xvec_12
+I0518 01:55:14.591 tapa.task_graph:38] get_instance PEG_Xvec_13
+I0518 01:55:14.591 tapa.task_graph:36] fifo_X_pe[14]
+I0518 01:55:14.591 tapa.task_graph:37] get_instance PEG_Xvec_13
+I0518 01:55:14.591 tapa.task_graph:38] get_instance PEG_Xvec_14
+I0518 01:55:14.591 tapa.task_graph:36] fifo_X_pe[15]
+I0518 01:55:14.591 tapa.task_graph:37] get_instance PEG_Xvec_14
+I0518 01:55:14.591 tapa.task_graph:38] get_instance PEG_Xvec_15
+I0518 01:55:14.591 tapa.task_graph:36] fifo_X_pe[16]
+I0518 01:55:14.592 tapa.task_graph:37] get_instance PEG_Xvec_15
+I0518 01:55:14.592 tapa.task_graph:38] get_instance black_hole_float_v16_0
+I0518 01:55:14.592 tapa.task_graph:36] fifo_X_pe[1]
+I0518 01:55:14.592 tapa.task_graph:37] get_instance PEG_Xvec_0
+I0518 01:55:14.592 tapa.task_graph:38] get_instance PEG_Xvec_1
+I0518 01:55:14.592 tapa.task_graph:36] fifo_X_pe[2]
+I0518 01:55:14.592 tapa.task_graph:37] get_instance PEG_Xvec_1
+I0518 01:55:14.592 tapa.task_graph:38] get_instance PEG_Xvec_2
+I0518 01:55:14.592 tapa.task_graph:36] fifo_X_pe[3]
+I0518 01:55:14.592 tapa.task_graph:37] get_instance PEG_Xvec_2
+I0518 01:55:14.592 tapa.task_graph:38] get_instance PEG_Xvec_3
+I0518 01:55:14.592 tapa.task_graph:36] fifo_X_pe[4]
+I0518 01:55:14.592 tapa.task_graph:37] get_instance PEG_Xvec_3
+I0518 01:55:14.593 tapa.task_graph:38] get_instance PEG_Xvec_4
+I0518 01:55:14.593 tapa.task_graph:36] fifo_X_pe[5]
+I0518 01:55:14.593 tapa.task_graph:37] get_instance PEG_Xvec_4
+I0518 01:55:14.593 tapa.task_graph:38] get_instance PEG_Xvec_5
+I0518 01:55:14.593 tapa.task_graph:36] fifo_X_pe[6]
+I0518 01:55:14.593 tapa.task_graph:37] get_instance PEG_Xvec_5
+I0518 01:55:14.593 tapa.task_graph:38] get_instance PEG_Xvec_6
+I0518 01:55:14.593 tapa.task_graph:36] fifo_X_pe[7]
+I0518 01:55:14.593 tapa.task_graph:37] get_instance PEG_Xvec_6
+I0518 01:55:14.593 tapa.task_graph:38] get_instance PEG_Xvec_7
+I0518 01:55:14.593 tapa.task_graph:36] fifo_X_pe[8]
+I0518 01:55:14.593 tapa.task_graph:37] get_instance PEG_Xvec_7
+I0518 01:55:14.593 tapa.task_graph:38] get_instance PEG_Xvec_8
+I0518 01:55:14.594 tapa.task_graph:36] fifo_X_pe[9]
+I0518 01:55:14.594 tapa.task_graph:37] get_instance PEG_Xvec_8
+I0518 01:55:14.594 tapa.task_graph:38] get_instance PEG_Xvec_9
+I0518 01:55:14.594 tapa.task_graph:36] fifo_aXvec[0]
+I0518 01:55:14.594 tapa.task_graph:37] get_instance PEG_Xvec_0
+I0518 01:55:14.594 tapa.task_graph:38] get_instance Stream2Mmap_2_0
+I0518 01:55:14.594 tapa.task_graph:36] fifo_aXvec[10]
+I0518 01:55:14.594 tapa.task_graph:37] get_instance PEG_Xvec_10
+I0518 01:55:14.594 tapa.task_graph:38] get_instance Stream2Mmap_2_10
+I0518 01:55:14.594 tapa.task_graph:36] fifo_aXvec[11]
+I0518 01:55:14.594 tapa.task_graph:37] get_instance PEG_Xvec_11
+I0518 01:55:14.594 tapa.task_graph:38] get_instance Stream2Mmap_2_11
+I0518 01:55:14.595 tapa.task_graph:36] fifo_aXvec[12]
+I0518 01:55:14.595 tapa.task_graph:37] get_instance PEG_Xvec_12
+I0518 01:55:14.595 tapa.task_graph:38] get_instance Stream2Mmap_2_12
+I0518 01:55:14.595 tapa.task_graph:36] fifo_aXvec[13]
+I0518 01:55:14.595 tapa.task_graph:37] get_instance PEG_Xvec_13
+I0518 01:55:14.595 tapa.task_graph:38] get_instance Stream2Mmap_2_13
+I0518 01:55:14.595 tapa.task_graph:36] fifo_aXvec[14]
+I0518 01:55:14.595 tapa.task_graph:37] get_instance PEG_Xvec_14
+I0518 01:55:14.595 tapa.task_graph:38] get_instance Stream2Mmap_2_14
+I0518 01:55:14.595 tapa.task_graph:36] fifo_aXvec[15]
+I0518 01:55:14.595 tapa.task_graph:37] get_instance PEG_Xvec_15
+I0518 01:55:14.595 tapa.task_graph:38] get_instance Stream2Mmap_2_15
+I0518 01:55:14.596 tapa.task_graph:36] fifo_aXvec[1]
+I0518 01:55:14.596 tapa.task_graph:37] get_instance PEG_Xvec_1
+I0518 01:55:14.596 tapa.task_graph:38] get_instance Stream2Mmap_2_1
+I0518 01:55:14.596 tapa.task_graph:36] fifo_aXvec[2]
+I0518 01:55:14.596 tapa.task_graph:37] get_instance PEG_Xvec_2
+I0518 01:55:14.596 tapa.task_graph:38] get_instance Stream2Mmap_2_2
+I0518 01:55:14.596 tapa.task_graph:36] fifo_aXvec[3]
+I0518 01:55:14.596 tapa.task_graph:37] get_instance PEG_Xvec_3
+I0518 01:55:14.596 tapa.task_graph:38] get_instance Stream2Mmap_2_3
+I0518 01:55:14.596 tapa.task_graph:36] fifo_aXvec[4]
+I0518 01:55:14.596 tapa.task_graph:37] get_instance PEG_Xvec_4
+I0518 01:55:14.596 tapa.task_graph:38] get_instance Stream2Mmap_2_4
+I0518 01:55:14.596 tapa.task_graph:36] fifo_aXvec[5]
+I0518 01:55:14.597 tapa.task_graph:37] get_instance PEG_Xvec_5
+I0518 01:55:14.597 tapa.task_graph:38] get_instance Stream2Mmap_2_5
+I0518 01:55:14.597 tapa.task_graph:36] fifo_aXvec[6]
+I0518 01:55:14.597 tapa.task_graph:37] get_instance PEG_Xvec_6
+I0518 01:55:14.597 tapa.task_graph:38] get_instance Stream2Mmap_2_6
+I0518 01:55:14.597 tapa.task_graph:36] fifo_aXvec[7]
+I0518 01:55:14.597 tapa.task_graph:37] get_instance PEG_Xvec_7
+I0518 01:55:14.597 tapa.task_graph:38] get_instance Stream2Mmap_2_7
+I0518 01:55:14.597 tapa.task_graph:36] fifo_aXvec[8]
+I0518 01:55:14.597 tapa.task_graph:37] get_instance PEG_Xvec_8
+I0518 01:55:14.597 tapa.task_graph:38] get_instance Stream2Mmap_2_8
+I0518 01:55:14.597 tapa.task_graph:36] fifo_aXvec[9]
+I0518 01:55:14.597 tapa.task_graph:37] get_instance PEG_Xvec_9
+I0518 01:55:14.598 tapa.task_graph:38] get_instance Stream2Mmap_2_9
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.598 tapa.task_graph:83] temps_1_12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_13 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_13 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_14 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_14 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_15 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_15 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.599 tapa.task_graph:83] temps_1_5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_1_5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_1_6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_1_6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_1_7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_1_7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_1_8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_1_8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_1_9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_1_9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_2_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_2_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_2_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_2_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_2_10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.600 tapa.task_graph:83] temps_2_10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_13 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_13 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_14 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_14 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_15 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_15 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.601 tapa.task_graph:83] temps_2_4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] temps_2_9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.602 tapa.task_graph:83] edge_list_ch_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_13 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.603 tapa.task_graph:83] edge_list_ch_14 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.604 tapa.task_graph:83] edge_list_ch_15 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.604 tapa.task_graph:83] vec_X is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0518 01:55:14.604 tapa.task_graph:83] edge_list_ptr is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+I0518 01:55:14.608 tapa.AutoBridge.src.autobridge.main:20] multi_fpga from autobridge main
+I0518 01:55:14.608 tapa.AutoBridge.src.autobridge.main:21] None
+
+*********************************************
+***         Starting AutoBridge           ***
+*********************************************
+
+Version: 0.0.20220512.dev1
+
+Running details logged to /home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/serpens_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/run-1/run/autobridge/autobridge-May-18-2023-01:55.log
+
+----------------------------------------------
+
+*** CRITICAL WARNING: Gurobi solver not detected. Floorplanning may take extra time. 
+The Gurobi solver is much faster than the open-source solver, and it is free for academia. 
+  - Register and download the Gurobi Optimizer at https://www.gurobi.com/downloads/gurobi-optimizer-eula/
+  - Unzip the package to your desired directory
+  - Obtain an academic license at https://www.gurobi.com/downloads/end-user-license-agreement-academic/
+  - Set environment variables GUROBI_HOME and GRB_LICENSE_FILE
+      export GUROBI_HOME=[WHERE-YOU-INSTALL] 
+      export GRB_LICENSE_FILE=[ADDRESS-OF-YOUR-LICENSE-FILE] 
+      export PATH="${PATH}:${GUROBI_HOME}/bin" 
+      export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib" 
+
+Generate task graph visualization in graphviz format: /home/ubuntu/tapa_m/regression/serpens-16ch/tapa/src/serpens_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/run-1/run/autobridge/task_graph.dot
+we are in get_floorplan
+
+Floorplan parameters:
+
+  floorplan_strategy: HALF_SLR_LEVEL_FLOORPLANNING
+  threshold for switching to iterative partitioning: 200
+  floorplan_opt_priority: AREA_PRIORITIZED
+  min_area_limit: 0.500000
+  max_area_limit: 0.850000
+  min_slr_width_limit: 5000
+  max_slr_width_limit: 15000
+  max_search_time per solving: 1000
+
+Start floorplanning, please check the log for the progress...
+
+The total area of the design:
+  BRAM: 1552 / 3504 = 44.3%
+  DSP: 537 / 8496 = 6.3%
+  FF: 557486 / 2331840 = 23.9%
+  LUT: 475072.125 / 1165920 = 40.7%
+  URAM: 0 / 960 = 0.0%
+
+I0518 01:55:19.460 tapa.AutoBridge.src.autobridge:291] failed
+I0518 01:55:22.737 tapa.AutoBridge.src.autobridge:291] failed
+I0518 01:55:25.941 tapa.AutoBridge.src.autobridge:291] failed
+I0518 01:55:29.206 tapa.AutoBridge.src.autobridge:291] failed
+I0518 01:55:32.408 tapa.AutoBridge.src.autobridge:291] failed
+I0518 01:55:35.632 tapa.AutoBridge.src.autobridge:291] failed
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/bin/tapac", line 8, in <module>
+    sys.exit(main())
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/tapa/tapac.py", line 667, in main
+    program.run_floorplanning(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/tapa/core.py", line 340, in run_floorplanning
+    config, config_with_floorplan = generate_floorplan(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/tapa/floorplan.py", line 60, in generate_floorplan
+    config_with_floorplan = annotate_floorplan(config, multi_fpga)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/tapa/AutoBridge/src/autobridge/main.py", line 72, in annotate_floorplan
+    v2s, slot_list = autobridge_floorplan.get_floorplan(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/tapa/AutoBridge/src/autobridge/Floorplan/__init__.py", line 153, in get_floorplan
+    v2s = partition(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/tapa/AutoBridge/src/autobridge/Floorplan/Partition.py", line 50, in partition
+    v2s = worker(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/tapa/AutoBridge/src/autobridge/Floorplan/Partition.py", line 105, in partition_area_prioritized
+    actual_slr_width_usage = get_actual_slr_crossing_limit(curr_v2s)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/tapa/AutoBridge/src/autobridge/Floorplan/Utilities.py", line 116, in get_actual_slr_crossing_limit
+    src_slr = v2s[e.src].getSLR()
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/tapa/AutoBridge/src/autobridge/Opt/Slot.py", line 180, in getSLR
+    assert False, f'the current slot {self.getName()} is beyond 1 SLR'
+AssertionError: the current slot CLOCKREGION_X2Y0:CLOCKREGION_X3Y15 is beyond 1 SLR
+E0518 03:19:25.224 tapa.floorplan_dse:199] Fail to run command: tapac --top Serpens --platform xilinx_u55c_gen3x16_xdma_3_202210_1 -o serpens_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/run-1/serpens_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo --other-hls-configs  --connectivity link_config.ini --enable-floorplan --floorplan-dse-step 500 --floorplan-output serpens_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/run-1/constraint.tcl --max-search-time 1000 --enable-synth-util --max-parallel-synth-jobs 8 --floorplan-strategy HALF_SLR_LEVEL_FLOORPLANNING --floorplan-opt-priority AREA_PRIORITIZED kernel_1.cpp --work-dir serpens_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/run-1/run --generate-task-rtl --run-floorplanning --generate-top-rtl --pack-xo --min-slr-width-limit 5000 --max-slr-width-limit 15000 --min-area-limit 0.5 --max-area-limit 0.85

@@ -1,0 +1,4 @@
+breathe
+myst_parser
+sphinx
+git+https://github.com/Blaok/sphinx-argparse#egg=sphinx-argparse

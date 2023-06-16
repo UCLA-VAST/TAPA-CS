@@ -1,0 +1,354 @@
+
+
+================================================================
+== Vitis HLS Report for 'Module6Func1_Pipeline_module_6_1_epoch'
+================================================================
+* Date:           Tue May  9 20:42:11 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       Module6Func1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  4.684 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- module_6_1_epoch  |        ?|        ?|        17|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 17
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 17, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.06>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%count = alloca i32 1"   --->   Operation 20 'alloca' 'count' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %fifo_ld_2_peek, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %fifo_ld_2_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %fifo_ld_1_peek, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %fifo_ld_1_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %fifo_ld_0_peek, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %fifo_ld_0_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %fifo_st_0, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.38ns)   --->   "%store_ln0 = store i32 0, i32 %count"   --->   Operation 28 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.cond"   --->   Operation 29 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specpipeline_ln62 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 30 'specpipeline' 'specpipeline_ln62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:60]   --->   Operation 31 'specloopname' 'specloopname_ln60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i33P0A, i33 %fifo_ld_0_s, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 32 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 33 [1/1] (0.38ns)   --->   "%br_ln27 = br i1 %tmp, void %_ZNK4tapa7istreamIfE3eotERb.exit52, void %land.rhs.i.i46" [/usr/local/include/tapa/xilinx/hls/stream.h:27]   --->   Operation 33 'br' 'br_ln27' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 34 [1/1] (1.21ns)   --->   "%fifo_ld_0_peek_read = nbread i34 @_ssdm_op_NbRead.ap_fifo.volatile.i33P0A, i33 %fifo_ld_0_peek" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 34 'nbread' 'fifo_ld_0_peek_read' <Predicate = (tmp)> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node phitmp1)   --->   "%p_vld = extractvalue i34 %fifo_ld_0_peek_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 35 'extractvalue' 'p_vld' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node phitmp)   --->   "%p_s = extractvalue i34 %fifo_ld_0_peek_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 36 'extractvalue' 'p_s' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node phitmp)   --->   "%elem_eot = bitselect i1 @_ssdm_op_BitSelect.i1.i33.i32, i33 %p_s, i32 32" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 37 'bitselect' 'elem_eot' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.12ns) (out node of the LUT)   --->   "%phitmp = xor i1 %elem_eot, i1 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 38 'xor' 'phitmp' <Predicate = (tmp)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.12ns) (out node of the LUT)   --->   "%phitmp1 = xor i1 %p_vld, i1 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 39 'xor' 'phitmp1' <Predicate = (tmp)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.38ns)   --->   "%br_ln0 = br void %_ZNK4tapa7istreamIfE3eotERb.exit52"   --->   Operation 40 'br' 'br_ln0' <Predicate = (tmp)> <Delay = 0.38>
+ST_1 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node or_ln62)   --->   "%phi_ln62 = phi i1 %phitmp, void %land.rhs.i.i46, i1 0, void %for.cond" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 41 'phi' 'phi_ln62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%phi_ln62_1 = phi i1 %phitmp1, void %land.rhs.i.i46, i1 1, void %for.cond" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 42 'phi' 'phi_ln62_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.12ns) (out node of the LUT)   --->   "%or_ln62 = or i1 %phi_ln62, i1 %phi_ln62_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 43 'or' 'or_ln62' <Predicate = true> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %or_ln62, void %_ZNK4tapa7istreamIfE3eotERb.exit.for.end_crit_edge.exitStub, void %land.lhs.true" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 44 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_3 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i33P0A, i33 %fifo_ld_1_s, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 45 'nbreadreq' 'tmp_3' <Predicate = (or_ln62)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 46 [1/1] (0.38ns)   --->   "%br_ln27 = br i1 %tmp_3, void %_ZNK4tapa7istreamIfE3eotERb.exit38, void %land.rhs.i.i32" [/usr/local/include/tapa/xilinx/hls/stream.h:27]   --->   Operation 46 'br' 'br_ln27' <Predicate = (or_ln62)> <Delay = 0.38>
+ST_1 : Operation 47 [1/1] (1.21ns)   --->   "%fifo_ld_1_peek_read = nbread i34 @_ssdm_op_NbRead.ap_fifo.volatile.i33P0A, i33 %fifo_ld_1_peek" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 47 'nbread' 'fifo_ld_1_peek_read' <Predicate = (or_ln62 & tmp_3)> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%p_vld5 = extractvalue i34 %fifo_ld_1_peek_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 48 'extractvalue' 'p_vld5' <Predicate = (or_ln62 & tmp_3)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_1 = extractvalue i34 %fifo_ld_1_peek_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 49 'extractvalue' 'p_1' <Predicate = (or_ln62 & tmp_3)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%elem_eot_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i33.i32, i33 %p_1, i32 32" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 50 'bitselect' 'elem_eot_1' <Predicate = (or_ln62 & tmp_3)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.38ns)   --->   "%br_ln0 = br void %_ZNK4tapa7istreamIfE3eotERb.exit38"   --->   Operation 51 'br' 'br_ln0' <Predicate = (or_ln62 & tmp_3)> <Delay = 0.38>
+ST_1 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node and_ln62)   --->   "%elem_eot_4 = phi i1 %elem_eot_1, void %land.rhs.i.i32, i1 0, void %land.lhs.true"   --->   Operation 52 'phi' 'elem_eot_4' <Predicate = (or_ln62)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%is_success = phi i1 %p_vld5, void %land.rhs.i.i32, i1 0, void %land.lhs.true" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 53 'phi' 'is_success' <Predicate = (or_ln62)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln62 = and i1 %elem_eot_4, i1 %is_success" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 54 'and' 'and_ln62' <Predicate = (or_ln62)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %and_ln62, void %land.rhs, void %_ZNK4tapa7istreamIfE3eotERb.exit.for.end_crit_edge.exitStub" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 55 'br' 'br_ln62' <Predicate = (or_ln62)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_6 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i33P0A, i33 %fifo_ld_2_s, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 56 'nbreadreq' 'tmp_6' <Predicate = (or_ln62 & !and_ln62)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 57 [1/1] (0.38ns)   --->   "%br_ln27 = br i1 %tmp_6, void %_ZNK4tapa7istreamIfE3eotERb.exit, void %land.rhs.i.i" [/usr/local/include/tapa/xilinx/hls/stream.h:27]   --->   Operation 57 'br' 'br_ln27' <Predicate = (or_ln62 & !and_ln62)> <Delay = 0.38>
+ST_1 : Operation 58 [1/1] (1.21ns)   --->   "%fifo_ld_2_peek_read = nbread i34 @_ssdm_op_NbRead.ap_fifo.volatile.i33P0A, i33 %fifo_ld_2_peek" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 58 'nbread' 'fifo_ld_2_peek_read' <Predicate = (or_ln62 & !and_ln62 & tmp_6)> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node phitmp2)   --->   "%p_vld7 = extractvalue i34 %fifo_ld_2_peek_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 59 'extractvalue' 'p_vld7' <Predicate = (or_ln62 & !and_ln62 & tmp_6)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns) (grouped into LUT with out node phitmp3)   --->   "%p_2 = extractvalue i34 %fifo_ld_2_peek_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 60 'extractvalue' 'p_2' <Predicate = (or_ln62 & !and_ln62 & tmp_6)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node phitmp3)   --->   "%elem_eot_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i33.i32, i33 %p_2, i32 32" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 61 'bitselect' 'elem_eot_3' <Predicate = (or_ln62 & !and_ln62 & tmp_6)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.12ns) (out node of the LUT)   --->   "%phitmp2 = xor i1 %p_vld7, i1 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 62 'xor' 'phitmp2' <Predicate = (or_ln62 & !and_ln62 & tmp_6)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 63 [1/1] (0.12ns) (out node of the LUT)   --->   "%phitmp3 = xor i1 %elem_eot_3, i1 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 63 'xor' 'phitmp3' <Predicate = (or_ln62 & !and_ln62 & tmp_6)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 64 [1/1] (0.38ns)   --->   "%br_ln0 = br void %_ZNK4tapa7istreamIfE3eotERb.exit"   --->   Operation 64 'br' 'br_ln0' <Predicate = (or_ln62 & !and_ln62 & tmp_6)> <Delay = 0.38>
+ST_1 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node or_ln62_1)   --->   "%phi_ln62_2 = phi i1 %phitmp3, void %land.rhs.i.i, i1 0, void %land.rhs" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 65 'phi' 'phi_ln62_2' <Predicate = (or_ln62 & !and_ln62)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%phi_ln62_3 = phi i1 %phitmp2, void %land.rhs.i.i, i1 1, void %land.rhs" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 66 'phi' 'phi_ln62_3' <Predicate = (or_ln62 & !and_ln62)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.12ns) (out node of the LUT)   --->   "%or_ln62_1 = or i1 %phi_ln62_3, i1 %phi_ln62_2" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 67 'or' 'or_ln62_1' <Predicate = (or_ln62 & !and_ln62)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %or_ln62_1, void %_ZNK4tapa7istreamIfE3eotERb.exit.for.end_crit_edge.exitStub, void %for.body" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 68 'br' 'br_ln62' <Predicate = (or_ln62 & !and_ln62)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns) (grouped into LUT with out node or_ln62_3)   --->   "%xor_ln62 = xor i1 %is_success, i1 1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 69 'xor' 'xor_ln62' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 70 [1/1] (0.00ns) (grouped into LUT with out node or_ln62_3)   --->   "%or_ln62_2 = or i1 %phi_ln62_3, i1 %xor_ln62" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 70 'or' 'or_ln62_2' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 71 [1/1] (0.12ns) (out node of the LUT)   --->   "%or_ln62_3 = or i1 %or_ln62_2, i1 %phi_ln62_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 71 'or' 'or_ln62_3' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %or_ln62_3, void %if.then, void %if.end29" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 72 'br' 'br_ln62' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%count_load_1 = load i32 %count" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:64]   --->   Operation 73 'load' 'count_load_1' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.85ns)   --->   "%do_ld_2 = icmp_sgt  i32 %count_load_1, i32 49" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:64]   --->   Operation 74 'icmp' 'do_ld_2' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%br_ln65 = br i1 %do_ld_2, void %if.end, void %if.then22" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:65]   --->   Operation 75 'br' 'br_ln65' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (1.21ns)   --->   "%fifo_ld_1_s_read_1 = nbread i34 @_ssdm_op_NbRead.ap_fifo.volatile.i33P0A, i33 %fifo_ld_1_s" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 76 'nbread' 'fifo_ld_1_s_read_1' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & !do_ld_2)> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%p_6 = extractvalue i34 %fifo_ld_1_s_read_1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 77 'extractvalue' 'p_6' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & !do_ld_2)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (1.21ns)   --->   "%fifo_ld_0_s_read = nbread i34 @_ssdm_op_NbRead.ap_fifo.volatile.i33P0A, i33 %fifo_ld_0_s" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 78 'nbread' 'fifo_ld_0_s_read' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%p_3 = extractvalue i34 %fifo_ld_0_s_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 79 'extractvalue' 'p_3' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%trunc_ln164 = trunc i33 %p_3" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 80 'trunc' 'trunc_ln164' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (1.21ns)   --->   "%fifo_ld_1_s_read = nbread i34 @_ssdm_op_NbRead.ap_fifo.volatile.i33P0A, i33 %fifo_ld_1_s" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 81 'nbread' 'fifo_ld_1_s_read' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%p_4 = extractvalue i34 %fifo_ld_1_s_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 82 'extractvalue' 'p_4' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (1.21ns)   --->   "%fifo_ld_2_s_read = nbread i34 @_ssdm_op_NbRead.ap_fifo.volatile.i33P0A, i33 %fifo_ld_2_s" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 83 'nbread' 'fifo_ld_2_s_read' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%p_5 = extractvalue i34 %fifo_ld_2_s_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 84 'extractvalue' 'p_5' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%trunc_ln164_1 = trunc i33 %p_5" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 85 'trunc' 'trunc_ln164_1' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%count_load = load i32 %count" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:76]   --->   Operation 86 'load' 'count_load' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.88ns)   --->   "%count_1 = add i32 %count_load, i32 1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:76]   --->   Operation 87 'add' 'count_1' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 88 [1/1] (0.22ns)   --->   "%count_2 = select i1 %do_ld_2, i32 %count_load, i32 %count_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:75]   --->   Operation 88 'select' 'count_2' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3)> <Delay = 0.22> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 89 [1/1] (0.38ns)   --->   "%store_ln78 = store i32 %count_2, i32 %count" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:78]   --->   Operation 89 'store' 'store_ln78' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3)> <Delay = 0.38>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln62 = br void %for.cond" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62]   --->   Operation 90 'br' 'br_ln62' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.72>
+ST_2 : Operation 91 [1/1] (0.38ns)   --->   "%br_ln0 = br void %if.end24"   --->   Operation 91 'br' 'br_ln0' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & !do_ld_2)> <Delay = 0.38>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%elem_val = bitcast i32 %trunc_ln164" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 92 'bitcast' 'elem_val' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%elem_val_1 = bitcast i32 %trunc_ln164_1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 93 'bitcast' 'elem_val_1' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.38ns)   --->   "%br_ln73 = br void %if.end24" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:73]   --->   Operation 94 'br' 'br_ln73' <Predicate = (or_ln62 & !and_ln62 & or_ln62_1 & !or_ln62_3 & do_ld_2)> <Delay = 0.38>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%phi_ln164 = phi i33 %p_4, void %if.then22, i33 %p_6, void %if.end" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 95 'phi' 'phi_ln164' <Predicate = (!or_ln62_3)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%fifo_ref_0_09 = phi i32 %elem_val, void %if.then22, i32 0, void %if.end"   --->   Operation 96 'phi' 'fifo_ref_0_09' <Predicate = (!or_ln62_3)> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%trunc_ln70 = trunc i33 %phi_ln164" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:70]   --->   Operation 97 'trunc' 'trunc_ln70' <Predicate = (!or_ln62_3)> <Delay = 0.00>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%fifo_ref_1 = bitcast i32 %trunc_ln70" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:70]   --->   Operation 98 'bitcast' 'fifo_ref_1' <Predicate = (!or_ln62_3)> <Delay = 0.00>
+ST_2 : Operation 99 [7/7] (2.34ns)   --->   "%add = fadd i32 %fifo_ref_0_09, i32 %fifo_ref_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 99 'fadd' 'add' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.34>
+ST_3 : Operation 100 [6/7] (2.34ns)   --->   "%add = fadd i32 %fifo_ref_0_09, i32 %fifo_ref_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 100 'fadd' 'add' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.34>
+ST_4 : Operation 101 [5/7] (2.34ns)   --->   "%add = fadd i32 %fifo_ref_0_09, i32 %fifo_ref_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 101 'fadd' 'add' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.34>
+ST_5 : Operation 102 [4/7] (2.34ns)   --->   "%add = fadd i32 %fifo_ref_0_09, i32 %fifo_ref_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 102 'fadd' 'add' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.34>
+ST_6 : Operation 103 [3/7] (2.34ns)   --->   "%add = fadd i32 %fifo_ref_0_09, i32 %fifo_ref_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 103 'fadd' 'add' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.34>
+ST_7 : Operation 104 [2/7] (2.34ns)   --->   "%add = fadd i32 %fifo_ref_0_09, i32 %fifo_ref_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 104 'fadd' 'add' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 4.68>
+ST_8 : Operation 105 [1/1] (0.00ns)   --->   "%fifo_ref_2_1 = phi i32 %elem_val_1, void %if.then22, i32 0, void %if.end"   --->   Operation 105 'phi' 'fifo_ref_2_1' <Predicate = (!or_ln62_3)> <Delay = 0.00>
+ST_8 : Operation 106 [1/7] (2.34ns)   --->   "%add = fadd i32 %fifo_ref_0_09, i32 %fifo_ref_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 106 'fadd' 'add' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 107 [7/7] (2.34ns)   --->   "%add1 = fadd i32 %add, i32 %fifo_ref_2_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 107 'fadd' 'add1' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.34>
+ST_9 : Operation 108 [6/7] (2.34ns)   --->   "%add1 = fadd i32 %add, i32 %fifo_ref_2_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 108 'fadd' 'add1' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.34>
+ST_10 : Operation 109 [5/7] (2.34ns)   --->   "%add1 = fadd i32 %add, i32 %fifo_ref_2_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 109 'fadd' 'add1' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.34>
+ST_11 : Operation 110 [4/7] (2.34ns)   --->   "%add1 = fadd i32 %add, i32 %fifo_ref_2_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 110 'fadd' 'add1' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 2.34>
+ST_12 : Operation 111 [3/7] (2.34ns)   --->   "%add1 = fadd i32 %add, i32 %fifo_ref_2_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 111 'fadd' 'add1' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 2.34>
+ST_13 : Operation 112 [2/7] (2.34ns)   --->   "%add1 = fadd i32 %add, i32 %fifo_ref_2_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 112 'fadd' 'add1' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 4.66>
+ST_14 : Operation 113 [1/7] (2.34ns)   --->   "%add1 = fadd i32 %add, i32 %fifo_ref_2_1" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 113 'fadd' 'add1' <Predicate = (!or_ln62_3)> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 114 [4/4] (2.32ns)   --->   "%mul = fmul i32 %add1, i32 0.2" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 114 'fmul' 'mul' <Predicate = (!or_ln62_3)> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.32>
+ST_15 : Operation 115 [3/4] (2.32ns)   --->   "%mul = fmul i32 %add1, i32 0.2" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 115 'fmul' 'mul' <Predicate = (!or_ln62_3)> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 2.32>
+ST_16 : Operation 116 [2/4] (2.32ns)   --->   "%mul = fmul i32 %add1, i32 0.2" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 116 'fmul' 'mul' <Predicate = (!or_ln62_3)> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 122 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 122 'ret' 'ret_ln0' <Predicate = (!or_ln62_1) | (and_ln62) | (!or_ln62)> <Delay = 0.00>
+
+State 17 <SV = 16> <Delay = 3.53>
+ST_17 : Operation 117 [1/4] (2.32ns)   --->   "%mul = fmul i32 %add1, i32 0.2" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74]   --->   Operation 117 'fmul' 'mul' <Predicate = (!or_ln62_3)> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 118 [1/1] (0.00ns)   --->   "%bitcast_ln174 = bitcast i32 %mul" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 118 'bitcast' 'bitcast_ln174' <Predicate = (!or_ln62_3)> <Delay = 0.00>
+ST_17 : Operation 119 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i33 @_ssdm_op_BitConcatenate.i33.i1.i32, i1 0, i32 %bitcast_ln174" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 119 'bitconcatenate' 'p_0' <Predicate = (!or_ln62_3)> <Delay = 0.00>
+ST_17 : Operation 120 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i33P0A, i33 %fifo_st_0, i33 %p_0" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 120 'write' 'write_ln174' <Predicate = (!or_ln62_3)> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_17 : Operation 121 [1/1] (0.00ns)   --->   "%br_ln78 = br void %if.end29" [/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:78]   --->   Operation 121 'br' 'br_ln78' <Predicate = (!or_ln62_3)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 3.06ns
+The critical path consists of the following:
+	fifo read operation ('fifo_ld_0_peek_read', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164) on port 'fifo_ld_0_peek' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164) [24]  (1.22 ns)
+	'xor' operation ('phitmp', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164) [28]  (0.122 ns)
+	multiplexor before 'phi' operation ('phi_ln62', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62) with incoming values : ('phitmp', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164) [32]  (0.387 ns)
+	'phi' operation ('phi_ln62', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62) with incoming values : ('phitmp', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164) [32]  (0 ns)
+	'or' operation ('or_ln62', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:62) [34]  (0.122 ns)
+	blocking operation 1.22 ns on control path)
+
+ <State 2>: 2.73ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('elem.val') with incoming values : ('elem.val', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164) [93]  (0.387 ns)
+	'phi' operation ('elem.val') with incoming values : ('elem.val', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164) [93]  (0 ns)
+	'fadd' operation ('add', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [98]  (2.34 ns)
+
+ <State 3>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [98]  (2.34 ns)
+
+ <State 4>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [98]  (2.34 ns)
+
+ <State 5>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [98]  (2.34 ns)
+
+ <State 6>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [98]  (2.34 ns)
+
+ <State 7>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [98]  (2.34 ns)
+
+ <State 8>: 4.68ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [98]  (2.34 ns)
+	'fadd' operation ('add1', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [99]  (2.34 ns)
+
+ <State 9>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add1', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [99]  (2.34 ns)
+
+ <State 10>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add1', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [99]  (2.34 ns)
+
+ <State 11>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add1', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [99]  (2.34 ns)
+
+ <State 12>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add1', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [99]  (2.34 ns)
+
+ <State 13>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add1', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [99]  (2.34 ns)
+
+ <State 14>: 4.66ns
+The critical path consists of the following:
+	'fadd' operation ('add1', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [99]  (2.34 ns)
+	'fmul' operation ('mul', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [100]  (2.32 ns)
+
+ <State 15>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('mul', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [100]  (2.32 ns)
+
+ <State 16>: 2.32ns
+The critical path consists of the following:
+	'fmul' operation ('mul', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [100]  (2.32 ns)
+
+ <State 17>: 3.54ns
+The critical path consists of the following:
+	'fmul' operation ('mul', /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Module6Func1.cpp:74) [100]  (2.32 ns)
+	fifo write operation ('write_ln174', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'fifo_st_0' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [103]  (1.22 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

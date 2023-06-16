@@ -1,0 +1,243 @@
+I0509 20:41:50.617 tapa.util:162] logging level set to INFO
+I0509 20:41:50.617 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0509 20:41:50.617 tapa.tapac:496] Python recursion limit set to 3000
+I0509 20:41:50.617 tapa.tapac:416] Executing all steps of tapac
+I0509 20:41:50.733 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+I0509 20:41:54.209 tapa.core:179] extracting HLS C++ files
+I0509 20:41:54.222 tapa.core:201] running HLS
+I0509 20:41:54.226 tapa.core:237] spawn 32 workers for parallel HLS synthesis of the tasks
+I0509 20:42:13.500 tapa.core:252] extracting RTL files
+I0509 20:42:13.553 tapa.core:283] parsing RTL files and populating tasks
+I0509 20:42:14.871 tapa.core:292] parsing Mmap2Stream
+I0509 20:42:14.873 tapa.core:296] populating Mmap2Stream
+I0509 20:42:14.916 tapa.core:292] parsing Module0Func
+I0509 20:42:14.916 tapa.core:296] populating Module0Func
+I0509 20:42:14.957 tapa.core:292] parsing Module1Func
+I0509 20:42:14.958 tapa.core:296] populating Module1Func
+I0509 20:42:14.958 tapa.core:292] parsing Module3Func1
+I0509 20:42:14.959 tapa.core:296] populating Module3Func1
+I0509 20:42:14.959 tapa.core:292] parsing Module3Func2
+I0509 20:42:14.959 tapa.core:296] populating Module3Func2
+I0509 20:42:15.008 tapa.core:292] parsing Module6Func1
+I0509 20:42:15.009 tapa.core:296] populating Module6Func1
+I0509 20:42:15.009 tapa.core:292] parsing Module6Func2
+I0509 20:42:15.013 tapa.core:296] populating Module6Func2
+I0509 20:42:15.014 tapa.core:292] parsing Module8Func
+I0509 20:42:15.014 tapa.core:296] populating Module8Func
+I0509 20:42:15.014 tapa.core:292] parsing Stream2Mmap
+I0509 20:42:15.016 tapa.core:296] populating Stream2Mmap
+I0509 20:42:15.016 tapa.core:292] parsing Jacobi
+I0509 20:42:15.034 tapa.core:296] populating Jacobi
+D0509 20:42:15.035 tapa.task:128] mmap argument 'Jacobi.bank_0_t1' (id_width=1, thread_count=1) is connected to port 'Mmap2Stream_0.mmap'
+D0509 20:42:15.035 tapa.task:128] mmap argument 'Jacobi.bank_0_t0' (id_width=1, thread_count=1) is connected to port 'Stream2Mmap_0.mmap'
+I0509 20:42:15.035 tapa.core:300] instrumenting upper-level RTL
+I0509 20:42:15.035 tapa.core:336] Running floorplanning
+I0509 20:42:15.036 tapa.floorplan:47] mulit_fpga from floorplan
+I0509 20:42:15.036 tapa.floorplan:48] None
+I0509 20:42:15.037 tapa.task_graph:36] bank_0_t0_buf
+I0509 20:42:15.037 tapa.task_graph:37] get_instance Module8Func_0
+I0509 20:42:15.037 tapa.task_graph:38] get_instance Stream2Mmap_0
+I0509 20:42:15.038 tapa.task_graph:36] bank_0_t1_buf
+I0509 20:42:15.038 tapa.task_graph:37] get_instance Mmap2Stream_0
+I0509 20:42:15.038 tapa.task_graph:38] get_instance Module0Func_0
+I0509 20:42:15.038 tapa.task_graph:36] from_super_source_to_t1_offset_0
+I0509 20:42:15.038 tapa.task_graph:37] get_instance Module0Func_0
+I0509 20:42:15.038 tapa.task_graph:38] get_instance Module1Func_0
+I0509 20:42:15.039 tapa.task_graph:36] from_super_source_to_t1_offset_1
+I0509 20:42:15.039 tapa.task_graph:37] get_instance Module0Func_0
+I0509 20:42:15.039 tapa.task_graph:38] get_instance Module1Func_1
+I0509 20:42:15.039 tapa.task_graph:36] from_t0_pe_0_to_super_sink
+I0509 20:42:15.039 tapa.task_graph:37] get_instance Module6Func1_0
+I0509 20:42:15.039 tapa.task_graph:38] get_instance Module8Func_0
+I0509 20:42:15.039 tapa.task_graph:36] from_t0_pe_1_to_super_sink
+I0509 20:42:15.039 tapa.task_graph:37] get_instance Module6Func2_0
+I0509 20:42:15.040 tapa.task_graph:38] get_instance Module8Func_0
+I0509 20:42:15.040 tapa.task_graph:36] from_t1_offset_0_to_t1_offset_2000
+I0509 20:42:15.040 tapa.task_graph:37] get_instance Module1Func_0
+I0509 20:42:15.040 tapa.task_graph:38] get_instance Module1Func_2
+I0509 20:42:15.040 tapa.task_graph:36] from_t1_offset_0_to_tcse_var_0_pe_1
+I0509 20:42:15.040 tapa.task_graph:37] get_instance Module1Func_0
+I0509 20:42:15.040 tapa.task_graph:38] get_instance Module3Func1_0
+I0509 20:42:15.040 tapa.task_graph:36] from_t1_offset_1_to_t1_offset_2001
+I0509 20:42:15.040 tapa.task_graph:37] get_instance Module1Func_1
+I0509 20:42:15.040 tapa.task_graph:38] get_instance Module1Func_3
+I0509 20:42:15.041 tapa.task_graph:36] from_t1_offset_1_to_tcse_var_0_pe_0
+I0509 20:42:15.041 tapa.task_graph:37] get_instance Module1Func_1
+I0509 20:42:15.041 tapa.task_graph:38] get_instance Module3Func2_0
+I0509 20:42:15.041 tapa.task_graph:36] from_t1_offset_2000_to_t0_pe_1
+I0509 20:42:15.041 tapa.task_graph:37] get_instance Module1Func_2
+I0509 20:42:15.041 tapa.task_graph:38] get_instance Module6Func2_0
+I0509 20:42:15.041 tapa.task_graph:36] from_t1_offset_2000_to_tcse_var_0_pe_0
+I0509 20:42:15.041 tapa.task_graph:37] get_instance Module1Func_2
+I0509 20:42:15.041 tapa.task_graph:38] get_instance Module3Func2_0
+I0509 20:42:15.041 tapa.task_graph:36] from_t1_offset_2001_to_t0_pe_0
+I0509 20:42:15.041 tapa.task_graph:37] get_instance Module1Func_3
+I0509 20:42:15.042 tapa.task_graph:38] get_instance Module6Func1_0
+I0509 20:42:15.042 tapa.task_graph:36] from_t1_offset_2001_to_tcse_var_0_pe_1
+I0509 20:42:15.042 tapa.task_graph:37] get_instance Module1Func_3
+I0509 20:42:15.042 tapa.task_graph:38] get_instance Module3Func1_0
+I0509 20:42:15.042 tapa.task_graph:36] from_tcse_var_0_offset_0_to_t0_pe_0
+I0509 20:42:15.042 tapa.task_graph:37] get_instance Module1Func_4
+I0509 20:42:15.042 tapa.task_graph:38] get_instance Module6Func1_0
+I0509 20:42:15.042 tapa.task_graph:36] from_tcse_var_0_offset_0_to_t0_pe_1
+I0509 20:42:15.042 tapa.task_graph:37] get_instance Module1Func_4
+I0509 20:42:15.042 tapa.task_graph:38] get_instance Module6Func2_0
+I0509 20:42:15.043 tapa.task_graph:36] from_tcse_var_0_offset_1_to_t0_pe_0
+I0509 20:42:15.043 tapa.task_graph:37] get_instance Module1Func_5
+I0509 20:42:15.043 tapa.task_graph:38] get_instance Module6Func1_0
+I0509 20:42:15.043 tapa.task_graph:36] from_tcse_var_0_offset_1_to_t0_pe_1
+I0509 20:42:15.043 tapa.task_graph:37] get_instance Module1Func_5
+I0509 20:42:15.043 tapa.task_graph:38] get_instance Module6Func2_0
+I0509 20:42:15.043 tapa.task_graph:36] from_tcse_var_0_pe_0_to_tcse_var_0_offset_1
+I0509 20:42:15.043 tapa.task_graph:37] get_instance Module3Func2_0
+I0509 20:42:15.043 tapa.task_graph:38] get_instance Module1Func_5
+I0509 20:42:15.043 tapa.task_graph:36] from_tcse_var_0_pe_1_to_tcse_var_0_offset_0
+I0509 20:42:15.043 tapa.task_graph:37] get_instance Module3Func1_0
+I0509 20:42:15.044 tapa.task_graph:38] get_instance Module1Func_4
+W0509 20:42:15.044 tapa.task_graph:83] bank_0_t1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0509 20:42:15.044 tapa.task_graph:83] bank_0_t0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+D0509 20:42:15.044 tapa.task_graph:165] area of Mmap2Stream: {'BRAM': 0, 'DSP': 0, 'FF': 975, 'LUT': 1500, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module0Func: {'BRAM': 0, 'DSP': 0, 'FF': 73, 'LUT': 197, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module3Func1: {'BRAM': 0, 'DSP': 2, 'FF': 534, 'LUT': 567, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module3Func2: {'BRAM': 0, 'DSP': 2, 'FF': 534, 'LUT': 567, 'URAM': 0}
+D0509 20:42:15.044 tapa.task_graph:165] area of Module6Func1: {'BRAM': 0, 'DSP': 7, 'FF': 1239, 'LUT': 917, 'URAM': 0}
+D0509 20:42:15.045 tapa.task_graph:165] area of Module6Func2: {'BRAM': 0, 'DSP': 7, 'FF': 1271, 'LUT': 947, 'URAM': 0}
+D0509 20:42:15.045 tapa.task_graph:165] area of Module8Func: {'BRAM': 0, 'DSP': 0, 'FF': 73, 'LUT': 195, 'URAM': 0}
+D0509 20:42:15.045 tapa.task_graph:165] area of Stream2Mmap: {'BRAM': 0, 'DSP': 0, 'FF': 1036, 'LUT': 1495, 'URAM': 0}
+I0509 20:42:15.045 tapa.AutoBridge.src.autobridge.main:20] multi_fpga from autobridge main
+I0509 20:42:15.045 tapa.AutoBridge.src.autobridge.main:21] None
+D0509 20:42:16.334 tapa.AutoBridge.src.autobridge:59] Start ILP solver with max usage ratio 0.75 and max search time 600s
+I0509 20:42:16.664 tapa.AutoBridge.src.autobridge:287] succeed with optimal solution
+I0509 20:42:16.691 tapa.floorplan:305] vertex TASK_VERTEX_Mmap2Stream_0
+I0509 20:42:16.691 tapa.floorplan:306] properties {'module': 'Mmap2Stream', 'instance': 'Mmap2Stream_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 975, 'LUT': 1500, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.691 tapa.floorplan:305] vertex TASK_VERTEX_Module0Func_0
+I0509 20:42:16.691 tapa.floorplan:306] properties {'module': 'Module0Func', 'instance': 'Module0Func_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 73, 'LUT': 197, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.691 tapa.floorplan:305] vertex TASK_VERTEX_Module1Func_0
+I0509 20:42:16.691 tapa.floorplan:306] properties {'module': 'Module1Func', 'instance': 'Module1Func_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.691 tapa.floorplan:305] vertex TASK_VERTEX_Module1Func_1
+I0509 20:42:16.691 tapa.floorplan:306] properties {'module': 'Module1Func', 'instance': 'Module1Func_1', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.691 tapa.floorplan:305] vertex TASK_VERTEX_Module1Func_2
+I0509 20:42:16.692 tapa.floorplan:306] properties {'module': 'Module1Func', 'instance': 'Module1Func_2', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.692 tapa.floorplan:305] vertex TASK_VERTEX_Module1Func_3
+I0509 20:42:16.692 tapa.floorplan:306] properties {'module': 'Module1Func', 'instance': 'Module1Func_3', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.692 tapa.floorplan:305] vertex TASK_VERTEX_Module1Func_4
+I0509 20:42:16.692 tapa.floorplan:306] properties {'module': 'Module1Func', 'instance': 'Module1Func_4', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.692 tapa.floorplan:305] vertex TASK_VERTEX_Module1Func_5
+I0509 20:42:16.692 tapa.floorplan:306] properties {'module': 'Module1Func', 'instance': 'Module1Func_5', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.692 tapa.floorplan:305] vertex TASK_VERTEX_Module3Func1_0
+I0509 20:42:16.692 tapa.floorplan:306] properties {'module': 'Module3Func1', 'instance': 'Module3Func1_0', 'area': {'BRAM': 0, 'DSP': 2, 'FF': 534, 'LUT': 567, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.692 tapa.floorplan:305] vertex TASK_VERTEX_Module3Func2_0
+I0509 20:42:16.692 tapa.floorplan:306] properties {'module': 'Module3Func2', 'instance': 'Module3Func2_0', 'area': {'BRAM': 0, 'DSP': 2, 'FF': 534, 'LUT': 567, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.692 tapa.floorplan:305] vertex TASK_VERTEX_Module6Func1_0
+I0509 20:42:16.693 tapa.floorplan:306] properties {'module': 'Module6Func1', 'instance': 'Module6Func1_0', 'area': {'BRAM': 0, 'DSP': 7, 'FF': 1239, 'LUT': 917, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.693 tapa.floorplan:305] vertex TASK_VERTEX_Module6Func2_0
+I0509 20:42:16.693 tapa.floorplan:306] properties {'module': 'Module6Func2', 'instance': 'Module6Func2_0', 'area': {'BRAM': 0, 'DSP': 7, 'FF': 1271, 'LUT': 947, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.693 tapa.floorplan:305] vertex TASK_VERTEX_Module8Func_0
+I0509 20:42:16.693 tapa.floorplan:306] properties {'module': 'Module8Func', 'instance': 'Module8Func_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 73, 'LUT': 195, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.693 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_0
+I0509 20:42:16.693 tapa.floorplan:306] properties {'module': 'Stream2Mmap', 'instance': 'Stream2Mmap_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 1036, 'LUT': 1495, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.693 tapa.floorplan:305] vertex PORT_VERTEX_bank_0_t0_external_controller
+I0509 20:42:16.693 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'bank_0_t0', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 0, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.693 tapa.floorplan:305] vertex PORT_VERTEX_bank_0_t1_external_controller
+I0509 20:42:16.693 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'bank_0_t1', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 1, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0509 20:42:16.694 tapa.floorplan:114] generate the floorplan constraint at constraint.tcl
+I0509 20:42:16.694 tapa.core:465] top task register level set to 3
+I0509 20:42:16.694 tapa.core:469] instrumenting top-level RTL
+I0509 20:42:16.706 tapa.core:524]   instantiating FIFOs in Jacobi
+I0509 20:42:16.706 tapa.core:537]     instantiating Jacobi.bank_0_t0_buf
+I0509 20:42:16.706 tapa.core:537]     instantiating Jacobi.bank_0_t1_buf
+I0509 20:42:16.707 tapa.core:537]     instantiating Jacobi.from_super_source_to_t1_offset_0
+I0509 20:42:16.707 tapa.core:537]     instantiating Jacobi.from_super_source_to_t1_offset_1
+I0509 20:42:16.707 tapa.core:537]     instantiating Jacobi.from_t0_pe_0_to_super_sink
+I0509 20:42:16.708 tapa.core:537]     instantiating Jacobi.from_t0_pe_1_to_super_sink
+I0509 20:42:16.709 tapa.core:537]     instantiating Jacobi.from_t1_offset_0_to_t1_offset_2000
+I0509 20:42:16.709 tapa.core:537]     instantiating Jacobi.from_t1_offset_0_to_tcse_var_0_pe_1
+I0509 20:42:16.709 tapa.core:537]     instantiating Jacobi.from_t1_offset_1_to_t1_offset_2001
+I0509 20:42:16.710 tapa.core:537]     instantiating Jacobi.from_t1_offset_1_to_tcse_var_0_pe_0
+I0509 20:42:16.710 tapa.core:537]     instantiating Jacobi.from_t1_offset_2000_to_t0_pe_1
+I0509 20:42:16.710 tapa.core:537]     instantiating Jacobi.from_t1_offset_2000_to_tcse_var_0_pe_0
+I0509 20:42:16.711 tapa.core:537]     instantiating Jacobi.from_t1_offset_2001_to_t0_pe_0
+I0509 20:42:16.711 tapa.core:537]     instantiating Jacobi.from_t1_offset_2001_to_tcse_var_0_pe_1
+I0509 20:42:16.711 tapa.core:537]     instantiating Jacobi.from_tcse_var_0_offset_0_to_t0_pe_0
+I0509 20:42:16.711 tapa.core:537]     instantiating Jacobi.from_tcse_var_0_offset_0_to_t0_pe_1
+I0509 20:42:16.712 tapa.core:537]     instantiating Jacobi.from_tcse_var_0_offset_1_to_t0_pe_0
+I0509 20:42:16.712 tapa.core:537]     instantiating Jacobi.from_tcse_var_0_offset_1_to_t0_pe_1
+I0509 20:42:16.712 tapa.core:537]     instantiating Jacobi.from_tcse_var_0_pe_0_to_tcse_var_0_offset_1
+I0509 20:42:16.713 tapa.core:537]     instantiating Jacobi.from_tcse_var_0_pe_1_to_tcse_var_0_offset_0
+I0509 20:42:16.713 tapa.core:503]   connecting Jacobi's children tasks
+I0509 20:42:16.735 tapa.core:811] Set the address width of async_mmap to 64
+I0509 20:42:16.878 tapa.core:473] generating report
+I0509 20:42:16.886 tapa.core:481] writing generated auxiliary RTL files
+I0509 20:42:16.887 tapa.core:489] packaging RTL code
+D0509 20:42:16.887 haoda.backend.xilinx:161] packing: Stream2Mmap.v
+D0509 20:42:16.887 haoda.backend.xilinx:161] packing: Module1Func_Module1Func_Pipeline_module_1_epoch.v
+D0509 20:42:16.887 haoda.backend.xilinx:161] packing: Module6Func2_Module6Func2_Pipeline_module_6_2_epoch.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module6Func1_fmul_32ns_32ns_32_4_max_dsp_1.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module6Func1_flow_control_loop_pipe_sequential_init.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module6Func2_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: axi_register_wr.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: detect_burst.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: fifo_fwd.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module3Func2_fadd_32ns_32ns_32_7_full_dsp_1_ip.tcl
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module8Func_flow_control_loop_pipe_sequential_init.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module6Func1_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module3Func1_fadd_32ns_32ns_32_7_full_dsp_1.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Mmap2Stream_Mmap2Stream_Pipeline_VITIS_LOOP_13_1.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: arbiter.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Jacobi_control_s_axi.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: fifo_srl.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module6Func2_fadd_32ns_32ns_32_7_full_dsp_1.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: fifo_bram.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: async_mmap.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module3Func2_flow_control_loop_pipe_sequential_init.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Jacobi_inner.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module6Func2_flow_control_loop_pipe_sequential_init.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Mmap2Stream.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module3Func1_Module3Func1_Pipeline_module_3_1_epoch.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module3Func2_Module3Func2_Pipeline_module_3_2_epoch.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module3Func2_fadd_32ns_32ns_32_7_full_dsp_1.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module6Func1_Module6Func1_Pipeline_module_6_1_epoch.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module0Func_flow_control_loop_pipe_sequential_init.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: Module3Func1_fadd_32ns_32ns_32_7_full_dsp_1_ip.tcl
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: axi_crossbar.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: axi_pipeline.v
+D0509 20:42:16.888 haoda.backend.xilinx:161] packing: a_axi_write_broadcastor_1_to_4.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module3Func1_flow_control_loop_pipe_sequential_init.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module6Func1_fadd_32ns_32ns_32_7_full_dsp_1_ip.tcl
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module8Func_Module8Func_Pipeline_module_8_epoch.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module0Func.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Stream2Mmap_flow_control_loop_pipe_sequential_init.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: axi_crossbar_rd.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: fifo.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module6Func2.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: axi_crossbar_wr.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Stream2Mmap_Stream2Mmap_Pipeline_VITIS_LOOP_18_1.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module1Func.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module3Func1.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Jacobi.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module6Func2_fadd_32ns_32ns_32_7_full_dsp_1_ip.tcl
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: axi_crossbar_addr.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module0Func_Module0Func_Pipeline_module_0_epoch.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module1Func_flow_control_loop_pipe_sequential_init.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module6Func1_fadd_32ns_32ns_32_7_full_dsp_1.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module8Func.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: generate_last.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: priority_encoder.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: a_axi_write_broadcastor_1_to_3.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Stream2Mmap_mmap_m_axi.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module6Func2_fmul_32ns_32ns_32_4_max_dsp_1.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Mmap2Stream_flow_control_loop_pipe_sequential_init.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module6Func1.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: relay_station.v
+D0509 20:42:16.889 haoda.backend.xilinx:161] packing: Module3Func2.v
+D0509 20:42:16.890 haoda.backend.xilinx:161] packing: Mmap2Stream_mmap_m_axi.v
+D0509 20:42:16.890 haoda.backend.xilinx:161] packing: axi_register_rd.v
+I0509 20:43:11.747 tapa.tapac:705] generate the v++ xo file at jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo
+I0509 20:43:11.748 tapa.bitstream:73] use the original connectivity configuration at /home/ubuntu/tapa_m/apps/jacobi/link_config.ini in the v++ script
+I0509 20:43:11.748 tapa.tapac:723] generate the v++ script at jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw_generate_bitstream.sh

@@ -1,0 +1,715 @@
+I0514 00:17:55.217 tapa.util:162] logging level set to INFO
+I0514 00:17:55.217 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0514 00:17:55.217 tapa.tapac:496] Python recursion limit set to 3000
+I0514 00:17:55.218 tapa.tapac:416] Executing all steps of tapac
+I0514 00:17:55.248 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1054:3: warning: unused stream: L1_out_dist[4]
+  tapa::streams<pkt, 6, 2> L1_out_dist;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1054:3: warning: unused stream: L1_out_dist[5]
+  tapa::streams<pkt, 6, 2> L1_out_dist;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1055:3: warning: unused stream: L1_out_id[4]
+  tapa::streams<id_pkt, 6, 2> L1_out_id;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1055:3: warning: unused stream: L1_out_id[5]
+  tapa::streams<id_pkt, 6, 2> L1_out_id;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1056:3: warning: unused stream: L2_out_dist0
+  tapa::stream<pkt, 2> L2_out_dist0;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1057:3: warning: unused stream: L2_out_dist1
+  tapa::stream<pkt, 2> L2_out_dist1;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1058:3: warning: unused stream: L2_out_id0
+  tapa::stream<id_pkt, 2> L2_out_id0;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1059:3: warning: unused stream: L2_out_id1
+  tapa::stream<id_pkt, 2> L2_out_id1;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1051:3: warning: unused stream: out_dist[12]
+  tapa::streams<pkt, 18, 2> out_dist;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1051:3: warning: unused stream: out_dist[13]
+  tapa::streams<pkt, 18, 2> out_dist;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1051:3: warning: unused stream: out_dist[14]
+  tapa::streams<pkt, 18, 2> out_dist;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1051:3: warning: unused stream: out_dist[15]
+  tapa::streams<pkt, 18, 2> out_dist;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1051:3: warning: unused stream: out_dist[16]
+  tapa::streams<pkt, 18, 2> out_dist;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1051:3: warning: unused stream: out_dist[17]
+  tapa::streams<pkt, 18, 2> out_dist;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1052:3: warning: unused stream: out_id[12]
+  tapa::streams<id_pkt, 18, 2> out_id;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1052:3: warning: unused stream: out_id[13]
+  tapa::streams<id_pkt, 18, 2> out_id;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1052:3: warning: unused stream: out_id[14]
+  tapa::streams<id_pkt, 18, 2> out_id;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1052:3: warning: unused stream: out_id[15]
+  tapa::streams<id_pkt, 18, 2> out_id;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1052:3: warning: unused stream: out_id[16]
+  tapa::streams<id_pkt, 18, 2> out_id;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/knn/src/kernel_1.cpp:1052:3: warning: unused stream: out_id[17]
+  tapa::streams<id_pkt, 18, 2> out_id;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20 warnings generated.
+I0514 00:18:07.637 tapa.core:179] extracting HLS C++ files
+I0514 00:18:07.664 tapa.core:201] running HLS
+I0514 00:18:07.668 tapa.core:237] spawn 32 workers for parallel HLS synthesis of the tasks
+I0514 00:19:41.628 tapa.core:252] extracting RTL files
+I0514 00:19:45.025 tapa.core:283] parsing RTL files and populating tasks
+I0514 00:19:46.939 tapa.core:292] parsing Mmap2Stream_id
+I0514 00:19:46.941 tapa.core:296] populating Mmap2Stream_id
+I0514 00:19:46.941 tapa.core:292] parsing Mmap2Stream_in
+I0514 00:19:46.943 tapa.core:296] populating Mmap2Stream_in
+I0514 00:19:46.943 tapa.core:292] parsing Mmap2Stream_out
+I0514 00:19:46.945 tapa.core:296] populating Mmap2Stream_out
+I0514 00:19:47.165 tapa.core:292] parsing Mmap2Stream_out_id
+I0514 00:19:47.168 tapa.core:296] populating Mmap2Stream_out_id
+I0514 00:19:47.169 tapa.core:292] parsing Stream2Mmap_id
+I0514 00:19:47.171 tapa.core:296] populating Stream2Mmap_id
+I0514 00:19:47.171 tapa.core:292] parsing Stream2Mmap_in
+I0514 00:19:47.174 tapa.core:296] populating Stream2Mmap_in
+I0514 00:19:47.174 tapa.core:292] parsing Stream2Mmap_out
+I0514 00:19:47.176 tapa.core:296] populating Stream2Mmap_out
+I0514 00:19:47.176 tapa.core:292] parsing Stream2Mmap_out_id
+I0514 00:19:47.177 tapa.core:296] populating Stream2Mmap_out_id
+I0514 00:19:47.177 tapa.core:292] parsing krnl_globalSort_L1_L2
+I0514 00:19:47.178 tapa.core:296] populating krnl_globalSort_L1_L2
+I0514 00:19:47.179 tapa.core:292] parsing krnl_globalSort_L3
+I0514 00:19:47.180 tapa.core:296] populating krnl_globalSort_L3
+I0514 00:19:47.180 tapa.core:292] parsing krnl_partialKnn_wrapper_0
+I0514 00:19:47.180 tapa.core:296] populating krnl_partialKnn_wrapper_0
+I0514 00:19:47.180 tapa.core:292] parsing krnl_partialKnn_wrapper_1
+I0514 00:19:47.181 tapa.core:296] populating krnl_partialKnn_wrapper_1
+I0514 00:19:47.181 tapa.core:292] parsing krnl_partialKnn_wrapper_10
+I0514 00:19:47.182 tapa.core:296] populating krnl_partialKnn_wrapper_10
+I0514 00:19:47.182 tapa.core:292] parsing krnl_partialKnn_wrapper_11
+I0514 00:19:47.183 tapa.core:296] populating krnl_partialKnn_wrapper_11
+I0514 00:19:47.183 tapa.core:292] parsing krnl_partialKnn_wrapper_2
+I0514 00:19:47.184 tapa.core:296] populating krnl_partialKnn_wrapper_2
+I0514 00:19:47.184 tapa.core:292] parsing krnl_partialKnn_wrapper_3
+I0514 00:19:47.184 tapa.core:296] populating krnl_partialKnn_wrapper_3
+I0514 00:19:47.185 tapa.core:292] parsing krnl_partialKnn_wrapper_4
+I0514 00:19:47.185 tapa.core:296] populating krnl_partialKnn_wrapper_4
+I0514 00:19:47.185 tapa.core:292] parsing krnl_partialKnn_wrapper_5
+I0514 00:19:47.186 tapa.core:296] populating krnl_partialKnn_wrapper_5
+I0514 00:19:47.186 tapa.core:292] parsing krnl_partialKnn_wrapper_6
+I0514 00:19:47.187 tapa.core:296] populating krnl_partialKnn_wrapper_6
+I0514 00:19:47.187 tapa.core:292] parsing krnl_partialKnn_wrapper_7
+I0514 00:19:47.188 tapa.core:296] populating krnl_partialKnn_wrapper_7
+I0514 00:19:47.188 tapa.core:292] parsing krnl_partialKnn_wrapper_8
+I0514 00:19:47.188 tapa.core:296] populating krnl_partialKnn_wrapper_8
+I0514 00:19:47.188 tapa.core:292] parsing krnl_partialKnn_wrapper_9
+I0514 00:19:47.189 tapa.core:296] populating krnl_partialKnn_wrapper_9
+I0514 00:19:47.189 tapa.core:292] parsing Knn_1
+I0514 00:19:47.190 tapa.core:296] populating Knn_1
+I0514 00:19:47.195 tapa.core:300] instrumenting upper-level RTL
+I0514 00:19:47.195 tapa.core:336] Running floorplanning
+I0514 00:19:47.195 tapa.floorplan:47] mulit_fpga from floorplan
+I0514 00:19:47.195 tapa.floorplan:48] None
+I0514 00:19:47.196 tapa.task_graph:36] L1_out_dist[0]
+I0514 00:19:47.197 tapa.task_graph:37] get_instance krnl_globalSort_L1_L2_0
+I0514 00:19:47.197 tapa.task_graph:38] get_instance Stream2Mmap_out_0
+I0514 00:19:47.197 tapa.task_graph:36] L1_out_dist[1]
+I0514 00:19:47.198 tapa.task_graph:37] get_instance krnl_globalSort_L1_L2_1
+I0514 00:19:47.198 tapa.task_graph:38] get_instance Stream2Mmap_out_1
+I0514 00:19:47.198 tapa.task_graph:36] L1_out_dist[2]
+I0514 00:19:47.198 tapa.task_graph:37] get_instance krnl_globalSort_L1_L2_2
+I0514 00:19:47.198 tapa.task_graph:38] get_instance Stream2Mmap_out_2
+I0514 00:19:47.199 tapa.task_graph:36] L1_out_dist[3]
+I0514 00:19:47.199 tapa.task_graph:37] get_instance krnl_globalSort_L1_L2_3
+I0514 00:19:47.199 tapa.task_graph:38] get_instance Stream2Mmap_out_3
+I0514 00:19:47.199 tapa.task_graph:36] L1_out_id[0]
+I0514 00:19:47.199 tapa.task_graph:37] get_instance krnl_globalSort_L1_L2_0
+I0514 00:19:47.200 tapa.task_graph:38] get_instance Stream2Mmap_out_id_0
+I0514 00:19:47.200 tapa.task_graph:36] L1_out_id[1]
+I0514 00:19:47.200 tapa.task_graph:37] get_instance krnl_globalSort_L1_L2_1
+I0514 00:19:47.200 tapa.task_graph:38] get_instance Stream2Mmap_out_id_1
+I0514 00:19:47.200 tapa.task_graph:36] L1_out_id[2]
+I0514 00:19:47.200 tapa.task_graph:37] get_instance krnl_globalSort_L1_L2_2
+I0514 00:19:47.201 tapa.task_graph:38] get_instance Stream2Mmap_out_id_2
+I0514 00:19:47.201 tapa.task_graph:36] L1_out_id[3]
+I0514 00:19:47.201 tapa.task_graph:37] get_instance krnl_globalSort_L1_L2_3
+I0514 00:19:47.201 tapa.task_graph:38] get_instance Stream2Mmap_out_id_3
+I0514 00:19:47.201 tapa.task_graph:36] out_dist[0]
+I0514 00:19:47.201 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_0_0
+I0514 00:19:47.201 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0514 00:19:47.202 tapa.task_graph:36] out_dist[10]
+I0514 00:19:47.202 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_10_0
+I0514 00:19:47.202 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+I0514 00:19:47.202 tapa.task_graph:36] out_dist[11]
+I0514 00:19:47.202 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_11_0
+I0514 00:19:47.202 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+I0514 00:19:47.202 tapa.task_graph:36] out_dist[1]
+I0514 00:19:47.202 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_1_0
+I0514 00:19:47.202 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0514 00:19:47.203 tapa.task_graph:36] out_dist[2]
+I0514 00:19:47.203 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_2_0
+I0514 00:19:47.203 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0514 00:19:47.203 tapa.task_graph:36] out_dist[3]
+I0514 00:19:47.203 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_3_0
+I0514 00:19:47.203 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0514 00:19:47.203 tapa.task_graph:36] out_dist[4]
+I0514 00:19:47.203 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_4_0
+I0514 00:19:47.204 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0514 00:19:47.204 tapa.task_graph:36] out_dist[5]
+I0514 00:19:47.204 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_5_0
+I0514 00:19:47.204 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0514 00:19:47.204 tapa.task_graph:36] out_dist[6]
+I0514 00:19:47.204 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_6_0
+I0514 00:19:47.204 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0514 00:19:47.204 tapa.task_graph:36] out_dist[7]
+I0514 00:19:47.205 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_7_0
+I0514 00:19:47.205 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0514 00:19:47.205 tapa.task_graph:36] out_dist[8]
+I0514 00:19:47.205 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_8_0
+I0514 00:19:47.205 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0514 00:19:47.205 tapa.task_graph:36] out_dist[9]
+I0514 00:19:47.205 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_9_0
+I0514 00:19:47.205 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+I0514 00:19:47.205 tapa.task_graph:36] out_id[0]
+I0514 00:19:47.206 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_0_0
+I0514 00:19:47.206 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0514 00:19:47.206 tapa.task_graph:36] out_id[10]
+I0514 00:19:47.206 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_10_0
+I0514 00:19:47.206 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+I0514 00:19:47.206 tapa.task_graph:36] out_id[11]
+I0514 00:19:47.206 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_11_0
+I0514 00:19:47.206 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+I0514 00:19:47.207 tapa.task_graph:36] out_id[1]
+I0514 00:19:47.207 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_1_0
+I0514 00:19:47.207 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0514 00:19:47.207 tapa.task_graph:36] out_id[2]
+I0514 00:19:47.207 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_2_0
+I0514 00:19:47.207 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0514 00:19:47.207 tapa.task_graph:36] out_id[3]
+I0514 00:19:47.207 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_3_0
+I0514 00:19:47.207 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0514 00:19:47.208 tapa.task_graph:36] out_id[4]
+I0514 00:19:47.208 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_4_0
+I0514 00:19:47.208 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0514 00:19:47.208 tapa.task_graph:36] out_id[5]
+I0514 00:19:47.208 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_5_0
+I0514 00:19:47.208 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0514 00:19:47.208 tapa.task_graph:36] out_id[6]
+I0514 00:19:47.208 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_6_0
+I0514 00:19:47.208 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0514 00:19:47.208 tapa.task_graph:36] out_id[7]
+I0514 00:19:47.209 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_7_0
+I0514 00:19:47.209 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0514 00:19:47.209 tapa.task_graph:36] out_id[8]
+I0514 00:19:47.209 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_8_0
+I0514 00:19:47.209 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0514 00:19:47.209 tapa.task_graph:36] out_id[9]
+I0514 00:19:47.209 tapa.task_graph:37] get_instance krnl_partialKnn_wrapper_9_0
+I0514 00:19:47.209 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+W0514 00:19:47.209 tapa.task_graph:83] temp11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.210 tapa.task_graph:83] temp3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.211 tapa.task_graph:83] temp6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] temp8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] temp8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] L3_out_dist is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] L3_out_id is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] in_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] in_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] in_10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] in_11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] in_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.212 tapa.task_graph:83] in_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.213 tapa.task_graph:83] in_4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.213 tapa.task_graph:83] in_5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.213 tapa.task_graph:83] in_6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.213 tapa.task_graph:83] in_7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.213 tapa.task_graph:83] in_8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0514 00:19:47.213 tapa.task_graph:83] in_9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+I0514 00:19:47.215 tapa.AutoBridge.src.autobridge.main:20] multi_fpga from autobridge main
+I0514 00:19:47.215 tapa.AutoBridge.src.autobridge.main:21] None
+
+*********************************************
+***         Starting AutoBridge           ***
+*********************************************
+
+Version: 0.0.20220512.dev1
+
+Running details logged to /home/ubuntu/tapa_m/regression/knn/src/knn_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/autobridge/autobridge-May-14-2023-00:19.log
+
+----------------------------------------------
+
+*** CRITICAL WARNING: Gurobi solver not detected. Floorplanning may take extra time. 
+The Gurobi solver is much faster than the open-source solver, and it is free for academia. 
+  - Register and download the Gurobi Optimizer at https://www.gurobi.com/downloads/gurobi-optimizer-eula/
+  - Unzip the package to your desired directory
+  - Obtain an academic license at https://www.gurobi.com/downloads/end-user-license-agreement-academic/
+  - Set environment variables GUROBI_HOME and GRB_LICENSE_FILE
+      export GUROBI_HOME=[WHERE-YOU-INSTALL] 
+      export GRB_LICENSE_FILE=[ADDRESS-OF-YOUR-LICENSE-FILE] 
+      export PATH="${PATH}:${GUROBI_HOME}/bin" 
+      export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib" 
+
+Generate task graph visualization in graphviz format: /home/ubuntu/tapa_m/regression/knn/src/knn_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/autobridge/task_graph.dot
+we are in get_floorplan
+Adjust the min_area_limit to the actual usage of the design: 0.720000
+
+Floorplan parameters:
+
+  floorplan_strategy: QUICK_FLOORPLANNING
+  threshold for switching to iterative partitioning: 200
+  floorplan_opt_priority: AREA_PRIORITIZED
+  min_area_limit: 0.720000
+  max_area_limit: 0.850000
+  min_slr_width_limit: 10000
+  max_slr_width_limit: 15000
+  max_search_time per solving: 600
+
+Start floorplanning, please check the log for the progress...
+
+The total area of the design:
+  BRAM: 1536 / 3504 = 43.8%
+  DSP: 705 / 8496 = 8.3%
+  FF: 986456 / 2331840 = 42.3%
+  LUT: 845016.0 / 1165920 = 72.5%
+  URAM: 72 / 960 = 7.5%
+
+we chose quick floorplanning and came here
+hello from autobridge
+helloo
+from analyze
+('xcu280', 'xcu250', 'xcu55c')
+total wire length: 47048
+total wire length: 74968
+SLR boundary 0 - 1 has 12861 crossings
+SLR boundary 1 - 2 has 5881 crossings
+SLR boundary 2 - 3 has 0 crossings
+total wire length: 124616
+SLR boundary 0 - 1 has 12861 crossings
+SLR boundary 1 - 2 has 5881 crossings
+SLR boundary 2 - 3 has 0 crossings
+{<autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e7f0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e820>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e850>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e6a0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e700>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e730>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e280>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e220>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277186d7c0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893fd0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893340>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893eb0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f27718939a0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f27718936a0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174adf0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a520>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a430>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a460>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a490>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a4c0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a4f0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a340>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a400>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a3a0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a370>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a580>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a250>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a2b0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a2e0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a310>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a160>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a1c0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a1f0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a220>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a070>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a700>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a0d0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277174a100>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277174a820>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e760>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e670>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e1c0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e1f0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277186d6a0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277186dc40>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277198f3a0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108c280>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277198f370>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108c280>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277198f9a0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893c70>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108c280>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893550>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108c280>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893430>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893640>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108c280>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893e80>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108c280>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893c40>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893f40>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108c280>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893af0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108c280>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893130>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d370>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277173e160>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277186dd00>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277186db20>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277186dd30>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277198f310>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d3a0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f277198f460>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d3a0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893f10>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f27718932b0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f27718938e0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d3a0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893250>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d3a0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893b50>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893ee0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893cd0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d3a0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893910>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d3a0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893070>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893820>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d2e0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f2771893d90>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d3a0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f27718934c0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f277108d3a0>}
+TASK_VERTEX_Mmap2Stream_id_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Mmap2Stream_in_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Mmap2Stream_out_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Mmap2Stream_out_id_0
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+TASK_VERTEX_Stream2Mmap_id_0
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+TASK_VERTEX_Stream2Mmap_in_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Stream2Mmap_out_1
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+TASK_VERTEX_Stream2Mmap_out_id_2
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+TASK_VERTEX_Stream2Mmap_out_id_3
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_in_0_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_1_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_2_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_3_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_4_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_5_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_6_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_7_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_8_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_9_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_10_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_in_11_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_L3_out_dist_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_L3_out_id_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp1_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp2_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp3_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp4_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp5_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp6_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp7_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp8_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp9_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp10_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp11_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_temp12_external_controller
+CLOCKREGION_X4Y0:CLOCKREGION_X7Y3
+PORT_VERTEX_HBM_read_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_HBM_write_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Stream2Mmap_out_0
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+TASK_VERTEX_Stream2Mmap_out_2
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+TASK_VERTEX_Stream2Mmap_out_id_0
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+TASK_VERTEX_Stream2Mmap_out_id_1
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+TASK_VERTEX_krnl_globalSort_L1_L2_0
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+TASK_VERTEX_krnl_globalSort_L1_L2_2
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+TASK_VERTEX_krnl_partialKnn_wrapper_0_0
+CLOCKREGION_X0Y4:CLOCKREGION_X3Y7
+TASK_VERTEX_krnl_partialKnn_wrapper_1_0
+CLOCKREGION_X0Y4:CLOCKREGION_X3Y7
+TASK_VERTEX_krnl_partialKnn_wrapper_2_0
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+TASK_VERTEX_krnl_partialKnn_wrapper_6_0
+CLOCKREGION_X0Y4:CLOCKREGION_X3Y7
+TASK_VERTEX_krnl_partialKnn_wrapper_7_0
+CLOCKREGION_X0Y4:CLOCKREGION_X3Y7
+TASK_VERTEX_krnl_partialKnn_wrapper_8_0
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+ASYNC_MMAP_VERTEX_in_0__m_axi
+CLOCKREGION_X0Y4:CLOCKREGION_X3Y7
+ASYNC_MMAP_VERTEX_in_1__m_axi
+CLOCKREGION_X0Y4:CLOCKREGION_X3Y7
+ASYNC_MMAP_VERTEX_in_2__m_axi
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+ASYNC_MMAP_VERTEX_in_6__m_axi
+CLOCKREGION_X0Y4:CLOCKREGION_X3Y7
+ASYNC_MMAP_VERTEX_in_7__m_axi
+CLOCKREGION_X0Y4:CLOCKREGION_X3Y7
+ASYNC_MMAP_VERTEX_in_8__m_axi
+CLOCKREGION_X4Y4:CLOCKREGION_X7Y7
+TASK_VERTEX_Stream2Mmap_out_3
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+TASK_VERTEX_krnl_globalSort_L1_L2_1
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+TASK_VERTEX_krnl_globalSort_L1_L2_3
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+TASK_VERTEX_krnl_globalSort_L3_0
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+TASK_VERTEX_krnl_partialKnn_wrapper_10_0
+CLOCKREGION_X0Y8:CLOCKREGION_X3Y11
+TASK_VERTEX_krnl_partialKnn_wrapper_11_0
+CLOCKREGION_X0Y8:CLOCKREGION_X3Y11
+TASK_VERTEX_krnl_partialKnn_wrapper_3_0
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+TASK_VERTEX_krnl_partialKnn_wrapper_4_0
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+TASK_VERTEX_krnl_partialKnn_wrapper_5_0
+CLOCKREGION_X0Y8:CLOCKREGION_X3Y11
+TASK_VERTEX_krnl_partialKnn_wrapper_9_0
+CLOCKREGION_X0Y8:CLOCKREGION_X3Y11
+ASYNC_MMAP_VERTEX_L3_out_dist__m_axi
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+ASYNC_MMAP_VERTEX_L3_out_id__m_axi
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+ASYNC_MMAP_VERTEX_in_10__m_axi
+CLOCKREGION_X0Y8:CLOCKREGION_X3Y11
+ASYNC_MMAP_VERTEX_in_11__m_axi
+CLOCKREGION_X0Y8:CLOCKREGION_X3Y11
+ASYNC_MMAP_VERTEX_in_3__m_axi
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+ASYNC_MMAP_VERTEX_in_4__m_axi
+CLOCKREGION_X4Y8:CLOCKREGION_X7Y11
+ASYNC_MMAP_VERTEX_in_5__m_axi
+CLOCKREGION_X0Y8:CLOCKREGION_X3Y11
+ASYNC_MMAP_VERTEX_in_9__m_axi
+CLOCKREGION_X0Y8:CLOCKREGION_X3Y11
+Floorplan finishes
+
++---------------------+----------+---------+--------+---------+----------+
+|      Slot Name      | BRAM (%) | DSP (%) | FF (%) | LUT (%) | URAM (%) |
++---------------------+----------+---------+--------+---------+----------+
+|  CR_X0Y0_To_CR_X3Y3 |   0.0    |   0.0   |  39.4  |   70.8  |   0.0    |
+|  CR_X4Y0_To_CR_X7Y3 |   0.0    |   0.0   |  42.4  |   77.1  |   0.0    |
+|  CR_X4Y4_To_CR_X7Y7 |   66.7   |   8.8   |  41.4  |   70.0  |   6.2    |
+|  CR_X0Y4_To_CR_X3Y7 |   66.7   |   15.1  |  45.6  |   77.0  |   18.8   |
+| CR_X4Y8_To_CR_X7Y11 |   66.7   |   9.2   |  38.3  |   60.3  |   6.2    |
+| CR_X0Y8_To_CR_X3Y11 |   66.7   |   15.1  |  45.6  |   77.0  |   18.8   |
++---------------------+----------+---------+--------+---------+----------+
+
+The device could be partitioned into 6 slots.
+
+The number of wires between slots are:
+
+CR_X4Y4_To_CR_X7Y7 <--> CR_X4Y8_To_CR_X7Y11 : 2839
+CR_X4Y0_To_CR_X7Y3 <--> CR_X4Y4_To_CR_X7Y7 : 4933
+CR_X0Y4_To_CR_X3Y7 <--> CR_X4Y4_To_CR_X7Y7 : 3414
+CR_X0Y8_To_CR_X3Y11 <--> CR_X4Y8_To_CR_X7Y11 : 1570
+CR_X0Y0_To_CR_X3Y3 <--> CR_X4Y0_To_CR_X7Y3 : 7928
+CR_X0Y0_To_CR_X3Y3 <--> CR_X0Y4_To_CR_X3Y7 : 7928
+CR_X0Y4_To_CR_X3Y7 <--> CR_X0Y8_To_CR_X3Y11 : 3042
+
+*********************************************
+***          AutoBridge Finishes          ***
+*********************************************
+
+I0514 00:19:49.174 tapa.floorplan:305] vertex TASK_VERTEX_Mmap2Stream_id_0
+I0514 00:19:49.175 tapa.floorplan:306] properties {'module': 'Mmap2Stream_id', 'instance': 'Mmap2Stream_id_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 18703, 'LUT': 18431, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.175 tapa.floorplan:305] vertex TASK_VERTEX_Mmap2Stream_in_0
+I0514 00:19:49.175 tapa.floorplan:306] properties {'module': 'Mmap2Stream_in', 'instance': 'Mmap2Stream_in_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 18703, 'LUT': 18431, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.175 tapa.floorplan:305] vertex TASK_VERTEX_Mmap2Stream_out_0
+I0514 00:19:49.175 tapa.floorplan:306] properties {'module': 'Mmap2Stream_out', 'instance': 'Mmap2Stream_out_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 33947, 'LUT': 36557, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.175 tapa.floorplan:305] vertex TASK_VERTEX_Mmap2Stream_out_id_0
+I0514 00:19:49.175 tapa.floorplan:306] properties {'module': 'Mmap2Stream_out_id', 'instance': 'Mmap2Stream_out_id_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 33947, 'LUT': 36557, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.175 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_id_0
+I0514 00:19:49.175 tapa.floorplan:306] properties {'module': 'Stream2Mmap_id', 'instance': 'Stream2Mmap_id_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 11419, 'LUT': 12910, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.175 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_in_0
+I0514 00:19:49.175 tapa.floorplan:306] properties {'module': 'Stream2Mmap_in', 'instance': 'Stream2Mmap_in_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 11419, 'LUT': 12910, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.176 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_out_0
+I0514 00:19:49.176 tapa.floorplan:306] properties {'module': 'Stream2Mmap_out', 'instance': 'Stream2Mmap_out_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 5739, 'LUT': 6494, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.176 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_out_1
+I0514 00:19:49.176 tapa.floorplan:306] properties {'module': 'Stream2Mmap_out', 'instance': 'Stream2Mmap_out_1', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 5739, 'LUT': 6494, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.176 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_out_2
+I0514 00:19:49.176 tapa.floorplan:306] properties {'module': 'Stream2Mmap_out', 'instance': 'Stream2Mmap_out_2', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 5739, 'LUT': 6494, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.176 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_out_3
+I0514 00:19:49.176 tapa.floorplan:306] properties {'module': 'Stream2Mmap_out', 'instance': 'Stream2Mmap_out_3', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 5739, 'LUT': 6494, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.176 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_out_id_0
+I0514 00:19:49.176 tapa.floorplan:306] properties {'module': 'Stream2Mmap_out_id', 'instance': 'Stream2Mmap_out_id_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 5739, 'LUT': 6494, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.176 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_out_id_1
+I0514 00:19:49.176 tapa.floorplan:306] properties {'module': 'Stream2Mmap_out_id', 'instance': 'Stream2Mmap_out_id_1', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 5739, 'LUT': 6494, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.177 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_out_id_2
+I0514 00:19:49.177 tapa.floorplan:306] properties {'module': 'Stream2Mmap_out_id', 'instance': 'Stream2Mmap_out_id_2', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 5739, 'LUT': 6494, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.177 tapa.floorplan:305] vertex TASK_VERTEX_Stream2Mmap_out_id_3
+I0514 00:19:49.177 tapa.floorplan:306] properties {'module': 'Stream2Mmap_out_id', 'instance': 'Stream2Mmap_out_id_3', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 5739, 'LUT': 6494, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.177 tapa.floorplan:305] vertex TASK_VERTEX_krnl_globalSort_L1_L2_0
+I0514 00:19:49.177 tapa.floorplan:306] properties {'module': 'krnl_globalSort_L1_L2', 'instance': 'krnl_globalSort_L1_L2_0', 'area': {'BRAM': 0, 'DSP': 1, 'FF': 7304, 'LUT': 1535, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.177 tapa.floorplan:305] vertex TASK_VERTEX_krnl_globalSort_L1_L2_1
+I0514 00:19:49.177 tapa.floorplan:306] properties {'module': 'krnl_globalSort_L1_L2', 'instance': 'krnl_globalSort_L1_L2_1', 'area': {'BRAM': 0, 'DSP': 1, 'FF': 7304, 'LUT': 1535, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.177 tapa.floorplan:305] vertex TASK_VERTEX_krnl_globalSort_L1_L2_2
+I0514 00:19:49.177 tapa.floorplan:306] properties {'module': 'krnl_globalSort_L1_L2', 'instance': 'krnl_globalSort_L1_L2_2', 'area': {'BRAM': 0, 'DSP': 1, 'FF': 7304, 'LUT': 1535, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.177 tapa.floorplan:305] vertex TASK_VERTEX_krnl_globalSort_L1_L2_3
+I0514 00:19:49.177 tapa.floorplan:306] properties {'module': 'krnl_globalSort_L1_L2', 'instance': 'krnl_globalSort_L1_L2_3', 'area': {'BRAM': 0, 'DSP': 1, 'FF': 7304, 'LUT': 1535, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.178 tapa.floorplan:305] vertex TASK_VERTEX_krnl_globalSort_L3_0
+I0514 00:19:49.178 tapa.floorplan:306] properties {'module': 'krnl_globalSort_L3', 'instance': 'krnl_globalSort_L3_0', 'area': {'BRAM': 0, 'DSP': 5, 'FF': 6176, 'LUT': 1468, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.178 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_0_0
+I0514 00:19:49.178 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_0', 'instance': 'krnl_partialKnn_wrapper_0_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0514 00:19:49.178 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_1_0
+I0514 00:19:49.178 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_1', 'instance': 'krnl_partialKnn_wrapper_1_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0514 00:19:49.178 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_10_0
+I0514 00:19:49.178 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_10', 'instance': 'krnl_partialKnn_wrapper_10_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y8_To_CR_X3Y11', 'SLR': 2}
+I0514 00:19:49.178 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_11_0
+I0514 00:19:49.178 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_11', 'instance': 'krnl_partialKnn_wrapper_11_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y8_To_CR_X3Y11', 'SLR': 2}
+I0514 00:19:49.178 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_2_0
+I0514 00:19:49.178 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_2', 'instance': 'krnl_partialKnn_wrapper_2_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.179 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_3_0
+I0514 00:19:49.179 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_3', 'instance': 'krnl_partialKnn_wrapper_3_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.179 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_4_0
+I0514 00:19:49.179 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_4', 'instance': 'krnl_partialKnn_wrapper_4_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.179 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_5_0
+I0514 00:19:49.179 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_5', 'instance': 'krnl_partialKnn_wrapper_5_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y8_To_CR_X3Y11', 'SLR': 2}
+I0514 00:19:49.179 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_6_0
+I0514 00:19:49.179 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_6', 'instance': 'krnl_partialKnn_wrapper_6_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0514 00:19:49.179 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_7_0
+I0514 00:19:49.179 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_7', 'instance': 'krnl_partialKnn_wrapper_7_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0514 00:19:49.179 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_8_0
+I0514 00:19:49.179 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_8', 'instance': 'krnl_partialKnn_wrapper_8_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.180 tapa.floorplan:305] vertex TASK_VERTEX_krnl_partialKnn_wrapper_9_0
+I0514 00:19:49.180 tapa.floorplan:306] properties {'module': 'krnl_partialKnn_wrapper_9', 'instance': 'krnl_partialKnn_wrapper_9_0', 'area': {'BRAM': 128, 'DSP': 58, 'FF': 49125, 'LUT': 40527, 'URAM': 6}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y8_To_CR_X3Y11', 'SLR': 2}
+I0514 00:19:49.180 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_L3_out_dist__m_axi
+I0514 00:19:49.180 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'L3_out_dist__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 377, 'LUT': 786, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.180 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_L3_out_id__m_axi
+I0514 00:19:49.180 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'L3_out_id__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 377, 'LUT': 786, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.180 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_0__m_axi
+I0514 00:19:49.180 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_0__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0514 00:19:49.180 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_1__m_axi
+I0514 00:19:49.180 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_1__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0514 00:19:49.180 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_10__m_axi
+I0514 00:19:49.180 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_10__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y8_To_CR_X3Y11', 'SLR': 2}
+I0514 00:19:49.181 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_11__m_axi
+I0514 00:19:49.181 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_11__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y8_To_CR_X3Y11', 'SLR': 2}
+I0514 00:19:49.181 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_2__m_axi
+I0514 00:19:49.181 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_2__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.181 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_3__m_axi
+I0514 00:19:49.181 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_3__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.181 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_4__m_axi
+I0514 00:19:49.181 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_4__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0514 00:19:49.181 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_5__m_axi
+I0514 00:19:49.181 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_5__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y8_To_CR_X3Y11', 'SLR': 2}
+I0514 00:19:49.181 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_6__m_axi
+I0514 00:19:49.181 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_6__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0514 00:19:49.182 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_7__m_axi
+I0514 00:19:49.182 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_7__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0514 00:19:49.182 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_8__m_axi
+I0514 00:19:49.182 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_8__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0514 00:19:49.182 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_in_9__m_axi
+I0514 00:19:49.182 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'in_9__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 371, 'LUT': 1225, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y8_To_CR_X3Y11', 'SLR': 2}
+I0514 00:19:49.182 tapa.floorplan:305] vertex PORT_VERTEX_in_0_external_controller
+I0514 00:19:49.182 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_0', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 0, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.182 tapa.floorplan:305] vertex PORT_VERTEX_in_1_external_controller
+I0514 00:19:49.182 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_1', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 1, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.182 tapa.floorplan:305] vertex PORT_VERTEX_in_2_external_controller
+I0514 00:19:49.182 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_2', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 2, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.183 tapa.floorplan:305] vertex PORT_VERTEX_in_3_external_controller
+I0514 00:19:49.183 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_3', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 3, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.183 tapa.floorplan:305] vertex PORT_VERTEX_in_4_external_controller
+I0514 00:19:49.183 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_4', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 4, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.183 tapa.floorplan:305] vertex PORT_VERTEX_in_5_external_controller
+I0514 00:19:49.183 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_5', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 5, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.183 tapa.floorplan:305] vertex PORT_VERTEX_in_6_external_controller
+I0514 00:19:49.183 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_6', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 6, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.183 tapa.floorplan:305] vertex PORT_VERTEX_in_7_external_controller
+I0514 00:19:49.183 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_7', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 7, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.183 tapa.floorplan:305] vertex PORT_VERTEX_in_8_external_controller
+I0514 00:19:49.183 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_8', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 8, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.184 tapa.floorplan:305] vertex PORT_VERTEX_in_9_external_controller
+I0514 00:19:49.184 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_9', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 9, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.184 tapa.floorplan:305] vertex PORT_VERTEX_in_10_external_controller
+I0514 00:19:49.184 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_10', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 10, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.184 tapa.floorplan:305] vertex PORT_VERTEX_in_11_external_controller
+I0514 00:19:49.184 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'in_11', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 11, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.184 tapa.floorplan:305] vertex PORT_VERTEX_L3_out_dist_external_controller
+I0514 00:19:49.184 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'L3_out_dist', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 18, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.184 tapa.floorplan:305] vertex PORT_VERTEX_L3_out_id_external_controller
+I0514 00:19:49.184 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'L3_out_id', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 19, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.184 tapa.floorplan:305] vertex PORT_VERTEX_temp1_external_controller
+I0514 00:19:49.184 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp1', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 20, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.185 tapa.floorplan:305] vertex PORT_VERTEX_temp2_external_controller
+I0514 00:19:49.185 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp2', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 21, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.185 tapa.floorplan:305] vertex PORT_VERTEX_temp3_external_controller
+I0514 00:19:49.185 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp3', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 22, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.185 tapa.floorplan:305] vertex PORT_VERTEX_temp4_external_controller
+I0514 00:19:49.185 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp4', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 23, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.185 tapa.floorplan:305] vertex PORT_VERTEX_temp5_external_controller
+I0514 00:19:49.185 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp5', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 24, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.185 tapa.floorplan:305] vertex PORT_VERTEX_temp6_external_controller
+I0514 00:19:49.185 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp6', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 25, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.185 tapa.floorplan:305] vertex PORT_VERTEX_temp7_external_controller
+I0514 00:19:49.185 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp7', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 26, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.186 tapa.floorplan:305] vertex PORT_VERTEX_temp8_external_controller
+I0514 00:19:49.186 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp8', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 27, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.186 tapa.floorplan:305] vertex PORT_VERTEX_temp9_external_controller
+I0514 00:19:49.186 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp9', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 28, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.186 tapa.floorplan:305] vertex PORT_VERTEX_temp10_external_controller
+I0514 00:19:49.186 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp10', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 29, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.186 tapa.floorplan:305] vertex PORT_VERTEX_temp11_external_controller
+I0514 00:19:49.186 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp11', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 30, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.186 tapa.floorplan:305] vertex PORT_VERTEX_temp12_external_controller
+I0514 00:19:49.186 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'temp12', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 31, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0514 00:19:49.186 tapa.floorplan:305] vertex PORT_VERTEX_HBM_read_external_controller
+I0514 00:19:49.186 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'HBM_read', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 14, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.187 tapa.floorplan:305] vertex PORT_VERTEX_HBM_write_external_controller
+I0514 00:19:49.187 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'HBM_write', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 15, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0514 00:19:49.188 tapa.floorplan:114] generate the floorplan constraint at constraint.tcl
+I0514 00:19:49.189 tapa.core:465] top task register level set to 3
+I0514 00:19:49.189 tapa.core:469] instrumenting top-level RTL
+I0514 00:19:49.225 tapa.core:524]   instantiating FIFOs in Knn_1
+I0514 00:19:49.226 tapa.core:537]     instantiating Knn_1.L1_out_dist[0]
+I0514 00:19:49.226 tapa.core:537]     instantiating Knn_1.L1_out_dist[1]
+I0514 00:19:49.227 tapa.core:537]     instantiating Knn_1.L1_out_dist[2]
+I0514 00:19:49.227 tapa.core:537]     instantiating Knn_1.L1_out_dist[3]
+I0514 00:19:49.227 tapa.core:537]     instantiating Knn_1.L1_out_id[0]
+I0514 00:19:49.228 tapa.core:537]     instantiating Knn_1.L1_out_id[1]
+I0514 00:19:49.228 tapa.core:537]     instantiating Knn_1.L1_out_id[2]
+I0514 00:19:49.228 tapa.core:537]     instantiating Knn_1.L1_out_id[3]
+I0514 00:19:49.229 tapa.core:537]     instantiating Knn_1.in_board_11
+I0514 00:19:49.229 tapa.core:537]     instantiating Knn_1.in_board_22
+I0514 00:19:49.230 tapa.core:537]     instantiating Knn_1.in_board_33
+I0514 00:19:49.230 tapa.core:537]     instantiating Knn_1.in_board_44
+I0514 00:19:49.230 tapa.core:537]     instantiating Knn_1.out_dist[0]
+I0514 00:19:49.231 tapa.core:537]     instantiating Knn_1.out_dist[10]
+I0514 00:19:49.231 tapa.core:537]     instantiating Knn_1.out_dist[11]
+I0514 00:19:49.231 tapa.core:537]     instantiating Knn_1.out_dist[1]
+I0514 00:19:49.232 tapa.core:537]     instantiating Knn_1.out_dist[2]
+I0514 00:19:49.232 tapa.core:537]     instantiating Knn_1.out_dist[3]
+I0514 00:19:49.233 tapa.core:537]     instantiating Knn_1.out_dist[4]
+I0514 00:19:49.233 tapa.core:537]     instantiating Knn_1.out_dist[5]
+I0514 00:19:49.233 tapa.core:537]     instantiating Knn_1.out_dist[6]
+I0514 00:19:49.234 tapa.core:537]     instantiating Knn_1.out_dist[7]
+I0514 00:19:49.234 tapa.core:537]     instantiating Knn_1.out_dist[8]
+I0514 00:19:49.235 tapa.core:537]     instantiating Knn_1.out_dist[9]
+I0514 00:19:49.235 tapa.core:537]     instantiating Knn_1.out_id[0]
+I0514 00:19:49.235 tapa.core:537]     instantiating Knn_1.out_id[10]
+I0514 00:19:49.236 tapa.core:537]     instantiating Knn_1.out_id[11]
+I0514 00:19:49.236 tapa.core:537]     instantiating Knn_1.out_id[1]
+I0514 00:19:49.236 tapa.core:537]     instantiating Knn_1.out_id[2]
+I0514 00:19:49.237 tapa.core:537]     instantiating Knn_1.out_id[3]
+I0514 00:19:49.237 tapa.core:537]     instantiating Knn_1.out_id[4]
+I0514 00:19:49.237 tapa.core:537]     instantiating Knn_1.out_id[5]
+I0514 00:19:49.238 tapa.core:537]     instantiating Knn_1.out_id[6]
+I0514 00:19:49.238 tapa.core:537]     instantiating Knn_1.out_id[7]
+I0514 00:19:49.238 tapa.core:537]     instantiating Knn_1.out_id[8]
+I0514 00:19:49.239 tapa.core:537]     instantiating Knn_1.out_id[9]
+I0514 00:19:49.239 tapa.core:503]   connecting Knn_1's children tasks
+I0514 00:19:49.266 tapa.task:435] 256
+I0514 00:19:49.443 tapa.task:435] 256
+I0514 00:19:49.445 tapa.task:435] 256
+I0514 00:19:49.446 tapa.task:435] 256
+I0514 00:19:49.447 tapa.task:435] 256
+I0514 00:19:49.449 tapa.task:435] 256
+I0514 00:19:49.450 tapa.task:435] 256
+I0514 00:19:49.451 tapa.task:435] 256
+I0514 00:19:49.453 tapa.task:435] 256
+I0514 00:19:49.486 tapa.task:435] 256
+I0514 00:19:49.488 tapa.task:435] 256
+I0514 00:19:49.489 tapa.task:435] 256
+I0514 00:19:49.633 tapa.core:811] Set the address width of async_mmap to 64
+I0514 00:19:50.083 tapa.core:473] generating report
+I0514 00:19:50.102 tapa.core:481] writing generated auxiliary RTL files
+I0514 00:19:50.103 tapa.core:489] packaging RTL code
+I0514 00:26:43.277 tapa.tapac:705] generate the v++ xo file at knn_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo
+I0514 00:26:43.278 tapa.bitstream:73] use the original connectivity configuration at /home/ubuntu/tapa_m/regression/knn/src/knn.ini in the v++ script
+I0514 00:26:43.278 tapa.tapac:723] generate the v++ script at knn_1.xilinx_u55c_gen3x16_xdma_3_202210_1.hw_generate_bitstream.sh
+Orbit 0:  1 5
+Orbit 1:  19 20
+Orbit 2:  21 22 30
+Orbit 3:  24 25
+Orbit 4:  27 28
+Orbit 5:  31 32
+Orbit 6:  33 34
+Orbit 7:  35 36 44
+Orbit 8:  38 39
+Orbit 9:  41 42
+Orbit 10:  45 46
+Orbit 11:  48 49
+Orbit 12:  51 52
+Orbit 13:  54 55 56
+Orbit 14:  67 68
+Orbit 15:  69 70

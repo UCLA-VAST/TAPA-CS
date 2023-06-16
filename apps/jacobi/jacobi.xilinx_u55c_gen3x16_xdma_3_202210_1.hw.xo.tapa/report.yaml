@@ -1,0 +1,111 @@
+schema: v0.0.20210922
+name: Jacobi
+performance:
+  source: hls
+  clock_period: '4.684'
+  critical_path:
+    Module6Func1:
+      source: hls
+      clock_period: '4.684'
+    Module6Func2:
+      source: hls
+      clock_period: '4.684'
+area:
+  source: hls
+  total:
+    BRAM_18K: 0
+    DSP: 18
+    FF: 6227
+    LUT: 7991
+    URAM: 0
+  breakdown:
+    Mmap2Stream:
+      count: 1
+      area:
+        source: hls
+        total:
+          BRAM_18K: 0
+          DSP: 0
+          FF: 975
+          LUT: 1500
+          URAM: 0
+    Module0Func:
+      count: 1
+      area:
+        source: hls
+        total:
+          BRAM_18K: 0
+          DSP: 0
+          FF: 73
+          LUT: 197
+          URAM: 0
+    Module1Func:
+      count: 6
+      area:
+        source: hls
+        total:
+          BRAM_18K: 0
+          DSP: 0
+          FF: 41
+          LUT: 197
+          URAM: 0
+    Module3Func1:
+      count: 1
+      area:
+        source: hls
+        total:
+          BRAM_18K: 0
+          DSP: 2
+          FF: 534
+          LUT: 567
+          URAM: 0
+    Module3Func2:
+      count: 1
+      area:
+        source: hls
+        total:
+          BRAM_18K: 0
+          DSP: 2
+          FF: 534
+          LUT: 567
+          URAM: 0
+    Module6Func1:
+      count: 1
+      area:
+        source: hls
+        total:
+          BRAM_18K: 0
+          DSP: 7
+          FF: 1239
+          LUT: 917
+          URAM: 0
+    Module6Func2:
+      count: 1
+      area:
+        source: hls
+        total:
+          BRAM_18K: 0
+          DSP: 7
+          FF: 1271
+          LUT: 947
+          URAM: 0
+    Module8Func:
+      count: 1
+      area:
+        source: hls
+        total:
+          BRAM_18K: 0
+          DSP: 0
+          FF: 73
+          LUT: 195
+          URAM: 0
+    Stream2Mmap:
+      count: 1
+      area:
+        source: hls
+        total:
+          BRAM_18K: 0
+          DSP: 0
+          FF: 1036
+          LUT: 1495
+          URAM: 0

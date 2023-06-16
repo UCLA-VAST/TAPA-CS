@@ -1,0 +1,245 @@
+
+*********************************************
+***         Starting AutoBridge           ***
+*********************************************
+
+Version: 0.0.20220512.dev1
+
+Running details logged to /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/autobridge/autobridge-May-02-2023-03:26.log
+
+----------------------------------------------
+
+*** CRITICAL WARNING: Gurobi solver not detected. Floorplanning may take extra time. 
+The Gurobi solver is much faster than the open-source solver, and it is free for academia. 
+  - Register and download the Gurobi Optimizer at https://www.gurobi.com/downloads/gurobi-optimizer-eula/
+  - Unzip the package to your desired directory
+  - Obtain an academic license at https://www.gurobi.com/downloads/end-user-license-agreement-academic/
+  - Set environment variables GUROBI_HOME and GRB_LICENSE_FILE
+      export GUROBI_HOME=[WHERE-YOU-INSTALL] 
+      export GRB_LICENSE_FILE=[ADDRESS-OF-YOUR-LICENSE-FILE] 
+      export PATH="${PATH}:${GUROBI_HOME}/bin" 
+      export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib" 
+
+Generate task graph visualization in graphviz format: /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/autobridge/task_graph.dot
+slot managers
+2
+
+Floorplan parameters:
+
+  number of FPGAs: 2
+  floorplan_strategy: QUICK_FLOORPLANNING
+  threshold for switching to iterative partitioning: 200
+  floorplan_opt_priority: AREA_PRIORITIZED
+  min_area_limit: 0.650000
+  max_area_limit: 0.850000
+  min_slr_width_limit: 10000
+  max_slr_width_limit: 15000
+  max_search_time per solving: 600
+
+Start floorplanning, please check the log for the progress...
+
+FPGA 1
+[INFO:Utilities:203] The pre-determined floorplanning is shown as below:
+[INFO:Utilities:205]     PORT_VERTEX_bank_0_t0_external_controller  =>  CR_X0Y0_To_CR_X3Y3
+[INFO:Utilities:205]     PORT_VERTEX_bank_0_t1_external_controller  =>  CR_X0Y0_To_CR_X3Y3
+[INFO:Utilities:177] The area of each vertex is listed as below.
+[INFO:Utilities:178] Note that the area of each vertex includes the area of all its in-bound FIFOs.
+[INFO:Utilities:180]     TASK_VERTEX_Mmap2Stream_0: BRAM: 0 DSP: 0 FF: 975 LUT: 1500 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module0Func_0: BRAM: 0 DSP: 0 FF: 95 LUT: 417.9375 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_0: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_1: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_2: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_3: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_4: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_5: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module3Func1_0: BRAM: 0 DSP: 2 FF: 569 LUT: 795.375 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module3Func2_0: BRAM: 0 DSP: 2 FF: 569 LUT: 801.5625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module6Func1_0: BRAM: 0 DSP: 7 FF: 1293 LUT: 1314.6875 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module6Func2_0: BRAM: 0 DSP: 7 FF: 1328 LUT: 1358.0 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module8Func_0: BRAM: 0 DSP: 0 FF: 96 LUT: 308.25 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Stream2Mmap_0: BRAM: 0 DSP: 0 FF: 1058 LUT: 1715.9375 URAM: 0
+[INFO:Utilities:180]     PORT_VERTEX_bank_0_t0_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+[INFO:Utilities:180]     PORT_VERTEX_bank_0_t1_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+The total area of the design:
+  BRAM: 0 / 3504 = 0.0%
+  DSP: 18 / 8496 = 0.2%
+  FF: 19289 / 2331840 = 0.8%
+  LUT: 19712.125 / 1165920 = 1.7%
+  URAM: 0 / 960 = 0.0%
+
+FPGA 2
+[INFO:Utilities:203] The pre-determined floorplanning is shown as below:
+[INFO:Utilities:205]     PORT_VERTEX_bank_0_t0_external_controller  =>  CR_X0Y0_To_CR_X3Y3
+[INFO:Utilities:205]     PORT_VERTEX_bank_0_t1_external_controller  =>  CR_X0Y0_To_CR_X3Y3
+[INFO:Utilities:177] The area of each vertex is listed as below.
+[INFO:Utilities:178] Note that the area of each vertex includes the area of all its in-bound FIFOs.
+[INFO:Utilities:180]     TASK_VERTEX_Mmap2Stream_0: BRAM: 0 DSP: 0 FF: 975 LUT: 1500 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module0Func_0: BRAM: 0 DSP: 0 FF: 95 LUT: 417.9375 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_0: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_1: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_2: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_3: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_4: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module1Func_5: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module3Func1_0: BRAM: 0 DSP: 2 FF: 569 LUT: 795.375 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module3Func2_0: BRAM: 0 DSP: 2 FF: 569 LUT: 801.5625 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module6Func1_0: BRAM: 0 DSP: 7 FF: 1293 LUT: 1314.6875 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module6Func2_0: BRAM: 0 DSP: 7 FF: 1328 LUT: 1358.0 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Module8Func_0: BRAM: 0 DSP: 0 FF: 96 LUT: 308.25 URAM: 0
+[INFO:Utilities:180]     TASK_VERTEX_Stream2Mmap_0: BRAM: 0 DSP: 0 FF: 1058 LUT: 1715.9375 URAM: 0
+[INFO:Utilities:180]     PORT_VERTEX_bank_0_t0_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+[INFO:Utilities:180]     PORT_VERTEX_bank_0_t1_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+The total area of the design:
+  BRAM: 0 / 3504 = 0.0%
+  DSP: 18 / 8496 = 0.2%
+  FF: 19289 / 2331840 = 0.8%
+  LUT: 19712.125 / 1165920 = 1.7%
+  URAM: 0 / 960 = 0.0%
+
+dict_values([<autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469d00>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469cd0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469ee0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469070>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469280>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469220>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469250>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f01464691c0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f01464691f0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469bb0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469c10>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469c40>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469c70>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469ac0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469b20>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469b50>])
+TASK_VERTEX_Mmap2Stream_0
+TASK_VERTEX_Module0Func_0
+TASK_VERTEX_Module1Func_0
+TASK_VERTEX_Module1Func_1
+TASK_VERTEX_Module1Func_2
+TASK_VERTEX_Module1Func_3
+TASK_VERTEX_Module1Func_4
+TASK_VERTEX_Module1Func_5
+TASK_VERTEX_Module3Func1_0
+TASK_VERTEX_Module3Func2_0
+TASK_VERTEX_Module6Func1_0
+TASK_VERTEX_Module6Func2_0
+TASK_VERTEX_Module8Func_0
+TASK_VERTEX_Stream2Mmap_0
+PORT_VERTEX_bank_0_t0_external_controller
+PORT_VERTEX_bank_0_t1_external_controller
+num_vertices
+16
+floorplan strategy
+QUICK_FLOORPLANNING
+[INFO:IterativeBipartion:35] partition #1 in the direction: Dir.horizontal
+[INFO:Bipartition:88] Finish bipartition with a usage ratio of 0.7
+[INFO:Utilities:134] Slot CR_X0Y0_To_CR_X7Y7:
+[INFO:Utilities:138]   [BRAM]: 0.0% (0 / 2352)
+[INFO:Utilities:138]   [DSP ]: 0.3% (18 / 5616)
+[INFO:Utilities:138]   [FF  ]: 1.2% (19289 / 1567680)
+[INFO:Utilities:138]   [LUT ]: 2.5% (19712.125 / 783840)
+[INFO:Utilities:138]   [URAM]: 0.0% (0 / 640)
+[INFO:Utilities:141] Slot CR_X0Y0_To_CR_X7Y7 contains:
+[INFO:Utilities:144]   TASK_VERTEX_Mmap2Stream_0: BRAM: 0 DSP: 0 FF: 975 LUT: 1500 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module0Func_0: BRAM: 0 DSP: 0 FF: 95 LUT: 417.9375 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_0: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_1: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_2: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_3: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_4: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_5: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module3Func1_0: BRAM: 0 DSP: 2 FF: 569 LUT: 795.375 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module3Func2_0: BRAM: 0 DSP: 2 FF: 569 LUT: 801.5625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module6Func1_0: BRAM: 0 DSP: 7 FF: 1293 LUT: 1314.6875 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module6Func2_0: BRAM: 0 DSP: 7 FF: 1328 LUT: 1358.0 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module8Func_0: BRAM: 0 DSP: 0 FF: 96 LUT: 308.25 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Stream2Mmap_0: BRAM: 0 DSP: 0 FF: 1058 LUT: 1715.9375 URAM: 0
+[INFO:Utilities:144]   PORT_VERTEX_bank_0_t0_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+[INFO:Utilities:144]   PORT_VERTEX_bank_0_t1_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+total wire length: 0
+[INFO:Utilities:164] Skip logging SLR crossing because current slots include multiple SLRs
+[INFO:IterativeBipartion:35] partition #2 in the direction: Dir.horizontal
+[INFO:Bipartition:88] Finish bipartition with a usage ratio of 0.7
+[INFO:Utilities:134] Slot CR_X0Y0_To_CR_X7Y3:
+[INFO:Utilities:138]   [BRAM]: 0.0% (0 / 1200)
+[INFO:Utilities:138]   [DSP ]: 0.7% (18 / 2736)
+[INFO:Utilities:138]   [FF  ]: 2.4% (19289 / 803520)
+[INFO:Utilities:138]   [LUT ]: 4.9% (19712.125 / 401760)
+[INFO:Utilities:138]   [URAM]: 0.0% (0 / 320)
+[INFO:Utilities:141] Slot CR_X0Y0_To_CR_X7Y3 contains:
+[INFO:Utilities:144]   TASK_VERTEX_Mmap2Stream_0: BRAM: 0 DSP: 0 FF: 975 LUT: 1500 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module0Func_0: BRAM: 0 DSP: 0 FF: 95 LUT: 417.9375 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_0: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_1: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_2: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_3: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_4: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_5: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module3Func1_0: BRAM: 0 DSP: 2 FF: 569 LUT: 795.375 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module3Func2_0: BRAM: 0 DSP: 2 FF: 569 LUT: 801.5625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module6Func1_0: BRAM: 0 DSP: 7 FF: 1293 LUT: 1314.6875 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module6Func2_0: BRAM: 0 DSP: 7 FF: 1328 LUT: 1358.0 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module8Func_0: BRAM: 0 DSP: 0 FF: 96 LUT: 308.25 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Stream2Mmap_0: BRAM: 0 DSP: 0 FF: 1058 LUT: 1715.9375 URAM: 0
+[INFO:Utilities:144]   PORT_VERTEX_bank_0_t0_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+[INFO:Utilities:144]   PORT_VERTEX_bank_0_t1_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+total wire length: 0
+SLR boundary 0 - 1 has 0 crossings
+SLR boundary 1 - 2 has 0 crossings
+SLR boundary 2 - 3 has 0 crossings
+[INFO:IterativeBipartion:35] partition #3 in the direction: Dir.vertical
+[INFO:Bipartition:88] Finish bipartition with a usage ratio of 0.7
+[INFO:Utilities:134] Slot CR_X0Y0_To_CR_X3Y3:
+[INFO:Utilities:138]   [BRAM]: 0.0% (0 / 768)
+[INFO:Utilities:138]   [DSP ]: 1.2% (18 / 1440)
+[INFO:Utilities:138]   [FF  ]: 4.4% (19289 / 441600)
+[INFO:Utilities:138]   [LUT ]: 8.9% (19712.125 / 220800)
+[INFO:Utilities:138]   [URAM]: 0.0% (0 / 128)
+[INFO:Utilities:141] Slot CR_X0Y0_To_CR_X3Y3 contains:
+[INFO:Utilities:144]   TASK_VERTEX_Mmap2Stream_0: BRAM: 0 DSP: 0 FF: 975 LUT: 1500 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module0Func_0: BRAM: 0 DSP: 0 FF: 95 LUT: 417.9375 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_0: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_1: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_2: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_3: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_4: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module1Func_5: BRAM: 0 DSP: 0 FF: 51 LUT: 250.0625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module3Func1_0: BRAM: 0 DSP: 2 FF: 569 LUT: 795.375 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module3Func2_0: BRAM: 0 DSP: 2 FF: 569 LUT: 801.5625 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module6Func1_0: BRAM: 0 DSP: 7 FF: 1293 LUT: 1314.6875 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module6Func2_0: BRAM: 0 DSP: 7 FF: 1328 LUT: 1358.0 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Module8Func_0: BRAM: 0 DSP: 0 FF: 96 LUT: 308.25 URAM: 0
+[INFO:Utilities:144]   TASK_VERTEX_Stream2Mmap_0: BRAM: 0 DSP: 0 FF: 1058 LUT: 1715.9375 URAM: 0
+[INFO:Utilities:144]   PORT_VERTEX_bank_0_t0_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+[INFO:Utilities:144]   PORT_VERTEX_bank_0_t1_external_controller: BRAM: 0 DSP: 0 FF: 6500 LUT: 5000 URAM: 0
+total wire length: 0
+SLR boundary 0 - 1 has 0 crossings
+SLR boundary 1 - 2 has 0 crossings
+SLR boundary 2 - 3 has 0 crossings
+iterative bipartition v2s
+{<autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469d00>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469cd0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469ee0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469070>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469280>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469220>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469250>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f01464691c0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f01464691f0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469bb0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469c10>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469c40>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469c70>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469ac0>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469b20>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>, <autobridge.Opt.DataflowGraph.Vertex object at 0x7f0146469b50>: <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7f014637bdc0>}
+TASK_VERTEX_Mmap2Stream_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module0Func_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module1Func_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module1Func_1
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module1Func_2
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module1Func_3
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module1Func_4
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module1Func_5
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module3Func1_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module3Func2_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module6Func1_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module6Func2_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Module8Func_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+TASK_VERTEX_Stream2Mmap_0
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_bank_0_t0_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+PORT_VERTEX_bank_0_t1_external_controller
+CLOCKREGION_X0Y0:CLOCKREGION_X3Y3
+
+*** CRITICAL WARNING: AutoBridge fails to find a solution. Please refer to the log for details.
+
+*********************************************
+***          AutoBridge Finishes          ***
+*********************************************
+

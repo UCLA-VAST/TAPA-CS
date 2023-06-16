@@ -1,0 +1,8 @@
+/.cache/
+/.cmake-format
+/.vscode
+/build/
+/compile_commands.json
+work.out
+work.xo
+run/

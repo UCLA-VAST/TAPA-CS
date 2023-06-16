@@ -1,0 +1,530 @@
+{
+  "work_dir": "/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/autobridge",
+  "part_num": "xcu55c-fsvh2892-2L-e",
+  "edges": {
+    "FIFO_EDGE_bank_0_t0_buf": {
+      "produced_by": "TASK_VERTEX_Module8Func_0",
+      "consumed_by": "TASK_VERTEX_Stream2Mmap_0",
+      "width": 65,
+      "depth": 32,
+      "instance": "bank_0_t0_buf",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 33
+    },
+    "FIFO_EDGE_bank_0_t1_buf": {
+      "produced_by": "TASK_VERTEX_Mmap2Stream_0",
+      "consumed_by": "TASK_VERTEX_Module0Func_0",
+      "width": 65,
+      "depth": 32,
+      "instance": "bank_0_t1_buf",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 33
+    },
+    "FIFO_EDGE_from_super_source_to_t1_offset_0": {
+      "produced_by": "TASK_VERTEX_Module0Func_0",
+      "consumed_by": "TASK_VERTEX_Module1Func_0",
+      "width": 33,
+      "depth": 2,
+      "instance": "from_super_source_to_t1_offset_0",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 3
+    },
+    "FIFO_EDGE_from_super_source_to_t1_offset_1": {
+      "produced_by": "TASK_VERTEX_Module0Func_0",
+      "consumed_by": "TASK_VERTEX_Module1Func_1",
+      "width": 33,
+      "depth": 2,
+      "instance": "from_super_source_to_t1_offset_1",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 3
+    },
+    "FIFO_EDGE_from_t0_pe_0_to_super_sink": {
+      "produced_by": "TASK_VERTEX_Module6Func1_0",
+      "consumed_by": "TASK_VERTEX_Module8Func_0",
+      "width": 33,
+      "depth": 4,
+      "instance": "from_t0_pe_0_to_super_sink",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 5
+    },
+    "FIFO_EDGE_from_t0_pe_1_to_super_sink": {
+      "produced_by": "TASK_VERTEX_Module6Func2_0",
+      "consumed_by": "TASK_VERTEX_Module8Func_0",
+      "width": 33,
+      "depth": 2,
+      "instance": "from_t0_pe_1_to_super_sink",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 3
+    },
+    "FIFO_EDGE_from_t1_offset_0_to_t1_offset_2000": {
+      "produced_by": "TASK_VERTEX_Module1Func_0",
+      "consumed_by": "TASK_VERTEX_Module1Func_2",
+      "width": 33,
+      "depth": 2,
+      "instance": "from_t1_offset_0_to_t1_offset_2000",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 3
+    },
+    "FIFO_EDGE_from_t1_offset_0_to_tcse_var_0_pe_1": {
+      "produced_by": "TASK_VERTEX_Module1Func_0",
+      "consumed_by": "TASK_VERTEX_Module3Func1_0",
+      "width": 33,
+      "depth": 4,
+      "instance": "from_t1_offset_0_to_tcse_var_0_pe_1",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 6
+    },
+    "FIFO_EDGE_from_t1_offset_1_to_t1_offset_2001": {
+      "produced_by": "TASK_VERTEX_Module1Func_1",
+      "consumed_by": "TASK_VERTEX_Module1Func_3",
+      "width": 33,
+      "depth": 2,
+      "instance": "from_t1_offset_1_to_t1_offset_2001",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 3
+    },
+    "FIFO_EDGE_from_t1_offset_1_to_tcse_var_0_pe_0": {
+      "produced_by": "TASK_VERTEX_Module1Func_1",
+      "consumed_by": "TASK_VERTEX_Module3Func2_0",
+      "width": 33,
+      "depth": 6,
+      "instance": "from_t1_offset_1_to_tcse_var_0_pe_0",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 8
+    },
+    "FIFO_EDGE_from_t1_offset_2000_to_t0_pe_1": {
+      "produced_by": "TASK_VERTEX_Module1Func_2",
+      "consumed_by": "TASK_VERTEX_Module6Func2_0",
+      "width": 33,
+      "depth": 58,
+      "instance": "from_t1_offset_2000_to_t0_pe_1",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 61
+    },
+    "FIFO_EDGE_from_t1_offset_2000_to_tcse_var_0_pe_0": {
+      "produced_by": "TASK_VERTEX_Module1Func_2",
+      "consumed_by": "TASK_VERTEX_Module3Func2_0",
+      "width": 33,
+      "depth": 53,
+      "instance": "from_t1_offset_2000_to_tcse_var_0_pe_0",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 54
+    },
+    "FIFO_EDGE_from_t1_offset_2001_to_t0_pe_0": {
+      "produced_by": "TASK_VERTEX_Module1Func_3",
+      "consumed_by": "TASK_VERTEX_Module6Func1_0",
+      "width": 33,
+      "depth": 56,
+      "instance": "from_t1_offset_2001_to_t0_pe_0",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 59
+    },
+    "FIFO_EDGE_from_t1_offset_2001_to_tcse_var_0_pe_1": {
+      "produced_by": "TASK_VERTEX_Module1Func_3",
+      "consumed_by": "TASK_VERTEX_Module3Func1_0",
+      "width": 33,
+      "depth": 52,
+      "instance": "from_t1_offset_2001_to_tcse_var_0_pe_1",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 53
+    },
+    "FIFO_EDGE_from_tcse_var_0_offset_0_to_t0_pe_0": {
+      "produced_by": "TASK_VERTEX_Module1Func_4",
+      "consumed_by": "TASK_VERTEX_Module6Func1_0",
+      "width": 33,
+      "depth": 52,
+      "instance": "from_tcse_var_0_offset_0_to_t0_pe_0",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 53
+    },
+    "FIFO_EDGE_from_tcse_var_0_offset_0_to_t0_pe_1": {
+      "produced_by": "TASK_VERTEX_Module1Func_4",
+      "consumed_by": "TASK_VERTEX_Module6Func2_0",
+      "width": 33,
+      "depth": 6,
+      "instance": "from_tcse_var_0_offset_0_to_t0_pe_1",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 7
+    },
+    "FIFO_EDGE_from_tcse_var_0_offset_1_to_t0_pe_0": {
+      "produced_by": "TASK_VERTEX_Module1Func_5",
+      "consumed_by": "TASK_VERTEX_Module6Func1_0",
+      "width": 33,
+      "depth": 2,
+      "instance": "from_tcse_var_0_offset_1_to_t0_pe_0",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 3
+    },
+    "FIFO_EDGE_from_tcse_var_0_offset_1_to_t0_pe_1": {
+      "produced_by": "TASK_VERTEX_Module1Func_5",
+      "consumed_by": "TASK_VERTEX_Module6Func2_0",
+      "width": 33,
+      "depth": 51,
+      "instance": "from_tcse_var_0_offset_1_to_t0_pe_1",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 52
+    },
+    "FIFO_EDGE_from_tcse_var_0_pe_0_to_tcse_var_0_offset_1": {
+      "produced_by": "TASK_VERTEX_Module3Func2_0",
+      "consumed_by": "TASK_VERTEX_Module1Func_5",
+      "width": 33,
+      "depth": 2,
+      "instance": "from_tcse_var_0_pe_0_to_tcse_var_0_offset_1",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 3
+    },
+    "FIFO_EDGE_from_tcse_var_0_pe_1_to_tcse_var_0_offset_0": {
+      "produced_by": "TASK_VERTEX_Module3Func1_0",
+      "consumed_by": "TASK_VERTEX_Module1Func_4",
+      "width": 33,
+      "depth": 2,
+      "instance": "from_tcse_var_0_pe_1_to_tcse_var_0_offset_0",
+      "category": "FIFO_EDGE",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 3
+    },
+    "AXI_EDGE_axi_edge_from_bank_0_t1_external_controller_to_Mmap2Stream_0": {
+      "produced_by": "PORT_VERTEX_bank_0_t1_external_controller",
+      "consumed_by": "TASK_VERTEX_Mmap2Stream_0",
+      "width": 250,
+      "depth": 0,
+      "category": "AXI_EDGE",
+      "port_name": "bank_0_t1",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 1
+    },
+    "AXI_EDGE_axi_edge_from_bank_0_t0_external_controller_to_Stream2Mmap_0": {
+      "produced_by": "PORT_VERTEX_bank_0_t0_external_controller",
+      "consumed_by": "TASK_VERTEX_Stream2Mmap_0",
+      "width": 250,
+      "depth": 0,
+      "category": "AXI_EDGE",
+      "port_name": "bank_0_t0",
+      "path": [
+        "CR_X0Y0_To_CR_X3Y3"
+      ],
+      "adjusted_depth": 1
+    }
+  },
+  "vertices": {
+    "TASK_VERTEX_Mmap2Stream_0": {
+      "module": "Mmap2Stream",
+      "instance": "Mmap2Stream_0",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 975,
+        "LUT": 1500,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module0Func_0": {
+      "module": "Module0Func",
+      "instance": "Module0Func_0",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 73,
+        "LUT": 197,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module1Func_0": {
+      "module": "Module1Func",
+      "instance": "Module1Func_0",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 41,
+        "LUT": 197,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module1Func_1": {
+      "module": "Module1Func",
+      "instance": "Module1Func_1",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 41,
+        "LUT": 197,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module1Func_2": {
+      "module": "Module1Func",
+      "instance": "Module1Func_2",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 41,
+        "LUT": 197,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module1Func_3": {
+      "module": "Module1Func",
+      "instance": "Module1Func_3",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 41,
+        "LUT": 197,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module1Func_4": {
+      "module": "Module1Func",
+      "instance": "Module1Func_4",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 41,
+        "LUT": 197,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module1Func_5": {
+      "module": "Module1Func",
+      "instance": "Module1Func_5",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 41,
+        "LUT": 197,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module3Func1_0": {
+      "module": "Module3Func1",
+      "instance": "Module3Func1_0",
+      "area": {
+        "BRAM": 0,
+        "DSP": 2,
+        "FF": 534,
+        "LUT": 567,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module3Func2_0": {
+      "module": "Module3Func2",
+      "instance": "Module3Func2_0",
+      "area": {
+        "BRAM": 0,
+        "DSP": 2,
+        "FF": 534,
+        "LUT": 567,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module6Func1_0": {
+      "module": "Module6Func1",
+      "instance": "Module6Func1_0",
+      "area": {
+        "BRAM": 0,
+        "DSP": 7,
+        "FF": 1239,
+        "LUT": 917,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module6Func2_0": {
+      "module": "Module6Func2",
+      "instance": "Module6Func2_0",
+      "area": {
+        "BRAM": 0,
+        "DSP": 7,
+        "FF": 1271,
+        "LUT": 947,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Module8Func_0": {
+      "module": "Module8Func",
+      "instance": "Module8Func_0",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 73,
+        "LUT": 195,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "TASK_VERTEX_Stream2Mmap_0": {
+      "module": "Stream2Mmap",
+      "instance": "Stream2Mmap_0",
+      "area": {
+        "BRAM": 0,
+        "DSP": 0,
+        "FF": 1036,
+        "LUT": 1495,
+        "URAM": 0
+      },
+      "category": "TASK_VERTEX",
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "PORT_VERTEX_bank_0_t0_external_controller": {
+      "module": "external_HBM_controller",
+      "top_arg_name": "bank_0_t0",
+      "area": {
+        "LUT": 5000,
+        "FF": 6500,
+        "BRAM": 0,
+        "URAM": 0,
+        "DSP": 0
+      },
+      "category": "PORT_VERTEX",
+      "port_cat": "HBM",
+      "port_id": 0,
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    },
+    "PORT_VERTEX_bank_0_t1_external_controller": {
+      "module": "external_HBM_controller",
+      "top_arg_name": "bank_0_t1",
+      "area": {
+        "LUT": 5000,
+        "FF": 6500,
+        "BRAM": 0,
+        "URAM": 0,
+        "DSP": 0
+      },
+      "category": "PORT_VERTEX",
+      "port_cat": "HBM",
+      "port_id": 1,
+      "floorplan_region": "CR_X0Y0_To_CR_X3Y3",
+      "SLR": 0
+    }
+  },
+  "floorplan_pre_assignments": {
+    "COARSE_X0Y0": [
+      "PORT_VERTEX_bank_0_t0_external_controller",
+      "PORT_VERTEX_bank_0_t1_external_controller"
+    ]
+  },
+  "grouping_constraints": [],
+  "min_area_limit": 0.65,
+  "max_area_limit": 0.85,
+  "min_slr_width_limit": 10000,
+  "max_slr_width_limit": 15000,
+  "max_search_time": 600,
+  "floorplan_strategy": "HALF_SLR_LEVEL_FLOORPLANNING",
+  "floorplan_opt_priority": "AREA_PRIORITIZED",
+  "enable_hbm_binding_adjustment": false,
+  "floorplan_region_pblock_tcl": {
+    "CR_X0Y0_To_CR_X3Y3": "\n# begin defining a slot\ncreate_pblock CR_X0Y0_To_CR_X3Y3\nresize_pblock CR_X0Y0_To_CR_X3Y3 -add CLOCKREGION_X0Y0:CLOCKREGION_X3Y3\n# remove the reserved clock regions for the Vitis infra\nresize_pblock CR_X0Y0_To_CR_X3Y3 -remove CLOCKREGION_X7Y1:CLOCKREGION_X7Y11\n"
+  },
+  "slot_resource_usage": {
+    "CR_X0Y0_To_CR_X3Y3": {
+      "BRAM": 0.0,
+      "DSP": 0.013,
+      "FF": 0.044,
+      "LUT": 0.089,
+      "URAM": 0.0
+    }
+  },
+  "floorplan_status": "SUCCEED",
+  "actual_slr_width_usage": 0,
+  "actual_area_usage": 0.0896
+}

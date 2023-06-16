@@ -1,0 +1,27 @@
+.invoke(read_edge_list_ptr,NUM_ITE,M,P_N,K,edge_list_ptr,fifo_edge_list_ptr,PE_inst)
+
+ .invoke<tapa::join, NUM_CH_SPARSE>(read_A,edge_list_ch,fifo_A,NUM_A_LEN,P_N)
+
+ .invoke<tapa::detach, NUM_CH_SPARSE>(Scatter_1_2,fifo_A,fifo_A_pe)
+
+ .invoke<tapa::join, NUM_CH_B>(read_B,mat_B_ch,fifo_B_pe,K,P_N)
+
+ .invoke<tapa::join, NUM_CH_SPARSE * PEG_PER_A>(PEG_Bmtx,PE_inst,fifo_edge_list_ptr,fifo_A_pe,fifo_B_pe,PE_inst,fifo_edge_list_ptr,fifo_B_pe,PE_inst_to_Cmtx,fifo_edge_list_ptr_to_Cmtx,fifo_aBvec)
+
+ .invoke<tapa::join, NUM_CH_SPARSE * PEG_PER_A>(PEG_Cmtx,PE_inst_to_Cmtx,fifo_edge_list_ptr_to_Cmtx,fifo_aBvec,fifo_C_pe)
+
+ .invoke<tapa::detach>(black_hole_int,PE_inst)
+ .invoke<tapa::detach>(black_hole_int,fifo_edge_list_ptr)
+ .invoke<tapa::detach, NUM_CH_B>(black_hole_float_v16,  fifo_B_pe)
+
+ .invoke<tapa::detach, NUM_CH_SPARSE>(Merger,fifo_C_pe,fifo_C_ch_result)
+
+ .invoke<tapa::join, NUM_CH_C>(read_C,mat_C_ch_in,fifo_C_read_in,M,P_N,wrC_inst)
+
+ .invoke<tapa::detach, NUM_CH_C>(FloatvMultConst,  beta_u,  fifo_C_read_in,  fifo_C_read_in_beta  )
+
+ .invoke<tapa::detach, NUM_CH_C>(FloatvMultConst,  alpha_u,  fifo_C_ch_result,  fifo_C_ch_result_alpha  )
+
+ .invoke<tapa::detach, NUM_CH_C>(FloatvAddFloatv,  fifo_C_ch_result_alpha,  fifo_C_read_in_beta,  fifo_C_ch  )
+
+ .invoke<tapa::join, NUM_CH_C>(write_C,wrC_inst,fifo_C_ch,mat_C_ch)

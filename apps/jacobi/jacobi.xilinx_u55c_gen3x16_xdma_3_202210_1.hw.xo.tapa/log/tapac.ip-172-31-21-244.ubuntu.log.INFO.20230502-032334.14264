@@ -1,0 +1,115 @@
+I0502 03:23:34.702 tapa.util:162] logging level set to INFO
+I0502 03:23:34.702 tapa.tapac:487] tapa version: 0.0.20221113.1
+I0502 03:23:34.702 tapa.tapac:491] Python recursion limit set to 3000
+I0502 03:23:34.702 tapa.tapac:411] Executing all steps of tapac
+I0502 03:23:34.795 tapa.tapac:551] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+I0502 03:23:36.946 tapa.core:175] extracting HLS C++ files
+I0502 03:23:36.956 tapa.core:197] running HLS
+I0502 03:23:36.960 tapa.core:233] spawn 4 workers for parallel HLS synthesis of the tasks
+I0502 03:24:32.691 tapa.core:248] extracting RTL files
+I0502 03:24:32.725 tapa.core:279] parsing RTL files and populating tasks
+I0502 03:24:35.154 tapa.core:288] parsing Mmap2Stream
+I0502 03:24:35.156 tapa.core:292] populating Mmap2Stream
+I0502 03:24:35.156 tapa.core:288] parsing Module0Func
+I0502 03:24:35.157 tapa.core:292] populating Module0Func
+I0502 03:24:35.157 tapa.core:288] parsing Module1Func
+I0502 03:24:35.158 tapa.core:292] populating Module1Func
+I0502 03:24:35.159 tapa.core:288] parsing Module3Func1
+I0502 03:24:35.160 tapa.core:292] populating Module3Func1
+I0502 03:24:37.494 tapa.core:288] parsing Module3Func2
+I0502 03:24:37.495 tapa.core:292] populating Module3Func2
+I0502 03:24:37.498 tapa.core:288] parsing Module6Func1
+I0502 03:24:37.499 tapa.core:292] populating Module6Func1
+I0502 03:24:37.500 tapa.core:288] parsing Module6Func2
+I0502 03:24:37.501 tapa.core:292] populating Module6Func2
+I0502 03:24:37.513 tapa.core:288] parsing Module8Func
+I0502 03:24:37.514 tapa.core:292] populating Module8Func
+I0502 03:24:38.688 tapa.core:288] parsing Stream2Mmap
+I0502 03:24:38.693 tapa.core:292] populating Stream2Mmap
+I0502 03:24:38.693 tapa.core:288] parsing Jacobi
+I0502 03:24:38.694 tapa.core:292] populating Jacobi
+D0502 03:24:38.695 tapa.task:128] mmap argument 'Jacobi.bank_0_t1' (id_width=1, thread_count=1) is connected to port 'Mmap2Stream_0.mmap'
+D0502 03:24:38.695 tapa.task:128] mmap argument 'Jacobi.bank_0_t0' (id_width=1, thread_count=1) is connected to port 'Stream2Mmap_0.mmap'
+I0502 03:24:38.695 tapa.core:296] instrumenting upper-level RTL
+I0502 03:24:38.695 tapa.tapac:642] new step added 
+I0502 03:24:38.695 tapa.core:332] Running floorplanning
+I0502 03:24:38.695 tapa.core:333] multi_fpga
+I0502 03:24:38.695 tapa.core:334] 2
+I0502 03:24:38.695 tapa.floorplan:45] mulit_fpga from floorplan
+I0502 03:24:38.696 tapa.floorplan:46] 2
+I0502 03:24:38.696 tapa.task_graph:36] bank_0_t0_buf
+I0502 03:24:38.696 tapa.task_graph:37] get_instance Module8Func_0
+I0502 03:24:38.696 tapa.task_graph:38] get_instance Stream2Mmap_0
+I0502 03:24:38.696 tapa.task_graph:36] bank_0_t1_buf
+I0502 03:24:38.696 tapa.task_graph:37] get_instance Mmap2Stream_0
+I0502 03:24:38.697 tapa.task_graph:38] get_instance Module0Func_0
+I0502 03:24:38.697 tapa.task_graph:36] from_super_source_to_t1_offset_0
+I0502 03:24:38.697 tapa.task_graph:37] get_instance Module0Func_0
+I0502 03:24:38.697 tapa.task_graph:38] get_instance Module1Func_0
+I0502 03:24:38.697 tapa.task_graph:36] from_super_source_to_t1_offset_1
+I0502 03:24:38.697 tapa.task_graph:37] get_instance Module0Func_0
+I0502 03:24:38.697 tapa.task_graph:38] get_instance Module1Func_1
+I0502 03:24:38.697 tapa.task_graph:36] from_t0_pe_0_to_super_sink
+I0502 03:24:38.697 tapa.task_graph:37] get_instance Module6Func1_0
+I0502 03:24:38.697 tapa.task_graph:38] get_instance Module8Func_0
+I0502 03:24:38.697 tapa.task_graph:36] from_t0_pe_1_to_super_sink
+I0502 03:24:38.697 tapa.task_graph:37] get_instance Module6Func2_0
+I0502 03:24:38.697 tapa.task_graph:38] get_instance Module8Func_0
+I0502 03:24:38.697 tapa.task_graph:36] from_t1_offset_0_to_t1_offset_2000
+I0502 03:24:38.698 tapa.task_graph:37] get_instance Module1Func_0
+I0502 03:24:38.698 tapa.task_graph:38] get_instance Module1Func_2
+I0502 03:24:38.698 tapa.task_graph:36] from_t1_offset_0_to_tcse_var_0_pe_1
+I0502 03:24:38.698 tapa.task_graph:37] get_instance Module1Func_0
+I0502 03:24:38.698 tapa.task_graph:38] get_instance Module3Func1_0
+I0502 03:24:38.698 tapa.task_graph:36] from_t1_offset_1_to_t1_offset_2001
+I0502 03:24:38.698 tapa.task_graph:37] get_instance Module1Func_1
+I0502 03:24:38.698 tapa.task_graph:38] get_instance Module1Func_3
+I0502 03:24:38.698 tapa.task_graph:36] from_t1_offset_1_to_tcse_var_0_pe_0
+I0502 03:24:38.698 tapa.task_graph:37] get_instance Module1Func_1
+I0502 03:24:38.698 tapa.task_graph:38] get_instance Module3Func2_0
+I0502 03:24:38.698 tapa.task_graph:36] from_t1_offset_2000_to_t0_pe_1
+I0502 03:24:38.698 tapa.task_graph:37] get_instance Module1Func_2
+I0502 03:24:38.698 tapa.task_graph:38] get_instance Module6Func2_0
+I0502 03:24:38.698 tapa.task_graph:36] from_t1_offset_2000_to_tcse_var_0_pe_0
+I0502 03:24:38.699 tapa.task_graph:37] get_instance Module1Func_2
+I0502 03:24:38.699 tapa.task_graph:38] get_instance Module3Func2_0
+I0502 03:24:38.699 tapa.task_graph:36] from_t1_offset_2001_to_t0_pe_0
+I0502 03:24:38.699 tapa.task_graph:37] get_instance Module1Func_3
+I0502 03:24:38.699 tapa.task_graph:38] get_instance Module6Func1_0
+I0502 03:24:38.699 tapa.task_graph:36] from_t1_offset_2001_to_tcse_var_0_pe_1
+I0502 03:24:38.699 tapa.task_graph:37] get_instance Module1Func_3
+I0502 03:24:38.699 tapa.task_graph:38] get_instance Module3Func1_0
+I0502 03:24:38.699 tapa.task_graph:36] from_tcse_var_0_offset_0_to_t0_pe_0
+I0502 03:24:38.699 tapa.task_graph:37] get_instance Module1Func_4
+I0502 03:24:38.699 tapa.task_graph:38] get_instance Module6Func1_0
+I0502 03:24:38.700 tapa.task_graph:36] from_tcse_var_0_offset_0_to_t0_pe_1
+I0502 03:24:38.700 tapa.task_graph:37] get_instance Module1Func_4
+I0502 03:24:38.700 tapa.task_graph:38] get_instance Module6Func2_0
+I0502 03:24:38.700 tapa.task_graph:36] from_tcse_var_0_offset_1_to_t0_pe_0
+I0502 03:24:38.700 tapa.task_graph:37] get_instance Module1Func_5
+I0502 03:24:38.700 tapa.task_graph:38] get_instance Module6Func1_0
+I0502 03:24:38.700 tapa.task_graph:36] from_tcse_var_0_offset_1_to_t0_pe_1
+I0502 03:24:38.700 tapa.task_graph:37] get_instance Module1Func_5
+I0502 03:24:38.700 tapa.task_graph:38] get_instance Module6Func2_0
+I0502 03:24:38.701 tapa.task_graph:36] from_tcse_var_0_pe_0_to_tcse_var_0_offset_1
+I0502 03:24:38.701 tapa.task_graph:37] get_instance Module3Func2_0
+I0502 03:24:38.701 tapa.task_graph:38] get_instance Module1Func_5
+I0502 03:24:38.701 tapa.task_graph:36] from_tcse_var_0_pe_1_to_tcse_var_0_offset_0
+I0502 03:24:38.701 tapa.task_graph:37] get_instance Module3Func1_0
+I0502 03:24:38.701 tapa.task_graph:38] get_instance Module1Func_4
+W0502 03:24:38.701 tapa.task_graph:83] bank_0_t1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0502 03:24:38.702 tapa.task_graph:83] bank_0_t0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+D0502 03:24:38.702 tapa.task_graph:165] area of Mmap2Stream: {'BRAM': 0, 'DSP': 0, 'FF': 975, 'LUT': 1500, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module0Func: {'BRAM': 0, 'DSP': 0, 'FF': 73, 'LUT': 197, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module1Func: {'BRAM': 0, 'DSP': 0, 'FF': 41, 'LUT': 197, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module3Func1: {'BRAM': 0, 'DSP': 2, 'FF': 534, 'LUT': 567, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module3Func2: {'BRAM': 0, 'DSP': 2, 'FF': 534, 'LUT': 567, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module6Func1: {'BRAM': 0, 'DSP': 7, 'FF': 1239, 'LUT': 917, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module6Func2: {'BRAM': 0, 'DSP': 7, 'FF': 1271, 'LUT': 947, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Module8Func: {'BRAM': 0, 'DSP': 0, 'FF': 73, 'LUT': 195, 'URAM': 0}
+D0502 03:24:38.702 tapa.task_graph:165] area of Stream2Mmap: {'BRAM': 0, 'DSP': 0, 'FF': 1036, 'LUT': 1495, 'URAM': 0}

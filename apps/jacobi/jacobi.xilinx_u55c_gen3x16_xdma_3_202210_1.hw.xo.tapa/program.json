@@ -1,0 +1,587 @@
+{
+  "tasks": {
+    "Jacobi": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nextern \"C\" {\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) {\n\n#pragma HLS interface s_axilite port = bank_0_t0 bundle = control\n{ auto val = reinterpret_cast<volatile uint8_t&>(bank_0_t0); }\n{ auto val = reinterpret_cast<volatile uint8_t&>(bank_0_t0); }\n\n#pragma HLS interface s_axilite port = bank_0_t1 bundle = control\n{ auto val = reinterpret_cast<volatile uint8_t&>(bank_0_t1); }\n{ auto val = reinterpret_cast<volatile uint8_t&>(bank_0_t1); }\n\n#pragma HLS interface s_axilite port = coalesced_data_num bundle = control\n{ auto val = reinterpret_cast<volatile uint8_t&>(coalesced_data_num); }\n\n\n#pragma HLS interface s_axilite port = return bundle = control\n}\n\n\n}  // extern \"C\"\n\n",
+      "fifos": {
+        "bank_0_t0_buf": {
+          "consumed_by": [
+            "Stream2Mmap",
+            0
+          ],
+          "depth": 32,
+          "produced_by": [
+            "Module8Func",
+            0
+          ]
+        },
+        "bank_0_t1_buf": {
+          "consumed_by": [
+            "Module0Func",
+            0
+          ],
+          "depth": 32,
+          "produced_by": [
+            "Mmap2Stream",
+            0
+          ]
+        },
+        "from_super_source_to_t1_offset_0": {
+          "consumed_by": [
+            "Module1Func",
+            0
+          ],
+          "depth": 2,
+          "produced_by": [
+            "Module0Func",
+            0
+          ]
+        },
+        "from_super_source_to_t1_offset_1": {
+          "consumed_by": [
+            "Module1Func",
+            1
+          ],
+          "depth": 2,
+          "produced_by": [
+            "Module0Func",
+            0
+          ]
+        },
+        "from_t0_pe_0_to_super_sink": {
+          "consumed_by": [
+            "Module8Func",
+            0
+          ],
+          "depth": 4,
+          "produced_by": [
+            "Module6Func1",
+            0
+          ]
+        },
+        "from_t0_pe_1_to_super_sink": {
+          "consumed_by": [
+            "Module8Func",
+            0
+          ],
+          "depth": 2,
+          "produced_by": [
+            "Module6Func2",
+            0
+          ]
+        },
+        "from_t1_offset_0_to_t1_offset_2000": {
+          "consumed_by": [
+            "Module1Func",
+            2
+          ],
+          "depth": 2,
+          "produced_by": [
+            "Module1Func",
+            0
+          ]
+        },
+        "from_t1_offset_0_to_tcse_var_0_pe_1": {
+          "consumed_by": [
+            "Module3Func1",
+            0
+          ],
+          "depth": 4,
+          "produced_by": [
+            "Module1Func",
+            0
+          ]
+        },
+        "from_t1_offset_1_to_t1_offset_2001": {
+          "consumed_by": [
+            "Module1Func",
+            3
+          ],
+          "depth": 2,
+          "produced_by": [
+            "Module1Func",
+            1
+          ]
+        },
+        "from_t1_offset_1_to_tcse_var_0_pe_0": {
+          "consumed_by": [
+            "Module3Func2",
+            0
+          ],
+          "depth": 6,
+          "produced_by": [
+            "Module1Func",
+            1
+          ]
+        },
+        "from_t1_offset_2000_to_t0_pe_1": {
+          "consumed_by": [
+            "Module6Func2",
+            0
+          ],
+          "depth": 58,
+          "produced_by": [
+            "Module1Func",
+            2
+          ]
+        },
+        "from_t1_offset_2000_to_tcse_var_0_pe_0": {
+          "consumed_by": [
+            "Module3Func2",
+            0
+          ],
+          "depth": 53,
+          "produced_by": [
+            "Module1Func",
+            2
+          ]
+        },
+        "from_t1_offset_2001_to_t0_pe_0": {
+          "consumed_by": [
+            "Module6Func1",
+            0
+          ],
+          "depth": 56,
+          "produced_by": [
+            "Module1Func",
+            3
+          ]
+        },
+        "from_t1_offset_2001_to_tcse_var_0_pe_1": {
+          "consumed_by": [
+            "Module3Func1",
+            0
+          ],
+          "depth": 52,
+          "produced_by": [
+            "Module1Func",
+            3
+          ]
+        },
+        "from_tcse_var_0_offset_0_to_t0_pe_0": {
+          "consumed_by": [
+            "Module6Func1",
+            0
+          ],
+          "depth": 52,
+          "produced_by": [
+            "Module1Func",
+            4
+          ]
+        },
+        "from_tcse_var_0_offset_0_to_t0_pe_1": {
+          "consumed_by": [
+            "Module6Func2",
+            0
+          ],
+          "depth": 6,
+          "produced_by": [
+            "Module1Func",
+            4
+          ]
+        },
+        "from_tcse_var_0_offset_1_to_t0_pe_0": {
+          "consumed_by": [
+            "Module6Func1",
+            0
+          ],
+          "depth": 2,
+          "produced_by": [
+            "Module1Func",
+            5
+          ]
+        },
+        "from_tcse_var_0_offset_1_to_t0_pe_1": {
+          "consumed_by": [
+            "Module6Func2",
+            0
+          ],
+          "depth": 51,
+          "produced_by": [
+            "Module1Func",
+            5
+          ]
+        },
+        "from_tcse_var_0_pe_0_to_tcse_var_0_offset_1": {
+          "consumed_by": [
+            "Module1Func",
+            5
+          ],
+          "depth": 2,
+          "produced_by": [
+            "Module3Func2",
+            0
+          ]
+        },
+        "from_tcse_var_0_pe_1_to_tcse_var_0_offset_0": {
+          "consumed_by": [
+            "Module1Func",
+            4
+          ],
+          "depth": 2,
+          "produced_by": [
+            "Module3Func1",
+            0
+          ]
+        }
+      },
+      "frt_interface": "#include <sstream>\n#include <stdexcept>\n#include <frt.h>\n\n#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nvoid Jacobi(tapa::mmap<float> bank_0_t0, tapa::mmap<const float> bank_0_t1,\n            uint64_t coalesced_data_num) {\n#define TAPAB_APP \"TAPAB_Jacobi\"\n#define TAPAB \"TAPAB\"\n  const char* _tapa_bitstream = nullptr;\n  if ((_tapa_bitstream = getenv(TAPAB_APP)) ||\n      (_tapa_bitstream = getenv(TAPAB))) {\n    fpga::Instance _tapa_instance(_tapa_bitstream);\n    int _tapa_arg_index = 0;\n    for (const auto& _tapa_arg_info : _tapa_instance.GetArgsInfo()) {\n      if (false) {\n      } else if (_tapa_arg_info.name == \"bank_0_t0\") {\n        auto _tapa_arg = fpga::ReadWrite(bank_0_t0.get(), bank_0_t0.size());\n        _tapa_instance.SetArg(_tapa_arg_index, _tapa_arg);\n      } else if (_tapa_arg_info.name == \"bank_0_t1\") {\n        auto _tapa_arg = fpga::WriteOnly(bank_0_t1.get(), bank_0_t1.size());\n        _tapa_instance.SetArg(_tapa_arg_index, _tapa_arg);\n      } else if (_tapa_arg_info.name == \"coalesced_data_num\") {\n        _tapa_instance.SetArg(_tapa_arg_index, coalesced_data_num);\n      } else {\n        std::stringstream ss;\n        ss << \"unknown argument: \" << _tapa_arg_info;\n        throw std::runtime_error(ss.str());\n      }\n      ++_tapa_arg_index;\n    }\n    _tapa_instance.WriteToDevice();\n    _tapa_instance.Exec();\n    _tapa_instance.ReadFromDevice();\n    _tapa_instance.Finish();\n  } else {\n    throw std::runtime_error(\"no bitstream found; please set `\" TAPAB_APP\n                             \"` or `\" TAPAB \"`\");\n  }\n}\n",
+      "level": "upper",
+      "ports": [
+        {
+          "cat": "mmap",
+          "name": "bank_0_t0",
+          "type": "float*",
+          "width": 32
+        },
+        {
+          "cat": "mmap",
+          "name": "bank_0_t1",
+          "type": "const float*",
+          "width": 32
+        },
+        {
+          "cat": "scalar",
+          "name": "coalesced_data_num",
+          "type": "uint64_t",
+          "width": 64
+        }
+      ],
+      "target": "hls",
+      "tasks": {
+        "Mmap2Stream": [
+          {
+            "args": {
+              "mmap": {
+                "arg": "bank_0_t1",
+                "cat": "mmap"
+              },
+              "n": {
+                "arg": "coalesced_data_num",
+                "cat": "scalar"
+              },
+              "stream": {
+                "arg": "bank_0_t1_buf",
+                "cat": "ostream"
+              }
+            },
+            "name": "Mmap2Stream",
+            "step": 0
+          }
+        ],
+        "Module0Func": [
+          {
+            "args": {
+              "dram_t1_bank_0_fifo": {
+                "arg": "bank_0_t1_buf",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_super_source_to_t1_offset_0",
+                "cat": "ostream"
+              },
+              "fifo_st_1": {
+                "arg": "from_super_source_to_t1_offset_1",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module0Func",
+            "step": 0
+          }
+        ],
+        "Module1Func": [
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_super_source_to_t1_offset_0",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_t1_offset_0_to_t1_offset_2000",
+                "cat": "ostream"
+              },
+              "fifo_st_1": {
+                "arg": "from_t1_offset_0_to_tcse_var_0_pe_1",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module1Func#1",
+            "step": 0
+          },
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_super_source_to_t1_offset_1",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_t1_offset_1_to_t1_offset_2001",
+                "cat": "ostream"
+              },
+              "fifo_st_1": {
+                "arg": "from_t1_offset_1_to_tcse_var_0_pe_0",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module1Func#2",
+            "step": 0
+          },
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_t1_offset_0_to_t1_offset_2000",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_t1_offset_2000_to_tcse_var_0_pe_0",
+                "cat": "ostream"
+              },
+              "fifo_st_1": {
+                "arg": "from_t1_offset_2000_to_t0_pe_1",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module2Func#1",
+            "step": 0
+          },
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_t1_offset_1_to_t1_offset_2001",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_t1_offset_2001_to_tcse_var_0_pe_1",
+                "cat": "ostream"
+              },
+              "fifo_st_1": {
+                "arg": "from_t1_offset_2001_to_t0_pe_0",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module2Func#2",
+            "step": 0
+          },
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_tcse_var_0_pe_1_to_tcse_var_0_offset_0",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_tcse_var_0_offset_0_to_t0_pe_0",
+                "cat": "ostream"
+              },
+              "fifo_st_1": {
+                "arg": "from_tcse_var_0_offset_0_to_t0_pe_1",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module1Func#3",
+            "step": 0
+          },
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_tcse_var_0_pe_0_to_tcse_var_0_offset_1",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_tcse_var_0_offset_1_to_t0_pe_1",
+                "cat": "ostream"
+              },
+              "fifo_st_1": {
+                "arg": "from_tcse_var_0_offset_1_to_t0_pe_0",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module1Func#4",
+            "step": 0
+          }
+        ],
+        "Module3Func1": [
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_t1_offset_2001_to_tcse_var_0_pe_1",
+                "cat": "istream"
+              },
+              "fifo_ld_1": {
+                "arg": "from_t1_offset_0_to_tcse_var_0_pe_1",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_tcse_var_0_pe_1_to_tcse_var_0_offset_0",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module3Func#1",
+            "step": 0
+          }
+        ],
+        "Module3Func2": [
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_t1_offset_2000_to_tcse_var_0_pe_0",
+                "cat": "istream"
+              },
+              "fifo_ld_1": {
+                "arg": "from_t1_offset_1_to_tcse_var_0_pe_0",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_tcse_var_0_pe_0_to_tcse_var_0_offset_1",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module3Func#2",
+            "step": 0
+          }
+        ],
+        "Module6Func1": [
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_tcse_var_0_offset_0_to_t0_pe_0",
+                "cat": "istream"
+              },
+              "fifo_ld_1": {
+                "arg": "from_tcse_var_0_offset_1_to_t0_pe_0",
+                "cat": "istream"
+              },
+              "fifo_ld_2": {
+                "arg": "from_t1_offset_2001_to_t0_pe_0",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_t0_pe_0_to_super_sink",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module6Func#1",
+            "step": 0
+          }
+        ],
+        "Module6Func2": [
+          {
+            "args": {
+              "fifo_ld_0": {
+                "arg": "from_tcse_var_0_offset_1_to_t0_pe_1",
+                "cat": "istream"
+              },
+              "fifo_ld_1": {
+                "arg": "from_tcse_var_0_offset_0_to_t0_pe_1",
+                "cat": "istream"
+              },
+              "fifo_ld_2": {
+                "arg": "from_t1_offset_2000_to_t0_pe_1",
+                "cat": "istream"
+              },
+              "fifo_st_0": {
+                "arg": "from_t0_pe_1_to_super_sink",
+                "cat": "ostream"
+              }
+            },
+            "name": "Module6Func#2",
+            "step": 0
+          }
+        ],
+        "Module8Func": [
+          {
+            "args": {
+              "dram_t0_bank_0_fifo": {
+                "arg": "bank_0_t0_buf",
+                "cat": "ostream"
+              },
+              "fifo_ld_0": {
+                "arg": "from_t0_pe_0_to_super_sink",
+                "cat": "istream"
+              },
+              "fifo_ld_1": {
+                "arg": "from_t0_pe_1_to_super_sink",
+                "cat": "istream"
+              }
+            },
+            "name": "Module8Func",
+            "step": 0
+          }
+        ],
+        "Stream2Mmap": [
+          {
+            "args": {
+              "mmap": {
+                "arg": "bank_0_t0",
+                "cat": "mmap"
+              },
+              "stream": {
+                "arg": "bank_0_t0_buf",
+                "cat": "istream"
+              }
+            },
+            "name": "Stream2Mmap",
+            "step": 0
+          }
+        ]
+      },
+      "vendor": "xilinx"
+    },
+    "Mmap2Stream": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(tapa::mmap<const float> mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) {\n#pragma HLS interface m_axi port = mmap offset = direct bundle = mmap\n\n\n#pragma HLS disaggregate variable = stream\n#pragma HLS interface ap_fifo port = stream._\n#pragma HLS aggregate variable = stream._ bit\nvoid(stream._.full());\n\n   for (uint64_t i = 0; i < n; ++i) {\n#pragma HLS pipeline II = 2\n\n    tapa::vec_t<float, 2> tmp;\n    tmp.set(0, mmap[i * 2]);\n    tmp.set(1, mmap[i * 2 + 1]);\n    stream.write(tmp);\n  }\n  stream.close();\n}\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) ;\n",
+      "level": "lower",
+      "target": "hls",
+      "vendor": "xilinx"
+    },
+    "Module0Func": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) {\n#pragma HLS disaggregate variable = fifo_st_0\n#pragma HLS interface ap_fifo port = fifo_st_0._\n#pragma HLS aggregate variable = fifo_st_0._ bit\nvoid(fifo_st_0._.full());\n\n#pragma HLS disaggregate variable = fifo_st_1\n#pragma HLS interface ap_fifo port = fifo_st_1._\n#pragma HLS aggregate variable = fifo_st_1._ bit\nvoid(fifo_st_1._.full());\n\n#pragma HLS disaggregate variable = dram_t1_bank_0_fifo\n#pragma HLS interface ap_fifo port = dram_t1_bank_0_fifo._\n#pragma HLS aggregate variable = dram_t1_bank_0_fifo._ bit\n#pragma HLS interface ap_fifo port = dram_t1_bank_0_fifo._peek\n#pragma HLS aggregate variable = dram_t1_bank_0_fifo._peek bit\nvoid(dram_t1_bank_0_fifo._.empty());\nvoid(dram_t1_bank_0_fifo._peek.empty());\n\nmodule_0_epoch:\n  TAPA_WHILE_NOT_EOT(dram_t1_bank_0_fifo) {\n    auto dram_t1_bank_0_buf = dram_t1_bank_0_fifo.read(nullptr);\n    fifo_st_0.write(dram_t1_bank_0_buf[1]);\n    fifo_st_1.write(dram_t1_bank_0_buf[0]);\n  }\n  fifo_st_0.close();\n  fifo_st_1.close();\n}\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) ;\n",
+      "level": "lower",
+      "target": "hls",
+      "vendor": "xilinx"
+    },
+    "Module1Func": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) {\n#pragma HLS disaggregate variable = fifo_st_0\n#pragma HLS interface ap_fifo port = fifo_st_0._\n#pragma HLS aggregate variable = fifo_st_0._ bit\nvoid(fifo_st_0._.full());\n\n#pragma HLS disaggregate variable = fifo_st_1\n#pragma HLS interface ap_fifo port = fifo_st_1._\n#pragma HLS aggregate variable = fifo_st_1._ bit\nvoid(fifo_st_1._.full());\n\n#pragma HLS disaggregate variable = fifo_ld_0\n#pragma HLS interface ap_fifo port = fifo_ld_0._\n#pragma HLS aggregate variable = fifo_ld_0._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_0._peek\n#pragma HLS aggregate variable = fifo_ld_0._peek bit\nvoid(fifo_ld_0._.empty());\nvoid(fifo_ld_0._peek.empty());\n\nmodule_1_epoch:\n  TAPA_WHILE_NOT_EOT(fifo_ld_0) {\n    auto fifo_ref_0 = fifo_ld_0.read(nullptr);\n    fifo_st_0.write(fifo_ref_0);\n    fifo_st_1.write(fifo_ref_0);\n  }\n  fifo_st_0.close();\n  fifo_st_1.close();\n}\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) ;\n",
+      "level": "lower",
+      "target": "hls",
+      "vendor": "xilinx"
+    },
+    "Module3Func1": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) {\n#pragma HLS disaggregate variable = fifo_st_0\n#pragma HLS interface ap_fifo port = fifo_st_0._\n#pragma HLS aggregate variable = fifo_st_0._ bit\nvoid(fifo_st_0._.full());\n\n#pragma HLS disaggregate variable = fifo_ld_0\n#pragma HLS interface ap_fifo port = fifo_ld_0._\n#pragma HLS aggregate variable = fifo_ld_0._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_0._peek\n#pragma HLS aggregate variable = fifo_ld_0._peek bit\nvoid(fifo_ld_0._.empty());\nvoid(fifo_ld_0._peek.empty());\n\n#pragma HLS disaggregate variable = fifo_ld_1\n#pragma HLS interface ap_fifo port = fifo_ld_1._\n#pragma HLS aggregate variable = fifo_ld_1._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_1._peek\n#pragma HLS aggregate variable = fifo_ld_1._peek bit\nvoid(fifo_ld_1._.empty());\nvoid(fifo_ld_1._peek.empty());\n\n  const int delay_0 = 50;\n  int count = 0;\nmodule_3_1_epoch:\n  TAPA_WHILE_NEITHER_EOT(fifo_ld_0, fifo_ld_1) {\n    float fifo_ref_0 = 0.f;\n    bool do_ld_0 = count >= delay_0;\n    if (do_ld_0) {\n      fifo_ref_0 = fifo_ld_0.read(nullptr);\n    }\n    float fifo_ref_1 = fifo_ld_1.read(nullptr);\n    fifo_st_0.write(fifo_ref_0 + fifo_ref_1);\n    if (!do_ld_0) {\n      ++count;\n    }\n  }\n  fifo_st_0.close();\n}\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) ;\n",
+      "level": "lower",
+      "target": "hls",
+      "vendor": "xilinx"
+    },
+    "Module3Func2": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) {\n#pragma HLS disaggregate variable = fifo_st_0\n#pragma HLS interface ap_fifo port = fifo_st_0._\n#pragma HLS aggregate variable = fifo_st_0._ bit\nvoid(fifo_st_0._.full());\n\n#pragma HLS disaggregate variable = fifo_ld_0\n#pragma HLS interface ap_fifo port = fifo_ld_0._\n#pragma HLS aggregate variable = fifo_ld_0._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_0._peek\n#pragma HLS aggregate variable = fifo_ld_0._peek bit\nvoid(fifo_ld_0._.empty());\nvoid(fifo_ld_0._peek.empty());\n\n#pragma HLS disaggregate variable = fifo_ld_1\n#pragma HLS interface ap_fifo port = fifo_ld_1._\n#pragma HLS aggregate variable = fifo_ld_1._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_1._peek\n#pragma HLS aggregate variable = fifo_ld_1._peek bit\nvoid(fifo_ld_1._.empty());\nvoid(fifo_ld_1._peek.empty());\n\n  const int delay_0 = 51;\n  int count = 0;\nmodule_3_2_epoch:\n  TAPA_WHILE_NEITHER_EOT(fifo_ld_0, fifo_ld_1) {\n    float fifo_ref_0 = 0.f;\n    bool do_ld_0 = count >= delay_0;\n    if (do_ld_0) {\n      fifo_ref_0 = fifo_ld_0.read(nullptr);\n    }\n    float fifo_ref_1 = fifo_ld_1.read(nullptr);\n    fifo_st_0.write(fifo_ref_0 + fifo_ref_1);\n    if (!do_ld_0) {\n      ++count;\n    }\n  }\n  fifo_st_0.close();\n}\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) ;\n",
+      "level": "lower",
+      "target": "hls",
+      "vendor": "xilinx"
+    },
+    "Module6Func1": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) {\n#pragma HLS disaggregate variable = fifo_st_0\n#pragma HLS interface ap_fifo port = fifo_st_0._\n#pragma HLS aggregate variable = fifo_st_0._ bit\nvoid(fifo_st_0._.full());\n\n#pragma HLS disaggregate variable = fifo_ld_0\n#pragma HLS interface ap_fifo port = fifo_ld_0._\n#pragma HLS aggregate variable = fifo_ld_0._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_0._peek\n#pragma HLS aggregate variable = fifo_ld_0._peek bit\nvoid(fifo_ld_0._.empty());\nvoid(fifo_ld_0._peek.empty());\n\n#pragma HLS disaggregate variable = fifo_ld_1\n#pragma HLS interface ap_fifo port = fifo_ld_1._\n#pragma HLS aggregate variable = fifo_ld_1._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_1._peek\n#pragma HLS aggregate variable = fifo_ld_1._peek bit\nvoid(fifo_ld_1._.empty());\nvoid(fifo_ld_1._peek.empty());\n\n#pragma HLS disaggregate variable = fifo_ld_2\n#pragma HLS interface ap_fifo port = fifo_ld_2._\n#pragma HLS aggregate variable = fifo_ld_2._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_2._peek\n#pragma HLS aggregate variable = fifo_ld_2._peek bit\nvoid(fifo_ld_2._.empty());\nvoid(fifo_ld_2._peek.empty());\n\n  const int delay_0 = 50;\n  const int delay_2 = 50;\n  int count = 0;\nmodule_6_1_epoch:\n  TAPA_WHILE_NONE_EOT(fifo_ld_0, fifo_ld_1, fifo_ld_2) {\n    float fifo_ref_0 = 0.f;\n    bool do_ld_0 = count >= delay_0;\n    if (do_ld_0) {\n      fifo_ref_0 = fifo_ld_0.read(nullptr);\n    }\n    auto fifo_ref_1 = fifo_ld_1.read(nullptr);\n    float fifo_ref_2 = 0.f;\n    bool do_ld_2 = count >= delay_2;\n    if (do_ld_2) {\n      fifo_ref_2 = fifo_ld_2.read(nullptr);\n    }\n    fifo_st_0.write((fifo_ref_0 + fifo_ref_1 + fifo_ref_2) * 0.2f);\n    if (!do_ld_0 || !do_ld_2) {\n      ++count;\n    }\n  }\n  fifo_st_0.close();\n}\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) ;\n",
+      "level": "lower",
+      "target": "hls",
+      "vendor": "xilinx"
+    },
+    "Module6Func2": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) {\n#pragma HLS disaggregate variable = fifo_st_0\n#pragma HLS interface ap_fifo port = fifo_st_0._\n#pragma HLS aggregate variable = fifo_st_0._ bit\nvoid(fifo_st_0._.full());\n\n#pragma HLS disaggregate variable = fifo_ld_0\n#pragma HLS interface ap_fifo port = fifo_ld_0._\n#pragma HLS aggregate variable = fifo_ld_0._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_0._peek\n#pragma HLS aggregate variable = fifo_ld_0._peek bit\nvoid(fifo_ld_0._.empty());\nvoid(fifo_ld_0._peek.empty());\n\n#pragma HLS disaggregate variable = fifo_ld_1\n#pragma HLS interface ap_fifo port = fifo_ld_1._\n#pragma HLS aggregate variable = fifo_ld_1._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_1._peek\n#pragma HLS aggregate variable = fifo_ld_1._peek bit\nvoid(fifo_ld_1._.empty());\nvoid(fifo_ld_1._peek.empty());\n\n#pragma HLS disaggregate variable = fifo_ld_2\n#pragma HLS interface ap_fifo port = fifo_ld_2._\n#pragma HLS aggregate variable = fifo_ld_2._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_2._peek\n#pragma HLS aggregate variable = fifo_ld_2._peek bit\nvoid(fifo_ld_2._.empty());\nvoid(fifo_ld_2._peek.empty());\n\n  const int delay_0 = 49;\n  const int delay_2 = 50;\n  int count = 0;\nmodule_6_2_epoch:\n  TAPA_WHILE_NONE_EOT(fifo_ld_0, fifo_ld_1, fifo_ld_2) {\n    float fifo_ref_0 = 0.f;\n    bool do_ld_0 = count >= delay_0;\n    if (do_ld_0) {\n      fifo_ref_0 = fifo_ld_0.read(nullptr);\n    }\n    auto fifo_ref_1 = fifo_ld_1.read(nullptr);\n    float fifo_ref_2 = 0.f;\n    bool do_ld_2 = count >= delay_2;\n    if (do_ld_2) {\n      fifo_ref_2 = fifo_ld_2.read(nullptr);\n    }\n    fifo_st_0.write((fifo_ref_0 + fifo_ref_1 + fifo_ref_2) * 0.2f);\n    if (!do_ld_0 || !do_ld_2) {\n      ++count;\n    }\n  }\n  fifo_st_0.close();\n}\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) ;\n",
+      "level": "lower",
+      "target": "hls",
+      "vendor": "xilinx"
+    },
+    "Module8Func": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 uint64_t  mmap) ;\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) {\n#pragma HLS disaggregate variable = dram_t0_bank_0_fifo\n#pragma HLS interface ap_fifo port = dram_t0_bank_0_fifo._\n#pragma HLS aggregate variable = dram_t0_bank_0_fifo._ bit\nvoid(dram_t0_bank_0_fifo._.full());\n\n#pragma HLS disaggregate variable = fifo_ld_0\n#pragma HLS interface ap_fifo port = fifo_ld_0._\n#pragma HLS aggregate variable = fifo_ld_0._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_0._peek\n#pragma HLS aggregate variable = fifo_ld_0._peek bit\nvoid(fifo_ld_0._.empty());\nvoid(fifo_ld_0._peek.empty());\n\n#pragma HLS disaggregate variable = fifo_ld_1\n#pragma HLS interface ap_fifo port = fifo_ld_1._\n#pragma HLS aggregate variable = fifo_ld_1._ bit\n#pragma HLS interface ap_fifo port = fifo_ld_1._peek\n#pragma HLS aggregate variable = fifo_ld_1._peek bit\nvoid(fifo_ld_1._.empty());\nvoid(fifo_ld_1._peek.empty());\n\nmodule_8_epoch:\n  TAPA_WHILE_NEITHER_EOT(fifo_ld_0, fifo_ld_1) {\n    tapa::vec_t<float, 2> tmp;\n    tmp.set(0, fifo_ld_0.read(nullptr));\n    tmp.set(1, fifo_ld_1.read(nullptr));\n    dram_t0_bank_0_fifo.write(tmp);\n  }\n  dram_t0_bank_0_fifo.close();\n}\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) ;\n",
+      "level": "lower",
+      "target": "hls",
+      "vendor": "xilinx"
+    },
+    "Stream2Mmap": {
+      "code": "#include <tapa.h>\n\nvoid Mmap2Stream(uint64_t  mmap, uint64_t n,\n                 tapa::ostream<tapa::vec_t<float, 2>>& stream) ;\n\nvoid Stream2Mmap(tapa::istream<tapa::vec_t<float, 2>>& stream,\n                 tapa::mmap<float> mmap) {\n#pragma HLS disaggregate variable = stream\n#pragma HLS interface ap_fifo port = stream._\n#pragma HLS aggregate variable = stream._ bit\n#pragma HLS interface ap_fifo port = stream._peek\n#pragma HLS aggregate variable = stream._peek bit\nvoid(stream._.empty());\nvoid(stream._peek.empty());\n\n#pragma HLS interface m_axi port = mmap offset = direct bundle = mmap\n\n   for (uint64_t i = 0;;) {\n#pragma HLS pipeline II = 2\n\n    bool eot;\n    if (stream.try_eot(eot)) {\n      if (eot) break;\n      auto packed = stream.read(nullptr);\n      mmap[i * 2] = packed[0];\n      mmap[i * 2 + 1] = packed[1];\n      ++i;\n    }\n  }\n}\n\nvoid Module0Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<tapa::vec_t<float, 2>>& dram_t1_bank_0_fifo) ;\n\nvoid Module1Func(tapa::ostream<float>& fifo_st_0,\n                 tapa::ostream<float>& fifo_st_1,\n                 tapa::istream<float>& fifo_ld_0) ;\n\nvoid Module3Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module3Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1) ;\n\nvoid Module6Func1(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\nvoid Module6Func2(tapa::ostream<float>& fifo_st_0,\n                  tapa::istream<float>& fifo_ld_0,\n                  tapa::istream<float>& fifo_ld_1,\n                  tapa::istream<float>& fifo_ld_2) ;\n\nvoid Module8Func(tapa::ostream<tapa::vec_t<float, 2>>& dram_t0_bank_0_fifo,\n                 tapa::istream<float>& fifo_ld_0,\n                 tapa::istream<float>& fifo_ld_1) ;\n\nvoid Jacobi(uint64_t  bank_0_t0, uint64_t  bank_0_t1,\n            uint64_t coalesced_data_num) ;\n",
+      "level": "lower",
+      "target": "hls",
+      "vendor": "xilinx"
+    }
+  },
+  "top": "Jacobi",
+  "cflags": [
+    "-std=c++17"
+  ]
+}

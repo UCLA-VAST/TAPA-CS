@@ -1,0 +1,33 @@
+digraph {
+  rankdir="LR";
+  {
+    rank = same;
+    "PORT_VERTEX_bank_0_t0_external_controller" [style=filled, shape=rectangular, fillcolor="#9ACEEB"]
+    "PORT_VERTEX_bank_0_t1_external_controller" [style=filled, shape=rectangular, fillcolor="#9ACEEB"]
+  }
+
+  "TASK_VERTEX_Module8Func_0" -> "TASK_VERTEX_Stream2Mmap_0" [penwidth=1.7004397181410922, label=65]
+  "TASK_VERTEX_Mmap2Stream_0" -> "TASK_VERTEX_Module0Func_0" [penwidth=1.7004397181410922, label=65]
+  "TASK_VERTEX_Module0Func_0" -> "TASK_VERTEX_Module1Func_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module0Func_0" -> "TASK_VERTEX_Module1Func_1" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module6Func1_0" -> "TASK_VERTEX_Module8Func_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module6Func2_0" -> "TASK_VERTEX_Module8Func_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_0" -> "TASK_VERTEX_Module1Func_2" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_0" -> "TASK_VERTEX_Module3Func1_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_1" -> "TASK_VERTEX_Module1Func_3" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_1" -> "TASK_VERTEX_Module3Func2_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_2" -> "TASK_VERTEX_Module6Func2_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_2" -> "TASK_VERTEX_Module3Func2_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_3" -> "TASK_VERTEX_Module6Func1_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_3" -> "TASK_VERTEX_Module3Func1_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_4" -> "TASK_VERTEX_Module6Func1_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_4" -> "TASK_VERTEX_Module6Func2_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_5" -> "TASK_VERTEX_Module6Func1_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module1Func_5" -> "TASK_VERTEX_Module6Func2_0" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module3Func2_0" -> "TASK_VERTEX_Module1Func_5" [penwidth=0.722466024471091, label=33]
+  "TASK_VERTEX_Module3Func1_0" -> "TASK_VERTEX_Module1Func_4" [penwidth=0.722466024471091, label=33]
+  "PORT_VERTEX_bank_0_t1_external_controller" -> "TASK_VERTEX_Mmap2Stream_0" [dir=none, penwidth=3.6438561897747253, color=gold, label=250	]
+  "PORT_VERTEX_bank_0_t0_external_controller" -> "TASK_VERTEX_Stream2Mmap_0" [dir=none, penwidth=3.6438561897747253, color=gold, label=250	]
+
+
+}

@@ -1,0 +1,246 @@
+I0517 01:18:35.252 tapa.util:162] logging level set to INFO
+I0517 01:18:35.252 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0517 01:18:35.252 tapa.tapac:496] Python recursion limit set to 3000
+I0517 01:18:35.252 tapa.tapac:416] Executing all steps of tapac
+I0517 01:18:35.280 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:75:20: error: type 'tapa::ostream<Eid>' (aka 'ostream<unsigned int>') does not provide a subscript operator
+    update_config_q[pid].write(update_offset);
+    ~~~~~~~~~~~~~~~^~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:182:28: error: invalid operands to binary expression ('Pid [8]' and 'const int')
+        Pid pid = pid_send * kNumPes + pe;
+                  ~~~~~~~~ ^ ~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:203:13: error: use of undeclared identifier 'pid_recv'
+          ++pid_recv;
+            ^
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:218:16: error: use of undeclared identifier 'num_partitions'
+  metadata[2 + num_partitions * kNumPes + num_partitions] = iter;
+               ^
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:218:43: error: use of undeclared identifier 'num_partitions'
+  metadata[2 + num_partitions * kNumPes + num_partitions] = iter;
+                                          ^
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:218:3: error: C++ requires a type specifier for all declarations
+  metadata[2 + num_partitions * kNumPes + num_partitions] = iter;
+  ^
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:218:61: error: use of undeclared identifier 'iter'
+  metadata[2 + num_partitions * kNumPes + num_partitions] = iter;
+                                                            ^
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:219:1: error: extraneous closing brace ('}')
+}
+^
+In file included from /home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:6:
+In file included from /usr/local/include/tapa.h:6:
+In file included from /usr/local/include/tapa/host/tapa.h:9:
+/usr/local/include/tapa/host/task.h:48:74: error: pack expansion contains parameter packs 'Params' and 'Args' that have different lengths (9 vs. 8)
+                                                std::forward<Args>(args))...));
+                                                                         ^
+/usr/local/include/tapa/host/task.h:167:39: note: in instantiation of function template specialization 'tapa::internal::invoker<void (&)(unsigned short, tapa::mmap<unsigned long>, tapa::ostream<VertexReq> &, tapa::ostream<unsigned int> &, tapa::ostream<bool> &, tapa::istream<tapa::packet<unsigned short, unsigned int> > &, tapa::ostream<TaskReq> &, tapa::istream<TaskResp> &, int)>::invoke<unsigned short &, tapa::mmap<unsigned long> &, tapa::stream<VertexReq, 2> &, tapa::stream<unsigned int, 2>, tapa::stream<bool, 2>, tapa::stream<tapa::packet<unsigned short, unsigned int>, 2>, tapa::stream<TaskReq, 2>, tapa::stream<TaskResp, 2> >' requested here
+    internal::invoker<Func>::template invoke<Args...>(
+                                      ^
+/usr/local/include/tapa/host/task.h:158:12: note: in instantiation of function template specialization 'tapa::task::invoke<0, void (&)(unsigned short, tapa::mmap<unsigned long>, tapa::ostream<VertexReq> &, tapa::ostream<unsigned int> &, tapa::ostream<bool> &, tapa::istream<tapa::packet<unsigned short, unsigned int> > &, tapa::ostream<TaskReq> &, tapa::istream<TaskResp> &, int), unsigned short &, tapa::mmap<unsigned long> &, tapa::stream<VertexReq, 2> &, tapa::stream<unsigned int, 2>, tapa::stream<bool, 2>, tapa::stream<tapa::packet<unsigned short, unsigned int>, 2>, tapa::stream<TaskReq, 2>, tapa::stream<TaskResp, 2> , 8>' requested here
+    return invoke<join>(std::forward<Func>(func), name,
+           ^
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:936:2: note: in instantiation of function template specialization 'tapa::task::invoke<void (&)(unsigned short, tapa::mmap<unsigned long>, tapa::ostream<VertexReq> &, tapa::ostream<unsigned int> &, tapa::ostream<bool> &, tapa::istream<tapa::packet<unsigned short, unsigned int> > &, tapa::ostream<TaskReq> &, tapa::istream<TaskResp> &, int), unsigned short &, tapa::mmap<unsigned long> &, tapa::stream<VertexReq, 2> &, tapa::stream<unsigned int, 2>, tapa::stream<bool, 2>, tapa::stream<tapa::packet<unsigned short, unsigned int>, 2>, tapa::stream<TaskReq, 2>, tapa::stream<TaskResp, 2> , 8>' requested here
+.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[0],  update_phase[0], num_updates[0],  task_req[0],  task_resp[0])
+ ^
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:937:58: error: tapa::stream 'scatter_phase_vertex_req' produced more than once
+.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[1],  update_phase[1], num_updates[1],  task_req[1],  task_resp[1])
+                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:938:58: error: tapa::stream 'scatter_phase_vertex_req' produced more than once
+.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[2],  update_phase[2], num_updates[2],  task_req[2],  task_resp[2])
+                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:939:58: error: tapa::stream 'scatter_phase_vertex_req' produced more than once
+.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[3],  update_phase[3], num_updates[3],  task_req[3],  task_resp[3])
+                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:899:3: warning: unused stream: edge_req[4]
+  tapa::streams<Eid, kNumPes, 2> edge_req("edge_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:899:3: warning: unused stream: edge_req[5]
+  tapa::streams<Eid, kNumPes, 2> edge_req("edge_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:899:3: warning: unused stream: edge_req[6]
+  tapa::streams<Eid, kNumPes, 2> edge_req("edge_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:899:3: warning: unused stream: edge_req[7]
+  tapa::streams<Eid, kNumPes, 2> edge_req("edge_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:900:3: warning: unused stream: edge_resp[4]
+  tapa::streams<EdgeVec, kNumPes, 2> edge_resp("edge_resp");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:900:3: warning: unused stream: edge_resp[5]
+  tapa::streams<EdgeVec, kNumPes, 2> edge_resp("edge_resp");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:900:3: warning: unused stream: edge_resp[6]
+  tapa::streams<EdgeVec, kNumPes, 2> edge_resp("edge_resp");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:900:3: warning: unused stream: edge_resp[7]
+  tapa::streams<EdgeVec, kNumPes, 2> edge_resp("edge_resp");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:917:3: warning: unused stream: num_updates[4]
+  tapa::streams<NumUpdates, kNumPes, 2> num_updates("num_updates");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:917:3: warning: unused stream: num_updates[5]
+  tapa::streams<NumUpdates, kNumPes, 2> num_updates("num_updates");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:917:3: warning: unused stream: num_updates[6]
+  tapa::streams<NumUpdates, kNumPes, 2> num_updates("num_updates");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:917:3: warning: unused stream: num_updates[7]
+  tapa::streams<NumUpdates, kNumPes, 2> num_updates("num_updates");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:872:3: warning: unused stream: task_req[4]
+  tapa::streams<TaskReq, kNumPes, 2> task_req("task_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:872:3: warning: unused stream: task_req[5]
+  tapa::streams<TaskReq, kNumPes, 2> task_req("task_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:872:3: warning: unused stream: task_req[6]
+  tapa::streams<TaskReq, kNumPes, 2> task_req("task_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:872:3: warning: unused stream: task_req[7]
+  tapa::streams<TaskReq, kNumPes, 2> task_req("task_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:873:3: warning: unused stream: task_resp[4]
+  tapa::streams<TaskResp, kNumPes, 2> task_resp("task_resp");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:873:3: warning: unused stream: task_resp[5]
+  tapa::streams<TaskResp, kNumPes, 2> task_resp("task_resp");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:873:3: warning: unused stream: task_resp[6]
+  tapa::streams<TaskResp, kNumPes, 2> task_resp("task_resp");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:873:3: warning: unused stream: task_resp[7]
+  tapa::streams<TaskResp, kNumPes, 2> task_resp("task_resp");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:903:3: warning: unused stream: update_config[4]
+  tapa::streams<Eid, kNumPes, 2> update_config("update_config");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:903:3: warning: unused stream: update_config[5]
+  tapa::streams<Eid, kNumPes, 2> update_config("update_config");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:903:3: warning: unused stream: update_config[6]
+  tapa::streams<Eid, kNumPes, 2> update_config("update_config");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:903:3: warning: unused stream: update_config[7]
+  tapa::streams<Eid, kNumPes, 2> update_config("update_config");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:915:3: warning: unused stream: update_mm2pe[4]
+  tapa::streams<UpdateVec, kNumPes, 2> update_mm2pe("update_mm2pe");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:915:3: warning: unused stream: update_mm2pe[5]
+  tapa::streams<UpdateVec, kNumPes, 2> update_mm2pe("update_mm2pe");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:915:3: warning: unused stream: update_mm2pe[6]
+  tapa::streams<UpdateVec, kNumPes, 2> update_mm2pe("update_mm2pe");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:915:3: warning: unused stream: update_mm2pe[7]
+  tapa::streams<UpdateVec, kNumPes, 2> update_mm2pe("update_mm2pe");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:914:3: warning: unused stream: update_pe2mm[4]
+  tapa::streams<UpdateVecPacket, kNumPes, 2> update_pe2mm("update_pe2mm");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:914:3: warning: unused stream: update_pe2mm[5]
+  tapa::streams<UpdateVecPacket, kNumPes, 2> update_pe2mm("update_pe2mm");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:914:3: warning: unused stream: update_pe2mm[6]
+  tapa::streams<UpdateVecPacket, kNumPes, 2> update_pe2mm("update_pe2mm");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:914:3: warning: unused stream: update_pe2mm[7]
+  tapa::streams<UpdateVecPacket, kNumPes, 2> update_pe2mm("update_pe2mm");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:904:3: warning: unused stream: update_phase[4]
+  tapa::streams<bool, kNumPes, 2> update_phase("update_phase");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:904:3: warning: unused stream: update_phase[5]
+  tapa::streams<bool, kNumPes, 2> update_phase("update_phase");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:904:3: warning: unused stream: update_phase[6]
+  tapa::streams<bool, kNumPes, 2> update_phase("update_phase");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:904:3: warning: unused stream: update_phase[7]
+  tapa::streams<bool, kNumPes, 2> update_phase("update_phase");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:909:3: warning: unused stream: update_read_addr[4]
+  tapa::streams<uint64_t, kNumPes, 2> update_read_addr("update_read_addr");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:909:3: warning: unused stream: update_read_addr[5]
+  tapa::streams<uint64_t, kNumPes, 2> update_read_addr("update_read_addr");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:909:3: warning: unused stream: update_read_addr[6]
+  tapa::streams<uint64_t, kNumPes, 2> update_read_addr("update_read_addr");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:909:3: warning: unused stream: update_read_addr[7]
+  tapa::streams<uint64_t, kNumPes, 2> update_read_addr("update_read_addr");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:910:3: warning: unused stream: update_read_data[4]
+  tapa::streams<UpdateVec, kNumPes, 2> update_read_data("update_read_data");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:910:3: warning: unused stream: update_read_data[5]
+  tapa::streams<UpdateVec, kNumPes, 2> update_read_data("update_read_data");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:910:3: warning: unused stream: update_read_data[6]
+  tapa::streams<UpdateVec, kNumPes, 2> update_read_data("update_read_data");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:910:3: warning: unused stream: update_read_data[7]
+  tapa::streams<UpdateVec, kNumPes, 2> update_read_data("update_read_data");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:907:3: warning: unused stream: update_req[4]
+  tapa::streams<UpdateReq, kNumPes, 2> update_req("update_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:907:3: warning: unused stream: update_req[5]
+  tapa::streams<UpdateReq, kNumPes, 2> update_req("update_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:907:3: warning: unused stream: update_req[6]
+  tapa::streams<UpdateReq, kNumPes, 2> update_req("update_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:907:3: warning: unused stream: update_req[7]
+  tapa::streams<UpdateReq, kNumPes, 2> update_req("update_req");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:911:3: warning: unused stream: update_write_addr[4]
+  tapa::streams<uint64_t, kNumPes, 2> update_write_addr("update_write_addr");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:911:3: warning: unused stream: update_write_addr[5]
+  tapa::streams<uint64_t, kNumPes, 2> update_write_addr("update_write_addr");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:911:3: warning: unused stream: update_write_addr[6]
+  tapa::streams<uint64_t, kNumPes, 2> update_write_addr("update_write_addr");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:911:3: warning: unused stream: update_write_addr[7]
+  tapa::streams<uint64_t, kNumPes, 2> update_write_addr("update_write_addr");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:912:3: warning: unused stream: update_write_data[4]
+  tapa::streams<UpdateVec, kNumPes, 2> update_write_data("update_write_data");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:912:3: warning: unused stream: update_write_data[5]
+  tapa::streams<UpdateVec, kNumPes, 2> update_write_data("update_write_data");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:912:3: warning: unused stream: update_write_data[6]
+  tapa::streams<UpdateVec, kNumPes, 2> update_write_data("update_write_data");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:912:3: warning: unused stream: update_write_data[7]
+  tapa::streams<UpdateVec, kNumPes, 2> update_write_data("update_write_data");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:896:3: error: produced but not consumed stream: vertex_mm2pe_r2[0]
+  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_mm2pe_r2("vertex_mm2pe_r2");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:896:3: error: produced but not consumed stream: vertex_mm2pe_r2[1]
+  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_mm2pe_r2("vertex_mm2pe_r2");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:896:3: error: produced but not consumed stream: vertex_mm2pe_r2[2]
+  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_mm2pe_r2("vertex_mm2pe_r2");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:896:3: error: produced but not consumed stream: vertex_mm2pe_r2[3]
+  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_mm2pe_r2("vertex_mm2pe_r2");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:895:3: error: consumed but not produced stream: vertex_pe2mm_r2[0]
+  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_pe2mm_r2("vertex_pe2mm_r2");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:895:3: error: consumed but not produced stream: vertex_pe2mm_r2[1]
+  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_pe2mm_r2("vertex_pe2mm_r2");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:895:3: error: consumed but not produced stream: vertex_pe2mm_r2[2]
+  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_pe2mm_r2("vertex_pe2mm_r2");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+56 warnings and 20 errors generated.
+Error while processing /home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp.
+E0517 01:18:40.081 tapa.tapac:566] tapacc command ['/usr/local/bin/tapacc', 'kernel_1.cpp', '-top', 'PageRank_1', '--', '-I', '/home/ubuntu/.local/lib/python3.8/site-packages/tapa/../../../src', '-isystem', '/home/ubuntu/.local/lib/python3.8/site-packages/tapa/assets/clang', '-isystem', '/tools/Xilinx/Vitis_HLS/2022.1/include', '-std=c++17'] failed with exit code 1

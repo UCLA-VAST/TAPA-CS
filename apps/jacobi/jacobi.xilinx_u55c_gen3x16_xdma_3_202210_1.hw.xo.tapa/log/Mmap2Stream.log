@@ -1,0 +1,121 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ubuntu' on host 'ip-172-31-21-244.ec2.internal' (Linux_x86_64 version 5.11.0-1028-aws) on Tue May 09 20:41:57 UTC 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.3 LTS
+INFO: [HLS 200-10] In directory '/tmp/run-hls-Mmap2Stream-e1_615df'
+Sourcing Tcl script '/tmp/run-hls-Mmap2Stream-e1_615df/commands.tcl'
+INFO: [HLS 200-1510] Running: open_project project 
+INFO: [HLS 200-10] Creating and opening project '/tmp/run-hls-Mmap2Stream-e1_615df/project'.
+INFO: [HLS 200-1510] Running: set_top Mmap2Stream 
+INFO: [HLS 200-1510] Running: add_files /home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp -cflags -std=c++17 -std=c++17 -isystem /tools/Xilinx/Vitis_HLS/2022.1/include/../tps/lnx64/gcc-6.2.0/include/c++/6.2.0 -DTAPA_TARGET_=XILINX_HLS 
+INFO: [HLS 200-10] Adding design file '/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution Mmap2Stream 
+INFO: [HLS 200-10] Creating and opening solution '/tmp/run-hls-Mmap2Stream-e1_615df/project/Mmap2Stream'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xcu55c-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu55c-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 3.333333 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: config_compile -name_max_length 253 
+INFO: [XFORM 203-1161] The maximum of name length is set to 253.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_rtl -reset_level low -module_auto_prefix 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.458 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.33 seconds. CPU system time: 0.66 seconds. Elapsed time: 3.9 seconds; current allocated memory: 460.609 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'tapa::vec_t<float, 2>::operator[](int)' into 'tapa::vec_t<float, 2>::set(int, float const&)' (/usr/local/include/tapa/xilinx/hls/vec.h:59:2)
+INFO: [HLS 214-131] Inlining function 'tapa::ostream<tapa::vec_t<float, 2> >::close()' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream<tapa::vec_t<float, 2> >&)' (/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp:21:10)
+INFO: [HLS 214-131] Inlining function 'tapa::ostream<tapa::vec_t<float, 2> >::write(tapa::vec_t<float, 2> const&)' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream<tapa::vec_t<float, 2> >&)' (/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp:19:12)
+INFO: [HLS 214-131] Inlining function 'tapa::vec_t<float, 2>::set(int, float const&)' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream<tapa::vec_t<float, 2> >&)' (/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp:18:9)
+INFO: [HLS 214-131] Inlining function 'tapa::vec_t<float, 2>::set(int, float const&)' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream<tapa::vec_t<float, 2> >&)' (/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp:17:9)
+INFO: [HLS 214-210] Disaggregating variable 'stream' (/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'std::__array_traits<float, 2ul>::_S_ref(float const (&) [2], unsigned long)' into 'std::array<float, 2ul>::operator[](unsigned long)' (/tools/Xilinx/Vitis_HLS/2022.1/include/../tps/lnx64/gcc-6.2.0/include/c++/6.2.0/array:182:0)
+INFO: [HLS 214-178] Inlining function 'std::array<float, 2ul>::operator[](unsigned long)' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream<tapa::vec_t<float, 2> >&)' (/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp:4:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'stream' with compact=bit mode in 65-bits (/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp:4:0)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 has been inferred on bundle 'mmap'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/ubuntu/tapa_m/apps/jacobi/jacobi.xilinx_u55c_gen3x16_xdma_3_202210_1.hw.xo.tapa/cpp/Mmap2Stream.cpp:13:21)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i96.s_struct.tapa::internal::elem_t<tapa::vec_t<float, 2> >s' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream<tapa::vec_t<float, 2> >&)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.bits.i65.s_struct.tapa::internal::elem_t<tapa::vec_t<float, 2> >s.1' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream<tapa::vec_t<float, 2> >&)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.93 seconds. CPU system time: 0.71 seconds. Elapsed time: 5.66 seconds; current allocated memory: 461.707 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 461.707 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 462.219 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 462.285 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 483.816 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 483.816 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Mmap2Stream' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 5, loop 'VITIS_LOOP_13_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.07 seconds; current allocated memory: 484.945 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 484.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Mmap2Stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 485.184 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 485.184 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1' pipeline 'VITIS_LOOP_13_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1/m_axi_mmap_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mmap2Stream_Pipeline_VITIS_LOOP_13_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 485.184 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Mmap2Stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Mmap2Stream/mmap' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Mmap2Stream/mmap_offset' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Mmap2Stream/n' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Mmap2Stream/stream' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Mmap2Stream' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Mmap2Stream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 486.543 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 490.918 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.47 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.48 seconds; current allocated memory: 492.332 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Mmap2Stream.
+INFO: [VLOG 209-307] Generating Verilog RTL for Mmap2Stream.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 411.00 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10.56 seconds. CPU system time: 1.47 seconds. Elapsed time: 10.93 seconds; current allocated memory: -1000.516 MB.
+INFO: [HLS 200-112] Total CPU user time: 15.16 seconds. Total CPU system time: 2.5 seconds. Total elapsed time: 14.15 seconds; peak allocated memory: 1.458 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue May  9 20:42:11 2023...
