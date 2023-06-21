@@ -1,4 +1,0 @@
-I0621 11:27:03.935 tapa.util:162] logging level set to INFO
-I0621 11:27:03.936 tapa.tapac:492] tapa version: 0.0.20221113.1
-I0621 11:27:03.936 tapa.tapac:496] Python recursion limit set to 3000
-I0621 11:27:03.936 tapa.tapac:416] Executing all steps of tapac

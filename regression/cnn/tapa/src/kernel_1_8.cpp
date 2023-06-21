@@ -9,8 +9,9 @@ typedef ap_uint<512> C_t16;
 typedef ap_uint<64> C_t2;
 
 void Stream2Mmap_final(tapa::istream<C_t2>& in_board, tapa::mmap<C_t2> itemp1, tapa::mmap<C_t2> itemp2,
-tapa::mmap<C_t2> itemp3, tapa::mmap<C_t2> itemp4, tapa::mmap<C_t2> itemp5, tapa::mmap<C_t2> itemp6)
-// tapa::mmap<C_t2> itemp7, tapa::mmap<C_t2> itemp8, tapa::mmap<C_t2> itemp9,
+tapa::mmap<C_t2> itemp3, tapa::mmap<C_t2> itemp4, tapa::mmap<C_t2> itemp5, tapa::mmap<C_t2> itemp6,
+tapa::mmap<C_t2> itemp7, tapa::mmap<C_t2> itemp8)
+// , tapa::mmap<C_t2> itemp9,
 // tapa::mmap<C_t2> itemp10, tapa::mmap<C_t2> itemp11, tapa::mmap<C_t2> itemp12, tapa::mmap<C_t2> itemp13, tapa::mmap<C_t2> itemp14, tapa::mmap<C_t2> itemp15, tapa::mmap<C_t2> itemp16, tapa::mmap<C_t2> itemp17
 
 {
@@ -22,8 +23,8 @@ tapa::mmap<C_t2> itemp3, tapa::mmap<C_t2> itemp4, tapa::mmap<C_t2> itemp5, tapa:
         in_board>>itemp4[i];
         in_board>>itemp5[i];
         in_board>>itemp6[i];
-        // in_board>>itemp7[i];
-        // in_board>>itemp8[i];
+        in_board>>itemp7[i];
+        in_board>>itemp8[i];
         // in_board>>itemp9[i];
         // in_board>>itemp10[i];
         // in_board>>itemp11[i];
@@ -36,8 +37,9 @@ tapa::mmap<C_t2> itemp3, tapa::mmap<C_t2> itemp4, tapa::mmap<C_t2> itemp5, tapa:
     }
 }
 
-void Mmap2Stream_final(tapa::ostream<B_t8>& out_board, tapa::mmap<B_t8> temp1, tapa::mmap<B_t8> temp2, tapa::mmap<B_t8> temp3, tapa::mmap<B_t8> temp4, tapa::mmap<B_t8> temp5,tapa::mmap<B_t8> temp6, tapa::mmap<B_t8> temp7)
-// tapa::mmap<B_t8> temp8, tapa::mmap<B_t8> temp9, tapa::mmap<B_t8> temp10, tapa::mmap<B_t8> temp11, tapa::mmap<B_t8> temp12, tapa::mmap<B_t8> temp13, 
+void Mmap2Stream_final(tapa::ostream<B_t8>& out_board, tapa::mmap<B_t8> temp1, tapa::mmap<B_t8> temp2, tapa::mmap<B_t8> temp3, tapa::mmap<B_t8> temp4, tapa::mmap<B_t8> temp5,tapa::mmap<B_t8> temp6, tapa::mmap<B_t8> temp7,
+tapa::mmap<B_t8> temp8, tapa::mmap<B_t8> temp9)
+// , tapa::mmap<B_t8> temp10, tapa::mmap<B_t8> temp11, tapa::mmap<B_t8> temp12, tapa::mmap<B_t8> temp13, 
 // tapa::mmap<B_t8> temp14, tapa::mmap<B_t8> temp15, tapa::mmap<B_t8> temp16, tapa::mmap<B_t8> temp17
 
 {
@@ -50,8 +52,8 @@ void Mmap2Stream_final(tapa::ostream<B_t8>& out_board, tapa::mmap<B_t8> temp1, t
         out_board<<temp5[i];
         out_board<<temp6[i];
         out_board<<temp7[i];
-        // out_board<<temp8[i];
-        // out_board<<temp9[i];
+        out_board<<temp8[i];
+        out_board<<temp9[i];
         // out_board<<temp10[i];
         // out_board<<temp11[i];
         // out_board<<temp12[i];
@@ -184,10 +186,10 @@ void A_IO_L2_in( int idx, tapa::istream<A_t8>& fifo_A_in, tapa::ostream<A_t8>& f
     int p0 = idx;
     A_t8 local_A_ping[16][32];
 #pragma HLS ARRAY_MAP variable=local_A_ping instance=local_A horizontal
-#pragma HLS RESOURCE variable=local_A_ping core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_A_ping core=RAM_2P_BRAM
     A_t8 local_A_pong[16][32];
 #pragma HLS ARRAY_MAP variable=local_A_pong instance=local_A horizontal
-#pragma HLS RESOURCE variable=local_A_pong core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_A_pong core=RAM_2P_BRAM
     bool arb = 0;
     bool inter_trans_en = 1;
     bool intra_trans_en = 0;
@@ -250,10 +252,10 @@ void A_IO_L2_in_boundary( int idx, tapa::istream<A_t8>& fifo_A_in, tapa::ostream
     int p0 = idx;
     A_t8 local_A_ping[16][32];
 #pragma HLS ARRAY_MAP variable=local_A_ping instance=local_A horizontal
-#pragma HLS RESOURCE variable=local_A_ping core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_A_ping core=RAM_2P_BRAM
     A_t8 local_A_pong[16][32];
 #pragma HLS ARRAY_MAP variable=local_A_pong instance=local_A horizontal
-#pragma HLS RESOURCE variable=local_A_pong core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_A_pong core=RAM_2P_BRAM
     bool arb = 0;
     bool inter_trans_en = 1;
     bool intra_trans_en = 0;
@@ -385,10 +387,10 @@ void B_IO_L2_in( int idx, tapa::istream<B_t8>& fifo_B_in, tapa::ostream<B_t8>& f
     int p0 = idx;
     B_t8 local_B_ping[64][32];
 #pragma HLS ARRAY_MAP variable=local_B_ping instance=local_B horizontal
-#pragma HLS RESOURCE variable=local_B_ping core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_B_ping core=RAM_2P_BRAM
     B_t8 local_B_pong[64][32];
 #pragma HLS ARRAY_MAP variable=local_B_pong instance=local_B horizontal
-#pragma HLS RESOURCE variable=local_B_pong core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_B_pong core=RAM_2P_BRAM
     bool arb = 0;
     bool inter_trans_en = 1;
     bool intra_trans_en = 0;
@@ -451,10 +453,10 @@ void B_IO_L2_in_boundary( int idx, tapa::istream<B_t8>& fifo_B_in, tapa::ostream
     int p0 = idx;
     B_t8 local_B_ping[64][32];
 #pragma HLS ARRAY_MAP variable=local_B_ping instance=local_B horizontal
-#pragma HLS RESOURCE variable=local_B_ping core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_B_ping core=RAM_2P_BRAM
     B_t8 local_B_pong[64][32];
 #pragma HLS ARRAY_MAP variable=local_B_pong instance=local_B horizontal
-#pragma HLS RESOURCE variable=local_B_pong core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_B_pong core=RAM_2P_BRAM
     bool arb = 0;
     bool inter_trans_en = 1;
     bool intra_trans_en = 0;
@@ -516,7 +518,7 @@ void PE( int idx, int idy, tapa::istream<A_t8>& fifo_A_in, tapa::ostream<A_t8>& 
     float local_A[1][8];
     float local_B[1][8];
     float local_C[16][64];
-#pragma HLS RESOURCE variable=local_C core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_C core=RAM_2P_BRAM
     {
         for( ap_uint<7> c6 = 0; c6 <= 63; c6 += 1 ) {
             for( ap_uint<5> c7 = 0; c7 <= 15; c7 += 1 ) {
@@ -738,7 +740,7 @@ void C_drain_IO_L1_out( int idx, int idy, tapa::istream<C_t2>& fifo_C_drain_in, 
 #pragma HLS INLINE OFF
     int p0 = idx, p1 = idy;
     C_t2 local_C[16][32];
-#pragma HLS RESOURCE variable=local_C core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_C core=RAM_2P_BRAM
     C_drain_IO_L1_out_intra_trans(
         idx,
         idy,
@@ -758,7 +760,7 @@ void C_drain_IO_L1_out_boundary( int idx, int idy, tapa::ostream<C_t2>& fifo_C_d
 #pragma HLS INLINE OFF
     int p0 = idx, p1 = idy;
     C_t2 local_C[16][32];
-#pragma HLS RESOURCE variable=local_C core=RAM_2P_BRAM
+// #pragma HLS RESOURCE variable=local_C core=RAM_2P_BRAM
     C_drain_IO_L1_out_intra_trans(
         idx,
         idy,
@@ -841,8 +843,8 @@ tapa::mmap<B_t8> &temp4,
 tapa::mmap<B_t8> &temp5,
 tapa::mmap<B_t8> &temp6,
 tapa::mmap<B_t8> &temp7,
-// tapa::mmap<B_t8> &temp8,
-// tapa::mmap<B_t8> &temp9,
+tapa::mmap<B_t8> &temp8,
+tapa::mmap<B_t8> &temp9,
 // tapa::mmap<B_t8> &temp10,
 // tapa::mmap<B_t8> &temp11,
 // tapa::mmap<B_t8> &temp12,
@@ -863,8 +865,8 @@ tapa::mmap<C_t2> &itemp6,
 // tapa::mmap<C_t2> &itemp10,
 // tapa::mmap<C_t2> &itemp11,
 // tapa::mmap<C_t2> &itemp12,
-// tapa::mmap<C_t2> &itemp13,
-// tapa::mmap<C_t2> &itemp14,
+tapa::mmap<C_t2> &itemp13,
+tapa::mmap<C_t2> &itemp14,
 // tapa::mmap<C_t2> &itemp15,
 // tapa::mmap<C_t2> &itemp16,
 // tapa::mmap<C_t2> &itemp17,
@@ -2002,7 +2004,7 @@ tapa::task()
 // .invoke(Stream2Mmap_b, fifo_B_PE_8_15, temp17, 256)
 // .invoke(Mmap2Stream_b, temp17, 256, out_board_17)
 // .invoke(Mmap2Stream_final, out_board, temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8, temp9, temp10, temp11, temp12, temp13, temp14, temp15, temp16, temp17)
-.invoke(Mmap2Stream_final, out_board, temp1, temp2, temp3, temp4, temp5, temp6, temp7)
+.invoke(Mmap2Stream_final, out_board, temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8, temp9)
 .invoke( A_PE_dummy, 0, 7, fifo_A_PE_0_8 )
 .invoke( A_PE_dummy, 1, 7, fifo_A_PE_1_8 )
 .invoke( A_PE_dummy, 2, 7, fifo_A_PE_2_8 )
@@ -2011,7 +2013,7 @@ tapa::task()
 .invoke( A_PE_dummy, 5, 7, fifo_A_PE_5_8 )
 .invoke( A_PE_dummy, 6, 7, fifo_A_PE_6_8 )
 .invoke( A_PE_dummy, 7, 7, fifo_A_PE_7_8 )
-.invoke(Stream2Mmap_final, in_board, itemp1, itemp2, itemp3, itemp4, itemp5, itemp6)
+.invoke(Stream2Mmap_final, in_board, itemp1, itemp2, itemp3, itemp4, itemp5, itemp6, itemp13, itemp14)
 .invoke(Mmap2Stream_c, itemp1, 256, in_board_1)
 // .invoke(Mmap2Stream_c, itemp2, 256, in_board_2)
 // .invoke(Mmap2Stream_c, itemp3, 256, in_board_3)

@@ -39,8 +39,8 @@ int main(int argc, char* argv[]) {
 
   // alveolink setup begin:
   AlveoLink::common::FPGA fpga_card[2];
-  fpga_card[0].setId(1);
-  fpga_card[1].setId(2);
+  fpga_card[0].setId(0);
+  fpga_card[1].setId(1);
   AlveoLink::network_roce_v2::NetLayer<2> l_netLayer[2];
   std::cout<<"here"<<std::endl;
   for (auto i=0; i<2; ++i) {
