@@ -1,0 +1,6 @@
+I0621 11:30:01.523 tapa.util:162] logging level set to INFO
+I0621 11:30:01.523 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0621 11:30:01.523 tapa.tapac:496] Python recursion limit set to 3000
+I0621 11:30:01.523 tapa.tapac:416] Executing all steps of tapac
+I0621 11:30:20.638 tapa.tapac:556] added vendor include path `/opt/tools/xilinx/Vitis_HLS/2020.2/include`
+E0621 11:30:24.302 tapa.tapac:569] tapacc command ['/usr/local/bin/tapacc', 'kernel_1_8.cpp', '-top', 'kernel3_1', '--', '-I', '/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/../../../src', '-isystem', '/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/assets/clang', '-isystem', '/opt/tools/xilinx/Vitis_HLS/2020.2/include', '-std=c++17'] failed with exit code 1

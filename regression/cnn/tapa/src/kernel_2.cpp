@@ -8,7 +8,6 @@ typedef ap_uint<256> B_t8;
 typedef ap_uint<512> C_t16;
 typedef ap_uint<64> C_t2;
 
-<<<<<<< HEAD
 
 void Mmap2Stream_a(tapa::mmap<A_t8> mmap, uint64_t n,
                  tapa::ostream<A_t8>& stream) {
@@ -50,8 +49,6 @@ void Stream2Mmap_c(tapa::istream<C_t2>& stream, tapa::mmap<C_t2> mmap,
 }
 
 
-=======
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
 void A_IO_L3_in( tapa::mmap<A_t16> A, tapa::ostream<A_t8>& fifo_A_local_out ) {
 #pragma HLS INLINE OFF
     for( ap_uint<13> i = 0; i < 3328; i++ ) {
@@ -775,7 +772,6 @@ void C_drain_IO_L3_out( tapa::mmap<C_t16> C, tapa::istream<C_t2>& fifo_C_drain_l
 
 extern "C" {
 void kernel3_2(tapa::ostream<float> &out_board,
-<<<<<<< HEAD
 tapa::istream<A_t8> &in_board_1,
 tapa::istream<B_t8> &in_board_2,
 tapa::istream<B_t8> &in_board_3,
@@ -794,9 +790,7 @@ tapa::istream<B_t8> &in_board_15,
 tapa::istream<B_t8> &in_board_16,
 tapa::istream<B_t8> &in_board_17,
 ){
-=======
 tapa::istream<float> &in_board){
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
         tapa::stream<A_t8, 2> fifo_A_A_IO_L2_in_0;
         tapa::stream<A_t8, 2> fifo_A_A_IO_L2_in_1;
         tapa::stream<A_t8, 2> fifo_A_A_IO_L2_in_2;
@@ -1723,7 +1717,6 @@ tapa::istream<float> &in_board){
         tapa::stream<C_t2, 2> fifo_C_drain_C_drain_IO_L2_out_15;
         tapa::stream<C_t2, 2> fifo_C_drain_C_drain_IO_L2_out_16;
 tapa::task()
-<<<<<<< HEAD
 .invoke( A_IO_L2_in, 8, in_board_1, fifo_A_A_IO_L2_in_9, fifo_A_PE_8_0 )
 .invoke( A_IO_L2_in, 9, fifo_A_A_IO_L2_in_9, fifo_A_A_IO_L2_in_10, fifo_A_PE_9_0 )
 .invoke( A_IO_L2_in, 10, fifo_A_A_IO_L2_in_10, fifo_A_A_IO_L2_in_11, fifo_A_PE_10_0 )
@@ -1916,7 +1909,5 @@ tapa::task()
 
 ;
 }}
-=======
 ;
 }
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7

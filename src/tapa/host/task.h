@@ -1,10 +1,10 @@
 #ifndef TAPA_HOST_TASK_H_
 #define TAPA_HOST_TASK_H_
 
-#include "/home/ubuntu/tapa_m/src/tapa/base/task.h"
+#include "tapa/base/task.h"
 
-#include "/home/ubuntu/tapa_m/src/tapa/host/coroutine.h"
-#include "/home/ubuntu/tapa_m/src/tapa/host/logging.h"
+#include "tapa/host/coroutine.h"
+#include "tapa/host/logging.h"
 
 #include <sys/wait.h>
 #include <chrono>

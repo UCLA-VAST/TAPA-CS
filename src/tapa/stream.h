@@ -3,7 +3,7 @@
 
 #if !defined(TAPA_TARGET_)
 
-#include "/home/ubuntu/tapa_m/src/tapa/stream.h"
+#include "tapa/stream.h"
 
 #elif TAPA_TARGET_ == XILINX_HLS
 

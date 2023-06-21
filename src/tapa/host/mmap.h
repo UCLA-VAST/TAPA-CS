@@ -10,11 +10,11 @@
 
 #include <frt.h>
 
-#include "/home/ubuntu/tapa_m/src/tapa/base/mmap.h"
+#include "tapa/base/mmap.h"
 
-#include "/home/ubuntu/tapa_m/src/tapa/host/coroutine.h"
-#include "/home/ubuntu/tapa_m/src/tapa/host/stream.h"
-#include "/home/ubuntu/tapa_m/src/tapa/host/vec.h"
+#include "tapa/host/coroutine.h"
+#include "tapa/host/stream.h"
+#include "tapa/host/vec.h"
 
 namespace tapa {
 

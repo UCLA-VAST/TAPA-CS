@@ -11,7 +11,7 @@
 #include <functional>
 #include <ostream>
 
-#include "/home/ubuntu/tapa_m/src/tapa/host/util.h"
+#include "tapa/host/util.h"
 
 namespace tapa {
 

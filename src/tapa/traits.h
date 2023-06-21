@@ -1,7 +1,7 @@
 #ifndef TAPA_TRAITS_H_
 #define TAPA_TRAITS_H_
 
-#include "/home/ubuntu/tapa_m/src/tapa/stream.h"
+#include "tapa/stream.h"
 
 namespace tapa {
 

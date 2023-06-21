@@ -4,7 +4,7 @@
 #include <fstream>
 
 #include <gflags/gflags.h>
-#include "/home/ubuntu/tapa_m/src/tapa.h"
+#include <tapa.h>
 #include "DILATE.h"
 
 // alveolink specific imports

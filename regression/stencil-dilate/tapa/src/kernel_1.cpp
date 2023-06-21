@@ -1,7 +1,7 @@
-#include <hls_stream.h>
+// #include <hls_stream.h>
 #include "math.h"
 #include "DILATE.h"
-#include <tapa.h>
+#include "/home/nehaprakriya/tapa/src/tapa.h"
 template<class T>
 T HLS_REG(T in){
 #pragma HLS pipeline
@@ -46,16 +46,16 @@ void DILATE(tapa::istream<INTERFACE_WIDTH>& s, tapa::ostream<INTERFACE_WIDTH>& y
 {
     INTERFACE_WIDTH s_block_0;
     INTERFACE_WIDTH s_block_1;
-    hls::stream<INTERFACE_WIDTH, 255> s_stream_2_to_255;
+    tapa::stream<INTERFACE_WIDTH, 255> s_stream_2_to_255;
     INTERFACE_WIDTH s_block_256;
     INTERFACE_WIDTH s_block_257;
-    hls::stream<INTERFACE_WIDTH, 255> s_stream_258_to_511;
+    tapa::stream<INTERFACE_WIDTH, 255> s_stream_258_to_511;
     INTERFACE_WIDTH s_block_512;
     INTERFACE_WIDTH s_block_513;
-    hls::stream<INTERFACE_WIDTH, 255> s_stream_514_to_767;
+    tapa::stream<INTERFACE_WIDTH, 255> s_stream_514_to_767;
     INTERFACE_WIDTH s_block_768;
     INTERFACE_WIDTH s_block_769;
-    hls::stream<INTERFACE_WIDTH, 255> s_stream_770_to_1023;
+    tapa::stream<INTERFACE_WIDTH, 255> s_stream_770_to_1023;
     INTERFACE_WIDTH s_block_1024;
     INTERFACE_WIDTH s_block_1025;
     s_block_0 = s.read();
@@ -210,10 +210,7 @@ void inter_kernel(tapa::async_mmap<INTERFACE_WIDTH>& a, tapa::async_mmap<INTERFA
     }
   }
 }
-<<<<<<< HEAD
 extern "C"{
-=======
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
 void unikernel(tapa::mmap<INTERFACE_WIDTH> in_0,
 tapa::mmap<INTERFACE_WIDTH> out_0,
 tapa::mmap<INTERFACE_WIDTH> in_1,
@@ -233,12 +230,7 @@ tapa::mmap<INTERFACE_WIDTH> out_7,
 tapa::mmap<INTERFACE_WIDTH> temp,
 uint32_t iters,
 tapa::ostream<INTERFACE_WIDTH> &out_board,
-<<<<<<< HEAD
-tapa::istream<INTERFACE_WIDTH> &in_board
-){
-=======
 tapa::istream<INTERFACE_WIDTH> &in_board){
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
   tapa::streams<INTERFACE_WIDTH, 15, 3> k_wr;
   tapa::streams<INTERFACE_WIDTH, 15, 3> k_rd;
 tapa::task()
@@ -261,7 +253,4 @@ tapa::task()
 .invoke(Mmap2Stream, temp, 3, out_board)
 ;
 }
-<<<<<<< HEAD
 }
-=======
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7

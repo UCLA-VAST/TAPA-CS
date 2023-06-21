@@ -1,4 +1,4 @@
-#include "/home/ubuntu/HLS_arbitrary_Precision_Types/include/ap_int.h"
+#include "/home/nehaprakriya/HLS_arbitrary_Precision_Types/include/ap_int.h"
 #include <inttypes.h>
 #ifndef DILATE_H
 
@@ -10,12 +10,9 @@
 #define KERNEL_COUNT 15
 #define PART_ROWS GRID_ROWS / KERNEL_COUNT
 
-<<<<<<< HEAD
 #define ITERATION 128
 
-=======
-#define ITERATION 64
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
+// #define ITERATION 64
 
 #define DWIDTH 512
 #define INTERFACE_WIDTH ap_uint<DWIDTH>

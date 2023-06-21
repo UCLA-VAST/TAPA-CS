@@ -1,4 +1,4 @@
-#include "/home/ubuntu/tapa_m/src/tapa/host/tapa.h"
+#include "tapa/host/tapa.h"
 
 #include <csignal>
 #include <cstring>

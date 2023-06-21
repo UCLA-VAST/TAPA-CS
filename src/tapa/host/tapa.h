@@ -1,14 +1,14 @@
 #ifndef TAPA_HOST_TAPA_H_
 #define TAPA_HOST_TAPA_H_
 
-#include "/home/ubuntu/tapa_m/src/tapa/base/tapa.h"
+#include "tapa/base/tapa.h"
 
-#include "/home/ubuntu/tapa_m/src/tapa/host/coroutine.h"
-#include "/home/ubuntu/tapa_m/src/tapa/host/mmap.h"
-#include "/home/ubuntu/tapa_m/src/tapa/host/stream.h"
-#include "/home/ubuntu/tapa_m/src/tapa/host/task.h"
-#include "/home/ubuntu/tapa_m/src/tapa/host/util.h"
-#include "/home/ubuntu/tapa_m/src/tapa/host/vec.h"
+#include "tapa/host/coroutine.h"
+#include "tapa/host/mmap.h"
+#include "tapa/host/stream.h"
+#include "tapa/host/task.h"
+#include "tapa/host/util.h"
+#include "tapa/host/vec.h"
 
 #include <chrono>
 #include <functional>

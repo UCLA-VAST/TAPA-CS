@@ -15,9 +15,9 @@
 
 #include <glog/logging.h>
 
-#include "/home/ubuntu/tapa_m/src/tapa/base/stream.h"
+#include "tapa/base/stream.h"
 
-#include "/home/ubuntu/tapa_m/src/tapa/host/coroutine.h"
+#include "tapa/host/coroutine.h"
 
 namespace tapa {
 
