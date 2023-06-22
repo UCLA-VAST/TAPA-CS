@@ -41,6 +41,11 @@ int main(int argc, char* argv[]) {
   AlveoLink::common::FPGA fpga_card[2];
   fpga_card[0].setId(0);
   fpga_card[1].setId(1);
+  std::cout<<"loaded xclbin not yet"<<std::endl;
+  fpga_card[0].load_xclbin("./unikernel_.xclbin");
+  std::cout<<"loaded xclbin on one fpga"<<std::endl;
+  fpga_card[1].load_xclbin("./unikernel_.xclbin");
+  std::cout<<"loaded the second xclbin too"<<std::endl;
   AlveoLink::network_roce_v2::NetLayer<2> l_netLayer[2];
   std::cout<<"here"<<std::endl;
   for (auto i=0; i<2; ++i) {
