@@ -1030,8 +1030,6 @@ tapa::mmap<INTERFACE_WIDTH> in_8,
 tapa::mmap<INTERFACE_WIDTH> in_9,
 tapa::mmap<INTERFACE_WIDTH> in_10,
 tapa::mmap<INTERFACE_WIDTH> in_11,
-tapa::mmap<float> L3_out_dist,
-tapa::mmap<int> L3_out_id,
 tapa::mmap<pkt> temp1,
 tapa::mmap<id_pkt> temp2, 
 tapa::mmap<pkt> temp3,
@@ -1040,27 +1038,18 @@ tapa::mmap<pkt> temp5,
 tapa::mmap<id_pkt> temp6,
 tapa::mmap<pkt> temp7,
 tapa::mmap<id_pkt> temp8,
-tapa::mmap<pkt> temp9,
-tapa::mmap<pkt> temp10,
-tapa::mmap<id_pkt> temp11,
-tapa::mmap<pkt> temp12,
 tapa::ostream<pkt> &out_board_1,
 tapa::ostream<id_pkt> &out_board_2,
 tapa::istream<pkt> &in_board_1,
 tapa::istream<id_pkt> &in_board_2){
   tapa::streams<pkt, 18, 2> out_dist;
   tapa::streams<id_pkt, 18, 2> out_id;
-  // has 6 streams of type <pkt> with depth 2
   tapa::streams<pkt, 6, 2> L1_out_dist;
   tapa::streams<id_pkt, 6, 2> L1_out_id;
   tapa::stream<pkt, 2> L2_out_dist0;
   tapa::stream<pkt, 2> L2_out_dist1;
   tapa::stream<id_pkt, 2> L2_out_id0;
   tapa::stream<id_pkt, 2> L2_out_id1;
-  tapa::stream<pkt, 2> in_board_11;
-  tapa::stream<pkt, 2> in_board_33;
-  tapa::stream<id_pkt, 2> in_board_22;
-  tapa::stream<id_pkt, 2> in_board_44; 
 tapa::task()
     .invoke( krnl_partialKnn_wrapper_0   , in_0,  NUM_SP_PTS_PADDED*0,  out_dist[0], out_id[0]  )
     .invoke( krnl_partialKnn_wrapper_1   , in_1,  NUM_SP_PTS_PADDED*1,  out_dist[1], out_id[1]  )
@@ -1088,14 +1077,5 @@ tapa::task()
     .invoke(Stream2Mmap_out_id, L1_out_id[3], 10, temp8)
     .invoke(Mmap2Stream_out, temp1, temp3, temp5, temp7, out_board_1)
     .invoke(Mmap2Stream_out_id, temp2, temp4, temp6, temp8, out_board_2)
-    .invoke(Stream2Mmap_in, in_board_1, temp9, temp10)
-    .invoke(Stream2Mmap_id, in_board_2, temp11, temp12)
-    .invoke(Mmap2Stream_in, temp9, temp10, in_board_11, in_board_22)
-    .invoke(Mmap2Stream_id, temp11, temp12, in_board_33, in_board_44)
-    .invoke( krnl_globalSort_L3,  in_board_11,//input,
-      in_board_33, //input
-        in_board_22, //input 
-         in_board_44, //input
-           L3_out_dist,  L3_out_id);
 ;
 }
