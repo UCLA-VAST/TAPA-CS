@@ -48,7 +48,7 @@ const int I2D_FACTOR_W = ((INPUT_DIM * DATA_TYPE_TOTAL_SZ - 1) / (IWIDTH)) + 1;
 
 const int SWIDTH = DATA_TYPE_TOTAL_SZ;
 typedef ap_axiu<SWIDTH, 0, 0, 0> pkt;
-typedef ap_axiu<SWIDTH, 0, 0, 0> id_pkt;
+typedef ap_axiu<SWIDTH, 0, 0, 0>    id_pkt;
 #define STREAM_WIDTH ap_uint<SWIDTH>
 
 const int NUM_FEATURES_PER_READ = (IWIDTH/DATA_TYPE_TOTAL_SZ);
@@ -88,23 +88,48 @@ bool compare_with_register(DATA_TYPE in_1, DATA_TYPE in_2){
 /*************************************************/
 void Stream2Mmap_out(tapa::istream<pkt> &in_board_1, tapa::mmap<pkt> temp1, tapa::mmap<pkt> temp2, tapa::mmap<pkt> temp3, tapa::mmap<pkt> temp4)
 {   
-    for (uint64_t i=0;i<10;++i)
+    #pragma HLS pipeline II=1
+    for (uint64_t i=0;i<40;++i)
     {
-        in_board_1>>temp1[i];
-        in_board_1>>temp2[i];
-        in_board_1>>temp3[i];
-        in_board_1>>temp4[i];
+        if (i%4==0)
+        {
+            in_board_1>>temp1[i/4];
+        }
+        else if (i%4==1)
+        {
+            in_board_1>>temp2[i/4];
+        }
+        else if (i%4==2)
+        {
+            in_board_1>>temp3[i/4];
+        }
+        else
+        {
+            in_board_1>>temp4[i/4];
+        }
     }
 }
 void Stream2Mmap_out_id(tapa::istream<id_pkt> &in_board_1, tapa::mmap<id_pkt> temp1, tapa::mmap<id_pkt> temp2, tapa::mmap<id_pkt> temp3, tapa::mmap<id_pkt> temp4)
 {   
-    for (uint64_t i=0;i<10;++i)
+    #pragma HLS pipeline II=1
+    for (uint64_t i=0;i<40;++i)
     {
-        in_board_1>>temp1[i];
-        in_board_1>>temp2[i];
-        in_board_1>>temp3[i];
-        in_board_1>>temp4[i];
-        
+        if (i%4==0)
+        {
+            in_board_1>>temp1[i/4];
+        }
+        else if (i%4==1)
+        {
+            in_board_1>>temp2[i/4];
+        }
+        else if (i%4==2)
+        {
+            in_board_1>>temp3[i/4];
+        }
+        else
+        {
+            in_board_1>>temp4[i/4];
+        }
     }
 }
 void Mmap2Stream_out(tapa::mmap<pkt> temp1, tapa::ostream<pkt> &L1_out_dist)
