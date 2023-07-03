@@ -896,47 +896,47 @@ void PageRank_1(Pid num_partitions, tapa::mmap<uint64_t> metadata,
   tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_mm2pe_r2("vertex_mm2pe_r2");
 
   // between ProcElem and EdgeMem
-  tapa::streams<Eid, kNumPes, 2> edge_req("edge_req");
-  tapa::streams<EdgeVec, kNumPes, 2> edge_resp("edge_resp");
+  tapa::streams<Eid, 4, 2> edge_req("edge_req");
+  tapa::streams<EdgeVec, 4, 2> edge_resp("edge_resp");
 
   // between Control and UpdateHandler
-  tapa::streams<Eid, kNumPes, 2> update_config("update_config");
-  tapa::streams<bool, kNumPes, 2> update_phase("update_phase");
+  tapa::streams<Eid, 4, 2> update_config("update_config");
+  tapa::streams<bool, 4, 2> update_phase("update_phase");
 
   // between UpdateHandler and ProcElem
-  tapa::streams<UpdateReq, kNumPes, 2> update_req("update_req");
+  tapa::streams<UpdateReq, 4, 2> update_req("update_req");
 // between UpdateHandler and UpdateMem
-  tapa::streams<uint64_t, kNumPes, 2> update_read_addr("update_read_addr");
-  tapa::streams<UpdateVec, kNumPes, 2> update_read_data("update_read_data");
-  tapa::streams<uint64_t, kNumPes, 2> update_write_addr("update_write_addr");
-  tapa::streams<UpdateVec, kNumPes, 2> update_write_data("update_write_data");
+  tapa::streams<uint64_t, 4, 2> update_read_addr("update_read_addr");
+  tapa::streams<UpdateVec, 4, 2> update_read_data("update_read_data");
+  tapa::streams<uint64_t, 4, 2> update_write_addr("update_write_addr");
+  tapa::streams<UpdateVec, 4, 2> update_write_data("update_write_data");
 
-  tapa::streams<UpdateVecPacket, kNumPes, 2> update_pe2mm("update_pe2mm");
-  tapa::streams<UpdateVec, kNumPes, 2> update_mm2pe("update_mm2pe");
+  tapa::streams<UpdateVecPacket, 4, 2> update_pe2mm("update_pe2mm");
+  tapa::streams<UpdateVec, 4, 2> update_mm2pe("update_mm2pe");
 
-  tapa::streams<NumUpdates, kNumPes, 2> num_updates("num_updates");
+  tapa::streams<NumUpdates, 4, 2> num_updates("num_updates");
 tapa::task()
 .invoke(VertexRouterR1,  "VertexRouterR1",   vertex_req_r0[kNumPesR0],  vertex_mm2pe_r0[kNumPesR0],   vertex_pe2mm_r0[kNumPesR0],  vertex_req_r1,   vertex_pe2mm_r1,  vertex_mm2pe_r1)
 .invoke(VertexRouterR2,  "VertexRouterR2",   vertex_req_r1[kNumPesR1],  vertex_mm2pe_r1[kNumPesR1],   vertex_pe2mm_r1[kNumPesR1],  vertex_req_r2,   vertex_pe2mm_r2,  vertex_mm2pe_r2)
 .invoke(VertexMem,  "VertexMem",  scatter_phase_vertex_req,   vertex_req_r0,  vertex_pe2mm_r0,  vertex_mm2pe_r0,  degrees,   rankings,  tmps)
 // .invoke(EdgeMem,  "EdgeMem",  ,  edge_resp,  edges)
-.invoke(EdgeMem,  "EdgeMem", edge_req[0],  edge_resp[0],  edges[0])
-.invoke(EdgeMem,  "EdgeMem", edge_req[1],  edge_resp[1],  edges[1])
-.invoke(EdgeMem,  "EdgeMem", edge_req[2],  edge_resp[2],  edges[2])
-.invoke(EdgeMem,  "EdgeMem", edge_req[3],  edge_resp[3],  edges[3])
-        .invoke<detach>(UpdateMem, "UpdateMem", update_read_addr[0],update_read_data[0], update_write_addr[0],update_write_data[0], updates[0])
-        .invoke<detach>(UpdateMem, "UpdateMem", update_read_addr[1],update_read_data[1], update_write_addr[1],update_write_data[1], updates[1])
-        .invoke<detach>(UpdateMem, "UpdateMem", update_read_addr[2],update_read_data[2], update_write_addr[2],update_write_data[2], updates[2])
-        .invoke<detach>(UpdateMem, "UpdateMem", update_read_addr[3],update_read_data[3], update_write_addr[3],update_write_data[3], updates[3])
+.invoke(EdgeMem,  "EdgeMem", edge_req,  edge_resp,  edges)
+// .invoke(EdgeMem,  "EdgeMem", edge_req[1],  edge_resp[1],  edges[1])
+// .invoke(EdgeMem,  "EdgeMem", edge_req[2],  edge_resp[2],  edges[2])
+// .invoke(EdgeMem,  "EdgeMem", edge_req[3],  edge_resp[3],  edges[3])
+        .invoke<detach>(UpdateMem, "UpdateMem", update_read_addr,update_read_data, update_write_addr,update_write_data, updates)
+        // .invoke<detach>(UpdateMem, "UpdateMem", update_read_addr[1],update_read_data[1], update_write_addr[1],update_write_data[1], updates[1])
+        // .invoke<detach>(UpdateMem, "UpdateMem", update_read_addr[2],update_read_data[2], update_write_addr[2],update_write_data[2], updates[2])
+        // .invoke<detach>(UpdateMem, "UpdateMem", update_read_addr[3],update_read_data[3], update_write_addr[3],update_write_data[3], updates[3])
       .invoke<join>(ProcElem, "ProcElem[0]", task_req[0], task_resp[0],vertex_req_r0[0], vertex_mm2pe_r0[0], vertex_pe2mm_r0[0],edge_req[0], edge_resp[0], update_req[0], update_mm2pe[0],update_pe2mm[0])
       .invoke<join>(ProcElem, "ProcElem[1]", task_req[1], task_resp[1],vertex_req_r1[0], vertex_mm2pe_r1[0], vertex_pe2mm_r1[0],edge_req[1], edge_resp[1], update_req[1], update_mm2pe[1],update_pe2mm[1])
       .invoke<join>(ProcElem, "ProcElem[2]", task_req[2], task_resp[2],vertex_req_r1[1], vertex_mm2pe_r1[1], vertex_pe2mm_r1[1],edge_req[2], edge_resp[2], update_req[2], update_mm2pe[2],update_pe2mm[2])
       .invoke<join>(ProcElem, "ProcElem[3]", task_req[3], task_resp[3],vertex_req_r1[2], vertex_mm2pe_r1[2], vertex_pe2mm_r1[2],edge_req[3], edge_resp[3], update_req[3], update_mm2pe[3],update_pe2mm[3])
 // .invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config,  update_phase, num_updates,  task_req,  task_resp)
-.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[0],  update_phase[0], num_updates[0],  task_req[0],  task_resp[0])
-.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[1],  update_phase[1], num_updates[1],  task_req[1],  task_resp[1])
-.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[2],  update_phase[2], num_updates[2],  task_req[2],  task_resp[2])
-.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[3],  update_phase[3], num_updates[3],  task_req[3],  task_resp[3])
+.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config,  update_phase, num_updates,  task_req,  task_resp)
+// .invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[1],  update_phase[1], num_updates[1],  task_req[1],  task_resp[1])
+// .invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[2],  update_phase[2], num_updates[2],  task_req[2],  task_resp[2])
+// .invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[3],  update_phase[3], num_updates[3],  task_req[3],  task_resp[3])
 .invoke(UpdateHandler,  "UpdateHandler",  num_partitions, update_config[0],  update_phase[0],  num_updates[0], update_req[0],  update_pe2mm[0],  update_mm2pe[0], update_read_addr[0],  update_read_data[0], update_write_addr[0],  update_write_data[0])
 .invoke(UpdateHandler,  "UpdateHandler",  num_partitions, update_config[1],  update_phase[1],  num_updates[1], update_req[1],  update_pe2mm[1],  update_mm2pe[1], update_read_addr[1],  update_read_data[1], update_write_addr[1],  update_write_data[1])
 .invoke(UpdateHandler,  "UpdateHandler",  num_partitions, update_config[2],  update_phase[2],  num_updates[2], update_req[2],  update_pe2mm[2],  update_mm2pe[2], update_read_addr[2],  update_read_data[2], update_write_addr[2],  update_write_data[2])
