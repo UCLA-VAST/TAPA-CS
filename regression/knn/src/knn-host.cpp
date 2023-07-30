@@ -14,26 +14,47 @@
 
 #include "knn.h"
 
+// AlveoLink imports
+#include <vector>
+#include "genColHost.hpp"
+#include "netLayer.hpp"
+#include "popl.hpp"
+#include "xNativeFPGA.hpp"
+#include "/home/ubuntu/fpga-runtime/src/frt.cpp"
+
+
 using std::clog;
 using std::endl;
 using std::vector;
 using std::chrono::duration;
 using std::chrono::high_resolution_clock;
+typedef ap_axiu<SWIDTH, 0, 0, 0> pkt;
+typedef ap_axiu<SWIDTH, 0, 0, 0>    id_pkt;
+void Knn_1(
+    tapa::mmap<INTERFACE_WIDTH> in_0,  tapa::mmap<INTERFACE_WIDTH> in_1,
+    tapa::mmap<INTERFACE_WIDTH> in_2,  tapa::mmap<INTERFACE_WIDTH> in_3,
+    tapa::mmap<INTERFACE_WIDTH> in_4,  tapa::mmap<INTERFACE_WIDTH> in_5,
+    tapa::mmap<INTERFACE_WIDTH> in_6,  tapa::mmap<INTERFACE_WIDTH> in_7,
+    tapa::mmap<INTERFACE_WIDTH> in_8, tapa::mmap<pkt> temp1, 
+    tapa::mmap<id_pkt> temp2, tapa::mmap<pkt> temp3, 
+    tapa::mmap<id_pkt> temp4, tapa::mmap<pkt> temp5, 
+    tapa::mmap<id_pkt> temp6
+);
 
-void Knn(
-  tapa::mmap<INTERFACE_WIDTH> in_0,  tapa::mmap<INTERFACE_WIDTH> in_1,
-  tapa::mmap<INTERFACE_WIDTH> in_2,  tapa::mmap<INTERFACE_WIDTH> in_3,
-  tapa::mmap<INTERFACE_WIDTH> in_4,  tapa::mmap<INTERFACE_WIDTH> in_5,
-  tapa::mmap<INTERFACE_WIDTH> in_6,  tapa::mmap<INTERFACE_WIDTH> in_7,
-  tapa::mmap<INTERFACE_WIDTH> in_8,  tapa::mmap<INTERFACE_WIDTH> in_9,
+void Knn_2(
+    tapa::mmap<INTERFACE_WIDTH> in_9,
   tapa::mmap<INTERFACE_WIDTH> in_10, tapa::mmap<INTERFACE_WIDTH> in_11,
   tapa::mmap<INTERFACE_WIDTH> in_12, tapa::mmap<INTERFACE_WIDTH> in_13,
   tapa::mmap<INTERFACE_WIDTH> in_14, tapa::mmap<INTERFACE_WIDTH> in_15,
   tapa::mmap<INTERFACE_WIDTH> in_16, tapa::mmap<INTERFACE_WIDTH> in_17,
-  tapa::mmap<float> L3_out_dist, tapa::mmap<int> L3_out_id);
+  tapa::mmap<pkt> temp1, tapa::mmap<id_pkt> temp2, tapa::mmap<pkt> temp3, 
+  tapa::mmap<pkt> temp5, tapa::mmap<id_pkt> temp6, tapa::mmap<pkt> temp7,
+  tapa::mmap<float> L3_out_dist, tapa::mmap<int> L3_out_id
+);
 
 DEFINE_string(bitstream, "", "path to bitstream file, run csim if empty");
 
+// sorting operator
 struct {
     bool operator()(const std::pair<DATA_TYPE, int>& a, const std::pair<DATA_TYPE, int>& b){
         if (a.first < b.first) {
@@ -50,7 +71,6 @@ struct {
         }
     }
 } custom_cmp;
-
 
 DATA_TYPE square_and_handle_overflow(DATA_TYPE input)
 {
@@ -91,7 +111,6 @@ DATA_TYPE add_and_handle_overflow(DATA_TYPE a_val, DATA_TYPE b_val)
         return a_val + b_val;
     }
 }
-
 
 DATA_TYPE calc_single_dim_dist( DATA_TYPE query_point,
                                 DATA_TYPE data_point)
@@ -196,7 +215,6 @@ bool verify(std::vector<DATA_TYPE> &sw_dist,
 
     return check;
 }
-
 
 void Generate_sw_verif_data(std::vector<DATA_TYPE> &query,
                             std::vector<DATA_TYPE> &searchSpace,
@@ -311,11 +329,9 @@ void Generate_sw_verif_data(std::vector<DATA_TYPE> &query,
     return;
 }
 
-int main(int argc, char* argv[]) {
-  gflags::ParseCommandLineFlags(&argc, &argv, /*remove_flags=*/true);
-
-	// generate input data
-    int num_pe = 18; //user-defined - temp hack
+int main(int argc, char* argv[]){
+    gflags::ParseCommandLineFlags(&argc, &argv, /*remove_flags=*/true);
+    int num_pe = 18;
     int dataSize = NUM_SP_PTS_PADDED * num_pe;
     vector<float> searchspace_data(dataSize*INPUT_DIM);
 	vector<float> searchspace_data_part[num_pe];
@@ -325,7 +341,6 @@ int main(int argc, char* argv[]) {
     vector<int> sw_id(TOP);
     vector<float> hw_dist(TOP);
     vector<int> hw_id(TOP);
-
     // Initializing hw output vectors to zero
     std::fill(hw_dist.begin(), hw_dist.end(), 0.0);
     std::fill(hw_id.begin(), hw_id.end(), 0);
@@ -364,26 +379,66 @@ int main(int argc, char* argv[]) {
 		}
 	}
 
-	// run kernel
-	auto start = high_resolution_clock::now();
-	tapa::invoke(Knn, FLAGS_bitstream,
-				 tapa::read_only_mmap<INTERFACE_WIDTH>(in[0]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[1]),
-				 tapa::read_only_mmap<INTERFACE_WIDTH>(in[2]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[3]),
-				 tapa::read_only_mmap<INTERFACE_WIDTH>(in[4]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[5]),
-				 tapa::read_only_mmap<INTERFACE_WIDTH>(in[6]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[7]),
-				 tapa::read_only_mmap<INTERFACE_WIDTH>(in[8]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[9]),
-				 tapa::read_only_mmap<INTERFACE_WIDTH>(in[10]), tapa::read_only_mmap<INTERFACE_WIDTH>(in[11]),
-				 tapa::read_only_mmap<INTERFACE_WIDTH>(in[12]), tapa::read_only_mmap<INTERFACE_WIDTH>(in[13]),
-				 tapa::read_only_mmap<INTERFACE_WIDTH>(in[14]), tapa::read_only_mmap<INTERFACE_WIDTH>(in[15]),
-				 tapa::read_only_mmap<INTERFACE_WIDTH>(in[16]), tapa::read_only_mmap<INTERFACE_WIDTH>(in[17]),
-				 tapa::write_only_mmap<float>(hw_dist), tapa::write_only_mmap<int>(hw_id));
+    // AlveoLink setups
+    std::cout<<"starting device stuff"<<std::endl;
+    AlveoLink::common::FPGA fpga_card[2];
+    fpga_card[0].setId(0);
+    fpga_card[1].setId(1);
+    std::cout<<"Loading first xclbin"<<std::endl;
+    fpga_card[0].load_xclbin("./Knn_1_.xclbin");
+    std::cout<<"Loaded xclbin on first fpga, loading second xclbin"<<std::endl;
+    fpga_card[1].load_xclbin("./Knn_2_.xclbin");
+    std::cout<<"Loaded xclbin on second FPGA"<<std::endl;
+    AlveoLink::network_roce_v2::NetLayer<2> l_netLayer[2];
+    for (auto i=0; i<2; ++i) {
+    std::cout<<"in here?"<<std::endl;
+    l_netLayer[i].init(&(fpga_card[i]));
+    std::cout<<"init"<<std::endl;
+    for (auto j=0; j<2; ++j) {
+        std::cout<<"we reach inside"<<std::endl;
+        l_netLayer[i].setIPSubnet(j, 0x0000a8c0);
+        l_netLayer[i].setMACSubnet(j, 0x347844332211);
+        l_netLayer[i].setID(j, i*2+j);
+        std::cout<<"we reach here"<<std::endl;
+        }
+    }
+    std::cout<<"setup the links on both"<<std::endl;
+    for (auto i=0; i<2; ++i) {
+        for (auto j=0; j<2; ++j) {
+            std::cout <<"INFO: turn on RS_FEC for device " << i << " port " <<j << std::endl;
+            l_netLayer[i].turnOn_RS_FEC(j, true);
+        }
+    }
+    unsigned int l_totalDevLinksUp = 0;
+    while (l_totalDevLinksUp < 2) {
+        std::cout << "INFO: Waiting for links up on device " << l_totalDevLinksUp << std::endl;
+        if (l_netLayer[l_totalDevLinksUp].linksUp()) {
+            l_totalDevLinksUp++;
+        }
+    }
+    auto start = high_resolution_clock::now();
+    // tapa::invoke(Knn_1, FLAGS_bitstream,
+    //             tapa::read_only_mmap<INTERFACE_WIDTH>(in[0]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[1]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[2]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[3]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[4]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[5]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[6]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[7]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[8]),
+    //             )
+	// tapa::invoke(Knn, FLAGS_bitstream,
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[0]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[1]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[2]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[3]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[4]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[5]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[6]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[7]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[8]),  tapa::read_only_mmap<INTERFACE_WIDTH>(in[9]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[10]), tapa::read_only_mmap<INTERFACE_WIDTH>(in[11]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[12]), tapa::read_only_mmap<INTERFACE_WIDTH>(in[13]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[14]), tapa::read_only_mmap<INTERFACE_WIDTH>(in[15]),
+	// 			 tapa::read_only_mmap<INTERFACE_WIDTH>(in[16]), tapa::read_only_mmap<INTERFACE_WIDTH>(in[17]),
+	// 			 tapa::write_only_mmap<float>(hw_dist), tapa::write_only_mmap<int>(hw_id));
 	auto stop = high_resolution_clock::now();
 	duration<double> elapsed = stop - start;
 	clog << "elapsed time: " << elapsed.count() << " s" << endl;
+    return 0;
 
-	// verify results
-    bool match = true;
-    match = verify(sw_dist, hw_dist, sw_id, hw_id, query_data, searchspace_data, TOP);
-    clog << (match ? "PASSED" : "FAILED") << endl;
-    return (match ? EXIT_SUCCESS : EXIT_FAILURE);
+    
 }
