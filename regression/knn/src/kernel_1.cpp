@@ -103,25 +103,43 @@ void Stream2Mmap_out_id(tapa::istream<id_pkt> &L1_out_id, uint64_t n, tapa::mmap
     }
 }
 
-void Mmap2Stream_out(tapa::mmap<pkt> temp1, tapa::mmap<pkt> temp3, tapa::mmap<pkt> temp5, tapa::mmap<pkt> temp7, tapa::ostream<pkt> &out_board_1)
+void Mmap2Stream_out(tapa::mmap<pkt> temp1, tapa::mmap<pkt> temp3, tapa::mmap<pkt> temp5, tapa::ostream<pkt> &out_board_1)
 {
-    for(uint64_t i=0;i<10;++i)
+    #pragma HLS pipeline II=1
+    for (uint64_t i=0;i<30;++i)
     {
-        out_board_1<<temp1[i];
-        out_board_1<<temp3[i];
-        out_board_1<<temp5[i];
-        out_board_1<<temp7[i];
+        if (i%3==0)
+        {
+            out_board_1<<temp1[i/3];
+        }
+        else if (i%3==1)
+        {
+            out_board_1<<temp3[i/3];
+        }
+        else if (i%3==2)
+        {
+            out_board_1<<temp5[i/3];
+        }
     }
 }
 
-void Mmap2Stream_out_id(tapa::mmap<id_pkt> temp2, tapa::mmap<id_pkt> temp4, tapa::mmap<id_pkt> temp6, tapa::mmap<id_pkt> temp8, tapa::ostream<id_pkt> &out_board_2)
+void Mmap2Stream_out_id(tapa::mmap<id_pkt> temp2, tapa::mmap<id_pkt> temp4, tapa::mmap<id_pkt> temp6, tapa::ostream<id_pkt> &out_board_2)
 {
-    for(uint64_t i=0;i<10;++i)
+    #pragma HLS pipeline II=1
+    for (uint64_t i=0;i<30;++i)
     {
-        out_board_2<<temp2[i];
-        out_board_2<<temp4[i];
-        out_board_2<<temp6[i];
-        out_board_2<<temp8[i];
+        if (i%3==0)
+        {
+            out_board_2<<temp2[i/3];
+        }
+        else if (i%3==1)
+        {
+            out_board_2<<temp4[i/3];
+        }
+        else if (i%3==2)
+        {
+            out_board_2<<temp6[i/3];
+        }
     }
 }
 
@@ -1027,17 +1045,12 @@ tapa::mmap<INTERFACE_WIDTH> in_5,
 tapa::mmap<INTERFACE_WIDTH> in_6,
 tapa::mmap<INTERFACE_WIDTH> in_7,
 tapa::mmap<INTERFACE_WIDTH> in_8,
-tapa::mmap<INTERFACE_WIDTH> in_9,
-tapa::mmap<INTERFACE_WIDTH> in_10,
-tapa::mmap<INTERFACE_WIDTH> in_11,
 tapa::mmap<pkt> temp1,
 tapa::mmap<id_pkt> temp2, 
 tapa::mmap<pkt> temp3,
 tapa::mmap<id_pkt> temp4, 
 tapa::mmap<pkt> temp5,
 tapa::mmap<id_pkt> temp6,
-tapa::mmap<pkt> temp7,
-tapa::mmap<id_pkt> temp8,
 tapa::ostream<pkt> &out_board_1,
 tapa::ostream<id_pkt> &out_board_2,
 tapa::istream<pkt> &in_board_1,
@@ -1060,9 +1073,6 @@ tapa::task()
     .invoke( krnl_partialKnn_wrapper_6   , in_6,  NUM_SP_PTS_PADDED*6,  out_dist[6], out_id[6]  )
     .invoke( krnl_partialKnn_wrapper_7   , in_7,  NUM_SP_PTS_PADDED*7,  out_dist[7], out_id[7]  )
     .invoke( krnl_partialKnn_wrapper_8   , in_8,  NUM_SP_PTS_PADDED*8,  out_dist[8], out_id[8]  )
-    .invoke( krnl_partialKnn_wrapper_9   , in_9,  NUM_SP_PTS_PADDED*9,  out_dist[9], out_id[9]  )
-    .invoke( krnl_partialKnn_wrapper_10  , in_10, NUM_SP_PTS_PADDED*10, out_dist[10], out_id[10] )
-    .invoke( krnl_partialKnn_wrapper_11  , in_11, NUM_SP_PTS_PADDED*11, out_dist[11], out_id[11] )
     .invoke( krnl_globalSort_L1_L2,   out_dist[0],   out_id[0],   out_dist[1],   out_id[1],   out_dist[2],   out_id[2],  L1_out_dist[0],  L1_out_id[0] )
     .invoke(Stream2Mmap_out, L1_out_dist[0], 10, temp1)
     .invoke(Stream2Mmap_out_id, L1_out_id[0], 10, temp2)
@@ -1072,10 +1082,10 @@ tapa::task()
     .invoke( krnl_globalSort_L1_L2,   out_dist[6],   out_id[6],   out_dist[7],   out_id[7],   out_dist[8],   out_id[8],  L1_out_dist[2],  L1_out_id[2] )
     .invoke(Stream2Mmap_out, L1_out_dist[2], 10, temp5)
     .invoke(Stream2Mmap_out_id, L1_out_id[2], 10, temp6)
-    .invoke( krnl_globalSort_L1_L2,   out_dist[9],   out_id[9],  out_dist[10],  out_id[10],  out_dist[11],  out_id[11],  L1_out_dist[3],  L1_out_id[3] )
-    .invoke(Stream2Mmap_out, L1_out_dist[3], 10, temp7)
-    .invoke(Stream2Mmap_out_id, L1_out_id[3], 10, temp8)
-    .invoke(Mmap2Stream_out, temp1, temp3, temp5, temp7, out_board_1)
-    .invoke(Mmap2Stream_out_id, temp2, temp4, temp6, temp8, out_board_2)
+    // .invoke( krnl_globalSort_L1_L2,   out_dist[9],   out_id[9],  out_dist[10],  out_id[10],  out_dist[11],  out_id[11],  L1_out_dist[3],  L1_out_id[3] )
+    // .invoke(Stream2Mmap_out, L1_out_dist[3], 10, temp7)
+    // .invoke(Stream2Mmap_out_id, L1_out_id[3], 10, temp8)
+    .invoke(Mmap2Stream_out, temp1, temp3, temp5, out_board_1)
+    .invoke(Mmap2Stream_out_id, temp2, temp4, temp6, out_board_2)
 ;
 }
