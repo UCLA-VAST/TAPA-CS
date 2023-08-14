@@ -32,11 +32,7 @@ def get_fifo_edges(
     # _logger.info('fifo %s', fifo)
     # _logger.info('get_instance %s', util.get_instance_name(fifo['produced_by']))
     # _logger.info('get_instance %s', util.get_instance_name(fifo['consumed_by']))
-<<<<<<< HEAD
-    if 'out_board' not in fifo_name and 'in_board' not in fifo_name:
-=======
     if fifo_name!='out_board' and fifo_name!='in_board':
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
       _logger.info(fifo_name)
       _logger.info('get_instance %s', util.get_instance_name(fifo['produced_by']))
       _logger.info('get_instance %s', util.get_instance_name(fifo['consumed_by']))
