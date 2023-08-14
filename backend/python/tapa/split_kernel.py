@@ -41,11 +41,7 @@ def split_kernel(v2s:Dict[Vertex, Slot] , slot_list:List[Slot], program:tapa.cor
         _logger.info(vertex.name)
         _logger.info(v2s[vertex].getName())
         _logger.info("partition to")
-<<<<<<< HEAD
-        if int(v2s[vertex].getName()[15])<=2:
-=======
         if int(v2s[vertex].getName()[15])<=7:
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
             # if 'TASK_VERTEX' in vertex.name:
             # sanitized_name = vertex.name[12:]
             # sanitized_name = sanitized_name[:2]
@@ -70,11 +66,7 @@ def split_kernel(v2s:Dict[Vertex, Slot] , slot_list:List[Slot], program:tapa.cor
         _logger.info(port.ctype)
     file_1 = open('kernel_1.cpp', 'w+')
     file_2 = open('kernel_2.cpp', 'w+')
-<<<<<<< HEAD
-    with open('/home/ubuntu/tapa_m/regression/spmm/sextans-u280-split-bram-uram/tapa/src/spmm_2.cpp', 'r') as top:
-=======
     with open('tapa_kernel.cpp', 'r') as top:
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
         lines = top.readlines()
         for line in lines:
             if 'void '+program.top not in line:
@@ -123,11 +115,6 @@ def split_kernel(v2s:Dict[Vertex, Slot] , slot_list:List[Slot], program:tapa.cor
     for elem in device_2:
         if 'axi' in elem or 'external_controller' in elem:
             device_2.remove(elem)
-<<<<<<< HEAD
-    _logger.info(len(device_1_items))
-    _logger.info(len(device_2_items))
-=======
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
     device_1_items = '\t'.join(device_1)
     device_2_items = '\t'.join(device_2)
     _logger.info(device_1_items)
@@ -135,11 +122,7 @@ def split_kernel(v2s:Dict[Vertex, Slot] , slot_list:List[Slot], program:tapa.cor
     # TODO need something for the strweams in between the args and middle
 
 
-<<<<<<< HEAD
-    with open('/home/ubuntu/tapa_m/regression/spmm/sextans-u280-split-bram-uram/tapa/src/spmm_2.cpp', 'r') as top:
-=======
     with open('tapa_kernel.cpp', 'r') as top:
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
         lines = top.readlines()
         for line in lines:
             if 'tapa::stream' in line:
@@ -148,29 +131,16 @@ def split_kernel(v2s:Dict[Vertex, Slot] , slot_list:List[Slot], program:tapa.cor
 
     file_1.write('tapa::task()\n')
     file_2.write('tapa::task()\n')
-<<<<<<< HEAD
-    with open('/home/ubuntu/tapa_m/regression/spmm/sextans-u280-split-bram-uram/tapa/src/spmm_2.cpp', 'r') as top:
-=======
     with open('tapa_kernel.cpp', 'r') as top:
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
         lines = top.readlines()
         for line in lines:
             if '.invoke' in line:
                 line = line.split('(')
                 line = line[1].split(',')
                 _logger.info(line)
-<<<<<<< HEAD
-                word = line[0][1:]
-                if line[0][1:] in device_1_items:
-                    # device_1_list = device_1_items.split(line[0])
-                    _logger.info(line[0][1:])
-                    device_1_items = device_1_items.replace(line[0][1:], "hello", 1)
-                    _logger.info(device_1_items)
-=======
                 if line[0] in device_1_items:
                     # device_1_list = device_1_items.split(line[0])
                     device_1_items = device_1_items.replace(line[0], "", 1)
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
                     # device_1_items =''
                     # for elem in device_1_list:
                     #     device_1_items+=elem
@@ -183,11 +153,7 @@ def split_kernel(v2s:Dict[Vertex, Slot] , slot_list:List[Slot], program:tapa.cor
                         else:
                             to_write+=elem+', '  
                     file_1.write(to_write)
-<<<<<<< HEAD
-                elif line[0][1:] in device_2_items:
-=======
                 elif line[0] in device_2_items:
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
                     device_2_items = device_2_items.replace(line[0], "", 1)
                     to_write = '.invoke('
                     for elem in line:
