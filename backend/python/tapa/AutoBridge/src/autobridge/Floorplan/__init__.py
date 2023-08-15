@@ -9,8 +9,10 @@ from tapa.AutoBridge.src.autobridge.Floorplan.Utilities import (
   print_vertex_areas,
   get_eight_way_partition_slots,
   get_four_way_partition_slots,
+  get_two_way_partition_slots,
   get_actual_usage,
 )
+from tapa.AutoBridge.src.autobridge.Floorplan.Bipartition import Bipartition
 from tapa.AutoBridge.src.autobridge.Opt.DataflowGraph import Vertex, DataflowGraph
 from tapa.AutoBridge.src.autobridge.Opt.Slot import Slot
 from tapa.AutoBridge.src.autobridge.Opt.SlotManager import SlotManager, Dir
@@ -254,10 +256,14 @@ def get_multi_fpga_floorplan(
   # cli_logger.info(floorplan_strategy)
   floorplan_strategy = 'QUICK_FLOORPLANNING'
   # v2s = multi_fpga_iterative_bipartition(init_v2s, slot_managers, grouping_constraints, pre_assignments)
-  v2s = iterative_bipartition(init_v2s, slot_managers[0], grouping_constraints, pre_assignments[0])
-  cli_logger.info("iterative bipartition v2s")
+  # v2s = iterative_bipartition(init_v2s, slot_managers[0], grouping_constraints, pre_assignments[0])
+  v2s = Bipartition(
+    init_v2s, grouping_constraints, pre_assignments[0], slot_managers[0]
+  ).get_bipartition(Dir.horizontal, max_area_limit, max_search_time)
+  cli_logger.info("2-way v2s")
   cli_logger.info(v2s)
   for vertex in v2s:
     cli_logger.info(vertex.name)
     cli_logger.info(v2s[vertex].getName())
-  return v2s, get_eight_way_partition_slots(slot_managers[0])
+  cli_logger.info("running 2 way partition")
+  return v2s, get_four_way_partition_slots(slot_managers[0])
