@@ -93,6 +93,9 @@ def get_four_way_partition_slots(slot_manager: SlotManager) -> List[Slot]:
   partition_order = [Dir.horizontal, Dir.horizontal]
   return slot_manager.getLeafSlotsAfterPartition(partition_order)
 
+def get_two_way_partition_slots(slot_manager: SlotManager) ->List[Slot]:
+  partition_order = [Dir.horizontal]
+  return slot_manager.getLeafSlotsAfterPartition(partition_order)
 
 def get_actual_area_limit(v2s: Dict[Vertex, Slot]) -> float:
   """Calculate the actual area limit among all slots"""
