@@ -1,3 +1,5 @@
+# issues: add tapa::task and remove comma from last argument
+
 from tapa.AutoBridge.src.autobridge.Opt.DataflowGraph import Edge, Vertex
 from tapa.AutoBridge.src.autobridge.Opt.Slot import Slot
 import tapa.core
@@ -40,8 +42,8 @@ def add_tasks(input_file:str, file1, file2, program:tapa.core.Program):
                 file1.write(line)
                 file2.write(line)
             elif 'void ' in line and 'void '+program.top not in line:
-                file1.write(line.replace(line.split(' ')[1], line.split(' ')[1]+'_1'))
-                file2.write(line.replace(line.split(' ')[1], line.split(' ')[1]+'_2'))
+                file1.write(line.replace(line.split(' ')[1], line.split(' ')[1]))
+                file2.write(line.replace(line.split(' ')[1], line.split(' ')[1]))
             else:
                 break
     file1.write('void '+program.top+'_1(\n')
@@ -57,15 +59,22 @@ def add_ports(input_file:str, file1, file2, device_1_items, device_2_items, prog
         device_2_names.append(device_2_items[i].name)
     device_1_names = '\t'.join(device_1_names)
     device_2_names = '\t'.join(device_2_names)
-    for port in program.toplevel_ports:
+    for i in range(len(program.toplevel_ports)):
+        port = program.toplevel_ports[i]
         width = port.width
         name = port.name
         ctype = port.ctype
         # we need to write tapa::mmap<ctype> port.name
-        if port.name+'__m_axi' in device_1_names and str(port.cat).split('.')[1]=='MMAP':
-            file1.write('tapa::mmap<'+ctype[:-1]+'> '+port.name+',\n')
-        elif port.name+'__m_axi' in device_2_names and str(port.cat).split('.')[1]=='MMAP':
-            file2.write('tapa::mmap<'+ctype[:-1]+'> '+port.name+',\n')
+        if i==len(program.toplevel_ports)-1:
+            if port.name+'__m_axi' in device_1_names and str(port.cat).split('.')[1]=='MMAP':
+                file1.write('tapa::mmap<'+ctype[:-1]+'> '+port.name+'\n')
+            elif port.name+'__m_axi' in device_2_names and str(port.cat).split('.')[1]=='MMAP':
+                file2.write('tapa::mmap<'+ctype[:-1]+'> '+port.name+'\n')
+        else:
+            if port.name+'__m_axi' in device_1_names and str(port.cat).split('.')[1]=='MMAP':
+                file1.write('tapa::mmap<'+ctype[:-1]+'> '+port.name+',\n')
+            elif port.name+'__m_axi' in device_2_names and str(port.cat).split('.')[1]=='MMAP':
+                file2.write('tapa::mmap<'+ctype[:-1]+'> '+port.name+',\n')
     file1.write(')\n')
     file2.write(')\n')
     file1.write('{\n')
@@ -161,6 +170,8 @@ def add_invokes(input_file:str, file1, file2, device_1_items, device_2_items, pr
     _logger.info(middle_streams)
     unique_tasks, task_counts = unique_task_counts(input_file)
     already_invoked = []
+    file1.write('tapa::task()\n')
+    file2.write('tapa::task()\n')
     for line in lines:
         if '.invoke' in line:
             task_name = str(line.split('(')[1]).split(',')[0]
@@ -196,9 +207,11 @@ def add_mmap2streams(unique_counts, unique_types, edge_mappings, file1):
     func_names = []
     args_names = []
     for i in range(len(unique_counts)):
+        _logger.info(i)
         count = unique_counts[i]
         types = unique_types[i]
         edges_in = edge_mappings[i]
+        _logger.info(edges_in)
         args = ''
         streams_list = []
         temps_list = []
@@ -207,21 +220,33 @@ def add_mmap2streams(unique_counts, unique_types, edge_mappings, file1):
             name = sanitize_names(name)
             if j != len(edges_in)-1:
                 args+='tapa::ostream<'+types+'> &'+name+','
-                streams_list.append(name)
+                streams_list.append(name.split('[')[0])
             else:
                 args+='tapa::ostream<'+types+'> &'+name+','
-                streams_list.append(name)
+                streams_list.append(name.split('[')[0])
                 for i in range(count):
                     if i !=count-1:
-                        args+='tapa::mmap<'+types+'>'+' temp'+str(i)+','
-                        temps_list.append('temp'+str(i))
+                        args+='tapa::mmap<'+types+'>'+' temp'+str(i)+types+','
+                        temps_list.append('temp'+str(i)+types)
                     else:
-                        args+='tapa::mmap<'+types+'>'+' temp'+str(i)
-                        temps_list.append('temp'+str(i))
+                        args+='tapa::mmap<'+types+'>'+' temp'+str(i)+types
+                        temps_list.append('temp'+str(i)+types)
         _logger.info(args)
+        new_args = args.split(',')
+        updated_args = ''
+        for i in range(len(new_args)):
+            names = new_args[i]
+            if i==len(new_args)-1:
+                updated_args+=names
+            else:
+                if 'temp' not in names:
+                    names = names.split('[')[0]
+                    updated_args+=names+','
+                else:
+                    updated_args+=names+','
         _logger.info(temps_list)
         _logger.info(streams_list)
-        file1.write('void Mmap2Stream_'+types+'('+args+'){\n')
+        file1.write('void Mmap2Stream_'+types+'('+updated_args+'){\n')
         func_names.append('Mmap2Stream_'+types)
         args_names.append(args)
         ranges = count*10
@@ -232,13 +257,13 @@ def add_mmap2streams(unique_counts, unique_types, edge_mappings, file1):
                 # file1.write('\ttapa::ostream<'+)
                 file1.write('\t'+streams_list[i]+'<<'+temps_list[i]+'[i/'+str(count)+'];}\n')
             elif i==count-1:
-                file1.write('\telse(i%'+str(count)+'=='+str(i)+'){\n')
+                file1.write('\telse if(i%'+str(count)+'=='+str(i)+'){\n')
                 file1.write('\t'+streams_list[i]+'<<'+temps_list[i]+'[i/'+str(count)+'];}\n')
             else:
-                file1.write('\telif(i%'+str(count)+'=='+str(i)+'){\n')
+                file1.write('\telse if(i%'+str(count)+'=='+str(i)+'){\n')
                 file1.write('\t'+streams_list[i]+'<<'+temps_list[i]+'[i/'+str(count)+'];}\n')
         file1.write('}}\n')
-        return func_names, args_names
+    return func_names, args_names
 
 
 def add_stream2Mmaps(unique_counts, unique_types, edge_mappings, file1):
@@ -262,11 +287,11 @@ def add_stream2Mmaps(unique_counts, unique_types, edge_mappings, file1):
                 streams_list.append(name)
                 for i in range(count):
                     if i !=count-1:
-                        args+='tapa::mmap<'+types+'>'+' temp'+str(i)+','
-                        temps_list.append('temp'+str(i))
+                        args+='tapa::mmap<'+types+'>'+' temp'+str(i)+types+','
+                        temps_list.append('temp'+str(i)+types)
                     else:
-                        args+='tapa::mmap<'+types+'>'+' temp'+str(i)
-                        temps_list.append('temp'+str(i))
+                        args+='tapa::mmap<'+types+'>'+' temp'+str(i)+types
+                        temps_list.append('temp'+str(i)+types)
         _logger.info(args)
         _logger.info(temps_list)
         _logger.info(streams_list)
@@ -287,7 +312,7 @@ def add_stream2Mmaps(unique_counts, unique_types, edge_mappings, file1):
                 file1.write('\telif(i%'+str(count)+'=='+str(i)+'){\n')
                 file1.write('\t'+streams_list[i]+'>>'+temps_list[i]+'[i/'+str(count)+'];}\n')
         file1.write('}}\n')
-        return func_names, args_names
+    return func_names, args_names
 
 def add_inter_fpga_comm_1(input_file, temp1, file1, device_own_items, device_other_items, partition_1_in, partition_1_out):
     # lines = file1.readlines()
@@ -319,7 +344,7 @@ def add_inter_fpga_comm_1(input_file, temp1, file1, device_own_items, device_oth
             # name = sanitize_names(name)
             name = sanitize_names(name)
             _logger.info(name)
-            if name in edge_names:
+            if name in edge_names and (edge_names, types) not in edge_types:
                 edge_types.append((edge_names, types))
     _logger.info(edge_types)
     # unique_types, edge_mappings = get_type_mappings(edge_types)
@@ -394,8 +419,117 @@ def add_inter_fpga_comm_1(input_file, temp1, file1, device_own_items, device_oth
     #     args_names_in=[]
     # elif args_names_out==None:
     #     args_names_out=[]
+    tmp1.close()
     return func_names_in, args_names_in, func_names_out, args_names_out
         
+
+def add_inter_fpga_comm_2(input_file, temp1, file1, device_own_items, device_other_items, partition_1_in, partition_1_out):
+    # lines = file1.readlines()
+    tmp1 = open(input_file, 'r')
+    lines = tmp1.readlines()
+    for line in lines:
+        if 'void' not in line:
+            file1.write(line)
+        else:
+            break
+    middle_streams_types = []
+    for line in lines:
+        if 'tapa::stream' in line:
+            middle_name = str(line.split('>')[1])[:-2]
+            middle_streams_types.append((middle_name, str(str(line.split('<')[1]).split(',')[0])))
+    _logger.info(middle_streams_types)
+
+    vertices=[]
+    in_edge_names = []
+    for i in range(len(partition_1_in)):
+        vertice, in_edge = partition_1_in[i]
+        in_edge_names.append(in_edge.name)
+        vertices.append(vertice)
+    edge_types = []
+    for edge_names in in_edge_names:
+        _logger.info(edge_names)
+        for i in range(len(middle_streams_types)):
+            name, types = middle_streams_types[i]
+            # name = sanitize_names(name)
+            name = sanitize_names(name)
+            _logger.info(name)
+            if name in edge_names and (edge_names, types) not in edge_types:
+                edge_types.append((edge_names, types))
+    _logger.info(edge_types)
+    # unique_types, edge_mappings = get_type_mappings(edge_types)
+    unique_types = []
+    unique_counts = []
+    edge_mappings = []
+    for i in range(len(edge_types)):
+        edge_name, edge_type = edge_types[i]
+        if edge_type not in unique_types:
+            unique_types.append(edge_type)
+            unique_counts.append(0)
+            edge_mappings.append([])
+    for i in range(len(unique_types)):
+        unique_type = unique_types[i]
+        for name, types in edge_types:
+            if types==unique_type:
+                unique_counts[i]+=1
+                edge_mappings[i].append(name)
+    _logger.info(unique_counts)
+    _logger.info(unique_types)
+    _logger.info(edge_mappings)
+    if len(partition_1_in)!=0:
+        func_names_in, args_names_in = add_mmap2streams(unique_counts, unique_types, edge_mappings, file1)
+    
+    vertices = []
+    out_edge_names = []
+    for i in range(len(partition_1_out)):
+        vertice, out_edge = partition_1_out[i]
+        out_edge_names.append(out_edge.name)
+        vertices.append(vertice)
+    edge_types_out = []
+    for edge_names in out_edge_names:
+        _logger.info(edge_names)
+        for i in range(len(middle_streams_types)):
+            name, types = middle_streams_types[i]
+            name = sanitize_names(name)
+            _logger.info(name)
+            if name in edge_names and (edge_names, types) not in edge_types:
+                edge_types_out.append((edge_names, types))
+    _logger.info(edge_types_out)
+    unique_types_out = []
+    unique_counts_out = []
+    edge_mappings_out = []
+    for i in range(len(edge_types_out)):
+        edge_name, edge_type = edge_types_out[i]
+        if edge_type not in unique_types_out:
+            unique_types_out.append(edge_type)
+            unique_counts_out.append(0)
+            edge_mappings_out.append([])
+    for i in range(len(unique_types_out)):
+        unique_type = unique_types_out[i]
+        for name, types in edge_types_out:
+            if types ==unique_type:
+                unique_counts_out[i]+=1
+                edge_mappings_out[i].append(name)
+    _logger.info(unique_counts_out)
+    _logger.info(unique_types_out)
+    _logger.info(edge_mappings_out)
+    if len(partition_1_out)!=0:
+        func_names_out, args_names_out = add_stream2Mmaps(unique_counts_out, unique_types_out, edge_mappings_out, file1)
+    if len(partition_1_out)==0:
+        func_names_out=[]
+        args_names_out = []
+    if len(partition_1_in)==0:
+        func_names_in=[]
+        args_names_in=[]
+    # if func_names_in==None:
+    #     func_names_in=[]
+    # elif func_names_out==None:
+    #     func_names_out=[]
+    # elif args_names_in==None:
+    #     args_names_in=[]
+    # elif args_names_out==None:
+    #     args_names_out=[]
+    tmp1.close()
+    return func_names_in, args_names_in, func_names_out, args_names_out
 
 # def combine(file1, file1_final, partition_1_in, partition_1_out):
 #     file1 = open(file1, 'r')
@@ -421,6 +555,7 @@ def find_placements(temp1, func_1_in, args_1_in, func_1_out, args_1_out):
     else:
         args_1_out = ['no values']
     _logger.info(args_1_in)
+    _logger.info(args_1_out)
     args_1_preprocessed_in = []
     args_1_preprocessed_out = []
     for values in args_1_in:
@@ -432,7 +567,7 @@ def find_placements(temp1, func_1_in, args_1_in, func_1_out, args_1_out):
         args_1_preprocessed_in.append(values)
     for values in args_1_out:
         if '&' in values:
-            values = values.split(' ')[1]
+            values = values.split('&')[1]
         elif ' ' in values:
             values = values.split(' ')[1]
         args_1_preprocessed_out.append(values)
@@ -441,15 +576,117 @@ def find_placements(temp1, func_1_in, args_1_in, func_1_out, args_1_out):
     placements_1_in = []
     placements_1_out = []
     for line in lines:
-        if '.invoke' in line:
+        if 'invoke' in line:
             split_line = line.split(',')[1:]
             _logger.info(split_line)
             for items in split_line:
+                _logger.info(items)
+                if ' ' in items:
+                    items = items.replace(' ', '')
                 if items in args_1_preprocessed_in:
                     placements_1_in.append(line)
                 if items in args_1_preprocessed_out:
                     placements_1_out.append(line)
+
+    file1.close()
     return placements_1_in, placements_1_out
+
+def append_tasks(temp1, file1_final):
+    temp_file = open(temp1, 'r')
+    lines = temp_file.readlines()
+    count = 1
+    for line in lines:
+        if 'void' in line:
+            break
+        else:
+            count+=1
+    for i in range(len(lines)):
+        if i+1>=count:
+            line = lines[i]
+            file1_final.write(line)
+    file1_final.close()
+    temp_file.close()
+
+def add_calls_to_placements(file1_final, placements_1_in, placements_1_out, func_1_in, args_1_in, func_1_out, args_1_out, program:tapa.core.Program):
+    file1_final_file = open(file1_final, 'r')
+    _logger.info(func_1_in)
+    _logger.info(args_1_in)
+    _logger.info(func_1_out)
+    _logger.info(args_1_out)
+    _logger.info(placements_1_in)
+    _logger.info(placements_1_out)
+
+    lines = file1_final_file.readlines()
+    file1_final_file.close()
+    file1_final_file = open(file1_final, 'w')
+    index = 1
+    for line in lines:
+        if 'void '+program.top in line:
+            break
+        else:
+            index+=1
+    for i in range(len(args_1_in)):
+        items = args_1_in[i]
+        items = items.split(',')
+        for item in items:
+            if 'temp' in item:
+                _logger.info(lines[index-1])
+                lines.insert(index, item+',\n' )
+                _logger.info(lines[index])
+                _logger.info(lines[index+1])
+                index+=1
+    for i in range(len(args_1_out)):
+        items = args_1_out[i]
+        items = items.split(',')
+        for item in items:
+            if 'temp' in item:
+                _logger.info(lines[index-1])
+                lines.insert(index, item+'_out,\n')
+                _logger.info(lines[index])
+                _logger.info(lines[index+1])
+                index+=1
+    for inward in placements_1_in:
+        index = 1
+        for line in lines:
+            if inward in line:
+                break
+            else:
+                index+=1
+        for i in range(len(func_1_in)):
+            cleaned_args_1_in = args_1_in[i].split(',')
+            cleaned_up = []
+            for cleaned in cleaned_args_1_in:
+                _logger.info(cleaned)
+                if 'temp' not in cleaned:
+                    cleaned = cleaned.split(' ')[1][1:]
+                else:
+                    cleaned = cleaned.split(' ')[1]
+                _logger.info(cleaned)
+                cleaned_up.append(cleaned)
+            cleaned_up = ','.join(cleaned_up)
+            _logger.info(cleaned_up)
+            lines.insert(index+i-1, '\t.invoke('+func_1_in[i]+','+cleaned_up+')\n')
+        break
+    # need to be careful in outward as the stream needs to be produced first. TODO add checks.    
+    for outward in placements_1_out:
+        index = 1
+        for line in lines:
+            if outward in line:
+                break
+            else:
+                index+=1
+        for i in range(len(func_1_out)):
+            args_to_check = args_1_out[i].split(',')
+            for args in args_to_check:
+                cleaned_args = args.split(' ')[1][1:]
+                _logger.info(cleaned_args)
+                _logger.info(lines[index])
+                if cleaned_args in lines[index+i]:
+                    lines.insert(index+i, '\t.invoke('+func_1_out[i]+'('+args_1_out[i]+'\n')
+        break
+    file1_final_file.writelines(lines)
+    file1_final_file.write('}\n')
+    file1_final_file.close()
 
 
 def split_kernel(v2s:Dict[Vertex, Slot], slot_list:List[Slot], program:tapa.core.Program, input_file):
@@ -477,19 +714,45 @@ def split_kernel(v2s:Dict[Vertex, Slot], slot_list:List[Slot], program:tapa.core
     _logger.info(partition_2_out)
     add_invokes(input_file, file1, file2, device_1_items, device_2_items, program)
     file1.close()
+    file2.close()
     # file1 = open("tmp1.cpp", 'r+')
     # lines = file1.readlines()
     # _logger.info(len(lines))
     temp1 = 'tmp1.cpp'
+    temp2 = 'tmp2.cpp'
     func_1_in, args_1_in, func_1_out, args_1_out = add_inter_fpga_comm_1(input_file, temp1, file1_final, device_1_items, device_2_items, partition_1_in, partition_1_out)
     _logger.info(func_1_in)
     _logger.info(args_1_in)
     _logger.info(func_1_out)
     _logger.info(args_1_out)
-    # placements_1_in_out = find_placements(temp1, func_1_in, args_1_in, func_1_out, args_1_out)
+    func_2_in, args_2_in, func_2_out, args_2_out = add_inter_fpga_comm_2(input_file, temp2, file2_final, device_2_items, device_1_items, partition_2_in, partition_2_out)
+    _logger.info(func_2_in)
+    _logger.info(args_2_in)
+    _logger.info(func_2_out)
+    _logger.info(args_2_out)
     placements_1_in, placements_1_out = find_placements(temp1, func_1_in, args_1_in, func_1_out, args_1_out)
+    # placements_1_in, placements_1_out = find_placements(temp1, func_1_in, args_1_in, func_1_out, args_1_out)
     _logger.info(placements_1_in)
     _logger.info(placements_1_out)
+
+    placements_2_in, placements_2_out = find_placements(temp2, func_2_in, args_2_in, func_2_out, args_2_out)
+    _logger.info(placements_2_in)
+    _logger.info(placements_2_out)
+    file1_final.close()
+    file2_final.close()
+    file1_final = open("kernel_1.cpp", 'a')
+    file2_final = open("kernel_2.cpp", 'a')
+    append_tasks(temp1, file1_final)
+    file1_final.close()
+    append_tasks(temp2, file2_final)
+    file2_final.close()
+    # file1_final = open("kernel_1.cpp", 'w+')
+    # file2_final = open("kernel_2.cpp", 'w+')
+    add_calls_to_placements('kernel_1.cpp', placements_1_in, placements_1_out, func_1_in, args_1_in, func_1_out, args_1_out, program)
+    
+    file1_final.close()
+    add_calls_to_placements('kernel_2.cpp', placements_2_in, placements_2_out, func_2_in, args_2_in, func_2_out, args_2_out, program)
+    file2_final.close()
     # combine(file1, file1_final, partition_1_in, partition_1_out)
     # add_inter_fpga_comm_2(input_file, file2, device_2_items, device_1_items, partition_2_in, partition_2_out)
     # file1.write('}\n')
