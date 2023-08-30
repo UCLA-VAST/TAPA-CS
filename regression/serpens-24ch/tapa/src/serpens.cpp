@@ -478,141 +478,214 @@ void black_hole_float_v16(tapa::istream<float_v16> & fifo_in) {
         float_v16 tmp; fifo_in.try_read(tmp);
     }
 }
-
 void Serpens(tapa::mmap<int> edge_list_ptr,
-             
-             tapa::mmaps<ap_uint<512>, NUM_CH_SPARSE> edge_list_ch,
-             
-             tapa::mmap<float_v16> vec_X,
-             
-             tapa::mmap<float_v16> vec_Y,
-             
-             tapa::mmap<float_v16> vec_Y_out,
-             
-             const int NUM_ITE,
-             const int NUM_A_LEN,
-             const int M,
-             const int K,
-             const int P_N,
-             const int alpha_u,
-             const int beta_u
-             ) {
-    tapa::streams<int, NUM_CH_SPARSE + 1, FIFO_DEPTH> PE_inst("PE_inst");
+  
+  tapa::mmaps<ap_uint<512>, NUM_CH_SPARSE> edge_list_ch,
+  
+  tapa::mmap<float_v16> vec_X,
+  
+  tapa::mmap<float_v16> vec_Y,
+  
+  tapa::mmap<float_v16> vec_Y_out,
+  
+  const int NUM_ITE,
+  const int NUM_A_LEN,
+  const int M,
+  const int K,
+  const int P_N,
+  const int alpha_u,
+  const int beta_u
+  ) {
+    tapa::streams<int, NUM_CH_SPARSE + 1, FIFO_DEPTH> PE_inst;
     
-    tapa::streams<float_v16, NUM_CH_SPARSE + 1, FIFO_DEPTH> fifo_X_pe("fifo_X_pe");
+    tapa::streams<float_v16, NUM_CH_SPARSE + 1, FIFO_DEPTH> fifo_X_pe;
     
-    tapa::streams<ap_uint<512>, NUM_CH_SPARSE, FIFO_DEPTH> fifo_A("fifo_A");
+    tapa::streams<ap_uint<512>, NUM_CH_SPARSE, FIFO_DEPTH> fifo_A;
     
-    tapa::streams<int, NUM_CH_SPARSE, FIFO_DEPTH> Yvec_inst("Yvec_inst");
+    tapa::streams<int, NUM_CH_SPARSE, FIFO_DEPTH> Yvec_inst;
     
-    tapa::streams<MultXVec, NUM_CH_SPARSE, FIFO_DEPTH> fifo_aXvec("fifo_aXvec");
+    tapa::streams<MultXVec, NUM_CH_SPARSE, FIFO_DEPTH> fifo_aXvec;
     
-    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe("fifo_Y_pe");
+    tapa::streams<float_v2, NUM_CH_SPARSE, FIFO_DEPTH> fifo_Y_pe;
     
-    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd("fifo_Y_pe_abd");
+    tapa::streams<float_v2, 8, FIFO_DEPTH> fifo_Y_pe_abd;
     
-    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_AX("fifo_Y_AX");
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_AX;
     
-    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_alpha_AX("fifo_Y_alpha_AX");
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_alpha_AX;
     
-    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_in("fifo_Y_in");
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_in;
     
-    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_in_beta("fifo_Y_in_beta");
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_in_beta;
     
-    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_out("fifo_Y_out");
+    tapa::stream<float_v16, FIFO_DEPTH> fifo_Y_out;
 
     /* =========deploy modules======= */
     
     tapa::task()
-        .invoke(read_edge_list_ptr,
-                NUM_ITE,
-                M,
-                P_N,
-                K,
-                edge_list_ptr,
-                PE_inst
-                )
+        .invoke(read_edge_list_ptr, NUM_ITE, M, P_N, K,edge_list_ptr,PE_inst)
     
-        .invoke<tapa::join>(read_X,
-                            P_N,
-                            K,
-                            vec_X,
-                            fifo_X_pe
-                            )
+        .invoke<tapa::join>(read_X, P_N, K, vec_X, fifo_X_pe )
     
-        .invoke<tapa::join, NUM_CH_SPARSE>(read_A,
-                                           P_N,
-                                           NUM_A_LEN,
-                                           edge_list_ch,
-                                           fifo_A
-                                           )
-    
-        .invoke<tapa::join, NUM_CH_SPARSE>(PEG_Xvec,
-                                           PE_inst,
-                                           fifo_A,
-                                           fifo_X_pe,
-                                           PE_inst,
-                                           fifo_X_pe,
-                                           Yvec_inst,
-                                           fifo_aXvec
-                                           )
-        .invoke<tapa::detach>(black_hole_int,
-                              PE_inst)
-        .invoke<tapa::detach>(black_hole_float_v16,
-                              fifo_X_pe)
-                        
-        .invoke<tapa::join, NUM_CH_SPARSE>(PEG_Yvec,
-                                           Yvec_inst,
-                                           fifo_aXvec,
-                                           fifo_Y_pe
-                                           )
-    
-        .invoke<tapa::join, 8>(Arbiter_Y,
-                               P_N,
-                               M,
-                               fifo_Y_pe,
-                               fifo_Y_pe_abd
-                               )
-    
-        .invoke<tapa::detach>(Merger_Y,
-                              fifo_Y_pe_abd,
-                              fifo_Y_AX
-                              )
-    
-        .invoke<tapa::join>(FloatvMultConst,
-                            P_N,
-                            M,
-                            alpha_u,
-                            fifo_Y_AX,
-                            fifo_Y_alpha_AX
-                            )
-    
-        .invoke<tapa::join>(read_Y,
-                            P_N,
-                            M,
-                            vec_Y,
-                            fifo_Y_in
-                            )
-    
-        .invoke<tapa::join>(FloatvMultConst,
-                            P_N,
-                            M,
-                            beta_u,
-                            fifo_Y_in,
-                            fifo_Y_in_beta
-                            )
-    
-        .invoke<tapa::detach>(FloatvAddFloatv,
-                              fifo_Y_alpha_AX,
-                              fifo_Y_in_beta,
-                              fifo_Y_out
-                              )
-    
-        .invoke<tapa::join>(write_Y,
-                            P_N,
-                            M,
-                            fifo_Y_out,
-                            vec_Y_out
-                            )
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[0], fifo_A[0])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[1], fifo_A[1])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[2], fifo_A[2])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[3], fifo_A[3])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[4], fifo_A[4])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[5], fifo_A[5])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[6], fifo_A[6])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[7], fifo_A[7])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[8], fifo_A[8])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[9], fifo_A[9])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[10], fifo_A[10])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[11], fifo_A[11])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[12], fifo_A[12])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[13], fifo_A[13])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[14], fifo_A[14])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[15], fifo_A[15])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[16], fifo_A[16])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[17], fifo_A[17])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[18], fifo_A[18])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[19], fifo_A[19])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[20], fifo_A[20])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[21], fifo_A[21])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[22], fifo_A[22])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[23], fifo_A[23])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[24], fifo_A[24])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[25], fifo_A[25])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[26], fifo_A[26])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[27], fifo_A[27])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[28], fifo_A[28])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[29], fifo_A[29])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[30], fifo_A[30])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[31], fifo_A[31])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[32], fifo_A[32])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[33], fifo_A[33])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[34], fifo_A[34])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[35], fifo_A[35])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[36], fifo_A[36])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[37], fifo_A[37])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[38], fifo_A[38])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[39], fifo_A[39])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[40], fifo_A[40])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[41], fifo_A[41])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[42], fifo_A[42])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[43], fifo_A[43])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[44], fifo_A[44])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[45], fifo_A[45])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[46], fifo_A[46])
+        .invoke<tapa::join>(read_A, P_N, NUM_A_LEN, edge_list_ch[47], fifo_A[47])
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[0], fifo_A[0], fifo_X_pe[0], PE_inst[1], fifo_X_pe[1], Yvec_inst[0], fifo_aXvec[0] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[1], fifo_A[1], fifo_X_pe[1], PE_inst[2], fifo_X_pe[2], Yvec_inst[1], fifo_aXvec[1] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[2], fifo_A[2], fifo_X_pe[2], PE_inst[3], fifo_X_pe[3], Yvec_inst[2], fifo_aXvec[2] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[3], fifo_A[3], fifo_X_pe[3], PE_inst[4], fifo_X_pe[4], Yvec_inst[3], fifo_aXvec[3] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[4], fifo_A[4], fifo_X_pe[4], PE_inst[5], fifo_X_pe[5], Yvec_inst[4], fifo_aXvec[4] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[5], fifo_A[5], fifo_X_pe[5], PE_inst[6], fifo_X_pe[6], Yvec_inst[5], fifo_aXvec[5] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[6], fifo_A[6], fifo_X_pe[6], PE_inst[7], fifo_X_pe[7], Yvec_inst[6], fifo_aXvec[6] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[7], fifo_A[7], fifo_X_pe[7], PE_inst[8], fifo_X_pe[8], Yvec_inst[7], fifo_aXvec[7] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[8], fifo_A[8], fifo_X_pe[8], PE_inst[9], fifo_X_pe[9], Yvec_inst[8], fifo_aXvec[8] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[9], fifo_A[9], fifo_X_pe[9], PE_inst[10], fifo_X_pe[10], Yvec_inst[9], fifo_aXvec[9] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[10], fifo_A[10], fifo_X_pe[10], PE_inst[11], fifo_X_pe[11], Yvec_inst[10], fifo_aXvec[10] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[11], fifo_A[11], fifo_X_pe[11], PE_inst[12], fifo_X_pe[12], Yvec_inst[11], fifo_aXvec[11] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[12], fifo_A[12], fifo_X_pe[12], PE_inst[13], fifo_X_pe[13], Yvec_inst[12], fifo_aXvec[12] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[13], fifo_A[13], fifo_X_pe[13], PE_inst[14], fifo_X_pe[14], Yvec_inst[13], fifo_aXvec[13] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[14], fifo_A[14], fifo_X_pe[14], PE_inst[15], fifo_X_pe[15], Yvec_inst[14], fifo_aXvec[14] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[15], fifo_A[15], fifo_X_pe[15], PE_inst[16], fifo_X_pe[16], Yvec_inst[15], fifo_aXvec[15] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[16], fifo_A[16], fifo_X_pe[16], PE_inst[17], fifo_X_pe[17], Yvec_inst[16], fifo_aXvec[16] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[17], fifo_A[17], fifo_X_pe[17], PE_inst[18], fifo_X_pe[18], Yvec_inst[17], fifo_aXvec[17] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[18], fifo_A[18], fifo_X_pe[18], PE_inst[19], fifo_X_pe[19], Yvec_inst[18], fifo_aXvec[18] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[19], fifo_A[19], fifo_X_pe[19], PE_inst[20], fifo_X_pe[20], Yvec_inst[19], fifo_aXvec[19] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[20], fifo_A[20], fifo_X_pe[20], PE_inst[21], fifo_X_pe[21], Yvec_inst[20], fifo_aXvec[20] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[21], fifo_A[21], fifo_X_pe[21], PE_inst[22], fifo_X_pe[22], Yvec_inst[21], fifo_aXvec[21] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[22], fifo_A[22], fifo_X_pe[22], PE_inst[23], fifo_X_pe[23], Yvec_inst[22], fifo_aXvec[22] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[23], fifo_A[23], fifo_X_pe[23], PE_inst[24], fifo_X_pe[24], Yvec_inst[23], fifo_aXvec[23] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[24], fifo_A[24], fifo_X_pe[24], PE_inst[25], fifo_X_pe[25], Yvec_inst[24], fifo_aXvec[24] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[25], fifo_A[25], fifo_X_pe[25], PE_inst[26], fifo_X_pe[26], Yvec_inst[25], fifo_aXvec[25] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[26], fifo_A[26], fifo_X_pe[26], PE_inst[27], fifo_X_pe[27], Yvec_inst[26], fifo_aXvec[26] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[27], fifo_A[27], fifo_X_pe[27], PE_inst[28], fifo_X_pe[28], Yvec_inst[27], fifo_aXvec[27] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[28], fifo_A[28], fifo_X_pe[28], PE_inst[29], fifo_X_pe[29], Yvec_inst[28], fifo_aXvec[28] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[29], fifo_A[29], fifo_X_pe[29], PE_inst[30], fifo_X_pe[30], Yvec_inst[29], fifo_aXvec[29] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[30], fifo_A[30], fifo_X_pe[30], PE_inst[31], fifo_X_pe[31], Yvec_inst[30], fifo_aXvec[30] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[31], fifo_A[31], fifo_X_pe[31], PE_inst[32], fifo_X_pe[32], Yvec_inst[31], fifo_aXvec[31] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[32], fifo_A[32], fifo_X_pe[32], PE_inst[33], fifo_X_pe[33], Yvec_inst[32], fifo_aXvec[32] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[33], fifo_A[33], fifo_X_pe[33], PE_inst[34], fifo_X_pe[34], Yvec_inst[33], fifo_aXvec[33] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[34], fifo_A[34], fifo_X_pe[34], PE_inst[35], fifo_X_pe[35], Yvec_inst[34], fifo_aXvec[34] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[35], fifo_A[35], fifo_X_pe[35], PE_inst[36], fifo_X_pe[36], Yvec_inst[35], fifo_aXvec[35] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[36], fifo_A[36], fifo_X_pe[36], PE_inst[37], fifo_X_pe[37], Yvec_inst[36], fifo_aXvec[36] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[37], fifo_A[37], fifo_X_pe[37], PE_inst[38], fifo_X_pe[38], Yvec_inst[37], fifo_aXvec[37] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[38], fifo_A[38], fifo_X_pe[38], PE_inst[39], fifo_X_pe[39], Yvec_inst[38], fifo_aXvec[38] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[39], fifo_A[39], fifo_X_pe[39], PE_inst[40], fifo_X_pe[40], Yvec_inst[39], fifo_aXvec[39] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[40], fifo_A[40], fifo_X_pe[40], PE_inst[41], fifo_X_pe[41], Yvec_inst[40], fifo_aXvec[40] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[41], fifo_A[41], fifo_X_pe[41], PE_inst[42], fifo_X_pe[42], Yvec_inst[41], fifo_aXvec[41] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[42], fifo_A[42], fifo_X_pe[42], PE_inst[43], fifo_X_pe[43], Yvec_inst[42], fifo_aXvec[42] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[43], fifo_A[43], fifo_X_pe[43], PE_inst[44], fifo_X_pe[44], Yvec_inst[43], fifo_aXvec[43] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[44], fifo_A[44], fifo_X_pe[44], PE_inst[45], fifo_X_pe[45], Yvec_inst[44], fifo_aXvec[44] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[45], fifo_A[45], fifo_X_pe[45], PE_inst[46], fifo_X_pe[46], Yvec_inst[45], fifo_aXvec[45] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[46], fifo_A[46], fifo_X_pe[46], PE_inst[47], fifo_X_pe[47], Yvec_inst[46], fifo_aXvec[46] )
+        .invoke<tapa::join>(PEG_Xvec, PE_inst[47], fifo_A[47], fifo_X_pe[47], PE_inst[48], fifo_X_pe[48], Yvec_inst[47], fifo_aXvec[47] )
+        .invoke<tapa::detach>(black_hole_int, PE_inst[48])
+        .invoke<tapa::detach>(black_hole_float_v16, fifo_X_pe[48])        
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[0], fifo_aXvec[0], fifo_Y_pe[0] )
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[1], fifo_aXvec[1], fifo_Y_pe[1])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[2], fifo_aXvec[2], fifo_Y_pe[2])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[3], fifo_aXvec[3], fifo_Y_pe[3] )
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[4], fifo_aXvec[4], fifo_Y_pe[4])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[5], fifo_aXvec[5], fifo_Y_pe[5])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[6], fifo_aXvec[6], fifo_Y_pe[6])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[7], fifo_aXvec[7], fifo_Y_pe[7])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[8], fifo_aXvec[8], fifo_Y_pe[8])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[9], fifo_aXvec[9], fifo_Y_pe[9])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[10], fifo_aXvec[10], fifo_Y_pe[10])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[11], fifo_aXvec[11], fifo_Y_pe[11])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[12], fifo_aXvec[12], fifo_Y_pe[12])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[13], fifo_aXvec[13], fifo_Y_pe[13])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[14], fifo_aXvec[14], fifo_Y_pe[14])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[15], fifo_aXvec[15], fifo_Y_pe[15])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[16], fifo_aXvec[16], fifo_Y_pe[16])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[17], fifo_aXvec[17], fifo_Y_pe[17])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[18], fifo_aXvec[18], fifo_Y_pe[18])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[19], fifo_aXvec[19], fifo_Y_pe[19])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[20], fifo_aXvec[20], fifo_Y_pe[20])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[21], fifo_aXvec[21], fifo_Y_pe[21])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[22], fifo_aXvec[22], fifo_Y_pe[22])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[23], fifo_aXvec[23], fifo_Y_pe[23])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[24], fifo_aXvec[24], fifo_Y_pe[24])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[25], fifo_aXvec[25], fifo_Y_pe[25])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[26], fifo_aXvec[26], fifo_Y_pe[26])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[27], fifo_aXvec[27], fifo_Y_pe[27])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[28], fifo_aXvec[28], fifo_Y_pe[28])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[29], fifo_aXvec[29], fifo_Y_pe[29])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[30], fifo_aXvec[30], fifo_Y_pe[30])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[31], fifo_aXvec[31], fifo_Y_pe[31])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[32], fifo_aXvec[32], fifo_Y_pe[32])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[33], fifo_aXvec[33], fifo_Y_pe[33])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[34], fifo_aXvec[34], fifo_Y_pe[34])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[35], fifo_aXvec[35], fifo_Y_pe[35])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[36], fifo_aXvec[36], fifo_Y_pe[36])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[37], fifo_aXvec[37], fifo_Y_pe[37])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[38], fifo_aXvec[38], fifo_Y_pe[38])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[39], fifo_aXvec[39], fifo_Y_pe[39])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[40], fifo_aXvec[40], fifo_Y_pe[40])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[41], fifo_aXvec[41], fifo_Y_pe[41])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[42], fifo_aXvec[42], fifo_Y_pe[42])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[43], fifo_aXvec[43], fifo_Y_pe[43])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[44], fifo_aXvec[44], fifo_Y_pe[44])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[45], fifo_aXvec[45], fifo_Y_pe[45])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[46], fifo_aXvec[46], fifo_Y_pe[46])
+        .invoke<tapa::join>(PEG_Yvec, Yvec_inst[47], fifo_aXvec[47], fifo_Y_pe[47])
+        .invoke<tapa::join>(Arbiter_Y, P_N, M, fifo_Y_pe, fifo_Y_pe_abd[0])
+        .invoke<tapa::join>(Arbiter_Y, P_N, M, fifo_Y_pe, fifo_Y_pe_abd[1])
+        .invoke<tapa::join>(Arbiter_Y, P_N, M, fifo_Y_pe, fifo_Y_pe_abd[2])
+        .invoke<tapa::join>(Arbiter_Y, P_N, M, fifo_Y_pe, fifo_Y_pe_abd[3])
+        .invoke<tapa::join>(Arbiter_Y, P_N, M, fifo_Y_pe, fifo_Y_pe_abd[4])
+        .invoke<tapa::join>(Arbiter_Y, P_N, M, fifo_Y_pe, fifo_Y_pe_abd[5])
+        .invoke<tapa::join>(Arbiter_Y, P_N, M, fifo_Y_pe, fifo_Y_pe_abd[6])
+        .invoke<tapa::join>(Arbiter_Y, P_N, M, fifo_Y_pe, fifo_Y_pe_abd[7])
+        .invoke<tapa::detach>(Merger_Y,   fifo_Y_pe_abd,   fifo_Y_AX   )
+        .invoke<tapa::join>(FloatvMultConst, P_N, M, alpha_u, fifo_Y_AX, fifo_Y_alpha_AX )
+        .invoke<tapa::join>(read_Y, P_N, M, vec_Y, fifo_Y_in )
+        .invoke<tapa::join>(FloatvMultConst, P_N, M, beta_u, fifo_Y_in, fifo_Y_in_beta )
+        .invoke<tapa::detach>(FloatvAddFloatv,   fifo_Y_alpha_AX,   fifo_Y_in_beta,   fifo_Y_out   )
+        .invoke<tapa::join>(write_Y, P_N, M, fifo_Y_out, vec_Y_out )
     ;
 }
