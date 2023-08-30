@@ -94,8 +94,9 @@ def find_partitions(device_1_items, device_2_items):
     device_2_names = []
     for i in range(len(device_2_items)):
         device_2_names.append(device_2_items[i].name)
-    device_1_names = '\t'.join(device_1_names)
-    device_2_names = '\t'.join(device_2_names)
+    _logger.info(device_2_names)
+    # device_1_names = '\t'.join(device_1_names)
+    # device_2_names = '\t'.join(device_2_names)
     partition_1_in = []
     partition_1_out = []
     partition_2_in = []
@@ -106,21 +107,38 @@ def find_partitions(device_1_items, device_2_items):
         for in_edge in in_edges:
             _logger.info(in_edge.name)
             _logger.info(in_edge.width)
-            if in_edge.src.name in device_2_names and 'AXI_EDGE' not in in_edge.name:
-                partition_1_in.append((vertex.name, in_edge))
+            for items in device_2_names:
+                _logger.info(in_edge.src.name)
+                _logger.info(items)
+                if in_edge.src.name == items and 'AXI_EDGE' not in in_edge.name:   
+                    partition_1_in.append((vertex.name, in_edge))
+            # if in_edge.src.name in device_2_names and 'AXI_EDGE' not in in_edge.name:
+            #     _logger.info(in_edge.src.name)
+            #     partition_1_in.append((vertex.name, in_edge))
         for out_edge in out_edges:
             _logger.info(out_edge.dst.name)
-            if out_edge.dst.name in device_2_names and 'AXI_EDGE' not in out_edge.name:
-                partition_1_out.append((vertex.name, out_edge))
+            for items in device_2_names:
+                _logger.info(out_edge.dst.name)
+                _logger.info(items)
+                if out_edge.dst.name == items and 'AXI_EDGE' not in out_edge.name:
+                    partition_1_out.append((vertex.name, out_edge))
+            # if out_edge.dst.name in device_2_names and 'AXI_EDGE' not in out_edge.name:
+            #     partition_1_out.append((vertex.name, out_edge))
     for vertex in device_2_items:
         in_edges = vertex.in_edges
         out_edges = vertex.out_edges
         for in_edge in in_edges:
-            if in_edge.src.name in device_1_names and 'AXI_EDGE' not in in_edge.name:
-                partition_2_in.append((vertex.name, in_edge))
+            for items in device_1_names:
+                if in_edge.src.name == items and 'AXI_EDGE' not in in_edge.name:
+                    partition_2_in.append((vertex.name, in_edge))
+            # if in_edge.src.name in device_1_names and 'AXI_EDGE' not in in_edge.name:
+            #     partition_2_in.append((vertex.name, in_edge))
         for out_edge in out_edges:
-            if out_edge.dst.name in device_1_names and 'AXI_EDGE' not in out_edge.name:
-                partition_2_out.append((vertex.name, out_edge))
+            for items in device_1_names:
+                if out_edge.dst.name==items and 'AXI_EDGE' not in out_edge.name:
+                    partition_2_out.append((vertex.name, out_edge))
+            # if out_edge.dst.name in device_1_names and 'AXI_EDGE' not in out_edge.name:
+            #     partition_2_out.append((vertex.name, out_edge))
     return partition_1_in, partition_1_out, partition_2_in, partition_2_out
 
 def unique_task_counts(input_file:str):
@@ -172,6 +190,8 @@ def add_invokes(input_file:str, file1, file2, device_1_items, device_2_items, pr
     already_invoked = []
     file1.write('tapa::task()\n')
     file2.write('tapa::task()\n')
+    device_1_time = 0
+    device_2_time = 0
     for line in lines:
         if '.invoke' in line:
             task_name = str(line.split('(')[1]).split(',')[0]
@@ -188,13 +208,18 @@ def add_invokes(input_file:str, file1, file2, device_1_items, device_2_items, pr
             already_invoked.append(task_name)
             if task_name+'_'+str(counts) in device_1_names:
                 file1.write(line)
+                device_1_time+=1
+                _logger.info("device_1")
                 _logger.info(task_name)
                 device_1_names = device_1_names.replace('TASK_VERTEX_'+task_name+'_'+str(counts), '')
                 _logger.info(device_1_names)
             elif task_name+'_'+str(counts) in device_2_names:
+                device_2_time+=1
+                _logger.info("device_2")
                 file2.write(line)
                 device_2_names = device_2_names.replace('TASK_VERTEX_'+task_name+'_'+str(counts), '')
-
+    _logger.info(device_1_time)
+    _logger.info(device_2_time)
 def round_width(width:int):
     width=width-1
     while width & width-1:
@@ -709,9 +734,21 @@ def split_kernel(v2s:Dict[Vertex, Slot], slot_list:List[Slot], program:tapa.core
     add_ports(input_file, file1, file2, device_1_items, device_2_items, program)
     partition_1_in, partition_1_out, partition_2_in, partition_2_out = find_partitions(device_1_items, device_2_items)
     _logger.info(partition_1_in)
+    for items in partition_1_in:
+        edge_name = items[1].name
+        _logger.info(edge_name)
     _logger.info(partition_1_out)
+    for items in partition_1_out:
+        edge_name = items[1].name
+        _logger.info(edge_name)
     _logger.info(partition_2_in)
+    for items in partition_2_in:
+        edge_name = items[1].name
+        _logger.info(edge_name)
     _logger.info(partition_2_out)
+    for items in partition_2_out:
+        edge_name = items[1].name
+        _logger.info(edge_name)
     add_invokes(input_file, file1, file2, device_1_items, device_2_items, program)
     file1.close()
     file2.close()
