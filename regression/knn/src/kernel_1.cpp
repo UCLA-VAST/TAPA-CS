@@ -87,102 +87,20 @@ bool compare_with_register(DATA_TYPE in_1, DATA_TYPE in_2){
 /******************** LOADS: *********************/
 /*************************************************/
 
-void Stream2Mmap_out(tapa::istream<pkt> &L1_out_dist, uint64_t n, tapa::mmap<pkt> temp1)
-{
-    for(uint64_t i=0;i<10;++i)
-    {
-        L1_out_dist>>temp1[i];
-    }
-}
-
-void Stream2Mmap_out_id(tapa::istream<id_pkt> &L1_out_id, uint64_t n, tapa::mmap<pkt> temp1)
-{
-    for(uint64_t i=0;i<10;++i)
-    {
-        L1_out_id>>temp1[i];
-    }
-}
-
-void Mmap2Stream_out(tapa::mmap<pkt> temp1, tapa::mmap<pkt> temp3, tapa::mmap<pkt> temp5, tapa::ostream<pkt> &out_board_1)
-{
-    #pragma HLS pipeline II=1
-    for (uint64_t i=0;i<30;++i)
-    {
-        if (i%3==0)
-        {
-            out_board_1<<temp1[i/3];
-        }
-        else if (i%3==1)
-        {
-            out_board_1<<temp3[i/3];
-        }
-        else if (i%3==2)
-        {
-            out_board_1<<temp5[i/3];
-        }
-    }
-}
-
-void Mmap2Stream_out_id(tapa::mmap<id_pkt> temp2, tapa::mmap<id_pkt> temp4, tapa::mmap<id_pkt> temp6, tapa::ostream<id_pkt> &out_board_2)
-{
-    #pragma HLS pipeline II=1
-    for (uint64_t i=0;i<30;++i)
-    {
-        if (i%3==0)
-        {
-            out_board_2<<temp2[i/3];
-        }
-        else if (i%3==1)
-        {
-            out_board_2<<temp4[i/3];
-        }
-        else if (i%3==2)
-        {
-            out_board_2<<temp6[i/3];
-        }
-    }
-}
-
-
-void Stream2Mmap_in(tapa::istream<pkt> &in_board_1, tapa::mmap<pkt> temp9, tapa::mmap<pkt> temp10)
-{
-    for(uint64_t i=0;i<10;++i)
-    {
-        in_board_1>>temp9[i];
-        in_board_1>>temp10[i];
-    }
-
-}
-
-void Stream2Mmap_id(tapa::istream<id_pkt> &in_board_2, tapa::mmap<id_pkt> temp9, tapa::mmap<id_pkt> temp10)
-{
-    for(uint64_t i=0;i<10;++i)
-    {
-        in_board_2>>temp9[i];
-        in_board_2>>temp10[i];
-    }
-}
-
-void Mmap2Stream_in(tapa::mmap<pkt> temp9, tapa::mmap<pkt> temp10, tapa::ostream<pkt> &in_board_1, tapa::ostream<pkt> &in_board_2)
-{
-    for(uint64_t i=0;i<10;++i)
-    {
-        in_board_1<<temp9[i];
-        in_board_2<<temp10[i];
-    }
-
-}
-void Mmap2Stream_id(tapa::mmap<id_pkt> temp9, tapa::mmap<id_pkt> temp10, tapa::ostream<id_pkt> &in_board_1, tapa::ostream<id_pkt> &in_board_2)
-{
-    for(uint64_t i=0;i<10;++i)
-    {
-        in_board_1<<temp9[i];
-        in_board_2<<temp10[i];
-    }
-
-}
-
-
+void Mmap2Stream_pkt(tapa::ostream<pkt> &out_dist,tapa::ostream<pkt> &L1_out_dist,tapa::mmap<pkt> temp0pkt,tapa::mmap<pkt> temp1pkt){
+for(int i = 0 ; i < 20 ; ++i){
+	if(i%2==0){
+	out_dist<<temp0pkt[i/2];}
+	else if(i%2==1){
+	L1_out_dist<<temp1pkt[i/2];}
+}}
+void Mmap2Stream_id_pkt(tapa::ostream<id_pkt> &out_id,tapa::ostream<id_pkt> &L1_out_id,tapa::mmap<id_pkt> temp0id_pkt,tapa::mmap<id_pkt> temp1id_pkt){
+for(int i = 0 ; i < 20 ; ++i){
+	if(i%2==0){
+	out_id<<temp0id_pkt[i/2];}
+	else if(i%2==1){
+	L1_out_id<<temp1id_pkt[i/2];}
+}}
 void load(int flag, int tile_idx, INTERFACE_WIDTH* local_SP, tapa::async_mmap<INTERFACE_WIDTH>& searchSpace)
 {
 #pragma HLS INLINE OFF
@@ -1036,25 +954,29 @@ for (unsigned int i_req_dist = 0, i_resp_dist = 0, i_req_id = 0, i_resp_id = 0; 
     }
 }
 
-void Knn_1(tapa::mmap<INTERFACE_WIDTH> in_0,
-tapa::mmap<INTERFACE_WIDTH> in_1,
-tapa::mmap<INTERFACE_WIDTH> in_2,
-tapa::mmap<INTERFACE_WIDTH> in_3,
-tapa::mmap<INTERFACE_WIDTH> in_4,
-tapa::mmap<INTERFACE_WIDTH> in_5,
-tapa::mmap<INTERFACE_WIDTH> in_6,
-tapa::mmap<INTERFACE_WIDTH> in_7,
-tapa::mmap<INTERFACE_WIDTH> in_8,
-tapa::mmap<pkt> temp1,
-tapa::mmap<id_pkt> temp2, 
-tapa::mmap<pkt> temp3,
-tapa::mmap<id_pkt> temp4, 
-tapa::mmap<pkt> temp5,
-tapa::mmap<id_pkt> temp6,
-tapa::ostream<pkt> &out_board_1,
-tapa::ostream<id_pkt> &out_board_2,
-tapa::istream<pkt> &in_board_1,
-tapa::istream<id_pkt> &in_board_2){
+void Knn_1(
+tapa::mmap<pkt> temp0pkt,
+tapa::mmap<pkt> temp1pkt,
+tapa::mmap<id_pkt> temp0id_pkt,
+tapa::mmap<id_pkt> temp1id_pkt,
+tapa::mmap<ap_uint<IWIDTH>> in_1,
+tapa::mmap<ap_uint<IWIDTH>> in_2,
+tapa::mmap<ap_uint<IWIDTH>> in_6,
+tapa::mmap<ap_uint<IWIDTH>> in_7,
+tapa::mmap<ap_uint<IWIDTH>> in_8,
+tapa::mmap<ap_uint<IWIDTH>> in_9,
+tapa::mmap<ap_uint<IWIDTH>> in_10,
+tapa::mmap<ap_uint<IWIDTH>> in_11,
+tapa::mmap<ap_uint<IWIDTH>> in_12,
+tapa::mmap<ap_uint<IWIDTH>> in_13,
+tapa::mmap<ap_uint<IWIDTH>> in_14,
+tapa::mmap<ap_uint<IWIDTH>> in_15,
+tapa::mmap<ap_uint<IWIDTH>> in_16,
+tapa::mmap<ap_uint<IWIDTH>> in_17,
+tapa::mmap<float> L3_out_dist,
+tapa::mmap<int> L3_out_id
+)
+{
   tapa::streams<pkt, 18, 2> out_dist;
   tapa::streams<id_pkt, 18, 2> out_id;
   tapa::streams<pkt, 6, 2> L1_out_dist;
@@ -1064,28 +986,28 @@ tapa::istream<id_pkt> &in_board_2){
   tapa::stream<id_pkt, 2> L2_out_id0;
   tapa::stream<id_pkt, 2> L2_out_id1;
 tapa::task()
-    .invoke( krnl_partialKnn_wrapper_0   , in_0,  NUM_SP_PTS_PADDED*0,  out_dist[0], out_id[0]  )
-    .invoke( krnl_partialKnn_wrapper_1   , in_1,  NUM_SP_PTS_PADDED*1,  out_dist[1], out_id[1]  )
-    .invoke( krnl_partialKnn_wrapper_2   , in_2,  NUM_SP_PTS_PADDED*2,  out_dist[2], out_id[2]  )
-    .invoke( krnl_partialKnn_wrapper_3   , in_3,  NUM_SP_PTS_PADDED*3,  out_dist[3], out_id[3]  )
-    .invoke( krnl_partialKnn_wrapper_4   , in_4,  NUM_SP_PTS_PADDED*4,  out_dist[4], out_id[4]  )
-    .invoke( krnl_partialKnn_wrapper_5   , in_5,  NUM_SP_PTS_PADDED*5,  out_dist[5], out_id[5]  )
-    .invoke( krnl_partialKnn_wrapper_6   , in_6,  NUM_SP_PTS_PADDED*6,  out_dist[6], out_id[6]  )
-    .invoke( krnl_partialKnn_wrapper_7   , in_7,  NUM_SP_PTS_PADDED*7,  out_dist[7], out_id[7]  )
-    .invoke( krnl_partialKnn_wrapper_8   , in_8,  NUM_SP_PTS_PADDED*8,  out_dist[8], out_id[8]  )
-    .invoke( krnl_globalSort_L1_L2,   out_dist[0],   out_id[0],   out_dist[1],   out_id[1],   out_dist[2],   out_id[2],  L1_out_dist[0],  L1_out_id[0] )
-    .invoke(Stream2Mmap_out, L1_out_dist[0], 10, temp1)
-    .invoke(Stream2Mmap_out_id, L1_out_id[0], 10, temp2)
-    .invoke( krnl_globalSort_L1_L2,   out_dist[3],   out_id[3],   out_dist[4],   out_id[4],   out_dist[5],   out_id[5],  L1_out_dist[1],  L1_out_id[1] )
-    .invoke(Stream2Mmap_out, L1_out_dist[1], 10, temp3)
-    .invoke(Stream2Mmap_out_id, L1_out_id[1], 10, temp4)
-    .invoke( krnl_globalSort_L1_L2,   out_dist[6],   out_id[6],   out_dist[7],   out_id[7],   out_dist[8],   out_id[8],  L1_out_dist[2],  L1_out_id[2] )
-    .invoke(Stream2Mmap_out, L1_out_dist[2], 10, temp5)
-    .invoke(Stream2Mmap_out_id, L1_out_id[2], 10, temp6)
-    // .invoke( krnl_globalSort_L1_L2,   out_dist[9],   out_id[9],  out_dist[10],  out_id[10],  out_dist[11],  out_id[11],  L1_out_dist[3],  L1_out_id[3] )
-    // .invoke(Stream2Mmap_out, L1_out_dist[3], 10, temp7)
-    // .invoke(Stream2Mmap_out_id, L1_out_id[3], 10, temp8)
-    .invoke(Mmap2Stream_out, temp1, temp3, temp5, out_board_1)
-    .invoke(Mmap2Stream_out_id, temp2, temp4, temp6, out_board_2)
-;
+    .invoke( krnl_partialKnn_wrapper_1, in_1,  NUM_SP_PTS_PADDED*1,  out_dist[1], out_id[1]  )
+    .invoke( krnl_partialKnn_wrapper_2, in_2,  NUM_SP_PTS_PADDED*2,  out_dist[2], out_id[2]  )
+    .invoke( krnl_partialKnn_wrapper_6, in_6,  NUM_SP_PTS_PADDED*6,  out_dist[6], out_id[6]  )
+    .invoke( krnl_partialKnn_wrapper_7, in_7,  NUM_SP_PTS_PADDED*7,  out_dist[7], out_id[7]  )
+    .invoke( krnl_partialKnn_wrapper_8, in_8,  NUM_SP_PTS_PADDED*8,  out_dist[8], out_id[8]  )
+    .invoke( krnl_partialKnn_wrapper_9, in_9,  NUM_SP_PTS_PADDED*9,  out_dist[9], out_id[9]  )
+    .invoke( krnl_partialKnn_wrapper_10, in_10, NUM_SP_PTS_PADDED*10, out_dist[10], out_id[10] )
+    .invoke( krnl_partialKnn_wrapper_11, in_11, NUM_SP_PTS_PADDED*11, out_dist[11], out_id[11] )
+    .invoke( krnl_partialKnn_wrapper_12, in_12, NUM_SP_PTS_PADDED*12, out_dist[12], out_id[12] )
+    .invoke( krnl_partialKnn_wrapper_13, in_13, NUM_SP_PTS_PADDED*13, out_dist[13], out_id[13] )
+    .invoke( krnl_partialKnn_wrapper_14, in_14, NUM_SP_PTS_PADDED*14, out_dist[14], out_id[14] )
+    .invoke( krnl_partialKnn_wrapper_15, in_15, NUM_SP_PTS_PADDED*15, out_dist[15], out_id[15] )
+    .invoke( krnl_partialKnn_wrapper_16, in_16, NUM_SP_PTS_PADDED*16, out_dist[16], out_id[16] )
+    .invoke( krnl_partialKnn_wrapper_17, in_17, NUM_SP_PTS_PADDED*17, out_dist[17], out_id[17] )
+	.invoke(Mmap2Stream_pkt,out_dist[0],L1_out_dist[1],temp0pkt,temp1pkt)
+	.invoke(Mmap2Stream_id_pkt,out_id[0],L1_out_id[1],temp0id_pkt,temp1id_pkt)
+    .invoke( krnl_globalSort_L1_L2,out_dist[0],  out_id[0],  out_dist[1],  out_id[1],  out_dist[2],  out_id[2], L1_out_dist[0], L1_out_id[0] )
+    .invoke( krnl_globalSort_L1_L2,out_dist[6],  out_id[6],  out_dist[7],  out_id[7],  out_dist[8],  out_id[8], L1_out_dist[2], L1_out_id[2] )
+    .invoke( krnl_globalSort_L1_L2,out_dist[9],  out_id[9], out_dist[10], out_id[10], out_dist[11], out_id[11], L1_out_dist[3], L1_out_id[3] )
+    .invoke( krnl_globalSort_L1_L2, out_dist[12], out_id[12], out_dist[13], out_id[13], out_dist[14], out_id[14], L1_out_dist[4], L1_out_id[4] )
+    .invoke( krnl_globalSort_L1_L2, out_dist[15], out_id[15], out_dist[16], out_id[16], out_dist[17], out_id[17], L1_out_dist[5], L1_out_id[5] )
+    .invoke( krnl_globalSort_L1_L2, L1_out_dist[0], L1_out_id[0], L1_out_dist[1], L1_out_id[1], L1_out_dist[2], L1_out_id[2], L2_out_dist0, L2_out_id0 )
+    .invoke( krnl_globalSort_L1_L2, L1_out_dist[3], L1_out_id[3], L1_out_dist[4], L1_out_id[4], L1_out_dist[5], L1_out_id[5], L2_out_dist1, L2_out_id1 )
+    .invoke( krnl_globalSort_L3, L2_out_dist0, L2_out_id0, L2_out_dist1, L2_out_id1, L3_out_dist, L3_out_id);
 }
