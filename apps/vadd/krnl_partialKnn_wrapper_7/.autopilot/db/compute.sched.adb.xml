@@ -1,0 +1,171 @@
+<stg><name>compute</name>
+
+
+<trans_list>
+
+<trans id="12" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="37" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:0 %p_read17 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read1
+
+]]></Node>
+<StgValue><ssdm name="p_read17"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="38" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:1 %p_read_21 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read
+
+]]></Node>
+<StgValue><ssdm name="p_read_21"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="39" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+entry:2 %flag_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %flag
+
+]]></Node>
+<StgValue><ssdm name="flag_read"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<![CDATA[
+entry:3 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %local_SP, i64 666, i64 164, i64 18446744073709551615
+
+]]></Node>
+<StgValue><ssdm name="specmemcore_ln0"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="41" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
+<![CDATA[
+entry:4 %br_ln117 = br i1 %flag_read, void %if.end43, void %for.inc.3.preheader
+
+]]></Node>
+<StgValue><ssdm name="br_ln117"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="flag_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="43" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="256" op_34_bw="32" op_35_bw="32">
+<![CDATA[
+for.inc.3.preheader:0 %call_ln0 = call void @compute_Pipeline_VITIS_LOOP_119_1_VITIS_LOOP_120_2, i32 %local_distance_7_3, i32 %local_distance_7_2, i32 %local_distance_7_1, i32 %local_distance_7_0, i32 %local_distance_6_3, i32 %local_distance_6_2, i32 %local_distance_6_1, i32 %local_distance_6_0, i32 %local_distance_5_3, i32 %local_distance_5_2, i32 %local_distance_5_1, i32 %local_distance_5_0, i32 %local_distance_4_3, i32 %local_distance_4_2, i32 %local_distance_4_1, i32 %local_distance_4_0, i32 %local_distance_3_3, i32 %local_distance_3_2, i32 %local_distance_3_1, i32 %local_distance_3_0, i32 %local_distance_2_3, i32 %local_distance_2_2, i32 %local_distance_2_1, i32 %local_distance_2_0, i32 %local_distance_1_3, i32 %local_distance_1_2, i32 %local_distance_1_1, i32 %local_distance_1_0, i32 %local_distance_0_3, i32 %local_distance_0_2, i32 %local_distance_0_1, i32 %local_distance_0_0, i256 %local_SP, i32 %p_read_21, i32 %p_read17
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="9" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="flag_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="43" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="32" op_10_bw="32" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32" op_27_bw="32" op_28_bw="32" op_29_bw="32" op_30_bw="32" op_31_bw="32" op_32_bw="32" op_33_bw="256" op_34_bw="32" op_35_bw="32">
+<![CDATA[
+for.inc.3.preheader:0 %call_ln0 = call void @compute_Pipeline_VITIS_LOOP_119_1_VITIS_LOOP_120_2, i32 %local_distance_7_3, i32 %local_distance_7_2, i32 %local_distance_7_1, i32 %local_distance_7_0, i32 %local_distance_6_3, i32 %local_distance_6_2, i32 %local_distance_6_1, i32 %local_distance_6_0, i32 %local_distance_5_3, i32 %local_distance_5_2, i32 %local_distance_5_1, i32 %local_distance_5_0, i32 %local_distance_4_3, i32 %local_distance_4_2, i32 %local_distance_4_1, i32 %local_distance_4_0, i32 %local_distance_3_3, i32 %local_distance_3_2, i32 %local_distance_3_1, i32 %local_distance_3_0, i32 %local_distance_2_3, i32 %local_distance_2_2, i32 %local_distance_2_1, i32 %local_distance_2_0, i32 %local_distance_1_3, i32 %local_distance_1_2, i32 %local_distance_1_1, i32 %local_distance_1_0, i32 %local_distance_0_3, i32 %local_distance_0_2, i32 %local_distance_0_1, i32 %local_distance_0_0, i256 %local_SP, i32 %p_read_21, i32 %p_read17
+
+]]></Node>
+<StgValue><ssdm name="call_ln0"/></StgValue>
+</operation>
+
+<operation id="10" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp><literal name="flag_read" val="1"/>
+</and_exp></or_exp>
+</condition>
+
+<Node id="44" bw="0" op_0_bw="0">
+<![CDATA[
+for.inc.3.preheader:1 %br_ln0 = br void %if.end43
+
+]]></Node>
+<StgValue><ssdm name="br_ln0"/></StgValue>
+</operation>
+
+<operation id="11" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="46" bw="0">
+<![CDATA[
+if.end43:0 %ret_ln165 = ret
+
+]]></Node>
+<StgValue><ssdm name="ret_ln165"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

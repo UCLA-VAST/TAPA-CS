@@ -1,0 +1,132 @@
+I0522 14:01:27.702 tapa.util:162] logging level set to INFO
+I0522 14:01:27.703 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0522 14:01:27.703 tapa.tapac:496] Python recursion limit set to 3000
+I0522 14:01:27.703 tapa.tapac:416] Executing all steps of tapac
+W0522 14:01:27.703 tapa.tapac:438] The floorplan option is automatically enabled because a floorplan output file is provided
+I0522 14:01:27.834 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+I0522 14:01:35.688 tapa.core:179] extracting HLS C++ files
+I0522 14:01:35.709 tapa.core:201] running HLS
+I0522 14:01:35.714 tapa.core:239] spawn 8 workers for parallel HLS synthesis of the tasks
+I0522 14:06:43.346 tapa.core:282] parsing RTL files and populating tasks
+I0522 14:06:45.476 tapa.core:291] parsing krnl_globalSort_L1_L2
+I0522 14:06:45.478 tapa.core:295] populating krnl_globalSort_L1_L2
+I0522 14:06:45.864 tapa.core:291] parsing krnl_globalSort_L3
+I0522 14:06:45.866 tapa.core:295] populating krnl_globalSort_L3
+I0522 14:06:45.866 tapa.core:291] parsing krnl_partialKnn_wrapper_0
+I0522 14:06:45.867 tapa.core:295] populating krnl_partialKnn_wrapper_0
+I0522 14:06:45.867 tapa.core:291] parsing krnl_partialKnn_wrapper_1
+I0522 14:06:45.868 tapa.core:295] populating krnl_partialKnn_wrapper_1
+I0522 14:06:45.868 tapa.core:291] parsing krnl_partialKnn_wrapper_10
+I0522 14:06:45.870 tapa.core:295] populating krnl_partialKnn_wrapper_10
+I0522 14:06:45.870 tapa.core:291] parsing krnl_partialKnn_wrapper_11
+I0522 14:06:45.871 tapa.core:295] populating krnl_partialKnn_wrapper_11
+I0522 14:06:45.871 tapa.core:291] parsing krnl_partialKnn_wrapper_12
+I0522 14:06:45.872 tapa.core:295] populating krnl_partialKnn_wrapper_12
+I0522 14:06:45.872 tapa.core:291] parsing krnl_partialKnn_wrapper_13
+I0522 14:06:45.873 tapa.core:295] populating krnl_partialKnn_wrapper_13
+I0522 14:06:47.668 tapa.core:291] parsing krnl_partialKnn_wrapper_14
+I0522 14:06:47.669 tapa.core:295] populating krnl_partialKnn_wrapper_14
+I0522 14:06:47.701 tapa.core:291] parsing krnl_partialKnn_wrapper_15
+I0522 14:06:47.702 tapa.core:295] populating krnl_partialKnn_wrapper_15
+I0522 14:06:47.845 tapa.core:291] parsing krnl_partialKnn_wrapper_16
+I0522 14:06:47.846 tapa.core:295] populating krnl_partialKnn_wrapper_16
+I0522 14:06:47.908 tapa.core:291] parsing krnl_partialKnn_wrapper_17
+I0522 14:06:47.910 tapa.core:295] populating krnl_partialKnn_wrapper_17
+I0522 14:06:47.910 tapa.core:291] parsing krnl_partialKnn_wrapper_2
+I0522 14:06:47.911 tapa.core:295] populating krnl_partialKnn_wrapper_2
+I0522 14:06:47.945 tapa.core:291] parsing krnl_partialKnn_wrapper_3
+I0522 14:06:47.947 tapa.core:295] populating krnl_partialKnn_wrapper_3
+I0522 14:06:47.947 tapa.core:291] parsing krnl_partialKnn_wrapper_4
+I0522 14:06:47.948 tapa.core:295] populating krnl_partialKnn_wrapper_4
+I0522 14:06:48.043 tapa.core:291] parsing krnl_partialKnn_wrapper_5
+I0522 14:06:48.044 tapa.core:295] populating krnl_partialKnn_wrapper_5
+I0522 14:06:49.391 tapa.core:291] parsing krnl_partialKnn_wrapper_6
+I0522 14:06:49.392 tapa.core:295] populating krnl_partialKnn_wrapper_6
+I0522 14:06:49.392 tapa.core:291] parsing krnl_partialKnn_wrapper_7
+I0522 14:06:49.393 tapa.core:295] populating krnl_partialKnn_wrapper_7
+I0522 14:06:49.393 tapa.core:291] parsing krnl_partialKnn_wrapper_8
+I0522 14:06:49.394 tapa.core:295] populating krnl_partialKnn_wrapper_8
+I0522 14:06:49.516 tapa.core:291] parsing krnl_partialKnn_wrapper_9
+I0522 14:06:49.518 tapa.core:295] populating krnl_partialKnn_wrapper_9
+I0522 14:06:49.519 tapa.core:291] parsing Knn
+I0522 14:06:49.519 tapa.core:295] populating Knn
+D0522 14:06:49.523 tapa.task:136] mmap argument 'Knn.L3_out_dist' (id_width=1, thread_count=1) is connected to port 'krnl_globalSort_L3_0.output_knnDist'
+D0522 14:06:49.523 tapa.task:136] mmap argument 'Knn.L3_out_id' (id_width=1, thread_count=1) is connected to port 'krnl_globalSort_L3_0.output_knnId'
+D0522 14:06:49.523 tapa.task:136] mmap argument 'Knn.in_0' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_0_0.searchSpace_0'
+D0522 14:06:49.523 tapa.task:136] mmap argument 'Knn.in_1' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_1_0.searchSpace_0'
+D0522 14:06:49.523 tapa.task:136] mmap argument 'Knn.in_10' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_10_0.searchSpace_0'
+D0522 14:06:49.523 tapa.task:136] mmap argument 'Knn.in_11' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_11_0.searchSpace_0'
+D0522 14:06:49.523 tapa.task:136] mmap argument 'Knn.in_12' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_12_0.searchSpace_0'
+D0522 14:06:49.524 tapa.task:136] mmap argument 'Knn.in_13' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_13_0.searchSpace_0'
+D0522 14:06:49.524 tapa.task:136] mmap argument 'Knn.in_14' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_14_0.searchSpace_0'
+D0522 14:06:49.524 tapa.task:136] mmap argument 'Knn.in_15' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_15_0.searchSpace_0'
+D0522 14:06:49.524 tapa.task:136] mmap argument 'Knn.in_16' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_16_0.searchSpace_0'
+D0522 14:06:49.524 tapa.task:136] mmap argument 'Knn.in_17' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_17_0.searchSpace_0'
+D0522 14:06:49.524 tapa.task:136] mmap argument 'Knn.in_2' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_2_0.searchSpace_0'
+D0522 14:06:49.524 tapa.task:136] mmap argument 'Knn.in_3' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_3_0.searchSpace_0'
+D0522 14:06:49.524 tapa.task:136] mmap argument 'Knn.in_4' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_4_0.searchSpace_0'
+D0522 14:06:49.525 tapa.task:136] mmap argument 'Knn.in_5' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_5_0.searchSpace_0'
+D0522 14:06:49.525 tapa.task:136] mmap argument 'Knn.in_6' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_6_0.searchSpace_0'
+D0522 14:06:49.525 tapa.task:136] mmap argument 'Knn.in_7' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_7_0.searchSpace_0'
+D0522 14:06:49.525 tapa.task:136] mmap argument 'Knn.in_8' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_8_0.searchSpace_0'
+D0522 14:06:49.525 tapa.task:136] mmap argument 'Knn.in_9' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_9_0.searchSpace_0'
+I0522 14:06:49.525 tapa.core:299] instrumenting upper-level RTL
+I0522 14:06:49.525 tapa.core:373] Running Inter-FPGA floorplanning
+I0522 14:06:49.525 tapa.floorplan:80] Inter FPGA floorplan
+W0522 14:06:49.533 tapa.task_graph:79] L3_out_dist is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.533 tapa.task_graph:79] L3_out_id is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.533 tapa.task_graph:79] in_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.533 tapa.task_graph:79] in_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.533 tapa.task_graph:79] in_10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_13 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_14 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_15 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_16 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_17 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.534 tapa.task_graph:79] in_5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.535 tapa.task_graph:79] in_6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.535 tapa.task_graph:79] in_7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.535 tapa.task_graph:79] in_8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0522 14:06:49.535 tapa.task_graph:79] in_9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+D0522 14:06:49.535 tapa.task_graph:158] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0522 14:06:49.535 tapa.task_graph:158] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0522 14:06:49.535 tapa.task_graph:158] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0522 14:06:49.535 tapa.task_graph:158] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0522 14:06:49.535 tapa.task_graph:158] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_globalSort_L3: {'BRAM': 0, 'DSP': 0, 'FF': 3038, 'LUT': 1380, 'URAM': 0}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_0: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_1: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_10: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_11: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_12: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_13: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_14: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_15: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_16: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_17: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_2: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_3: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.536 tapa.task_graph:158] area of krnl_partialKnn_wrapper_4: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.537 tapa.task_graph:158] area of krnl_partialKnn_wrapper_5: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.537 tapa.task_graph:158] area of krnl_partialKnn_wrapper_6: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.537 tapa.task_graph:158] area of krnl_partialKnn_wrapper_7: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.537 tapa.task_graph:158] area of krnl_partialKnn_wrapper_8: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0522 14:06:49.537 tapa.task_graph:158] area of krnl_partialKnn_wrapper_9: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+I0522 14:06:51.757 tapa.tapac:686] Splitting kernel code into 2 FPGAs
+I0522 14:06:51.760 tapa.split_kernel:20] out_dist
+I0522 14:06:51.760 tapa.split_kernel:20] out_dist
+I0522 14:06:51.760 tapa.split_kernel:20] out_dist
+I0522 14:06:51.760 tapa.split_kernel:20] out_dist
+I0522 14:06:51.760 tapa.split_kernel:20] out_dist
+I0522 14:06:51.760 tapa.split_kernel:20] out_dist
+I0522 14:06:51.760 tapa.split_kernel:20] L1_out_dist
+I0522 14:06:51.760 tapa.split_kernel:20] L1_out_dist
+I0522 14:06:51.761 tapa.tapac:688] Created split kernel codes

@@ -3,7 +3,7 @@
 # originall tested on 2020.2
 # source /opt/tools/xilinx/Vitis_HLS/2020.2/settings64.sh
 
-WORK_DIR=run_128
+WORK_DIR=run_128_2048_2048_dwidth_512
 mkdir -p ${WORK_DIR}
 
 tapac \

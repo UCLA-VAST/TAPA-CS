@@ -22,7 +22,8 @@ from tapa.verilog.xilinx.const import *
 from tapa.verilog.xilinx.m_axi import *
 from tapa.verilog.xilinx.module import *
 from tapa.verilog.xilinx.typing import *
-
+import logging
+_logger = logging.getLogger().getChild(__name__)
 
 def ctrl_instance_name(top: str) -> str:
   return 'control_s_axi_U'

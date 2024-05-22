@@ -1,0 +1,199 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_dual_all_PEs'
+================================================================
+* Date:           Wed May 22 14:56:05 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_partialKnn_wrapper_15 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.348 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       25|       25|  83.250 ns|  83.250 ns|   25|   25|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_319_1  |       23|       23|         4|          2|          1|    11|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      156|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      132|    -|
+|Register             |        -|     -|      280|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      280|      288|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------+-----------------------------+---------+----+---+----+-----+
+    |             Instance             |            Module           | BRAM_18K| DSP| FF| LUT| URAM|
+    +----------------------------------+-----------------------------+---------+----+---+----+-----+
+    |fcmp_32ns_32ns_1_2_no_dsp_1_U601  |fcmp_32ns_32ns_1_2_no_dsp_1  |        0|   0|  0|   0|    0|
+    +----------------------------------+-----------------------------+---------+----+---+----+-----+
+    |Total                             |                             |        0|   0|  0|   0|    0|
+    +----------------------------------+-----------------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln319_fu_200_p2     |         +|   0|  0|  12|           5|           2|
+    |idx_a_1_fu_303_p2       |         +|   0|  0|  39|          32|           2|
+    |idx_b_1_fu_293_p2       |         +|   0|  0|  39|          32|           2|
+    |and_ln321_1_fu_287_p2   |       and|   0|  0|   2|           1|           1|
+    |and_ln321_fu_281_p2     |       and|   0|  0|   2|           1|           1|
+    |ap_condition_162        |       and|   0|  0|   2|           1|           1|
+    |icmp_ln321_1_fu_251_p2  |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln321_2_fu_263_p2  |      icmp|   0|  0|  11|           8|           2|
+    |icmp_ln321_3_fu_269_p2  |      icmp|   0|  0|  16|          23|           1|
+    |icmp_ln321_fu_245_p2    |      icmp|   0|  0|  11|           8|           2|
+    |or_ln321_1_fu_275_p2    |        or|   0|  0|   2|           1|           1|
+    |or_ln321_fu_257_p2      |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 156|         137|          19|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                         |  14|          3|    1|          3|
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1           |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2           |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_idx_a_load       |   9|          2|   32|         64|
+    |ap_sig_allocacmp_idx_b_load       |   9|          2|   32|         64|
+    |dist_d0                           |  14|          3|   32|         96|
+    |i_fu_60                           |   9|          2|    5|         10|
+    |id_d0                             |  14|          3|   32|         96|
+    |idx_a_fu_64                       |   9|          2|   32|         64|
+    |idx_b_fu_68                       |   9|          2|   32|         64|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             | 132|         29|  203|        471|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------+----+----+-----+-----------+
+    |                   Name                   | FF | LUT| Bits| Const Bits|
+    +------------------------------------------+----+----+-----+-----------+
+    |and_ln321_1_reg_392                       |   1|   0|    1|          0|
+    |ap_CS_fsm                                 |   2|   0|    2|          0|
+    |ap_done_reg                               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                   |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg          |   1|   0|    1|          0|
+    |i_2_reg_339                               |   5|   0|    5|          0|
+    |i_2_reg_339_pp0_iter1_reg                 |   5|   0|    5|          0|
+    |i_fu_60                                   |   5|   0|    5|          0|
+    |idx_a_fu_64                               |  32|   0|   32|          0|
+    |idx_a_load_reg_348                        |  32|   0|   32|          0|
+    |idx_b_fu_68                               |  32|   0|   32|          0|
+    |idx_b_load_reg_353                        |  32|   0|   32|          0|
+    |local_kNearstDist_partial_a_load_reg_378  |  32|   0|   32|          0|
+    |local_kNearstDist_partial_b_load_reg_385  |  32|   0|   32|          0|
+    |tmp_3_reg_344                             |   1|   0|    1|          0|
+    |zext_ln321_1_reg_368                      |  32|   0|   64|         32|
+    |zext_ln321_reg_358                        |  32|   0|   64|         32|
+    +------------------------------------------+----+----+-----+-----------+
+    |Total                                     | 280|   0|  344|         64|
+    +------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|               RTL Ports              | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++--------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                                |   in|    1|  ap_ctrl_hs|           merge_dual_all_PEs|  return value|
+|ap_rst                                |   in|    1|  ap_ctrl_hs|           merge_dual_all_PEs|  return value|
+|ap_start                              |   in|    1|  ap_ctrl_hs|           merge_dual_all_PEs|  return value|
+|ap_done                               |  out|    1|  ap_ctrl_hs|           merge_dual_all_PEs|  return value|
+|ap_idle                               |  out|    1|  ap_ctrl_hs|           merge_dual_all_PEs|  return value|
+|ap_ready                              |  out|    1|  ap_ctrl_hs|           merge_dual_all_PEs|  return value|
+|local_kNearstDist_partial_a_address0  |  out|    4|   ap_memory|  local_kNearstDist_partial_a|         array|
+|local_kNearstDist_partial_a_ce0       |  out|    1|   ap_memory|  local_kNearstDist_partial_a|         array|
+|local_kNearstDist_partial_a_q0        |   in|   32|   ap_memory|  local_kNearstDist_partial_a|         array|
+|local_kNearstDist_partial_b_address0  |  out|    4|   ap_memory|  local_kNearstDist_partial_b|         array|
+|local_kNearstDist_partial_b_ce0       |  out|    1|   ap_memory|  local_kNearstDist_partial_b|         array|
+|local_kNearstDist_partial_b_q0        |   in|   32|   ap_memory|  local_kNearstDist_partial_b|         array|
+|local_kNearstId_partial_a_address0    |  out|    4|   ap_memory|    local_kNearstId_partial_a|         array|
+|local_kNearstId_partial_a_ce0         |  out|    1|   ap_memory|    local_kNearstId_partial_a|         array|
+|local_kNearstId_partial_a_q0          |   in|   32|   ap_memory|    local_kNearstId_partial_a|         array|
+|local_kNearstId_partial_b_address0    |  out|    4|   ap_memory|    local_kNearstId_partial_b|         array|
+|local_kNearstId_partial_b_ce0         |  out|    1|   ap_memory|    local_kNearstId_partial_b|         array|
+|local_kNearstId_partial_b_q0          |   in|   32|   ap_memory|    local_kNearstId_partial_b|         array|
+|dist_address0                         |  out|    4|   ap_memory|                         dist|         array|
+|dist_ce0                              |  out|    1|   ap_memory|                         dist|         array|
+|dist_we0                              |  out|    1|   ap_memory|                         dist|         array|
+|dist_d0                               |  out|   32|   ap_memory|                         dist|         array|
+|id_address0                           |  out|    4|   ap_memory|                           id|         array|
+|id_ce0                                |  out|    1|   ap_memory|                           id|         array|
+|id_we0                                |  out|    1|   ap_memory|                           id|         array|
+|id_d0                                 |  out|   32|   ap_memory|                           id|         array|
++--------------------------------------+-----+-----+------------+-----------------------------+--------------+
+

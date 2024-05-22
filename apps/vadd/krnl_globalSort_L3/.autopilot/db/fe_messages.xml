@@ -1,0 +1,729 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:366:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5526" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:366:64" msg_body="'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:368:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5526" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:368:64" msg_body="'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:469:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5525" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:474:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
+        <args ClangWarningOption="ignored-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:114:13" msg_body="unused parameter 'debug_i'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:126:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:160:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_strb_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:172:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:178:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:182:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:186:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:191:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:209:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:213:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:217:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:227:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator=" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:266:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:291:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:302:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:312:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:327:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:363:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:370:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:378:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:388:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:399:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:409:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:425:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:80:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compare_with_register" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:81:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compare_with_register" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:82:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compare_with_register" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=2 max=2" ARG_PragmaType="latency" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:92:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:95:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:116:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:127:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:169:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="swap" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:192:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="para_partial_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:194:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="para_partial_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="para_partial_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="FACTOR=D2L_FACTOR_W" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:210:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="para_partial_sort" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:211:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="para_partial_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=&quot;local_kNearstDist&quot; inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:212:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="para_partial_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=&quot;local_kNearstId&quot; inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:225:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="para_partial_sort" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:226:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="para_partial_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=&quot;local_kNearstDist&quot; inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:227:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="para_partial_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=&quot;local_kNearstId&quot; inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:242:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:245:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=starting_id complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:248:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sort" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:255:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:256:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="FACTOR=L2I_FACTOR_W" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:271:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:286:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sort" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:344:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_dual_all_PEs" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:361:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:364:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_Query_0 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:366:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_SP_0_A core=XPM_MEMORY uram" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:368:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_SP_0_B core=XPM_MEMORY uram" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:371:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_distance_0_A complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:372:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_distance_0_A cyclic factor=L2I_FACTOR_W dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:374:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_distance_0_B complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:375:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_distance_0_B cyclic factor=L2I_FACTOR_W dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:380:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_kNearstDist_partial_0 complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:382:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_kNearstId_partial_0 complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:386:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_kNearstDist complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:388:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_kNearstId complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:392:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=global_kNearstDist complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:394:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=global_kNearstId complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:397:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:422:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:440:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:466:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_kNearstDist complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:467:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_kNearstDist complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:468:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_kNearstDist complete dim=3" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:469:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_kNearstDist core=RAM_1P_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:471:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_kNearstId complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:472:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_kNearstId complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:473:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_kNearstId complete dim=3" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:474:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_kNearstId core=RAM_1P_LUTRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:478:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:481:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:484:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:497:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:506:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:516:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:536:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:547:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_partialKnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="seq_global_merge_L1_L2" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:708:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="seq_global_merge_L1_L2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=idx complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:711:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="seq_global_merge_L1_L2" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:720:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="seq_global_merge_L1_L2" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:748:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="seq_global_merge_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="OFF" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:750:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="seq_global_merge_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=idx complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:753:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="seq_global_merge_L3" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:762:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="seq_global_merge_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tmp/run-hls-krnl_globalSort_L3-1uu89nah/commands.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=krnl_globalSort_L3" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:782:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_dist0" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:783:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = in_dist0._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:784:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_dist0._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:785:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = in_dist0._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:786:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_dist0._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:790:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_id0" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:791:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = in_id0._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:792:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_id0._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:793:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = in_id0._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:794:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_id0._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:798:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_dist1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:799:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = in_dist1._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:800:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_dist1._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:801:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = in_dist1._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:802:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_dist1._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:806:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_id1" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:807:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = in_id1._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:808:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_id1._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:809:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = in_id1._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:810:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = in_id1._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:814:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:815:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnDist.read_addr._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:816:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist.read_addr._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:817:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnDist.read_data._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:818:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist.read_data._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:819:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnDist.write_addr._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:820:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist.write_addr._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:821:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnDist.write_data._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:822:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist.write_data._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:823:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnDist.write_resp._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:824:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist.write_resp._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:825:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist .read_data" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:826:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnDist.read_data._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:827:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist.read_data._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:828:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist .write_resp" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:829:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnDist.write_resp._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:830:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnDist.write_resp._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:839:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:840:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnId.read_addr._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:841:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId.read_addr._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:842:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnId.read_data._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:843:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId.read_data._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:844:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnId.write_addr._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:845:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId.write_addr._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:846:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnId.write_data._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:847:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId.write_data._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:848:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnId.write_resp._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:849:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId.write_resp._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:850:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId .read_data" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:851:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnId.read_data._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:852:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId.read_data._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:853:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId .write_resp" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:854:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = output_knnId.write_resp._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:855:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = output_knnId.write_resp._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:866:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_kNearstDist_partial complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:868:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_kNearstId_partial complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:871:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output_dist complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:873:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=output_id complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:876:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:886:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:896:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="krnl_globalSort_L3" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:925:61" msg_body="Inlining function 'tapa::istream&lt;unsigned char&gt;::read(std::nullptr_t)' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::istream&lt;unsigned char&gt;::read(std::nullptr_t)" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:924:36" msg_body="Inlining function 'tapa::istream&lt;unsigned char&gt;::empty() const' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::istream&lt;unsigned char&gt;::empty() const" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:919:33" msg_body="Inlining function 'tapa::ostream&lt;int&gt;::try_write(int const&amp;)' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::ostream&lt;int&gt;::try_write(int const&amp;)" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:918:33" msg_body="Inlining function 'tapa::ostream&lt;long&gt;::try_write(long const&amp;)' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::ostream&lt;long&gt;::try_write(long const&amp;)" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:916:36" msg_body="Inlining function 'tapa::ostream&lt;int&gt;::full() const' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::ostream&lt;int&gt;::full() const" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:915:36" msg_body="Inlining function 'tapa::ostream&lt;long&gt;::full() const' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::ostream&lt;long&gt;::full() const" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:910:65" msg_body="Inlining function 'tapa::istream&lt;unsigned char&gt;::read(std::nullptr_t)' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::istream&lt;unsigned char&gt;::read(std::nullptr_t)" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:909:38" msg_body="Inlining function 'tapa::istream&lt;unsigned char&gt;::empty() const' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::istream&lt;unsigned char&gt;::empty() const" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:904:35" msg_body="Inlining function 'tapa::ostream&lt;float&gt;::try_write(float const&amp;)' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::ostream&lt;float&gt;::try_write(float const&amp;)" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:903:35" msg_body="Inlining function 'tapa::ostream&lt;long&gt;::try_write(long const&amp;)' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::ostream&lt;long&gt;::try_write(long const&amp;)" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:901:38" msg_body="Inlining function 'tapa::ostream&lt;float&gt;::full() const' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::ostream&lt;float&gt;::full() const" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:900:38" msg_body="Inlining function 'tapa::ostream&lt;long&gt;::full() const' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::ostream&lt;long&gt;::full() const" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:889:29" msg_body="Inlining function 'tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;::read()' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;::read()" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:887:24" msg_body="Inlining function 'tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;::read()' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;::read()" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:880:25" msg_body="Inlining function 'tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;::read()' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;::read()" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:877:20" msg_body="Inlining function 'tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;::read()' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;::read()" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'in_dist0'">
+        <args Name="in_dist0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'in_id0'">
+        <args Name="in_id0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'in_dist1'">
+        <args Name="in_dist1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'in_id1'">
+        <args Name="in_id1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnDist'">
+        <args Name="output_knnDist"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnDist_write_resp'">
+        <args Name="output_knnDist_write_resp"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnDist_write_data'">
+        <args Name="output_knnDist_write_data"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnDist_write_addr'">
+        <args Name="output_knnDist_write_addr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnDist_read_data'">
+        <args Name="output_knnDist_read_data"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnDist_read_addr'">
+        <args Name="output_knnDist_read_addr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnId'">
+        <args Name="output_knnId"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnId_write_resp'">
+        <args Name="output_knnId_write_resp"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnId_write_data'">
+        <args Name="output_knnId_write_data"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnId_write_addr'">
+        <args Name="output_knnId_write_addr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnId_read_data'">
+        <args Name="output_knnId_read_data"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Disaggregating variable 'output_knnId_read_addr'">
+        <args Name="output_knnId_read_addr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:747:0" msg_body="Unrolling loop 'VITIS_LOOP_751_1' (/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:751:20) in function 'seq_global_merge_L3' completely with a factor of 2">
+        <args Factor="2" LoopLoc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:751:20" LoopName="VITIS_LOOP_751_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:749:6" msg_body="Applying array_partition to 'idx': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="idx"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:865:11" msg_body="Applying array_partition to 'local_kNearstDist_partial': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="local_kNearstDist_partial"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:867:6" msg_body="Applying array_partition to 'local_kNearstId_partial': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="local_kNearstId_partial"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:870:8" msg_body="Applying array_partition to 'output_dist': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="output_dist"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:872:6" msg_body="Applying array_partition to 'output_id': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="output_id"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'in_dist0__' with compact=bit mode in 45-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="45" HwTyName="fifo (hls::stream)" Name="in_dist0__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'in_dist0__peek' with compact=bit mode in 45-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="45" HwTyName="fifo (hls::stream)" Name="in_dist0__peek"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'in_id0__' with compact=bit mode in 45-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="45" HwTyName="fifo (hls::stream)" Name="in_id0__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'in_id0__peek' with compact=bit mode in 45-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="45" HwTyName="fifo (hls::stream)" Name="in_id0__peek"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'in_dist1__' with compact=bit mode in 45-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="45" HwTyName="fifo (hls::stream)" Name="in_dist1__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'in_dist1__peek' with compact=bit mode in 45-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="45" HwTyName="fifo (hls::stream)" Name="in_dist1__peek"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'in_id1__' with compact=bit mode in 45-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="45" HwTyName="fifo (hls::stream)" Name="in_id1__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'in_id1__peek' with compact=bit mode in 45-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="45" HwTyName="fifo (hls::stream)" Name="in_id1__peek"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnDist_read_addr' with compact=bit mode in 65-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="65" HwTyName="fifo (hls::stream)" Name="output_knnDist_read_addr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnDist_read_data__' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="output_knnDist_read_data__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnDist_write_addr' with compact=bit mode in 65-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="65" HwTyName="fifo (hls::stream)" Name="output_knnDist_write_addr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnDist_write_data' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="output_knnDist_write_data"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnDist_write_resp__' with compact=bit mode in 9-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="9" HwTyName="fifo (hls::stream)" Name="output_knnDist_write_resp__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnDist_read_data__peek' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="output_knnDist_read_data__peek"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnDist_write_resp__peek' with compact=bit mode in 9-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="9" HwTyName="fifo (hls::stream)" Name="output_knnDist_write_resp__peek"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnId_read_addr' with compact=bit mode in 65-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="65" HwTyName="fifo (hls::stream)" Name="output_knnId_read_addr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnId_read_data__' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="output_knnId_read_data__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnId_write_addr' with compact=bit mode in 65-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="65" HwTyName="fifo (hls::stream)" Name="output_knnId_write_addr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnId_write_data' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="output_knnId_write_data"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnId_write_resp__' with compact=bit mode in 9-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="9" HwTyName="fifo (hls::stream)" Name="output_knnId_write_resp__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnId_read_data__peek' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="output_knnId_read_data__peek"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:781:0" msg_body="Aggregating fifo (hls::stream) variable 'output_knnId_write_resp__peek' with compact=bit mode in 9-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="9" HwTyName="fifo (hls::stream)" Name="output_knnId_write_resp__peek"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9" msg_body="Inlining function '_llvm.fpga.unpack.bits.s_struct.tapa::internal::elem_t&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;s.i45.1' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="_llvm.fpga.unpack.bits.s_struct.tapa::internal::elem_t&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;s.i45.1" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164:13" msg_body="Inlining function '_llvm.fpga.unpack.bits.s_struct.tapa::internal::elem_t&lt;unsigned char&gt;s.i9' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="_llvm.fpga.unpack.bits.s_struct.tapa::internal::elem_t&lt;unsigned char&gt;s.i9" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164:13" msg_body="Inlining function '_llvm.fpga.pack.none.i32.sl_i1i9s' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.none.i32.sl_i1i9s" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:185:16" msg_body="Inlining function '_llvm.fpga.pack.bits.i33.s_struct.tapa::internal::elem_t&lt;int&gt;s.1' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.bits.i33.s_struct.tapa::internal::elem_t&lt;int&gt;s.1" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:185:16" msg_body="Inlining function '_llvm.fpga.pack.none.i64.s_struct.tapa::internal::elem_t&lt;int&gt;s' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.none.i64.s_struct.tapa::internal::elem_t&lt;int&gt;s" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:185:16" msg_body="Inlining function '_llvm.fpga.pack.bits.i65.s_struct.tapa::internal::elem_t&lt;long&gt;s.1' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.bits.i65.s_struct.tapa::internal::elem_t&lt;long&gt;s.1" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:185:16" msg_body="Inlining function '_llvm.fpga.pack.none.i128.s_struct.tapa::internal::elem_t&lt;long&gt;s' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.none.i128.s_struct.tapa::internal::elem_t&lt;long&gt;s" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:185:16" msg_body="Inlining function '_llvm.fpga.pack.bits.i33.s_struct.tapa::internal::elem_t&lt;float&gt;s.1' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.bits.i33.s_struct.tapa::internal::elem_t&lt;float&gt;s.1" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:185:16" msg_body="Inlining function '_llvm.fpga.pack.none.i64.s_struct.tapa::internal::elem_t&lt;float&gt;s' into 'krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.none.i64.s_struct.tapa::internal::elem_t&lt;float&gt;s" Caller="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

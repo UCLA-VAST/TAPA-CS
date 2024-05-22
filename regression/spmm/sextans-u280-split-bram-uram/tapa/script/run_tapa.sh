@@ -2,11 +2,12 @@
 tapac \
   --work-dir run \
   --top Sextans \
-  --part-num xcu55c-fsvh2892-2L-e \
+  --part-num xcu280-fsvh2892-2L-e \
   --clock-period 3.33 \
   -o Sextans.xo \
   --floorplan-output Sextans_floorplan.tcl \
   --connectivity ../src/link_config.ini \
-  ../src/spmm_2.cpp \
-  --multi-fpga 2 \
+  --enable-hbm-binding-adjustment \
+  --run-floorplan-dse \
+  ../src/sextans.cpp \
    2>&1 | tee tapa.log

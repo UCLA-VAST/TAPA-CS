@@ -155,12 +155,8 @@ def analyze_input(config) -> None:
 
 
 def is_device_supported(config) -> bool:
-  
-  print("helloo")
   part_num = config['part_num']
   supported_part_num_prefix = ('xcu280', 'xcu250', 'xcu55c')
-  print("from analyze")
-  print(supported_part_num_prefix)
   if any(part_num.startswith(prefix) for prefix in supported_part_num_prefix):
     return True
   else:

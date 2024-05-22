@@ -464,7 +464,7 @@ def parse_steps(args, parser) -> Tuple[bool, str]:
       parser.error('--work-dir must be set to enable floorplan DSE.')
 
   if args.enable_hbm_binding_adjustment:
-    if not _get_device_info(parser, args)['part_num'].startswith('xcu280'):
+    if not (_get_device_info(parser, args)['part_num'].startswith('xcu280') or _get_device_info(parser, args)['part_num'].startswith('xcu55c')):
       parser.error('--enable-hbm-binding-adjustment only works with U280')
     if not args.work_dir:
       parser.error(
@@ -683,14 +683,10 @@ def main(argv: Optional[List[str]] = None):
           write_only_args=args.write_only_args,
           **kwargs,
         )
-        _logger.info("got v2s and slot_list from autobridge")
-        # for vertex in v2s:
-        #   _logger.info(vertex.name)
-        #   _logger.info(v2s[vertex].getName())
         _logger.info("Splitting kernel code into %s FPGAs", args.multi_fpga)
-        split_kernel(v2s, slot_list, program)
-        
-  if all_steps or args.generate_top_rtl is not None:
+        split_kernel(v2s, slot_list, program, input_file_basename)
+        _logger.info("Created split kernel codes")
+  if (all_steps and args.multi_fpga is None) or args.generate_top_rtl is not None:
     program.generate_top_rtl(
         args.floorplan_output,
         args.register_level or 0,
@@ -698,7 +694,7 @@ def main(argv: Optional[List[str]] = None):
         _get_device_info(parser, args)['part_num'],
     )
 
-  if all_steps or args.pack_xo is not None:
+  if (all_steps and args.multi_fpga is None) or args.pack_xo is not None:
     try:
       with open(args.output_file, 'wb') as packed_obj:
         program.pack_rtl(packed_obj)

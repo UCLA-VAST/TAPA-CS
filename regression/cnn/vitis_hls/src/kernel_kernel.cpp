@@ -559,6 +559,7 @@ void PE(int idx, int idy, hls::stream<A_t8> &fifo_A_in, hls::stream<A_t8> &fifo_
                 u1.ut = local_B[0][1];
                 u0.ut = local_B[0][0];
                 fifo_data = (ap_uint<32>(u7.ui), ap_uint<32>(u6.ui), ap_uint<32>(u5.ui), ap_uint<32>(u4.ui), ap_uint<32>(u3.ui), ap_uint<32>(u2.ui), ap_uint<32>(u1.ui), ap_uint<32>(u0.ui));
+                // printf("how many times do we write \n");
                 fifo_B_out.write(fifo_data);
               }
               {

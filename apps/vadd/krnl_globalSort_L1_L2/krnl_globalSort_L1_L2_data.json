@@ -1,0 +1,1171 @@
+{
+  "Top": "krnl_globalSort_L1_L2",
+  "RtlTop": "krnl_globalSort_L1_L2",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "krnl_globalSort_L1_L2_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "virtexuplushbm",
+    "Device": "xcu55c",
+    "Package": "-fsvh2892",
+    "Speed": "-2L-e",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "in_dist0": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "istream<hls::axis<ap_uint<32>, 0, 0, 0> >&",
+      "srcSize": "256",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "in_dist0_s",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "in_dist0_peek",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_id0": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "istream<hls::axis<ap_uint<32>, 0, 0, 0> >&",
+      "srcSize": "256",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "in_id0_s",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "in_id0_peek",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_dist1": {
+      "index": "2",
+      "direction": "in",
+      "srcType": "istream<hls::axis<ap_uint<32>, 0, 0, 0> >&",
+      "srcSize": "256",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "in_dist1_s",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "in_dist1_peek",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_id1": {
+      "index": "3",
+      "direction": "in",
+      "srcType": "istream<hls::axis<ap_uint<32>, 0, 0, 0> >&",
+      "srcSize": "256",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "in_id1_s",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "in_id1_peek",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_dist2": {
+      "index": "4",
+      "direction": "in",
+      "srcType": "istream<hls::axis<ap_uint<32>, 0, 0, 0> >&",
+      "srcSize": "256",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "in_dist2_s",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "in_dist2_peek",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_id2": {
+      "index": "5",
+      "direction": "in",
+      "srcType": "istream<hls::axis<ap_uint<32>, 0, 0, 0> >&",
+      "srcSize": "256",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "in_id2_s",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "interface",
+          "interface": "in_id2_peek",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "out_dist": {
+      "index": "6",
+      "direction": "out",
+      "srcType": "ostream<hls::axis<ap_uint<32>, 0, 0, 0> >&",
+      "srcSize": "128",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "out_dist",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    },
+    "out_id": {
+      "index": "7",
+      "direction": "out",
+      "srcType": "ostream<hls::axis<ap_uint<32>, 0, 0, 0> >&",
+      "srcSize": "128",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "out_id",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_interface -m_axi_latency=0",
+      "config_interface -m_axi_addr64=1",
+      "config_compile -complex-mul-dsp=0",
+      "config_compile -name_max_length=253",
+      "config_rtl -module_auto_prefix=1",
+      "config_rtl -reset_level=low"
+    ],
+    "DirectiveTcl": ["set_directive_top krnl_globalSort_L1_L2 -name krnl_globalSort_L1_L2"],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "krnl_globalSort_L1_L2"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "3.33",
+    "Uncertainty": "0.8991",
+    "IsCombinational": "0",
+    "II": "151",
+    "Latency": "150"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 3.330 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "krnl_globalSort_L1_L2",
+    "Version": "1.0",
+    "DisplayName": "Krnl_globalsort_l1_l2",
+    "Revision": "2113568874",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_krnl_globalSort_L1_L2_1_0.zip"
+  },
+  "Files": {
+    "CSource": ["\/home\/nehaprakriya\/Documents\/tapa\/regression\/knn\/src\/run_split_check\/cpp\/krnl_globalSort_L1_L2.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/krnl_globalSort_L1_L2_fcmp_32ns_32ns_1_2_no_dsp_1.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_krnl_globalSort_L1_L2_Pipeline_DIST_OUT.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_krnl_globalSort_L1_L2_Pipeline_ID_OUT.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_mux_32_32_1_1.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_mux_104_32_1_1.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_mux_332_32_1_1.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_mux_1032_32_1_1.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_seq_global_merge_L1_L2.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2_seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3.vhd",
+      "impl\/vhdl\/krnl_globalSort_L1_L2.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/krnl_globalSort_L1_L2_fcmp_32ns_32ns_1_2_no_dsp_1.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_krnl_globalSort_L1_L2_Pipeline_DIST_OUT.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_krnl_globalSort_L1_L2_Pipeline_ID_OUT.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_mux_32_32_1_1.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_mux_104_32_1_1.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_mux_332_32_1_1.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_mux_1032_32_1_1.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_seq_global_merge_L1_L2.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2_seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3.v",
+      "impl\/verilog\/krnl_globalSort_L1_L2.v"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "Subcore": ["impl\/misc\/krnl_globalSort_L1_L2_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/krnl_globalSort_L1_L2.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": [{
+        "Name": "krnl_globalSort_L1_L2_fcmp_32ns_32ns_1_2_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 1 CONFIG.c_result_fraction_width 0 CONFIG.component_name krnl_globalSort_L1_L2_fcmp_32ns_32ns_1_2_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Compare CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      }]
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {"ASSOCIATED_RESET": "ap_rst_n"},
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "busTypeName": "acc_handshake",
+      "mode": "slave",
+      "portMap": {
+        "ap_start": "start",
+        "ap_done": "done",
+        "ap_idle": "idle",
+        "ap_ready": "ready"
+      },
+      "ports": [
+        "ap_done",
+        "ap_idle",
+        "ap_ready",
+        "ap_start"
+      ]
+    },
+    "in_dist0_s": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_dist0_s_",
+      "portMap": {
+        "in_dist0_s_dout": "RD_DATA",
+        "in_dist0_s_empty_n": "EMPTY_N",
+        "in_dist0_s_read": "RD_EN"
+      },
+      "ports": [
+        "in_dist0_s_dout",
+        "in_dist0_s_empty_n",
+        "in_dist0_s_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_dist0"
+        }]
+    },
+    "in_dist0_peek": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_dist0_peek_",
+      "portMap": {
+        "in_dist0_peek_dout": "RD_DATA",
+        "in_dist0_peek_empty_n": "EMPTY_N",
+        "in_dist0_peek_read": "RD_EN"
+      },
+      "ports": [
+        "in_dist0_peek_dout",
+        "in_dist0_peek_empty_n",
+        "in_dist0_peek_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_dist0"
+        }]
+    },
+    "in_id0_s": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_id0_s_",
+      "portMap": {
+        "in_id0_s_dout": "RD_DATA",
+        "in_id0_s_empty_n": "EMPTY_N",
+        "in_id0_s_read": "RD_EN"
+      },
+      "ports": [
+        "in_id0_s_dout",
+        "in_id0_s_empty_n",
+        "in_id0_s_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_id0"
+        }]
+    },
+    "in_id0_peek": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_id0_peek_",
+      "portMap": {
+        "in_id0_peek_dout": "RD_DATA",
+        "in_id0_peek_empty_n": "EMPTY_N",
+        "in_id0_peek_read": "RD_EN"
+      },
+      "ports": [
+        "in_id0_peek_dout",
+        "in_id0_peek_empty_n",
+        "in_id0_peek_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_id0"
+        }]
+    },
+    "in_dist1_s": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_dist1_s_",
+      "portMap": {
+        "in_dist1_s_dout": "RD_DATA",
+        "in_dist1_s_empty_n": "EMPTY_N",
+        "in_dist1_s_read": "RD_EN"
+      },
+      "ports": [
+        "in_dist1_s_dout",
+        "in_dist1_s_empty_n",
+        "in_dist1_s_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_dist1"
+        }]
+    },
+    "in_dist1_peek": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_dist1_peek_",
+      "portMap": {
+        "in_dist1_peek_dout": "RD_DATA",
+        "in_dist1_peek_empty_n": "EMPTY_N",
+        "in_dist1_peek_read": "RD_EN"
+      },
+      "ports": [
+        "in_dist1_peek_dout",
+        "in_dist1_peek_empty_n",
+        "in_dist1_peek_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_dist1"
+        }]
+    },
+    "in_id1_s": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_id1_s_",
+      "portMap": {
+        "in_id1_s_dout": "RD_DATA",
+        "in_id1_s_empty_n": "EMPTY_N",
+        "in_id1_s_read": "RD_EN"
+      },
+      "ports": [
+        "in_id1_s_dout",
+        "in_id1_s_empty_n",
+        "in_id1_s_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_id1"
+        }]
+    },
+    "in_id1_peek": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_id1_peek_",
+      "portMap": {
+        "in_id1_peek_dout": "RD_DATA",
+        "in_id1_peek_empty_n": "EMPTY_N",
+        "in_id1_peek_read": "RD_EN"
+      },
+      "ports": [
+        "in_id1_peek_dout",
+        "in_id1_peek_empty_n",
+        "in_id1_peek_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_id1"
+        }]
+    },
+    "in_dist2_s": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_dist2_s_",
+      "portMap": {
+        "in_dist2_s_dout": "RD_DATA",
+        "in_dist2_s_empty_n": "EMPTY_N",
+        "in_dist2_s_read": "RD_EN"
+      },
+      "ports": [
+        "in_dist2_s_dout",
+        "in_dist2_s_empty_n",
+        "in_dist2_s_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_dist2"
+        }]
+    },
+    "in_dist2_peek": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_dist2_peek_",
+      "portMap": {
+        "in_dist2_peek_dout": "RD_DATA",
+        "in_dist2_peek_empty_n": "EMPTY_N",
+        "in_dist2_peek_read": "RD_EN"
+      },
+      "ports": [
+        "in_dist2_peek_dout",
+        "in_dist2_peek_empty_n",
+        "in_dist2_peek_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_dist2"
+        }]
+    },
+    "in_id2_s": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_id2_s_",
+      "portMap": {
+        "in_id2_s_dout": "RD_DATA",
+        "in_id2_s_empty_n": "EMPTY_N",
+        "in_id2_s_read": "RD_EN"
+      },
+      "ports": [
+        "in_id2_s_dout",
+        "in_id2_s_empty_n",
+        "in_id2_s_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_id2"
+        }]
+    },
+    "in_id2_peek": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_read",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "in_id2_peek_",
+      "portMap": {
+        "in_id2_peek_dout": "RD_DATA",
+        "in_id2_peek_empty_n": "EMPTY_N",
+        "in_id2_peek_read": "RD_EN"
+      },
+      "ports": [
+        "in_id2_peek_dout",
+        "in_id2_peek_empty_n",
+        "in_id2_peek_read"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "in_id2"
+        }]
+    },
+    "out_dist": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_write",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "out_dist_",
+      "portMap": {
+        "out_dist_din": "WR_DATA",
+        "out_dist_full_n": "FULL_N",
+        "out_dist_write": "WR_EN"
+      },
+      "ports": [
+        "out_dist_din",
+        "out_dist_full_n",
+        "out_dist_write"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "out_dist"
+        }]
+    },
+    "out_id": {
+      "type": "ap_fifo",
+      "busTypeName": "acc_fifo_write",
+      "mode": "master",
+      "dataWidth": "45",
+      "portPrefix": "out_id_",
+      "portMap": {
+        "out_id_din": "WR_DATA",
+        "out_id_full_n": "FULL_N",
+        "out_id_write": "WR_EN"
+      },
+      "ports": [
+        "out_id_din",
+        "out_id_full_n",
+        "out_id_write"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_fifo",
+          "register_option": "0",
+          "argName": "out_id"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_dist0_s_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_dist0_s_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_dist0_s_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_dist0_peek_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_dist0_peek_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_dist0_peek_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_id0_s_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_id0_s_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_id0_s_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_id0_peek_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_id0_peek_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_id0_peek_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_dist1_s_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_dist1_s_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_dist1_s_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_dist1_peek_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_dist1_peek_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_dist1_peek_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_id1_s_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_id1_s_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_id1_s_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_id1_peek_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_id1_peek_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_id1_peek_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_dist2_s_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_dist2_s_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_dist2_s_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_dist2_peek_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_dist2_peek_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_dist2_peek_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_id2_s_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_id2_s_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_id2_s_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_id2_peek_dout": {
+      "dir": "in",
+      "width": "45"
+    },
+    "in_id2_peek_empty_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_id2_peek_read": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_dist_din": {
+      "dir": "out",
+      "width": "45"
+    },
+    "out_dist_full_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "out_dist_write": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_id_din": {
+      "dir": "out",
+      "width": "45"
+    },
+    "out_id_full_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "out_id_write": {
+      "dir": "out",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "krnl_globalSort_L1_L2",
+      "Instances": [
+        {
+          "ModuleName": "krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1",
+          "InstanceName": "grp_krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1_fu_416"
+        },
+        {
+          "ModuleName": "krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2",
+          "InstanceName": "grp_krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2_fu_456"
+        },
+        {
+          "ModuleName": "seq_global_merge_L1_L2",
+          "InstanceName": "grp_seq_global_merge_L1_L2_fu_496",
+          "Instances": [{
+              "ModuleName": "seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3",
+              "InstanceName": "grp_seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3_fu_642"
+            }]
+        },
+        {
+          "ModuleName": "krnl_globalSort_L1_L2_Pipeline_DIST_OUT",
+          "InstanceName": "grp_krnl_globalSort_L1_L2_Pipeline_DIST_OUT_fu_560"
+        },
+        {
+          "ModuleName": "krnl_globalSort_L1_L2_Pipeline_ID_OUT",
+          "InstanceName": "grp_krnl_globalSort_L1_L2_Pipeline_ID_OUT_fu_576"
+        }
+      ]
+    },
+    "Info": {
+      "krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "seq_global_merge_L1_L2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "krnl_globalSort_L1_L2_Pipeline_DIST_OUT": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "krnl_globalSort_L1_L2_Pipeline_ID_OUT": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "krnl_globalSort_L1_L2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1": {
+        "Latency": {
+          "LatencyBest": "12",
+          "LatencyAvg": "12",
+          "LatencyWorst": "12",
+          "PipelineII": "12",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "3.33",
+          "Uncertainty": "0.90",
+          "Estimate": "1.215"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_811_1",
+            "TripCount": "10",
+            "Latency": "10",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "971",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "90",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2": {
+        "Latency": {
+          "LatencyBest": "12",
+          "LatencyAvg": "12",
+          "LatencyWorst": "12",
+          "PipelineII": "12",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "3.33",
+          "Uncertainty": "0.90",
+          "Estimate": "1.215"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_824_2",
+            "TripCount": "10",
+            "Latency": "10",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "971",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "90",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3": {
+        "Latency": {
+          "LatencyBest": "6",
+          "LatencyAvg": "6",
+          "LatencyWorst": "6",
+          "PipelineII": "6",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "3.33",
+          "Uncertainty": "0.90",
+          "Estimate": "2.385"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_718_3",
+            "TripCount": "3",
+            "Latency": "4",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "176",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "398",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "seq_global_merge_L1_L2": {
+        "Latency": {
+          "LatencyBest": "91",
+          "LatencyAvg": "91",
+          "LatencyWorst": "91",
+          "PipelineII": "91",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "3.33",
+          "Uncertainty": "0.90",
+          "Estimate": "2.385"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_714_2",
+            "TripCount": "10",
+            "Latency": "90",
+            "PipelineII": "",
+            "PipelineDepth": "9"
+          }],
+        "Area": {
+          "FF": "922",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "701",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "krnl_globalSort_L1_L2_Pipeline_DIST_OUT": {
+        "Latency": {
+          "LatencyBest": "12",
+          "LatencyAvg": "12",
+          "LatencyWorst": "12",
+          "PipelineII": "12",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "3.33",
+          "Uncertainty": "0.90",
+          "Estimate": "1.215"
+        },
+        "Loops": [{
+            "Name": "DIST_OUT",
+            "TripCount": "10",
+            "Latency": "10",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "39",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "124",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "krnl_globalSort_L1_L2_Pipeline_ID_OUT": {
+        "Latency": {
+          "LatencyBest": "12",
+          "LatencyAvg": "12",
+          "LatencyWorst": "12",
+          "PipelineII": "12",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "3.33",
+          "Uncertainty": "0.90",
+          "Estimate": "1.215"
+        },
+        "Loops": [{
+            "Name": "ID_OUT",
+            "TripCount": "10",
+            "Latency": "10",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "39",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "124",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "krnl_globalSort_L1_L2": {
+        "Latency": {
+          "LatencyBest": "150",
+          "LatencyAvg": "150",
+          "LatencyWorst": "150",
+          "PipelineII": "151",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "3.33",
+          "Uncertainty": "0.90",
+          "Estimate": "2.385"
+        },
+        "Area": {
+          "FF": "3599",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "1266",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2024-05-22 14:54:29 PDT",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2022.1"
+  }
+}

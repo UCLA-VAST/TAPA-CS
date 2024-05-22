@@ -829,72 +829,12 @@ void C_drain_IO_L3_out( tapa::mmap<C_t16> C, tapa::istream<C_t2>& fifo_C_drain_l
     }
 }
 
-<<<<<<< HEAD
-// extern "C" {
-void kernel3_1(tapa::mmap<A_t16> A,
-tapa::mmap<B_t16> B,
-tapa::mmap<C_t16> C,
-tapa::ostream<B_t8> &out_board,
-tapa::mmap<A_t8> &temp1,
-tapa::mmap<B_t8> &temp2,
-tapa::mmap<B_t8> &temp3,
-// tapa::mmap<B_t8> &temp4,
-// tapa::mmap<B_t8> &temp5,
-// tapa::mmap<B_t8> &temp6,
-// tapa::mmap<B_t8> &temp7,
-// tapa::mmap<B_t8> &temp8,
-// tapa::mmap<B_t8> &temp9,
-// tapa::mmap<B_t8> &temp10,
-// tapa::mmap<B_t8> &temp11,
-// tapa::mmap<B_t8> &temp12,
-// tapa::mmap<B_t8> &temp13,
-// tapa::mmap<B_t8> &temp14,
-// tapa::mmap<B_t8> &temp15,
-// tapa::mmap<B_t8> &temp16,
-// tapa::mmap<B_t8> &temp17,
-tapa::mmap<C_t2> &itemp1,
-tapa::mmap<C_t2> &itemp2,
-// tapa::mmap<C_t2> &itemp3,
-// tapa::mmap<C_t2> &itemp4,
-// tapa::mmap<C_t2> &itemp5,
-// tapa::mmap<C_t2> &itemp6,
-// tapa::mmap<C_t2> &itemp7,
-// tapa::mmap<C_t2> &itemp8,
-// tapa::mmap<C_t2> &itemp9,
-// tapa::mmap<C_t2> &itemp10,
-// tapa::mmap<C_t2> &itemp11,
-// tapa::mmap<C_t2> &itemp12,
-// tapa::mmap<C_t2> &itemp13,
-// tapa::mmap<C_t2> &itemp14,
-// tapa::mmap<C_t2> &itemp15,
-// tapa::mmap<C_t2> &itemp16,
-// tapa::mmap<C_t2> &itemp17,
-tapa::istream<C_t2> &in_board){
-        tapa::stream<C_t2> in_board_1;
-        tapa::stream<C_t2> in_board_2;
-        tapa::stream<C_t2> in_board_3;
-        tapa::stream<C_t2> in_board_4;
-        tapa::stream<C_t2> in_board_5;
-        tapa::stream<C_t2> in_board_6;
-        tapa::stream<C_t2> in_board_7;
-        tapa::stream<C_t2> in_board_8;
-        tapa::stream<C_t2> in_board_9;
-        tapa::stream<C_t2> in_board_10;
-        tapa::stream<C_t2> in_board_11;
-        tapa::stream<C_t2> in_board_12;
-        tapa::stream<C_t2> in_board_13;
-        tapa::stream<C_t2> in_board_14;
-        tapa::stream<C_t2> in_board_15;
-        tapa::stream<C_t2> in_board_16;
-        // tapa::stream<C_t2> in_board_17;
-=======
 extern "C" {
 void kernel3_1(tapa::mmap<INTERFACE_WIDTH> A,
 tapa::mmap<INTERFACE_WIDTH> B,
 tapa::mmap<INTERFACE_WIDTH> C,
 tapa::ostream<float> &out_board,
 tapa::istream<float> &in_board){
->>>>>>> 7107e487dade8a32d831151f03e44facb01a21e7
         tapa::stream<A_t8, 2> fifo_A_A_IO_L2_in_0;
         tapa::stream<A_t8, 2> fifo_A_A_IO_L2_in_1;
         tapa::stream<A_t8, 2> fifo_A_A_IO_L2_in_2;

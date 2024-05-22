@@ -1,0 +1,1583 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcu55c-fsvh2892-2L-e</Part>
+        <TopModelName>krnl_globalSort_L1_L2</TopModelName>
+        <TargetClockPeriod>3.33</TargetClockPeriod>
+        <ClockUncertainty>0.90</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>2.385</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>150</Best-caseLatency>
+            <Average-caseLatency>150</Average-caseLatency>
+            <Worst-caseLatency>150</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.499 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.499 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.499 us</Worst-caseRealTimeLatency>
+            <Interval-min>151</Interval-min>
+            <Interval-max>151</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>3599</FF>
+            <LUT>1266</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>krnl_globalSort_L1_L2</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>krnl_globalSort_L1_L2</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>krnl_globalSort_L1_L2</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>krnl_globalSort_L1_L2</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>krnl_globalSort_L1_L2</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>krnl_globalSort_L1_L2</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist0_s_dout</name>
+            <Object>in_dist0_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist0_s_empty_n</name>
+            <Object>in_dist0_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist0_s_read</name>
+            <Object>in_dist0_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist0_peek_dout</name>
+            <Object>in_dist0_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist0_peek_empty_n</name>
+            <Object>in_dist0_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist0_peek_read</name>
+            <Object>in_dist0_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id0_s_dout</name>
+            <Object>in_id0_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id0_s_empty_n</name>
+            <Object>in_id0_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id0_s_read</name>
+            <Object>in_id0_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id0_peek_dout</name>
+            <Object>in_id0_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id0_peek_empty_n</name>
+            <Object>in_id0_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id0_peek_read</name>
+            <Object>in_id0_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist1_s_dout</name>
+            <Object>in_dist1_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist1_s_empty_n</name>
+            <Object>in_dist1_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist1_s_read</name>
+            <Object>in_dist1_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist1_peek_dout</name>
+            <Object>in_dist1_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist1_peek_empty_n</name>
+            <Object>in_dist1_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist1_peek_read</name>
+            <Object>in_dist1_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id1_s_dout</name>
+            <Object>in_id1_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id1_s_empty_n</name>
+            <Object>in_id1_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id1_s_read</name>
+            <Object>in_id1_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id1_peek_dout</name>
+            <Object>in_id1_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id1_peek_empty_n</name>
+            <Object>in_id1_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id1_peek_read</name>
+            <Object>in_id1_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist2_s_dout</name>
+            <Object>in_dist2_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist2_s_empty_n</name>
+            <Object>in_dist2_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist2_s_read</name>
+            <Object>in_dist2_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist2_peek_dout</name>
+            <Object>in_dist2_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist2_peek_empty_n</name>
+            <Object>in_dist2_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_dist2_peek_read</name>
+            <Object>in_dist2_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id2_s_dout</name>
+            <Object>in_id2_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id2_s_empty_n</name>
+            <Object>in_id2_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id2_s_read</name>
+            <Object>in_id2_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id2_peek_dout</name>
+            <Object>in_id2_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id2_peek_empty_n</name>
+            <Object>in_id2_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_id2_peek_read</name>
+            <Object>in_id2_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_dist_din</name>
+            <Object>out_dist</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_dist_full_n</name>
+            <Object>out_dist</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_dist_write</name>
+            <Object>out_dist</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_id_din</name>
+            <Object>out_id</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_id_full_n</name>
+            <Object>out_id</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_id_write</name>
+            <Object>out_id</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="4">
+            <ModuleName>krnl_globalSort_L1_L2</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1_fu_416</InstName>
+                    <ModuleName>krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>416</ID>
+                    <BindInstances>add_ln811_fu_478_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2_fu_456</InstName>
+                    <ModuleName>krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>456</ID>
+                    <BindInstances>add_ln824_fu_478_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_seq_global_merge_L1_L2_fu_496</InstName>
+                    <ModuleName>seq_global_merge_L1_L2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>496</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3_fu_642</InstName>
+                            <ModuleName>seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>642</ID>
+                            <BindInstances>add_ln718_fu_372_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>idx_3_fu_1082_p2 add_ln714_fu_1107_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_krnl_globalSort_L1_L2_Pipeline_DIST_OUT_fu_560</InstName>
+                    <ModuleName>krnl_globalSort_L1_L2_Pipeline_DIST_OUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>560</ID>
+                    <BindInstances>add_ln838_fu_145_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_krnl_globalSort_L1_L2_Pipeline_ID_OUT_fu_576</InstName>
+                    <ModuleName>krnl_globalSort_L1_L2_Pipeline_ID_OUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>576</ID>
+                    <BindInstances>add_ln849_fu_145_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1</Name>
+            <Loops>
+                <VITIS_LOOP_811_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.215</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>39.960 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>39.960 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>39.960 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_811_1>
+                        <Name>VITIS_LOOP_811_1</Name>
+                        <TripCount>10</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>33.300 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_811_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>971</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>90</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_811_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln811_fu_478_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:811" URAM="0" VARIABLE="add_ln811"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2</Name>
+            <Loops>
+                <VITIS_LOOP_824_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.215</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>39.960 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>39.960 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>39.960 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_824_2>
+                        <Name>VITIS_LOOP_824_2</Name>
+                        <TripCount>10</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>33.300 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_824_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>971</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>90</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_824_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln824_fu_478_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:824" URAM="0" VARIABLE="add_ln824"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3</Name>
+            <Loops>
+                <VITIS_LOOP_718_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.385</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>6</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>6</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>19.980 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>19.980 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>19.980 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>6</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_718_3>
+                        <Name>VITIS_LOOP_718_3</Name>
+                        <TripCount>3</TripCount>
+                        <Latency>4</Latency>
+                        <AbsoluteTimeLatency>13.320 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_718_3>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>176</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>398</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_718_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln718_fu_372_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:718" URAM="0" VARIABLE="add_ln718"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>seq_global_merge_L1_L2</Name>
+            <Loops>
+                <VITIS_LOOP_714_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.385</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>91</Best-caseLatency>
+                    <Average-caseLatency>91</Average-caseLatency>
+                    <Worst-caseLatency>91</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.303 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.303 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.303 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>91</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_714_2>
+                        <Name>VITIS_LOOP_714_2</Name>
+                        <TripCount>10</TripCount>
+                        <Latency>90</Latency>
+                        <AbsoluteTimeLatency>0.300 us</AbsoluteTimeLatency>
+                        <IterationLatency>9</IterationLatency>
+                        <PipelineDepth>9</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3_fu_642</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_714_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>922</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>701</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_714_2" OPTYPE="add" PRAGMA="" RTLNAME="idx_3_fu_1082_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:728" URAM="0" VARIABLE="idx_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_714_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln714_fu_1107_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:714" URAM="0" VARIABLE="add_ln714"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_globalSort_L1_L2_Pipeline_DIST_OUT</Name>
+            <Loops>
+                <DIST_OUT/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.215</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>39.960 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>39.960 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>39.960 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <DIST_OUT>
+                        <Name>DIST_OUT</Name>
+                        <TripCount>10</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>33.300 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </DIST_OUT>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>39</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>124</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="DIST_OUT" OPTYPE="add" PRAGMA="" RTLNAME="add_ln838_fu_145_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:838" URAM="0" VARIABLE="add_ln838"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_globalSort_L1_L2_Pipeline_ID_OUT</Name>
+            <Loops>
+                <ID_OUT/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.215</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>39.960 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>39.960 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>39.960 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <ID_OUT>
+                        <Name>ID_OUT</Name>
+                        <TripCount>10</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>33.300 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </ID_OUT>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>39</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>124</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ID_OUT" OPTYPE="add" PRAGMA="" RTLNAME="add_ln849_fu_145_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:849" URAM="0" VARIABLE="add_ln849"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_globalSort_L1_L2</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.385</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>150</Best-caseLatency>
+                    <Average-caseLatency>150</Average-caseLatency>
+                    <Worst-caseLatency>150</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.499 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.499 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.499 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>151</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>3599</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1266</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+        <config_compile name_max_length="253"/>
+        <config_rtl reset_level="low"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="in_dist0" index="0" direction="in" srcType="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="256">
+            <hwRefs>
+                <hwRef type="interface" interface="in_dist0_s" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="in_dist0_peek" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_id0" index="1" direction="in" srcType="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="256">
+            <hwRefs>
+                <hwRef type="interface" interface="in_id0_s" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="in_id0_peek" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_dist1" index="2" direction="in" srcType="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="256">
+            <hwRefs>
+                <hwRef type="interface" interface="in_dist1_s" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="in_dist1_peek" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_id1" index="3" direction="in" srcType="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="256">
+            <hwRefs>
+                <hwRef type="interface" interface="in_id1_s" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="in_id1_peek" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_dist2" index="4" direction="in" srcType="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="256">
+            <hwRefs>
+                <hwRef type="interface" interface="in_dist2_s" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="in_dist2_peek" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_id2" index="5" direction="in" srcType="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="256">
+            <hwRefs>
+                <hwRef type="interface" interface="in_id2_s" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="in_id2_peek" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_dist" index="6" direction="out" srcType="ostream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="out_dist" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_id" index="7" direction="out" srcType="ostream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="out_id" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="in_dist0_s" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_dist0_s_">
+            <portMaps>
+                <portMap portMapName="in_dist0_s_dout">RD_DATA</portMap>
+                <portMap portMapName="in_dist0_s_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_dist0_s_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_dist0_s_dout</port>
+                <port>in_dist0_s_empty_n</port>
+                <port>in_dist0_s_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_dist0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_dist0_peek" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_dist0_peek_">
+            <portMaps>
+                <portMap portMapName="in_dist0_peek_dout">RD_DATA</portMap>
+                <portMap portMapName="in_dist0_peek_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_dist0_peek_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_dist0_peek_dout</port>
+                <port>in_dist0_peek_empty_n</port>
+                <port>in_dist0_peek_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_dist0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_id0_s" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_id0_s_">
+            <portMaps>
+                <portMap portMapName="in_id0_s_dout">RD_DATA</portMap>
+                <portMap portMapName="in_id0_s_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_id0_s_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_id0_s_dout</port>
+                <port>in_id0_s_empty_n</port>
+                <port>in_id0_s_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_id0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_id0_peek" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_id0_peek_">
+            <portMaps>
+                <portMap portMapName="in_id0_peek_dout">RD_DATA</portMap>
+                <portMap portMapName="in_id0_peek_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_id0_peek_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_id0_peek_dout</port>
+                <port>in_id0_peek_empty_n</port>
+                <port>in_id0_peek_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_id0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_dist1_s" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_dist1_s_">
+            <portMaps>
+                <portMap portMapName="in_dist1_s_dout">RD_DATA</portMap>
+                <portMap portMapName="in_dist1_s_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_dist1_s_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_dist1_s_dout</port>
+                <port>in_dist1_s_empty_n</port>
+                <port>in_dist1_s_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_dist1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_dist1_peek" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_dist1_peek_">
+            <portMaps>
+                <portMap portMapName="in_dist1_peek_dout">RD_DATA</portMap>
+                <portMap portMapName="in_dist1_peek_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_dist1_peek_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_dist1_peek_dout</port>
+                <port>in_dist1_peek_empty_n</port>
+                <port>in_dist1_peek_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_dist1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_id1_s" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_id1_s_">
+            <portMaps>
+                <portMap portMapName="in_id1_s_dout">RD_DATA</portMap>
+                <portMap portMapName="in_id1_s_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_id1_s_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_id1_s_dout</port>
+                <port>in_id1_s_empty_n</port>
+                <port>in_id1_s_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_id1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_id1_peek" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_id1_peek_">
+            <portMaps>
+                <portMap portMapName="in_id1_peek_dout">RD_DATA</portMap>
+                <portMap portMapName="in_id1_peek_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_id1_peek_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_id1_peek_dout</port>
+                <port>in_id1_peek_empty_n</port>
+                <port>in_id1_peek_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_id1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_dist2_s" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_dist2_s_">
+            <portMaps>
+                <portMap portMapName="in_dist2_s_dout">RD_DATA</portMap>
+                <portMap portMapName="in_dist2_s_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_dist2_s_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_dist2_s_dout</port>
+                <port>in_dist2_s_empty_n</port>
+                <port>in_dist2_s_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_dist2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_dist2_peek" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_dist2_peek_">
+            <portMaps>
+                <portMap portMapName="in_dist2_peek_dout">RD_DATA</portMap>
+                <portMap portMapName="in_dist2_peek_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_dist2_peek_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_dist2_peek_dout</port>
+                <port>in_dist2_peek_empty_n</port>
+                <port>in_dist2_peek_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_dist2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_id2_s" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_id2_s_">
+            <portMaps>
+                <portMap portMapName="in_id2_s_dout">RD_DATA</portMap>
+                <portMap portMapName="in_id2_s_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_id2_s_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_id2_s_dout</port>
+                <port>in_id2_s_empty_n</port>
+                <port>in_id2_s_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_id2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_id2_peek" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="45" portPrefix="in_id2_peek_">
+            <portMaps>
+                <portMap portMapName="in_id2_peek_dout">RD_DATA</portMap>
+                <portMap portMapName="in_id2_peek_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_id2_peek_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_id2_peek_dout</port>
+                <port>in_id2_peek_empty_n</port>
+                <port>in_id2_peek_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_id2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_dist" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="45" portPrefix="out_dist_">
+            <portMaps>
+                <portMap portMapName="out_dist_din">WR_DATA</portMap>
+                <portMap portMapName="out_dist_full_n">FULL_N</portMap>
+                <portMap portMapName="out_dist_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>out_dist_din</port>
+                <port>out_dist_full_n</port>
+                <port>out_dist_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="out_dist"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_id" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="45" portPrefix="out_id_">
+            <portMaps>
+                <portMap portMapName="out_id_din">WR_DATA</portMap>
+                <portMap portMapName="out_id_full_n">FULL_N</portMap>
+                <portMap portMapName="out_id_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>out_id_din</port>
+                <port>out_id_full_n</port>
+                <port>out_id_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="out_id"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_FIFO">
+                <table isCollapsed="0">
+                    <keys size="2">Interface, Data Width</keys>
+                    <column name="in_dist0_peek">45, </column>
+                    <column name="in_dist0_s">45, </column>
+                    <column name="in_dist1_peek">45, </column>
+                    <column name="in_dist1_s">45, </column>
+                    <column name="in_dist2_peek">45, </column>
+                    <column name="in_dist2_s">45, </column>
+                    <column name="in_id0_peek">45, </column>
+                    <column name="in_id0_s">45, </column>
+                    <column name="in_id1_peek">45, </column>
+                    <column name="in_id1_s">45, </column>
+                    <column name="in_id2_peek">45, </column>
+                    <column name="in_id2_s">45, </column>
+                    <column name="out_dist">45, </column>
+                    <column name="out_id">45, </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="in_dist0">in, istream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                    <column name="in_id0">in, istream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                    <column name="in_dist1">in, istream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                    <column name="in_id1">in, istream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                    <column name="in_dist2">in, istream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                    <column name="in_id2">in, istream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                    <column name="out_dist">out, ostream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                    <column name="out_id">out, ostream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="in_dist0">in_dist0_s, interface, , </column>
+                    <column name="in_dist0">in_dist0_peek, interface, , </column>
+                    <column name="in_id0">in_id0_s, interface, , </column>
+                    <column name="in_id0">in_id0_peek, interface, , </column>
+                    <column name="in_dist1">in_dist1_s, interface, , </column>
+                    <column name="in_dist1">in_dist1_peek, interface, , </column>
+                    <column name="in_id1">in_id1_s, interface, , </column>
+                    <column name="in_id1">in_id1_peek, interface, , </column>
+                    <column name="in_dist2">in_dist2_s, interface, , </column>
+                    <column name="in_dist2">in_dist2_peek, interface, , </column>
+                    <column name="in_id2">in_id2_s, interface, , </column>
+                    <column name="in_id2">in_id2_peek, interface, , </column>
+                    <column name="out_dist">out_dist, interface, , </column>
+                    <column name="out_id">out_id, interface, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:80" status="valid" parentFunction="compare_with_register" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:81" status="valid" parentFunction="compare_with_register" variable="" isDirective="0" options="off"/>
+        <Pragma type="latency" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:82" status="valid" parentFunction="compare_with_register" variable="" isDirective="0" options="min=2 max=2"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:92" status="valid" parentFunction="load" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:95" status="valid" parentFunction="load" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:116" status="valid" parentFunction="compute" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:121" status="valid" parentFunction="compute" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:127" status="valid" parentFunction="compute" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:169" status="valid" parentFunction="swap" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:192" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:194" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options="II=2"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:195" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options="FACTOR=D2L_FACTOR_W"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:210" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options=""/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:211" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstDist&quot;" isDirective="0" options="variable=&quot;local_kNearstDist&quot; inter false"/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:212" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstId&quot;" isDirective="0" options="variable=&quot;local_kNearstId&quot; inter false"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:225" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options=""/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:226" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstDist&quot;" isDirective="0" options="variable=&quot;local_kNearstDist&quot; inter false"/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:227" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstId&quot;" isDirective="0" options="variable=&quot;local_kNearstId&quot; inter false"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:242" status="valid" parentFunction="sort" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:245" status="valid" parentFunction="sort" variable="starting_id" isDirective="0" options="variable=starting_id complete dim=0"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:248" status="valid" parentFunction="sort" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:255" status="valid" parentFunction="sort" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:256" status="valid" parentFunction="sort" variable="" isDirective="0" options="FACTOR=L2I_FACTOR_W"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:271" status="valid" parentFunction="sort" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:286" status="valid" parentFunction="sort" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:344" status="valid" parentFunction="merge_dual_all_pes" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:361" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:364" status="valid" parentFunction="krnl_partialknn" variable="local_Query_0" isDirective="0" options="variable=local_Query_0 complete dim=1"/>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:366" status="warning" parentFunction="krnl_partialknn" variable="local_SP_0_A" isDirective="0" options="variable=local_SP_0_A core=XPM_MEMORY uram">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5526" msg_severity="WARNING" msg_body="'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead"/>
+        </Pragma>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:368" status="warning" parentFunction="krnl_partialknn" variable="local_SP_0_B" isDirective="0" options="variable=local_SP_0_B core=XPM_MEMORY uram">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5526" msg_severity="WARNING" msg_body="'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead"/>
+        </Pragma>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:371" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_A" isDirective="0" options="variable=local_distance_0_A complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:372" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_A" isDirective="0" options="variable=local_distance_0_A cyclic factor=L2I_FACTOR_W dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:374" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_B" isDirective="0" options="variable=local_distance_0_B complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:375" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_B" isDirective="0" options="variable=local_distance_0_B cyclic factor=L2I_FACTOR_W dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:380" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstDist_partial_0" isDirective="0" options="variable=local_kNearstDist_partial_0 complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:382" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstId_partial_0" isDirective="0" options="variable=local_kNearstId_partial_0 complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:386" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstDist" isDirective="0" options="variable=local_kNearstDist complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:388" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstId" isDirective="0" options="variable=local_kNearstId complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:392" status="valid" parentFunction="krnl_partialknn" variable="global_kNearstDist" isDirective="0" options="variable=global_kNearstDist complete"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:394" status="valid" parentFunction="krnl_partialknn" variable="global_kNearstId" isDirective="0" options="variable=global_kNearstId complete"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:397" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:422" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:440" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:466" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:467" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist complete dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:468" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist complete dim=3"/>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:469" status="warning" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist core=RAM_1P_LUTRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:471" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:472" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId complete dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:473" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId complete dim=3"/>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:474" status="warning" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId core=RAM_1P_LUTRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:478" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:481" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:484" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:497" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:506" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:516" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:536" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:547" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:706" status="valid" parentFunction="seq_global_merge_l1_l2" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:708" status="valid" parentFunction="seq_global_merge_l1_l2" variable="idx" isDirective="0" options="variable=idx complete dim=0"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:711" status="valid" parentFunction="seq_global_merge_l1_l2" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:720" status="valid" parentFunction="seq_global_merge_l1_l2" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:742" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_dist0"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:743" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_dist0._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:744" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_dist0._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:745" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_dist0._peek"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:746" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_dist0._peek bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:750" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_id0"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:751" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_id0._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:752" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_id0._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:753" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_id0._peek"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:754" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_id0._peek bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:758" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_dist1"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:759" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_dist1._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:760" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_dist1._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:761" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_dist1._peek"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:762" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_dist1._peek bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:766" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_id1"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:767" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_id1._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:768" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_id1._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:769" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_id1._peek"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:770" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_id1._peek bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:774" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_dist2"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:775" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_dist2._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:776" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_dist2._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:777" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_dist2._peek"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:778" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_dist2._peek bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:782" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_id2"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:783" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_id2._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:784" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_id2._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:785" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = in_id2._peek"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:786" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = in_id2._peek bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:790" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = out_dist"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:791" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = out_dist._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:792" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = out_dist._ bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:795" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = out_id"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:796" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="ap_fifo port = out_id._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:797" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="variable = out_id._ bit"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:802" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="local_kNearstDist_partial" isDirective="0" options="variable=local_kNearstDist_partial complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:804" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="local_kNearstId_partial" isDirective="0" options="variable=local_kNearstId_partial complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:807" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="output_dist" isDirective="0" options="variable=output_dist complete"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:809" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="output_id" isDirective="0" options="variable=output_id complete"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:812" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:825" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:840" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:851" status="valid" parentFunction="krnl_globalsort_l1_l2" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:864" status="valid" parentFunction="seq_global_merge_l3" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:866" status="valid" parentFunction="seq_global_merge_l3" variable="idx" isDirective="0" options="variable=idx complete dim=0"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:869" status="valid" parentFunction="seq_global_merge_l3" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:878" status="valid" parentFunction="seq_global_merge_l3" variable="" isDirective="0" options="II=1"/>
+    </PragmaReport>
+</profile>
+

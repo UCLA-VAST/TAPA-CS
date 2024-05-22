@@ -1,0 +1,7 @@
+<pragmas>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp" line="24" pragmaType="interface" parentfunction="VecAdd_1" mode="s_axilite" port="a" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp" line="28" pragmaType="interface" parentfunction="VecAdd_1" mode="s_axilite" port="b" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp" line="32" pragmaType="interface" parentfunction="VecAdd_1" mode="s_axilite" port="c" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp" line="36" pragmaType="interface" parentfunction="VecAdd_1" mode="s_axilite" port="n" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp" line="40" pragmaType="interface" parentfunction="VecAdd_1" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

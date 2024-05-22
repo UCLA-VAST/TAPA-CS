@@ -1,0 +1,2319 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcu55c-fsvh2892-2L-e</Part>
+        <TopModelName>krnl_partialKnn_wrapper_11</TopModelName>
+        <TargetClockPeriod>3.33</TargetClockPeriod>
+        <ClockUncertainty>0.90</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>3.847</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <VITIS_LOOP_447_7>
+                <TripCount>66</TripCount>
+                <Latency>undef</Latency>
+                <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                <IterationLatency>
+                    <range>
+                        <min>3</min>
+                        <max>12353</max>
+                    </range>
+                </IterationLatency>
+                <InstanceList/>
+            </VITIS_LOOP_447_7>
+        </SummaryOfLoopLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>128</BRAM_18K>
+            <DSP>56</DSP>
+            <FF>34358</FF>
+            <LUT>41127</LUT>
+            <URAM>8</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>krnl_partialKnn_wrapper_11</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>krnl_partialKnn_wrapper_11</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>krnl_partialKnn_wrapper_11</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>krnl_partialKnn_wrapper_11</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>krnl_partialKnn_wrapper_11</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>krnl_partialKnn_wrapper_11</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_read_addr_din</name>
+            <Object>searchSpace_0_read_addr</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>65</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_read_addr_full_n</name>
+            <Object>searchSpace_0_read_addr</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_read_addr_write</name>
+            <Object>searchSpace_0_read_addr</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_read_data_s_dout</name>
+            <Object>searchSpace_0_read_data_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>257</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_read_data_s_empty_n</name>
+            <Object>searchSpace_0_read_data_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_read_data_s_read</name>
+            <Object>searchSpace_0_read_data_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_read_data_peek_dout</name>
+            <Object>searchSpace_0_read_data_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>257</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_read_data_peek_empty_n</name>
+            <Object>searchSpace_0_read_data_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_read_data_peek_read</name>
+            <Object>searchSpace_0_read_data_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_addr_din</name>
+            <Object>searchSpace_0_write_addr</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>65</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_addr_full_n</name>
+            <Object>searchSpace_0_write_addr</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_addr_write</name>
+            <Object>searchSpace_0_write_addr</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_data_din</name>
+            <Object>searchSpace_0_write_data</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>257</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_data_full_n</name>
+            <Object>searchSpace_0_write_data</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_data_write</name>
+            <Object>searchSpace_0_write_data</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_resp_s_dout</name>
+            <Object>searchSpace_0_write_resp_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>9</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_resp_s_empty_n</name>
+            <Object>searchSpace_0_write_resp_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_resp_s_read</name>
+            <Object>searchSpace_0_write_resp_s</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_resp_peek_dout</name>
+            <Object>searchSpace_0_write_resp_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>9</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_resp_peek_empty_n</name>
+            <Object>searchSpace_0_write_resp_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>searchSpace_0_write_resp_peek_read</name>
+            <Object>searchSpace_0_write_resp_peek</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>start_id_0</name>
+            <Object>start_id_0</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_dist_din</name>
+            <Object>out_dist</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_dist_full_n</name>
+            <Object>out_dist</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_dist_write</name>
+            <Object>out_dist</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_id_din</name>
+            <Object>out_id</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>45</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_id_full_n</name>
+            <Object>out_id</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_id_write</name>
+            <Object>out_id</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="4">
+            <ModuleName>krnl_partialKnn_wrapper_11</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_krnl_partialKnn_wrapper_11_Pipeline_LOAD_QUERY_fu_2559</InstName>
+                    <ModuleName>krnl_partialKnn_wrapper_11_Pipeline_LOAD_QUERY</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2559</ID>
+                    <BindInstances>sub_ln399_fu_172_p2 sub_ln399_1_fu_192_p2 add_ln401_fu_249_p2 sub_ln407_fu_144_p2 sub_ln407_1_fu_299_p2 i_resp_5_fu_150_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_437_4_fu_2569</InstName>
+                    <ModuleName>krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_437_4</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2569</ID>
+                    <BindInstances>add_ln437_fu_410_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_420_1_VITIS_LOOP_421_2_fu_2925</InstName>
+                    <ModuleName>krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_420_1_VITIS_LOOP_421_2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2925</ID>
+                    <BindInstances>add_ln420_fu_1124_p2 add_ln420_1_fu_1150_p2 add_ln421_fu_1262_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_load_fu_2993</InstName>
+                    <ModuleName>load</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2993</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_load_Pipeline_VITIS_LOOP_94_1_fu_54</InstName>
+                            <ModuleName>load_Pipeline_VITIS_LOOP_94_1</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>54</ID>
+                            <BindInstances>addr_fu_159_p2 add_ln98_fu_193_p2 i_resp_2_fu_145_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                </Instance>
+                <Instance>
+                    <InstName>grp_compute_fu_3004</InstName>
+                    <ModuleName>compute</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3004</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_compute_Pipeline_VITIS_LOOP_119_1_VITIS_LOOP_120_2_fu_104</InstName>
+                            <ModuleName>compute_Pipeline_VITIS_LOOP_119_1_VITIS_LOOP_120_2</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>104</ID>
+                            <BindInstances>add_ln119_fu_795_p2 add_ln119_1_fu_821_p2 sum_fu_870_p2 fsub_32ns_32ns_32_7_full_dsp_1_U254 fmul_32ns_32ns_32_4_max_dsp_1_U270 fadd_32ns_32ns_32_7_full_dsp_1_U262 fsub_32ns_32ns_32_7_full_dsp_1_U255 fmul_32ns_32ns_32_4_max_dsp_1_U274 fadd_32ns_32ns_32_7_full_dsp_1_U266 fsub_32ns_32ns_32_7_full_dsp_1_U256 fmul_32ns_32ns_32_4_max_dsp_1_U271 fadd_32ns_32ns_32_7_full_dsp_1_U263 fsub_32ns_32ns_32_7_full_dsp_1_U257 fmul_32ns_32ns_32_4_max_dsp_1_U275 fadd_32ns_32ns_32_7_full_dsp_1_U267 fsub_32ns_32ns_32_7_full_dsp_1_U258 fmul_32ns_32ns_32_4_max_dsp_1_U272 fadd_32ns_32ns_32_7_full_dsp_1_U264 fsub_32ns_32ns_32_7_full_dsp_1_U259 fmul_32ns_32ns_32_4_max_dsp_1_U276 fadd_32ns_32ns_32_7_full_dsp_1_U268 fsub_32ns_32ns_32_7_full_dsp_1_U260 fmul_32ns_32ns_32_4_max_dsp_1_U273 fadd_32ns_32ns_32_7_full_dsp_1_U265 fsub_32ns_32ns_32_7_full_dsp_1_U261 fmul_32ns_32ns_32_4_max_dsp_1_U277 fadd_32ns_32ns_32_7_full_dsp_1_U269 add_ln120_fu_839_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                </Instance>
+                <Instance>
+                    <InstName>grp_sort_fu_3044</InstName>
+                    <ModuleName>sort</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3044</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_para_partial_sort_fu_452</InstName>
+                            <ModuleName>para_partial_sort</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>452</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_360</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>360</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_366</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>366</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_372</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>372</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_378</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>378</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_384</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>384</ID>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln193_fu_504_p2 add_ln229_fu_576_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_para_partial_sort_fu_486</InstName>
+                            <ModuleName>para_partial_sort</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>486</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_360</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>360</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_366</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>366</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_372</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>372</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_378</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>378</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_384</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>384</ID>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln193_fu_504_p2 add_ln229_fu_576_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_para_partial_sort_fu_519</InstName>
+                            <ModuleName>para_partial_sort</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>519</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_360</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>360</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_366</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>366</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_372</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>372</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_378</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>378</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_384</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>384</ID>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln193_fu_504_p2 add_ln229_fu_576_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_para_partial_sort_fu_552</InstName>
+                            <ModuleName>para_partial_sort</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>552</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_360</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>360</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_366</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>366</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_372</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>372</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_378</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>378</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_384</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>384</ID>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln193_fu_504_p2 add_ln229_fu_576_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_para_partial_sort_fu_585</InstName>
+                            <ModuleName>para_partial_sort</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>585</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_360</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>360</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_366</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>366</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_372</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>372</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_378</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>378</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_384</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>384</ID>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln193_fu_504_p2 add_ln229_fu_576_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_para_partial_sort_fu_618</InstName>
+                            <ModuleName>para_partial_sort</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>618</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_360</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>360</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_366</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>366</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_372</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>372</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_378</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>378</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_384</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>384</ID>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln193_fu_504_p2 add_ln229_fu_576_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_para_partial_sort_fu_651</InstName>
+                            <ModuleName>para_partial_sort</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>651</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_360</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>360</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_366</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>366</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_372</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>372</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_378</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>378</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_384</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>384</ID>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln193_fu_504_p2 add_ln229_fu_576_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_para_partial_sort_fu_684</InstName>
+                            <ModuleName>para_partial_sort</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>684</ID>
+                            <InstancesList>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_360</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>360</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_366</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>366</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_372</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>372</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_378</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>378</ID>
+                                </Instance>
+                                <Instance>
+                                    <InstName>grp_compare_with_register_fu_384</InstName>
+                                    <ModuleName>compare_with_register</ModuleName>
+                                    <IsCompInst>true</IsCompInst>
+                                    <ID>384</ID>
+                                </Instance>
+                            </InstancesList>
+                            <BindInstances>add_ln193_fu_504_p2 add_ln229_fu_576_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>add_ln249_fu_717_p2 add_ln249_1_fu_724_p2 add_ln249_2_fu_731_p2 add_ln249_3_fu_738_p2 add_ln249_4_fu_745_p2 add_ln249_5_fu_752_p2 add_ln249_6_fu_759_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_merge_dual_all_PEs_fu_3434</InstName>
+                    <ModuleName>merge_dual_all_PEs</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3434</ID>
+                    <BindInstances>idx_b_1_fu_293_p2 idx_a_1_fu_303_p2 add_ln319_fu_200_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_merge_dual_all_PEs_fu_3444</InstName>
+                    <ModuleName>merge_dual_all_PEs</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3444</ID>
+                    <BindInstances>idx_b_1_fu_293_p2 idx_a_1_fu_303_p2 add_ln319_fu_200_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_merge_dual_all_PEs_fu_3454</InstName>
+                    <ModuleName>merge_dual_all_PEs</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3454</ID>
+                    <BindInstances>idx_b_1_fu_293_p2 idx_a_1_fu_303_p2 add_ln319_fu_200_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_merge_dual_all_PEs_fu_3464</InstName>
+                    <ModuleName>merge_dual_all_PEs</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3464</ID>
+                    <BindInstances>idx_b_1_fu_293_p2 idx_a_1_fu_303_p2 add_ln319_fu_200_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_319_1_fu_3474</InstName>
+                    <ModuleName>krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_319_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3474</ID>
+                    <BindInstances>idx_b_2_fu_2118_p2 idx_a_2_fu_2132_p2 add_ln319_fu_1934_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_526_14_fu_3504</InstName>
+                    <ModuleName>krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_526_14</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3504</ID>
+                    <BindInstances>add_ln526_fu_506_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_krnl_partialKnn_wrapper_11_Pipeline_DIST_OUT_fu_3550</InstName>
+                    <ModuleName>krnl_partialKnn_wrapper_11_Pipeline_DIST_OUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3550</ID>
+                    <BindInstances>add_ln534_fu_173_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_krnl_partialKnn_wrapper_11_Pipeline_ID_OUT_fu_3566</InstName>
+                    <ModuleName>krnl_partialKnn_wrapper_11_Pipeline_ID_OUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>3566</ID>
+                    <BindInstances>add_ln545_fu_173_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>local_distance_0_A_U local_distance_0_A_1_U local_distance_0_A_2_U local_distance_0_A_3_U local_distance_0_A_4_U local_distance_0_A_5_U local_distance_0_A_6_U local_distance_0_A_7_U local_distance_0_A_8_U local_distance_0_A_9_U local_distance_0_A_10_U local_distance_0_A_11_U local_distance_0_A_12_U local_distance_0_A_13_U local_distance_0_A_14_U local_distance_0_A_15_U local_distance_0_A_16_U local_distance_0_A_17_U local_distance_0_A_18_U local_distance_0_A_19_U local_distance_0_A_20_U local_distance_0_A_21_U local_distance_0_A_22_U local_distance_0_A_23_U local_distance_0_A_24_U local_distance_0_A_25_U local_distance_0_A_26_U local_distance_0_A_27_U local_distance_0_A_28_U local_distance_0_A_29_U local_distance_0_A_30_U local_distance_0_A_31_U local_distance_0_B_U local_distance_0_B_1_U local_distance_0_B_2_U local_distance_0_B_3_U local_distance_0_B_4_U local_distance_0_B_5_U local_distance_0_B_6_U local_distance_0_B_7_U local_distance_0_B_8_U local_distance_0_B_9_U local_distance_0_B_10_U local_distance_0_B_11_U local_distance_0_B_12_U local_distance_0_B_13_U local_distance_0_B_14_U local_distance_0_B_15_U local_distance_0_B_16_U local_distance_0_B_17_U local_distance_0_B_18_U local_distance_0_B_19_U local_distance_0_B_20_U local_distance_0_B_21_U local_distance_0_B_22_U local_distance_0_B_23_U local_distance_0_B_24_U local_distance_0_B_25_U local_distance_0_B_26_U local_distance_0_B_27_U local_distance_0_B_28_U local_distance_0_B_29_U local_distance_0_B_30_U local_distance_0_B_31_U temp_kNearstDist_U temp_kNearstDist_12_U temp_kNearstDist_13_U temp_kNearstDist_14_U temp_kNearstDist_15_U temp_kNearstDist_16_U temp_kNearstDist_17_U temp_kNearstDist_18_U temp_kNearstDist_19_U temp_kNearstDist_20_U temp_kNearstDist_21_U temp_kNearstDist_22_U temp_kNearstId_U temp_kNearstId_12_U temp_kNearstId_13_U temp_kNearstId_14_U temp_kNearstId_15_U temp_kNearstId_16_U temp_kNearstId_17_U temp_kNearstId_18_U temp_kNearstId_19_U temp_kNearstId_20_U temp_kNearstId_21_U temp_kNearstId_22_U add_ln454_fu_3593_p2 i_6_fu_3612_p2 add_ln454_1_fu_3681_p2 add_ln459_fu_3699_p2</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>krnl_partialKnn_wrapper_11_Pipeline_LOAD_QUERY</Name>
+            <Loops>
+                <LOAD_QUERY/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>3.847</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <LOAD_QUERY>
+                        <Name>LOAD_QUERY</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </LOAD_QUERY>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>427</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1344</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LOAD_QUERY" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln399_fu_172_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:399" URAM="0" VARIABLE="sub_ln399"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LOAD_QUERY" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln399_1_fu_192_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:399" URAM="0" VARIABLE="sub_ln399_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LOAD_QUERY" OPTYPE="add" PRAGMA="" RTLNAME="add_ln401_fu_249_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:401" URAM="0" VARIABLE="add_ln401"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LOAD_QUERY" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln407_fu_144_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:407" URAM="0" VARIABLE="sub_ln407"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LOAD_QUERY" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln407_1_fu_299_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:407" URAM="0" VARIABLE="sub_ln407_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="LOAD_QUERY" OPTYPE="add" PRAGMA="" RTLNAME="i_resp_5_fu_150_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:414" URAM="0" VARIABLE="i_resp_5"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_420_1_VITIS_LOOP_421_2</Name>
+            <Loops>
+                <VITIS_LOOP_420_1_VITIS_LOOP_421_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.259</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>82</Best-caseLatency>
+                    <Average-caseLatency>82</Average-caseLatency>
+                    <Worst-caseLatency>82</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.273 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.273 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.273 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>82</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_420_1_VITIS_LOOP_421_2>
+                        <Name>VITIS_LOOP_420_1_VITIS_LOOP_421_2</Name>
+                        <TripCount>80</TripCount>
+                        <Latency>80</Latency>
+                        <AbsoluteTimeLatency>0.266 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_420_1_VITIS_LOOP_421_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>17</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>128</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_420_1_VITIS_LOOP_421_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln420_fu_1124_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:420" URAM="0" VARIABLE="add_ln420"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_420_1_VITIS_LOOP_421_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln420_1_fu_1150_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:420" URAM="0" VARIABLE="add_ln420_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_420_1_VITIS_LOOP_421_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln421_fu_1262_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:421" URAM="0" VARIABLE="add_ln421"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_437_4</Name>
+            <Loops>
+                <VITIS_LOOP_437_4/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.095</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>10</Best-caseLatency>
+                    <Average-caseLatency>10</Average-caseLatency>
+                    <Worst-caseLatency>10</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>33.300 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>33.300 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>33.300 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>10</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_437_4>
+                        <Name>VITIS_LOOP_437_4</Name>
+                        <TripCount>8</TripCount>
+                        <Latency>8</Latency>
+                        <AbsoluteTimeLatency>26.640 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_437_4>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>6</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>48</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_437_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln437_fu_410_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:437" URAM="0" VARIABLE="add_ln437"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>load_Pipeline_VITIS_LOOP_94_1</Name>
+            <Loops>
+                <VITIS_LOOP_94_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.709</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_94_1>
+                        <Name>VITIS_LOOP_94_1</Name>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_94_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>375</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>228</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_94_1" OPTYPE="add" PRAGMA="" RTLNAME="addr_fu_159_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:96" URAM="0" VARIABLE="addr"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_94_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln98_fu_193_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:98" URAM="0" VARIABLE="add_ln98"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_94_1" OPTYPE="add" PRAGMA="" RTLNAME="i_resp_2_fu_145_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:102" URAM="0" VARIABLE="i_resp_2"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>load</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.709</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>385</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>281</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>compute_Pipeline_VITIS_LOOP_119_1_VITIS_LOOP_120_2</Name>
+            <Loops>
+                <VITIS_LOOP_119_1_VITIS_LOOP_120_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.390</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4127</Best-caseLatency>
+                    <Average-caseLatency>4127</Average-caseLatency>
+                    <Worst-caseLatency>4127</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>13.743 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>13.743 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>13.743 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>4127</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_119_1_VITIS_LOOP_120_2>
+                        <Name>VITIS_LOOP_119_1_VITIS_LOOP_120_2</Name>
+                        <TripCount>4096</TripCount>
+                        <Latency>4125</Latency>
+                        <AbsoluteTimeLatency>13.736 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>31</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_119_1_VITIS_LOOP_120_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>56</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>8125</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>4931</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_fu_795_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:119" URAM="0" VARIABLE="add_ln119"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_1_fu_821_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:119" URAM="0" VARIABLE="add_ln119_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="add" PRAGMA="" RTLNAME="sum_fu_870_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:120" URAM="0" VARIABLE="sum"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_7_full_dsp_1_U254" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:150" URAM="0" VARIABLE="input_assign"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U270" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="mul"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U262" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="delta_squared_sum"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_7_full_dsp_1_U255" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:150" URAM="0" VARIABLE="input_assign_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U274" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="mul22_s"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U266" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="delta_squared_sum_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_7_full_dsp_1_U256" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:150" URAM="0" VARIABLE="input_assign_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U271" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="mul22_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U263" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="delta_squared_sum_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_7_full_dsp_1_U257" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:150" URAM="0" VARIABLE="input_assign_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U275" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="mul22_1_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U267" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="delta_squared_sum_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_7_full_dsp_1_U258" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:150" URAM="0" VARIABLE="input_assign_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U272" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="mul22_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U264" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="delta_squared_sum_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_7_full_dsp_1_U259" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:150" URAM="0" VARIABLE="input_assign_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U276" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="mul22_2_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U268" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="delta_squared_sum_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_7_full_dsp_1_U260" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:150" URAM="0" VARIABLE="input_assign_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U273" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="mul22_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U265" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="delta_squared_sum_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsub" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fsub" PRAGMA="" RTLNAME="fsub_32ns_32ns_32_7_full_dsp_1_U261" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:150" URAM="0" VARIABLE="input_assign_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fmul" DSP="3" ID="" IMPL="maxdsp" LATENCY="3" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fmul" PRAGMA="" RTLNAME="fmul_32ns_32ns_32_4_max_dsp_1_U277" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="mul22_3_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fadd" DSP="2" ID="" IMPL="fulldsp" LATENCY="6" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U269" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:151" URAM="0" VARIABLE="delta_squared_sum_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_119_1_VITIS_LOOP_120_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln120_fu_839_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:120" URAM="0" VARIABLE="add_ln120"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>compute</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.390</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1</Best-caseLatency>
+                    <Average-caseLatency>2065</Average-caseLatency>
+                    <Worst-caseLatency>4128</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.330 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.876 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>13.746 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1 ~ 4128</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>56</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>8128</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>4947</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>compare_with_register</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+                    <EstimatedClockPeriod>1.771</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2</Best-caseLatency>
+                    <Average-caseLatency>2</Average-caseLatency>
+                    <Worst-caseLatency>2</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>6.660 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.660 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>6.660 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>3</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>71</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>76</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>para_partial_sort</Name>
+            <Loops>
+                <VITIS_LOOP_193_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.277</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12350</Best-caseLatency>
+                    <Average-caseLatency>12350</Average-caseLatency>
+                    <Worst-caseLatency>12350</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>41.125 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>41.125 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>41.125 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12350</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_193_1>
+                        <Name>VITIS_LOOP_193_1</Name>
+                        <TripCount>2058</TripCount>
+                        <Latency>12348</Latency>
+                        <AbsoluteTimeLatency>41.119 us</AbsoluteTimeLatency>
+                        <PipelineII>6</PipelineII>
+                        <PipelineDepth>7</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_compare_with_register_fu_360</Instance>
+                            <Instance>grp_compare_with_register_fu_366</Instance>
+                            <Instance>grp_compare_with_register_fu_372</Instance>
+                            <Instance>grp_compare_with_register_fu_378</Instance>
+                            <Instance>grp_compare_with_register_fu_384</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_193_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>1760</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2428</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_193_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln193_fu_504_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:193" URAM="0" VARIABLE="add_ln193"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_193_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln229_fu_576_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:229" URAM="0" VARIABLE="add_ln229"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sort</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.277</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>1</Best-caseLatency>
+                    <Average-caseLatency>6176</Average-caseLatency>
+                    <Worst-caseLatency>12351</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.330 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>20.566 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>41.129 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1 ~ 12351</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>14314</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>21153</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln249_fu_717_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:249" URAM="0" VARIABLE="add_ln249"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln249_1_fu_724_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:249" URAM="0" VARIABLE="add_ln249_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln249_2_fu_731_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:249" URAM="0" VARIABLE="add_ln249_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln249_3_fu_738_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:249" URAM="0" VARIABLE="add_ln249_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln249_4_fu_745_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:249" URAM="0" VARIABLE="add_ln249_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln249_5_fu_752_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:249" URAM="0" VARIABLE="add_ln249_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln249_6_fu_759_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:249" URAM="0" VARIABLE="add_ln249_6"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>merge_dual_all_PEs</Name>
+            <Loops>
+                <VITIS_LOOP_319_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.348</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>25</Best-caseLatency>
+                    <Average-caseLatency>25</Average-caseLatency>
+                    <Worst-caseLatency>25</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>83.250 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>83.250 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>83.250 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>25</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_319_1>
+                        <Name>VITIS_LOOP_319_1</Name>
+                        <TripCount>11</TripCount>
+                        <Latency>23</Latency>
+                        <AbsoluteTimeLatency>76.590 ns</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_319_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>280</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>288</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_319_1" OPTYPE="add" PRAGMA="" RTLNAME="idx_b_1_fu_293_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:331" URAM="0" VARIABLE="idx_b_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_319_1" OPTYPE="add" PRAGMA="" RTLNAME="idx_a_1_fu_303_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:325" URAM="0" VARIABLE="idx_a_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_319_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln319_fu_200_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:319" URAM="0" VARIABLE="add_ln319"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_319_1</Name>
+            <Loops>
+                <VITIS_LOOP_319_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>2.348</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>26</Best-caseLatency>
+                    <Average-caseLatency>26</Average-caseLatency>
+                    <Worst-caseLatency>26</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>86.580 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>86.580 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>86.580 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>26</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_319_1>
+                        <Name>VITIS_LOOP_319_1</Name>
+                        <TripCount>11</TripCount>
+                        <Latency>24</Latency>
+                        <AbsoluteTimeLatency>79.920 ns</AbsoluteTimeLatency>
+                        <PipelineII>2</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_319_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>2679</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1164</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_319_1" OPTYPE="add" PRAGMA="" RTLNAME="idx_b_2_fu_2118_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:331" URAM="0" VARIABLE="idx_b_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_319_1" OPTYPE="add" PRAGMA="" RTLNAME="idx_a_2_fu_2132_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:325" URAM="0" VARIABLE="idx_a_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_319_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln319_fu_1934_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:319" URAM="0" VARIABLE="add_ln319"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_partialKnn_wrapper_11_Pipeline_VITIS_LOOP_526_14</Name>
+            <Loops>
+                <VITIS_LOOP_526_14/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.095</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>13</Best-caseLatency>
+                    <Average-caseLatency>13</Average-caseLatency>
+                    <Worst-caseLatency>13</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>43.290 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>43.290 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>43.290 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>13</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_526_14>
+                        <Name>VITIS_LOOP_526_14</Name>
+                        <TripCount>11</TripCount>
+                        <Latency>11</Latency>
+                        <AbsoluteTimeLatency>36.630 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_526_14>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>646</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>166</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_526_14" OPTYPE="add" PRAGMA="" RTLNAME="add_ln526_fu_506_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:526" URAM="0" VARIABLE="add_ln526"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_partialKnn_wrapper_11_Pipeline_DIST_OUT</Name>
+            <Loops>
+                <DIST_OUT/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.215</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>39.960 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>39.960 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>39.960 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <DIST_OUT>
+                        <Name>DIST_OUT</Name>
+                        <TripCount>10</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>33.300 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </DIST_OUT>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>39</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>129</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="DIST_OUT" OPTYPE="add" PRAGMA="" RTLNAME="add_ln534_fu_173_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:534" URAM="0" VARIABLE="add_ln534"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_partialKnn_wrapper_11_Pipeline_ID_OUT</Name>
+            <Loops>
+                <ID_OUT/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.215</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>12</Best-caseLatency>
+                    <Average-caseLatency>12</Average-caseLatency>
+                    <Worst-caseLatency>12</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>39.960 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>39.960 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>39.960 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>12</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <ID_OUT>
+                        <Name>ID_OUT</Name>
+                        <TripCount>10</TripCount>
+                        <Latency>10</Latency>
+                        <AbsoluteTimeLatency>33.300 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </ID_OUT>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>39</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>129</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ID_OUT" OPTYPE="add" PRAGMA="" RTLNAME="add_ln545_fu_173_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:545" URAM="0" VARIABLE="add_ln545"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>krnl_partialKnn_wrapper_11</Name>
+            <Loops>
+                <VITIS_LOOP_447_7/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>3.847</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_447_7>
+                        <Name>VITIS_LOOP_447_7</Name>
+                        <TripCount>66</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>3</min>
+                                <max>12353</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>3 ~ 12353</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_load_fu_2993</Instance>
+                            <Instance>grp_compute_fu_3004</Instance>
+                            <Instance>grp_sort_fu_3044</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_447_7>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>128</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>3</UTIL_BRAM>
+                    <DSP>56</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>34358</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>41127</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
+                    <URAM>8</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>~0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_1_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_2_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_2"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_3_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_3"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_4_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_4"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_5_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_5"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_6_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_6"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_7_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_7"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_8_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_8"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_9_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_9"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_10_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_10"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_11_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_11"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_12_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_12"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_13_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_13"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_14_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_14"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_15_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_15"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_16_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_16"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_17_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_17"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_18_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_18"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_19_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_19"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_20_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_20"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_21_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_21"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_22_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_22"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_23_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_23"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_24_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_24"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_25_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_25"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_26_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_26"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_27_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_27"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_28_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_28"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_29_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_29"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_30_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_30"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_A_31_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:370" URAM="0" VARIABLE="local_distance_0_A_31"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_1_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_2_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_2"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_3_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_3"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_4_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_4"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_5_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_5"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_6_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_6"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_7_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_7"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_8_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_8"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_9_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_9"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_10_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_10"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_11_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_11"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_12_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_12"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_13_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_13"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_14_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_14"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_15_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_15"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_16_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_16"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_17_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_17"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_18_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_18"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_19_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_19"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_20_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_20"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_21_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_21"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_22_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_22"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_23_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_23"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_24_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_24"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_25_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_25"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_26_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_26"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_27_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_27"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_28_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_28"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_29_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_29"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_30_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_30"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_distance_0_B_31_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:373" URAM="0" VARIABLE="local_distance_0_B_31"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_12_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_12"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_13_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_13"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_14_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_14"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_15_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_15"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_16_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_16"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_17_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_17"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_18_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_18"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_19_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_19"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_20_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_20"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_21_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_21"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstDist_22_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:465" URAM="0" VARIABLE="temp_kNearstDist_22"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_12_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_12"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_13_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_13"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_14_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_14"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_15_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_15"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_16_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_16"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_17_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_17"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_18_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_18"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_19_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_19"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_20_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_20"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_21_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_21"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="temp_kNearstId_22_U" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:470" URAM="0" VARIABLE="temp_kNearstId_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln454_fu_3593_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:454" URAM="0" VARIABLE="add_ln454"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_447_7" OPTYPE="add" PRAGMA="" RTLNAME="i_6_fu_3612_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:447" URAM="0" VARIABLE="i_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_447_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln454_1_fu_3681_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:454" URAM="0" VARIABLE="add_ln454_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_447_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln459_fu_3699_p2" SOURCE="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:459" URAM="0" VARIABLE="add_ln459"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+        <config_compile name_max_length="253"/>
+        <config_rtl reset_level="low"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="searchSpace_0" index="0" direction="inout" srcType="async_mmap&lt;ap_uint&lt;256&gt; &gt;&amp;" srcSize="2304">
+            <hwRefs>
+                <hwRef type="interface" interface="searchSpace_0_read_addr" name="" usage="data" direction="inout"/>
+                <hwRef type="interface" interface="searchSpace_0_read_data_s" name="" usage="data" direction="inout"/>
+                <hwRef type="interface" interface="searchSpace_0_read_data_peek" name="" usage="data" direction="inout"/>
+                <hwRef type="interface" interface="searchSpace_0_write_addr" name="" usage="data" direction="inout"/>
+                <hwRef type="interface" interface="searchSpace_0_write_data" name="" usage="data" direction="inout"/>
+                <hwRef type="interface" interface="searchSpace_0_write_resp_s" name="" usage="data" direction="inout"/>
+                <hwRef type="interface" interface="searchSpace_0_write_resp_peek" name="" usage="data" direction="inout"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="start_id_0" index="1" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="start_id_0" name="start_id_0" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_dist" index="2" direction="out" srcType="ostream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="out_dist" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_id" index="3" direction="out" srcType="ostream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" srcSize="128">
+            <hwRefs>
+                <hwRef type="interface" interface="out_id" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="searchSpace_0_read_addr" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="65" portPrefix="searchSpace_0_read_addr_">
+            <portMaps>
+                <portMap portMapName="searchSpace_0_read_addr_din">WR_DATA</portMap>
+                <portMap portMapName="searchSpace_0_read_addr_full_n">FULL_N</portMap>
+                <portMap portMapName="searchSpace_0_read_addr_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>searchSpace_0_read_addr_din</port>
+                <port>searchSpace_0_read_addr_full_n</port>
+                <port>searchSpace_0_read_addr_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="searchSpace_0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="searchSpace_0_read_data_s" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="257" portPrefix="searchSpace_0_read_data_s_">
+            <portMaps>
+                <portMap portMapName="searchSpace_0_read_data_s_dout">RD_DATA</portMap>
+                <portMap portMapName="searchSpace_0_read_data_s_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="searchSpace_0_read_data_s_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>searchSpace_0_read_data_s_dout</port>
+                <port>searchSpace_0_read_data_s_empty_n</port>
+                <port>searchSpace_0_read_data_s_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="searchSpace_0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="searchSpace_0_read_data_peek" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="257" portPrefix="searchSpace_0_read_data_peek_">
+            <portMaps>
+                <portMap portMapName="searchSpace_0_read_data_peek_dout">RD_DATA</portMap>
+                <portMap portMapName="searchSpace_0_read_data_peek_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="searchSpace_0_read_data_peek_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>searchSpace_0_read_data_peek_dout</port>
+                <port>searchSpace_0_read_data_peek_empty_n</port>
+                <port>searchSpace_0_read_data_peek_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="searchSpace_0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="searchSpace_0_write_addr" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="65" portPrefix="searchSpace_0_write_addr_">
+            <portMaps>
+                <portMap portMapName="searchSpace_0_write_addr_din">WR_DATA</portMap>
+                <portMap portMapName="searchSpace_0_write_addr_full_n">FULL_N</portMap>
+                <portMap portMapName="searchSpace_0_write_addr_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>searchSpace_0_write_addr_din</port>
+                <port>searchSpace_0_write_addr_full_n</port>
+                <port>searchSpace_0_write_addr_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="searchSpace_0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="searchSpace_0_write_data" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="257" portPrefix="searchSpace_0_write_data_">
+            <portMaps>
+                <portMap portMapName="searchSpace_0_write_data_din">WR_DATA</portMap>
+                <portMap portMapName="searchSpace_0_write_data_full_n">FULL_N</portMap>
+                <portMap portMapName="searchSpace_0_write_data_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>searchSpace_0_write_data_din</port>
+                <port>searchSpace_0_write_data_full_n</port>
+                <port>searchSpace_0_write_data_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="searchSpace_0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="searchSpace_0_write_resp_s" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="9" portPrefix="searchSpace_0_write_resp_s_">
+            <portMaps>
+                <portMap portMapName="searchSpace_0_write_resp_s_dout">RD_DATA</portMap>
+                <portMap portMapName="searchSpace_0_write_resp_s_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="searchSpace_0_write_resp_s_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>searchSpace_0_write_resp_s_dout</port>
+                <port>searchSpace_0_write_resp_s_empty_n</port>
+                <port>searchSpace_0_write_resp_s_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="searchSpace_0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="searchSpace_0_write_resp_peek" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="9" portPrefix="searchSpace_0_write_resp_peek_">
+            <portMaps>
+                <portMap portMapName="searchSpace_0_write_resp_peek_dout">RD_DATA</portMap>
+                <portMap portMapName="searchSpace_0_write_resp_peek_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="searchSpace_0_write_resp_peek_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>searchSpace_0_write_resp_peek_dout</port>
+                <port>searchSpace_0_write_resp_peek_empty_n</port>
+                <port>searchSpace_0_write_resp_peek_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="searchSpace_0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="start_id_0" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="start_id_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>start_id_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="start_id_0"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_dist" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="45" portPrefix="out_dist_">
+            <portMaps>
+                <portMap portMapName="out_dist_din">WR_DATA</portMap>
+                <portMap portMapName="out_dist_full_n">FULL_N</portMap>
+                <portMap portMapName="out_dist_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>out_dist_din</port>
+                <port>out_dist_full_n</port>
+                <port>out_dist_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="out_dist"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_id" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="45" portPrefix="out_id_">
+            <portMaps>
+                <portMap portMapName="out_id_din">WR_DATA</portMap>
+                <portMap portMapName="out_id_full_n">FULL_N</portMap>
+                <portMap portMapName="out_id_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>out_id_din</port>
+                <port>out_id_full_n</port>
+                <port>out_id_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="out_id"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_FIFO">
+                <table isCollapsed="0">
+                    <keys size="2">Interface, Data Width</keys>
+                    <column name="out_dist">45, </column>
+                    <column name="out_id">45, </column>
+                    <column name="searchSpace_0_read_addr">65, </column>
+                    <column name="searchSpace_0_read_data_peek">257, </column>
+                    <column name="searchSpace_0_read_data_s">257, </column>
+                    <column name="searchSpace_0_write_addr">65, </column>
+                    <column name="searchSpace_0_write_data">257, </column>
+                    <column name="searchSpace_0_write_resp_peek">9, </column>
+                    <column name="searchSpace_0_write_resp_s">9, </column>
+                </table>
+            </item>
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="start_id_0">ap_none, 32, , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="searchSpace_0">inout, async_mmap&lt;ap_uint&lt;256&gt; &gt;&amp;</column>
+                    <column name="start_id_0">in, int</column>
+                    <column name="out_dist">out, ostream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                    <column name="out_id">out, ostream&lt;hls::axis&lt;ap_uint&lt;32&gt; 0 0 0&gt; &gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="searchSpace_0">searchSpace_0_read_addr, interface, , </column>
+                    <column name="searchSpace_0">searchSpace_0_read_data_s, interface, , </column>
+                    <column name="searchSpace_0">searchSpace_0_read_data_peek, interface, , </column>
+                    <column name="searchSpace_0">searchSpace_0_write_addr, interface, , </column>
+                    <column name="searchSpace_0">searchSpace_0_write_data, interface, , </column>
+                    <column name="searchSpace_0">searchSpace_0_write_resp_s, interface, , </column>
+                    <column name="searchSpace_0">searchSpace_0_write_resp_peek, interface, , </column>
+                    <column name="start_id_0">start_id_0, port, , </column>
+                    <column name="out_dist">out_dist, interface, , </column>
+                    <column name="out_id">out_id, interface, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:80" status="valid" parentFunction="compare_with_register" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:81" status="valid" parentFunction="compare_with_register" variable="" isDirective="0" options="off"/>
+        <Pragma type="latency" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:82" status="valid" parentFunction="compare_with_register" variable="" isDirective="0" options="min=2 max=2"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:92" status="valid" parentFunction="load" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:95" status="valid" parentFunction="load" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:116" status="valid" parentFunction="compute" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:121" status="valid" parentFunction="compute" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:127" status="valid" parentFunction="compute" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:169" status="valid" parentFunction="swap" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:192" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:194" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options="II=2"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:195" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options="FACTOR=D2L_FACTOR_W"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:210" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options=""/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:211" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstDist&quot;" isDirective="0" options="variable=&quot;local_kNearstDist&quot; inter false"/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:212" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstId&quot;" isDirective="0" options="variable=&quot;local_kNearstId&quot; inter false"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:225" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options=""/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:226" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstDist&quot;" isDirective="0" options="variable=&quot;local_kNearstDist&quot; inter false"/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:227" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstId&quot;" isDirective="0" options="variable=&quot;local_kNearstId&quot; inter false"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:242" status="valid" parentFunction="sort" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:245" status="valid" parentFunction="sort" variable="starting_id" isDirective="0" options="variable=starting_id complete dim=0"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:248" status="valid" parentFunction="sort" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:255" status="valid" parentFunction="sort" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:256" status="valid" parentFunction="sort" variable="" isDirective="0" options="FACTOR=L2I_FACTOR_W"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:271" status="valid" parentFunction="sort" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:286" status="valid" parentFunction="sort" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:344" status="valid" parentFunction="merge_dual_all_pes" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:361" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:364" status="valid" parentFunction="krnl_partialknn" variable="local_Query_0" isDirective="0" options="variable=local_Query_0 complete dim=1"/>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:366" status="warning" parentFunction="krnl_partialknn" variable="local_SP_0_A" isDirective="0" options="variable=local_SP_0_A core=XPM_MEMORY uram">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5526" msg_severity="WARNING" msg_body="'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead"/>
+        </Pragma>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:368" status="warning" parentFunction="krnl_partialknn" variable="local_SP_0_B" isDirective="0" options="variable=local_SP_0_B core=XPM_MEMORY uram">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5526" msg_severity="WARNING" msg_body="'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead"/>
+        </Pragma>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:371" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_A" isDirective="0" options="variable=local_distance_0_A complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:372" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_A" isDirective="0" options="variable=local_distance_0_A cyclic factor=L2I_FACTOR_W dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:374" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_B" isDirective="0" options="variable=local_distance_0_B complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:375" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_B" isDirective="0" options="variable=local_distance_0_B cyclic factor=L2I_FACTOR_W dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:380" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstDist_partial_0" isDirective="0" options="variable=local_kNearstDist_partial_0 complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:382" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstId_partial_0" isDirective="0" options="variable=local_kNearstId_partial_0 complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:386" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstDist" isDirective="0" options="variable=local_kNearstDist complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:388" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstId" isDirective="0" options="variable=local_kNearstId complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:392" status="valid" parentFunction="krnl_partialknn" variable="global_kNearstDist" isDirective="0" options="variable=global_kNearstDist complete"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:394" status="valid" parentFunction="krnl_partialknn" variable="global_kNearstId" isDirective="0" options="variable=global_kNearstId complete"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:397" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:422" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:440" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:466" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:467" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist complete dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:468" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist complete dim=3"/>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:469" status="warning" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist core=RAM_1P_LUTRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:471" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:472" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId complete dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:473" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId complete dim=3"/>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:474" status="warning" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId core=RAM_1P_LUTRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:478" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:481" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:484" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:497" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:506" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:516" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:536" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:547" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:651" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:652" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="ap_fifo port = searchSpace_0.read_addr._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:653" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0.read_addr._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:654" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="ap_fifo port = searchSpace_0.read_data._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:655" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0.read_data._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:656" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="ap_fifo port = searchSpace_0.write_addr._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:657" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0.write_addr._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:658" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="ap_fifo port = searchSpace_0.write_data._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:659" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0.write_data._ bit"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:660" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="ap_fifo port = searchSpace_0.write_resp._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:661" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0.write_resp._ bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:662" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0 .read_data"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:663" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="ap_fifo port = searchSpace_0.read_data._peek"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:664" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0.read_data._peek bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:665" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0 .write_resp"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:666" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="ap_fifo port = searchSpace_0.write_resp._peek"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:667" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = searchSpace_0.write_resp._peek bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:677" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = out_dist"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:678" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="ap_fifo port = out_dist._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:679" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = out_dist._ bit"/>
+        <Pragma type="disaggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:682" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = out_id"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:683" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="ap_fifo port = out_id._"/>
+        <Pragma type="aggregate" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:684" status="valid" parentFunction="krnl_partialknn_wrapper_11" variable="" isDirective="0" options="variable = out_id._ bit"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:744" status="valid" parentFunction="seq_global_merge_l1_l2" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:746" status="valid" parentFunction="seq_global_merge_l1_l2" variable="idx" isDirective="0" options="variable=idx complete dim=0"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:749" status="valid" parentFunction="seq_global_merge_l1_l2" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:758" status="valid" parentFunction="seq_global_merge_l1_l2" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:786" status="valid" parentFunction="seq_global_merge_l3" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:788" status="valid" parentFunction="seq_global_merge_l3" variable="idx" isDirective="0" options="variable=idx complete dim=0"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:791" status="valid" parentFunction="seq_global_merge_l3" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_11.cpp:800" status="valid" parentFunction="seq_global_merge_l3" variable="" isDirective="0" options="II=1"/>
+    </PragmaReport>
+</profile>
+

@@ -1,0 +1,31 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="Stream2Mmap" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="r" src_name="stream" src_type="istream&lt;float&gt;&amp;" src_isptr="1" src_bitwidth="128" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="stream_s" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="stream_peek" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="r" src_name="mmap" src_type="float*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="mmap" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="direct" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="Register" hw_name="mmap_offset" hw_bitwidth="32" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="r" src_name="n" src_type="long unsigned int" src_isptr="0" src_bitwidth="64" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="n" hw_bitwidth="64" hw_size_or_depth="1" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0" hw_kernel_support="true"/>
+    </return>
+  </kernel>
+</root>

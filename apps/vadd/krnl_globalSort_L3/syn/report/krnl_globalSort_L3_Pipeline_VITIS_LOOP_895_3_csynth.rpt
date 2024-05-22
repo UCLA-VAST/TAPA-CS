@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3'
+================================================================
+* Date:           Wed May 22 14:54:28 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_globalSort_L3 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  3.187 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_895_3  |        ?|        ?|         1|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      284|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|      108|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       54|    -|
+|Register             |        -|     -|      131|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      131|      446|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------+-----------------+---------+----+---+----+-----+
+    |       Instance       |      Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +----------------------+-----------------+---------+----+---+----+-----+
+    |mux_1032_32_1_1_U122  |mux_1032_32_1_1  |        0|   0|  0|  54|    0|
+    |mux_1032_32_1_1_U123  |mux_1032_32_1_1  |        0|   0|  0|  54|    0|
+    +----------------------+-----------------+---------+----+---+----+-----+
+    |Total                 |                 |        0|   0|  0| 108|    0|
+    +----------------------+-----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln910_fu_443_p2        |         +|   0|  0|  16|           9|           1|
+    |add_ln925_fu_537_p2        |         +|   0|  0|  16|           9|           1|
+    |i_req_dist_1_fu_420_p2     |         +|   0|  0|  39|          32|           1|
+    |i_req_id_1_fu_514_p2       |         +|   0|  0|  39|          32|           1|
+    |i_resp_dist_2_fu_453_p2    |         +|   0|  0|  39|          32|          32|
+    |i_resp_id_2_fu_547_p2      |         +|   0|  0|  39|          32|          32|
+    |ap_condition_388           |       and|   0|  0|   2|           1|           1|
+    |ap_condition_393           |       and|   0|  0|   2|           1|           1|
+    |ap_condition_396           |       and|   0|  0|   2|           1|           1|
+    |ap_condition_399           |       and|   0|  0|   2|           1|           1|
+    |tmp_3_nbreadreq_fu_264_p3  |       and|   0|  0|   2|           1|           0|
+    |tmp_7_nbreadreq_fu_308_p3  |       and|   0|  0|   2|           1|           0|
+    |icmp_ln895_1_fu_354_p2     |      icmp|   0|  0|  20|          32|           4|
+    |icmp_ln895_fu_348_p2       |      icmp|   0|  0|  20|          32|           4|
+    |icmp_ln899_fu_369_p2       |      icmp|   0|  0|  20|          32|           4|
+    |icmp_ln914_fu_467_p2       |      icmp|   0|  0|  20|          32|           4|
+    |or_ln895_fu_360_p2         |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0| 284|         282|          91|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |i_req_dist_fu_102        |   9|          2|   32|         64|
+    |i_req_id_fu_98           |   9|          2|   32|         64|
+    |i_resp_dist_fu_110       |   9|          2|   32|         64|
+    |i_resp_id_fu_106         |   9|          2|   32|         64|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|  130|        260|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_req_dist_fu_102        |  32|   0|   32|          0|
+    |i_req_id_fu_98           |  32|   0|   32|          0|
+    |i_resp_dist_fu_110       |  32|   0|   32|          0|
+    |i_resp_id_fu_106         |  32|   0|   32|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 131|   0|  131|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------+-----+-----+------------+----------------------------------------------+--------------+
+|              RTL Ports              | Dir | Bits|  Protocol  |                 Source Object                |    C Type    |
++-------------------------------------+-----+-----+------------+----------------------------------------------+--------------+
+|ap_clk                               |   in|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3|  return value|
+|ap_rst                               |   in|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3|  return value|
+|ap_start                             |   in|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3|  return value|
+|ap_done                              |  out|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3|  return value|
+|ap_idle                              |  out|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3|  return value|
+|ap_ready                             |  out|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3|  return value|
+|output_knnId_write_resp_s_dout       |   in|    9|     ap_fifo|                     output_knnId_write_resp_s|       pointer|
+|output_knnId_write_resp_s_empty_n    |   in|    1|     ap_fifo|                     output_knnId_write_resp_s|       pointer|
+|output_knnId_write_resp_s_read       |  out|    1|     ap_fifo|                     output_knnId_write_resp_s|       pointer|
+|output_knnDist_write_resp_s_dout     |   in|    9|     ap_fifo|                   output_knnDist_write_resp_s|       pointer|
+|output_knnDist_write_resp_s_empty_n  |   in|    1|     ap_fifo|                   output_knnDist_write_resp_s|       pointer|
+|output_knnDist_write_resp_s_read     |  out|    1|     ap_fifo|                   output_knnDist_write_resp_s|       pointer|
+|output_knnDist_write_addr_din        |  out|   65|     ap_fifo|                     output_knnDist_write_addr|       pointer|
+|output_knnDist_write_addr_full_n     |   in|    1|     ap_fifo|                     output_knnDist_write_addr|       pointer|
+|output_knnDist_write_addr_write      |  out|    1|     ap_fifo|                     output_knnDist_write_addr|       pointer|
+|output_knnDist_write_data_din        |  out|   33|     ap_fifo|                     output_knnDist_write_data|       pointer|
+|output_knnDist_write_data_full_n     |   in|    1|     ap_fifo|                     output_knnDist_write_data|       pointer|
+|output_knnDist_write_data_write      |  out|    1|     ap_fifo|                     output_knnDist_write_data|       pointer|
+|output_dist                          |   in|   32|     ap_none|                                   output_dist|        scalar|
+|output_dist_1                        |   in|   32|     ap_none|                                 output_dist_1|        scalar|
+|output_dist_2                        |   in|   32|     ap_none|                                 output_dist_2|        scalar|
+|output_dist_3                        |   in|   32|     ap_none|                                 output_dist_3|        scalar|
+|output_dist_4                        |   in|   32|     ap_none|                                 output_dist_4|        scalar|
+|output_dist_5                        |   in|   32|     ap_none|                                 output_dist_5|        scalar|
+|output_dist_6                        |   in|   32|     ap_none|                                 output_dist_6|        scalar|
+|output_dist_7                        |   in|   32|     ap_none|                                 output_dist_7|        scalar|
+|output_dist_8                        |   in|   32|     ap_none|                                 output_dist_8|        scalar|
+|output_dist_9                        |   in|   32|     ap_none|                                 output_dist_9|        scalar|
+|output_knnId_write_addr_din          |  out|   65|     ap_fifo|                       output_knnId_write_addr|       pointer|
+|output_knnId_write_addr_full_n       |   in|    1|     ap_fifo|                       output_knnId_write_addr|       pointer|
+|output_knnId_write_addr_write        |  out|    1|     ap_fifo|                       output_knnId_write_addr|       pointer|
+|output_knnId_write_data_din          |  out|   33|     ap_fifo|                       output_knnId_write_data|       pointer|
+|output_knnId_write_data_full_n       |   in|    1|     ap_fifo|                       output_knnId_write_data|       pointer|
+|output_knnId_write_data_write        |  out|    1|     ap_fifo|                       output_knnId_write_data|       pointer|
+|output_id                            |   in|   32|     ap_none|                                     output_id|        scalar|
+|output_id_1                          |   in|   32|     ap_none|                                   output_id_1|        scalar|
+|output_id_2                          |   in|   32|     ap_none|                                   output_id_2|        scalar|
+|output_id_3                          |   in|   32|     ap_none|                                   output_id_3|        scalar|
+|output_id_4                          |   in|   32|     ap_none|                                   output_id_4|        scalar|
+|output_id_5                          |   in|   32|     ap_none|                                   output_id_5|        scalar|
+|output_id_6                          |   in|   32|     ap_none|                                   output_id_6|        scalar|
+|output_id_7                          |   in|   32|     ap_none|                                   output_id_7|        scalar|
+|output_id_8                          |   in|   32|     ap_none|                                   output_id_8|        scalar|
+|output_id_9                          |   in|   32|     ap_none|                                   output_id_9|        scalar|
++-------------------------------------+-----+-----+------------+----------------------------------------------+--------------+
+

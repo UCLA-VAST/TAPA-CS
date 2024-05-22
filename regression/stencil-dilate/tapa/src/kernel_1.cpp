@@ -247,10 +247,11 @@ tapa::task()
 .invoke(inter_kernel,  in_5,  out_5,  k_rd[5],  k_wr[5],  iters)
 .invoke(DILATE,  k_rd[5],  k_wr[5],  iters)
 .invoke(inter_kernel,  in_6,  out_6,  k_rd[6],  k_wr[6],  iters)
-.invoke(DILATE,  k_rd[6],  k_wr[6],  iters)
-.invoke(inter_kernel,  in_7,  out_7,  k_rd[7],  in_board,  iters)
-.invoke(Stream2Mmap, k_rd[7], temp, 3)
-.invoke(Mmap2Stream, temp, 3, out_board)
+// .invoke(DILATE,  k_rd[6],  k_wr[6],  iters)
+.invoke(Stream2Mmap_1, k_rd[6], k_wr[6])
+// .invoke(inter_kernel,  in_7,  out_7,  k_rd[7],  in_board,  iters)
+// .invoke(Stream2Mmap, k_rd[7], temp, 3)
+// .invoke(Mmap2Stream, temp, 3, out_board)
 ;
 }
 }

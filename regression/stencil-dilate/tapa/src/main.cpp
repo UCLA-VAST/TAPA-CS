@@ -7,20 +7,17 @@
 #include <tapa.h>
 #include "DILATE.h"
 
-// alveolink specific imports
-#include <vector>
-#include "genColHost.hpp"
-#include "netLayer.hpp"
-#include "popl.hpp"
-#include "xNativeFPGA.hpp"
-// #include "kernel_1.cpp"
 using std::clog;
 using std::endl;
 using std::vector;
 using std::chrono::duration;
 using std::chrono::high_resolution_clock;
 
-extern "C"{
+
+
+// void VecAdd(tapa::mmap<const float> a_array, tapa::mmap<const float> b_array,
+//             tapa::mmap<float> c_array, uint64_t n);
+
 void unikernel(tapa::mmap<INTERFACE_WIDTH> in_0, tapa::mmap<INTERFACE_WIDTH> out_0, //HBM 0 1
                 tapa::mmap<INTERFACE_WIDTH> in_1, tapa::mmap<INTERFACE_WIDTH> out_1, 
                tapa::mmap<INTERFACE_WIDTH> in_2, tapa::mmap<INTERFACE_WIDTH> out_2, 
@@ -28,52 +25,20 @@ void unikernel(tapa::mmap<INTERFACE_WIDTH> in_0, tapa::mmap<INTERFACE_WIDTH> out
                tapa::mmap<INTERFACE_WIDTH> in_4, tapa::mmap<INTERFACE_WIDTH> out_4, 
                tapa::mmap<INTERFACE_WIDTH> in_5, tapa::mmap<INTERFACE_WIDTH> out_5, 
                tapa::mmap<INTERFACE_WIDTH> in_6, tapa::mmap<INTERFACE_WIDTH> out_6, 
-               tapa::mmap<INTERFACE_WIDTH> in_7, tapa::mmap<INTERFACE_WIDTH> out_7,
-               tapa::mmap<INTERFACE_WIDTH> temp, uint32_t iters
-);
-}
+               tapa::mmap<INTERFACE_WIDTH> in_7, tapa::mmap<INTERFACE_WIDTH> out_7, 
+               tapa::mmap<INTERFACE_WIDTH> in_8, tapa::mmap<INTERFACE_WIDTH> out_8, 
+               tapa::mmap<INTERFACE_WIDTH> in_9, tapa::mmap<INTERFACE_WIDTH> out_9, 
+               tapa::mmap<INTERFACE_WIDTH> in_10, tapa::mmap<INTERFACE_WIDTH> out_10, 
+               tapa::mmap<INTERFACE_WIDTH> in_11, tapa::mmap<INTERFACE_WIDTH> out_11,  
+               tapa::mmap<INTERFACE_WIDTH> in_12, tapa::mmap<INTERFACE_WIDTH> out_12, 
+               tapa::mmap<INTERFACE_WIDTH> in_13, tapa::mmap<INTERFACE_WIDTH> out_13, 
+               tapa::mmap<INTERFACE_WIDTH> in_14, tapa::mmap<INTERFACE_WIDTH> out_14,  
+                uint32_t iters);
+
 DEFINE_string(bitstream, "", "path to bitstream file, run csim if empty");
 
 int main(int argc, char* argv[]) {
   gflags::ParseCommandLineFlags(&argc, &argv, /*remove_flags=*/true);
-
-  // alveolink setup begin:
-  AlveoLink::common::FPGA fpga_card[2];
-  fpga_card[0].setId(0);
-  fpga_card[1].setId(1);
-  std::cout<<"loaded xclbin not yet"<<std::endl;
-  fpga_card[0].load_xclbin("./unikernel_.xclbin");
-  std::cout<<"loaded xclbin on one fpga"<<std::endl;
-  fpga_card[1].load_xclbin("./unikernel_.xclbin");
-  std::cout<<"loaded the second xclbin too"<<std::endl;
-  AlveoLink::network_roce_v2::NetLayer<2> l_netLayer[2];
-  std::cout<<"here"<<std::endl;
-  for (auto i=0; i<2; ++i) {
-    std::cout<<"in here?"<<std::endl;
-    l_netLayer[i].init(&(fpga_card[i]));
-    std::cout<<"init"<<std::endl;
-    for (auto j=0; j<2; ++j) {
-        std::cout<<"we reach inside"<<std::endl;
-        l_netLayer[i].setIPSubnet(j, 0x0000a8c0);
-        l_netLayer[i].setMACSubnet(j, 0x347844332211);
-        l_netLayer[i].setID(j, i*2+j);
-        std::cout<<"we reach here"<<std::endl;
-        }
-    }
-  std::cout<<"setup the links on both"<<std::endl;
-    for (auto i=0; i<2; ++i) {
-        for (auto j=0; j<2; ++j) {
-            std::cout <<"INFO: turn on RS_FEC for device " << i << " port " <<j << std::endl;
-            l_netLayer[i].turnOn_RS_FEC(j, true);
-        }
-    }
-    unsigned int l_totalDevLinksUp = 0;
-    while (l_totalDevLinksUp < 2) {
-        std::cout << "INFO: Waiting for links up on device " << l_totalDevLinksUp << std::endl;
-        if (l_netLayer[l_totalDevLinksUp].linksUp()) {
-            l_totalDevLinksUp++;
-        }
-    }
 
   srand (time(NULL));
 
@@ -132,7 +97,7 @@ int main(int argc, char* argv[]) {
     in_13[i] = a; out_13[i] = a;
     in_14[i] = a; out_14[i] = a;
   }
-  uint32_t iter = 1;
+  const uint32_t iter = 512;
 
   // Software result
 
@@ -140,8 +105,8 @@ int main(int argc, char* argv[]) {
   //   sw_in[i] = i;
   // }
 
-  for(uint32_t n = 0; n < iter; n++){
-    for(uint32_t i = 1025; i < MIDLE_REGION * WIDTH_FACTOR - 1025; i++){
+  for(int n = 0; n < iter; n++){
+    for(int i = 1025; i < MIDLE_REGION * WIDTH_FACTOR - 1025; i++){
       sw_out[i] = (sw_in[i - 1024] + sw_in[i - 1025] + sw_in[i - 1023] + sw_in[i - 1] + sw_in[i] + sw_in[i + 1] + sw_in[i + 1023] + sw_in[i + 1] + sw_in[i + 1025]) /(float) 9;
     }
   }
@@ -154,7 +119,6 @@ int main(int argc, char* argv[]) {
   // tapa::invoke(VecAdd, FLAGS_bitstream, tapa::read_only_mmap<const float>(a),
   //              tapa::read_only_mmap<const float>(b),
   //              tapa::write_only_mmap<float>(c), n);
-  // uint32_t iter=1
   tapa::invoke(unikernel, FLAGS_bitstream, 
                 tapa::read_write_mmap<INTERFACE_WIDTH>(in_0), tapa::read_write_mmap<INTERFACE_WIDTH>(out_0),
                 tapa::read_write_mmap<INTERFACE_WIDTH>(in_1), tapa::read_write_mmap<INTERFACE_WIDTH> (out_1), 
@@ -164,17 +128,14 @@ int main(int argc, char* argv[]) {
                 tapa::read_write_mmap<INTERFACE_WIDTH>(in_5), tapa::read_write_mmap<INTERFACE_WIDTH> (out_5), 
                 tapa::read_write_mmap<INTERFACE_WIDTH>(in_6), tapa::read_write_mmap<INTERFACE_WIDTH> (out_6), 
                 tapa::read_write_mmap<INTERFACE_WIDTH>(in_7), tapa::read_write_mmap<INTERFACE_WIDTH> (out_7), 
-                // tapa::read_write_mmap<INTERFACE_WIDTH>(in_8), tapa::read_write_mmap<INTERFACE_WIDTH> (out_8), 
-                // tapa::read_write_mmap<INTERFACE_WIDTH>(in_9), tapa::read_write_mmap<INTERFACE_WIDTH> (out_9), 
-                // tapa::read_write_mmap<INTERFACE_WIDTH>(in_10), tapa::read_write_mmap<INTERFACE_WIDTH> (out_10), 
-                // tapa::read_write_mmap<INTERFACE_WIDTH>(in_11), tapa::read_write_mmap<INTERFACE_WIDTH> (out_11),
-                // tapa::read_write_mmap<INTERFACE_WIDTH>(in_12), tapa::read_write_mmap<INTERFACE_WIDTH> (out_12), 
-                // tapa::read_write_mmap<INTERFACE_WIDTH>(in_13), tapa::read_write_mmap<INTERFACE_WIDTH> (out_13), 
-                // tapa::read_write_mmap<INTERFACE_WIDTH>(in_14), tapa::read_write_mmap<INTERFACE_WIDTH> (out_14),
-                tapa::read_write_mmap<INTERFACE_WIDTH>(in_14), iter
-//                 , tapa::ostream<INTERFACE_WIDTH> &out_board,
-// tapa::istream<INTERFACE_WIDTH> &in_board
-);
+                tapa::read_write_mmap<INTERFACE_WIDTH>(in_8), tapa::read_write_mmap<INTERFACE_WIDTH> (out_8), 
+                tapa::read_write_mmap<INTERFACE_WIDTH>(in_9), tapa::read_write_mmap<INTERFACE_WIDTH> (out_9), 
+                tapa::read_write_mmap<INTERFACE_WIDTH>(in_10), tapa::read_write_mmap<INTERFACE_WIDTH> (out_10), 
+                tapa::read_write_mmap<INTERFACE_WIDTH>(in_11), tapa::read_write_mmap<INTERFACE_WIDTH> (out_11),
+                tapa::read_write_mmap<INTERFACE_WIDTH>(in_12), tapa::read_write_mmap<INTERFACE_WIDTH> (out_12), 
+                tapa::read_write_mmap<INTERFACE_WIDTH>(in_13), tapa::read_write_mmap<INTERFACE_WIDTH> (out_13), 
+                tapa::read_write_mmap<INTERFACE_WIDTH>(in_14), tapa::read_write_mmap<INTERFACE_WIDTH> (out_14),
+                iter);
   auto stop = high_resolution_clock::now();
   duration<double> elapsed = stop - start;
   clog << "elapsed time: " << elapsed.count() << "s" << endl;

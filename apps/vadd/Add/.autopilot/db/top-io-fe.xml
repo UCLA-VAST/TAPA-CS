@@ -1,0 +1,35 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="Add" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="r" src_name="a" src_type="istream&lt;float&gt;&amp;" src_isptr="1" src_bitwidth="128" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="a_s" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="a_peek" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="r" src_name="b" src_type="istream&lt;float&gt;&amp;" src_isptr="1" src_bitwidth="128" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="b_s" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="b_peek" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="w" src_name="c" src_type="ostream&lt;float&gt;&amp;" src_isptr="1" src_bitwidth="64" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="c" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="3" access_type="r" src_name="n" src_type="long unsigned int" src_isptr="0" src_bitwidth="64" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="n" hw_bitwidth="64" hw_size_or_depth="1" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0" hw_kernel_support="true"/>
+    </return>
+  </kernel>
+</root>

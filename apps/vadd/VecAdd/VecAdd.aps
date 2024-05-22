@@ -1,0 +1,24 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="VecAdd"/>
+    </name>
+    <project>
+        <value string="project"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <config>
+        <config_interface m_axi_latency="0" m_axi_addr64="1"/>
+        <config_compile complex-mul-dsp="0" name_max_length="253"/>
+        <config_rtl module_auto_prefix="1" reset_level="low"/>
+    </config>
+    <targetInfo>
+        <TargetInfo value="xcu55c:-fsvh2892:-2L-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/virtexuplus/virtexuplus" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" period="3.33" default="false"/>
+    </clockList>
+</AutoPilot:solution>
+

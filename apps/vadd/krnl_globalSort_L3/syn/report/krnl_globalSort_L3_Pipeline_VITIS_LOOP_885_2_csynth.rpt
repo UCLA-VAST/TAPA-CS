@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2'
+================================================================
+* Date:           Wed May 22 14:54:27 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_globalSort_L3 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.215 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       12|       12|  39.960 ns|  39.960 ns|   12|   12|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_885_2  |       10|       10|         2|          1|          1|    10|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       27|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       54|    -|
+|Register             |        -|     -|      651|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      651|       81|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln885_fu_340_p2               |         +|   0|  0|  12|           4|           1|
+    |ap_block_pp0_stage0_01001         |       and|   0|  0|   2|           1|           1|
+    |icmp_ln885_fu_334_p2              |      icmp|   0|  0|   9|           4|           4|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  27|          11|           9|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i       |   9|          2|    4|          8|
+    |i_1_fu_90                |   9|          2|    4|          8|
+    |in_id0_s_blk_n           |   9|          2|    1|          2|
+    |in_id1_s_blk_n           |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   12|         24|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |i_1_fu_90                          |   4|   0|    4|          0|
+    |i_reg_666                          |   4|   0|    4|          0|
+    |local_kNearstId_partial_10_fu_134  |  32|   0|   32|          0|
+    |local_kNearstId_partial_11_fu_138  |  32|   0|   32|          0|
+    |local_kNearstId_partial_12_fu_142  |  32|   0|   32|          0|
+    |local_kNearstId_partial_13_fu_146  |  32|   0|   32|          0|
+    |local_kNearstId_partial_14_fu_150  |  32|   0|   32|          0|
+    |local_kNearstId_partial_15_fu_154  |  32|   0|   32|          0|
+    |local_kNearstId_partial_16_fu_158  |  32|   0|   32|          0|
+    |local_kNearstId_partial_17_fu_162  |  32|   0|   32|          0|
+    |local_kNearstId_partial_18_fu_166  |  32|   0|   32|          0|
+    |local_kNearstId_partial_19_fu_170  |  32|   0|   32|          0|
+    |local_kNearstId_partial_1_fu_98    |  32|   0|   32|          0|
+    |local_kNearstId_partial_2_fu_102   |  32|   0|   32|          0|
+    |local_kNearstId_partial_3_fu_106   |  32|   0|   32|          0|
+    |local_kNearstId_partial_4_fu_110   |  32|   0|   32|          0|
+    |local_kNearstId_partial_5_fu_114   |  32|   0|   32|          0|
+    |local_kNearstId_partial_6_fu_118   |  32|   0|   32|          0|
+    |local_kNearstId_partial_7_fu_122   |  32|   0|   32|          0|
+    |local_kNearstId_partial_8_fu_126   |  32|   0|   32|          0|
+    |local_kNearstId_partial_9_fu_130   |  32|   0|   32|          0|
+    |local_kNearstId_partial_fu_94      |  32|   0|   32|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 651|   0|  651|          0|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------+-----+-----+------------+----------------------------------------------+--------------+
+|                RTL Ports                | Dir | Bits|  Protocol  |                 Source Object                |    C Type    |
++-----------------------------------------+-----+-----+------------+----------------------------------------------+--------------+
+|ap_clk                                   |   in|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2|  return value|
+|ap_rst                                   |   in|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2|  return value|
+|ap_start                                 |   in|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2|  return value|
+|ap_done                                  |  out|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2|  return value|
+|ap_idle                                  |  out|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2|  return value|
+|ap_ready                                 |  out|    1|  ap_ctrl_hs|  krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2|  return value|
+|in_id0_s_dout                            |   in|   45|     ap_fifo|                                      in_id0_s|       pointer|
+|in_id0_s_empty_n                         |   in|    1|     ap_fifo|                                      in_id0_s|       pointer|
+|in_id0_s_read                            |  out|    1|     ap_fifo|                                      in_id0_s|       pointer|
+|in_id1_s_dout                            |   in|   45|     ap_fifo|                                      in_id1_s|       pointer|
+|in_id1_s_empty_n                         |   in|    1|     ap_fifo|                                      in_id1_s|       pointer|
+|in_id1_s_read                            |  out|    1|     ap_fifo|                                      in_id1_s|       pointer|
+|local_kNearstId_partial_1948_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1948_out|       pointer|
+|local_kNearstId_partial_1948_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1948_out|       pointer|
+|local_kNearstId_partial_1847_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1847_out|       pointer|
+|local_kNearstId_partial_1847_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1847_out|       pointer|
+|local_kNearstId_partial_1746_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1746_out|       pointer|
+|local_kNearstId_partial_1746_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1746_out|       pointer|
+|local_kNearstId_partial_1645_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1645_out|       pointer|
+|local_kNearstId_partial_1645_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1645_out|       pointer|
+|local_kNearstId_partial_1544_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1544_out|       pointer|
+|local_kNearstId_partial_1544_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1544_out|       pointer|
+|local_kNearstId_partial_1443_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1443_out|       pointer|
+|local_kNearstId_partial_1443_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1443_out|       pointer|
+|local_kNearstId_partial_1342_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1342_out|       pointer|
+|local_kNearstId_partial_1342_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1342_out|       pointer|
+|local_kNearstId_partial_1241_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1241_out|       pointer|
+|local_kNearstId_partial_1241_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1241_out|       pointer|
+|local_kNearstId_partial_1140_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1140_out|       pointer|
+|local_kNearstId_partial_1140_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1140_out|       pointer|
+|local_kNearstId_partial_1039_out         |  out|   32|      ap_vld|              local_kNearstId_partial_1039_out|       pointer|
+|local_kNearstId_partial_1039_out_ap_vld  |  out|    1|      ap_vld|              local_kNearstId_partial_1039_out|       pointer|
+|local_kNearstId_partial_938_out          |  out|   32|      ap_vld|               local_kNearstId_partial_938_out|       pointer|
+|local_kNearstId_partial_938_out_ap_vld   |  out|    1|      ap_vld|               local_kNearstId_partial_938_out|       pointer|
+|local_kNearstId_partial_837_out          |  out|   32|      ap_vld|               local_kNearstId_partial_837_out|       pointer|
+|local_kNearstId_partial_837_out_ap_vld   |  out|    1|      ap_vld|               local_kNearstId_partial_837_out|       pointer|
+|local_kNearstId_partial_736_out          |  out|   32|      ap_vld|               local_kNearstId_partial_736_out|       pointer|
+|local_kNearstId_partial_736_out_ap_vld   |  out|    1|      ap_vld|               local_kNearstId_partial_736_out|       pointer|
+|local_kNearstId_partial_635_out          |  out|   32|      ap_vld|               local_kNearstId_partial_635_out|       pointer|
+|local_kNearstId_partial_635_out_ap_vld   |  out|    1|      ap_vld|               local_kNearstId_partial_635_out|       pointer|
+|local_kNearstId_partial_534_out          |  out|   32|      ap_vld|               local_kNearstId_partial_534_out|       pointer|
+|local_kNearstId_partial_534_out_ap_vld   |  out|    1|      ap_vld|               local_kNearstId_partial_534_out|       pointer|
+|local_kNearstId_partial_433_out          |  out|   32|      ap_vld|               local_kNearstId_partial_433_out|       pointer|
+|local_kNearstId_partial_433_out_ap_vld   |  out|    1|      ap_vld|               local_kNearstId_partial_433_out|       pointer|
+|local_kNearstId_partial_332_out          |  out|   32|      ap_vld|               local_kNearstId_partial_332_out|       pointer|
+|local_kNearstId_partial_332_out_ap_vld   |  out|    1|      ap_vld|               local_kNearstId_partial_332_out|       pointer|
+|local_kNearstId_partial_231_out          |  out|   32|      ap_vld|               local_kNearstId_partial_231_out|       pointer|
+|local_kNearstId_partial_231_out_ap_vld   |  out|    1|      ap_vld|               local_kNearstId_partial_231_out|       pointer|
+|local_kNearstId_partial_130_out          |  out|   32|      ap_vld|               local_kNearstId_partial_130_out|       pointer|
+|local_kNearstId_partial_130_out_ap_vld   |  out|    1|      ap_vld|               local_kNearstId_partial_130_out|       pointer|
+|local_kNearstId_partial29_out            |  out|   32|      ap_vld|                 local_kNearstId_partial29_out|       pointer|
+|local_kNearstId_partial29_out_ap_vld     |  out|    1|      ap_vld|                 local_kNearstId_partial29_out|       pointer|
++-----------------------------------------+-----+-----+------------+----------------------------------------------+--------------+
+

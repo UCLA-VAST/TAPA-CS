@@ -1,0 +1,237 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_globalSort_L3'
+================================================================
+* Date:           Wed May 22 14:54:29 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_globalSort_L3 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  3.187 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                                         |                                              |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                         Instance                        |                    Module                    |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_krnl_globalSort_L3_Pipeline_VITIS_LOOP_875_1_fu_420  |krnl_globalSort_L3_Pipeline_VITIS_LOOP_875_1  |       12|       12|  39.960 ns|  39.960 ns|   12|   12|       no|
+        |grp_krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2_fu_448  |krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2  |       12|       12|  39.960 ns|  39.960 ns|   12|   12|       no|
+        |grp_seq_global_merge_L3_fu_476                           |seq_global_merge_L3                           |       81|       81|   0.270 us|   0.270 us|   81|   81|       no|
+        |grp_krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3_fu_520  |krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3  |        ?|        ?|          ?|          ?|    ?|    ?|       no|
+        +---------------------------------------------------------+----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        -|        -|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|     2385|     1236|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      144|    -|
+|Register             |        -|     -|      653|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     3038|     1380|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------+----------------------------------------------+---------+----+-----+-----+-----+
+    |                         Instance                        |                    Module                    | BRAM_18K| DSP|  FF | LUT | URAM|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+-----+-----+-----+
+    |grp_krnl_globalSort_L3_Pipeline_VITIS_LOOP_875_1_fu_420  |krnl_globalSort_L3_Pipeline_VITIS_LOOP_875_1  |        0|   0|  651|   81|    0|
+    |grp_krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2_fu_448  |krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2  |        0|   0|  651|   81|    0|
+    |grp_krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3_fu_520  |krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3  |        0|   0|  131|  446|    0|
+    |grp_seq_global_merge_L3_fu_476                           |seq_global_merge_L3                           |        0|   0|  952|  628|    0|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                    |                                              |        0|   0| 2385| 1236|    0|
+    +---------------------------------------------------------+----------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                         |  54|         10|    1|         10|
+    |in_dist0_s_read                   |   9|          2|    1|          2|
+    |in_dist1_s_read                   |   9|          2|    1|          2|
+    |in_id0_s_read                     |   9|          2|    1|          2|
+    |in_id1_s_read                     |   9|          2|    1|          2|
+    |output_knnDist_write_addr_write   |   9|          2|    1|          2|
+    |output_knnDist_write_data_write   |   9|          2|    1|          2|
+    |output_knnDist_write_resp_s_read  |   9|          2|    1|          2|
+    |output_knnId_write_addr_write     |   9|          2|    1|          2|
+    |output_knnId_write_data_write     |   9|          2|    1|          2|
+    |output_knnId_write_resp_s_read    |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             | 144|         30|   11|         30|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+    |                                 Name                                 | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                             |   9|   0|    9|          0|
+    |grp_krnl_globalSort_L3_Pipeline_VITIS_LOOP_875_1_fu_420_ap_start_reg  |   1|   0|    1|          0|
+    |grp_krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2_fu_448_ap_start_reg  |   1|   0|    1|          0|
+    |grp_krnl_globalSort_L3_Pipeline_VITIS_LOOP_895_3_fu_520_ap_start_reg  |   1|   0|    1|          0|
+    |grp_seq_global_merge_L3_fu_476_ap_start_reg                           |   1|   0|    1|          0|
+    |output_dist_1_reg_1181                                                |  32|   0|   32|          0|
+    |output_dist_2_reg_1186                                                |  32|   0|   32|          0|
+    |output_dist_3_reg_1191                                                |  32|   0|   32|          0|
+    |output_dist_4_reg_1196                                                |  32|   0|   32|          0|
+    |output_dist_5_reg_1201                                                |  32|   0|   32|          0|
+    |output_dist_6_reg_1206                                                |  32|   0|   32|          0|
+    |output_dist_7_reg_1211                                                |  32|   0|   32|          0|
+    |output_dist_8_reg_1216                                                |  32|   0|   32|          0|
+    |output_dist_9_reg_1221                                                |  32|   0|   32|          0|
+    |output_dist_reg_1176                                                  |  32|   0|   32|          0|
+    |output_id_1_reg_1231                                                  |  32|   0|   32|          0|
+    |output_id_2_reg_1236                                                  |  32|   0|   32|          0|
+    |output_id_3_reg_1241                                                  |  32|   0|   32|          0|
+    |output_id_4_reg_1246                                                  |  32|   0|   32|          0|
+    |output_id_5_reg_1251                                                  |  32|   0|   32|          0|
+    |output_id_6_reg_1256                                                  |  32|   0|   32|          0|
+    |output_id_7_reg_1261                                                  |  32|   0|   32|          0|
+    |output_id_8_reg_1266                                                  |  32|   0|   32|          0|
+    |output_id_9_reg_1271                                                  |  32|   0|   32|          0|
+    |output_id_reg_1226                                                    |  32|   0|   32|          0|
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                 | 653|   0|  653|          0|
+    +----------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|                RTL Ports               | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                                  |   in|    1|  ap_ctrl_hs|              krnl_globalSort_L3|  return value|
+|ap_rst_n                                |   in|    1|  ap_ctrl_hs|              krnl_globalSort_L3|  return value|
+|ap_start                                |   in|    1|  ap_ctrl_hs|              krnl_globalSort_L3|  return value|
+|ap_done                                 |  out|    1|  ap_ctrl_hs|              krnl_globalSort_L3|  return value|
+|ap_idle                                 |  out|    1|  ap_ctrl_hs|              krnl_globalSort_L3|  return value|
+|ap_ready                                |  out|    1|  ap_ctrl_hs|              krnl_globalSort_L3|  return value|
+|in_dist0_s_dout                         |   in|   45|     ap_fifo|                      in_dist0_s|       pointer|
+|in_dist0_s_empty_n                      |   in|    1|     ap_fifo|                      in_dist0_s|       pointer|
+|in_dist0_s_read                         |  out|    1|     ap_fifo|                      in_dist0_s|       pointer|
+|in_dist0_peek_dout                      |   in|   45|     ap_fifo|                   in_dist0_peek|       pointer|
+|in_dist0_peek_empty_n                   |   in|    1|     ap_fifo|                   in_dist0_peek|       pointer|
+|in_dist0_peek_read                      |  out|    1|     ap_fifo|                   in_dist0_peek|       pointer|
+|in_id0_s_dout                           |   in|   45|     ap_fifo|                        in_id0_s|       pointer|
+|in_id0_s_empty_n                        |   in|    1|     ap_fifo|                        in_id0_s|       pointer|
+|in_id0_s_read                           |  out|    1|     ap_fifo|                        in_id0_s|       pointer|
+|in_id0_peek_dout                        |   in|   45|     ap_fifo|                     in_id0_peek|       pointer|
+|in_id0_peek_empty_n                     |   in|    1|     ap_fifo|                     in_id0_peek|       pointer|
+|in_id0_peek_read                        |  out|    1|     ap_fifo|                     in_id0_peek|       pointer|
+|in_dist1_s_dout                         |   in|   45|     ap_fifo|                      in_dist1_s|       pointer|
+|in_dist1_s_empty_n                      |   in|    1|     ap_fifo|                      in_dist1_s|       pointer|
+|in_dist1_s_read                         |  out|    1|     ap_fifo|                      in_dist1_s|       pointer|
+|in_dist1_peek_dout                      |   in|   45|     ap_fifo|                   in_dist1_peek|       pointer|
+|in_dist1_peek_empty_n                   |   in|    1|     ap_fifo|                   in_dist1_peek|       pointer|
+|in_dist1_peek_read                      |  out|    1|     ap_fifo|                   in_dist1_peek|       pointer|
+|in_id1_s_dout                           |   in|   45|     ap_fifo|                        in_id1_s|       pointer|
+|in_id1_s_empty_n                        |   in|    1|     ap_fifo|                        in_id1_s|       pointer|
+|in_id1_s_read                           |  out|    1|     ap_fifo|                        in_id1_s|       pointer|
+|in_id1_peek_dout                        |   in|   45|     ap_fifo|                     in_id1_peek|       pointer|
+|in_id1_peek_empty_n                     |   in|    1|     ap_fifo|                     in_id1_peek|       pointer|
+|in_id1_peek_read                        |  out|    1|     ap_fifo|                     in_id1_peek|       pointer|
+|output_knnDist_read_addr_din            |  out|   65|     ap_fifo|        output_knnDist_read_addr|       pointer|
+|output_knnDist_read_addr_full_n         |   in|    1|     ap_fifo|        output_knnDist_read_addr|       pointer|
+|output_knnDist_read_addr_write          |  out|    1|     ap_fifo|        output_knnDist_read_addr|       pointer|
+|output_knnDist_read_data_s_dout         |   in|   33|     ap_fifo|      output_knnDist_read_data_s|       pointer|
+|output_knnDist_read_data_s_empty_n      |   in|    1|     ap_fifo|      output_knnDist_read_data_s|       pointer|
+|output_knnDist_read_data_s_read         |  out|    1|     ap_fifo|      output_knnDist_read_data_s|       pointer|
+|output_knnDist_read_data_peek_dout      |   in|   33|     ap_fifo|   output_knnDist_read_data_peek|       pointer|
+|output_knnDist_read_data_peek_empty_n   |   in|    1|     ap_fifo|   output_knnDist_read_data_peek|       pointer|
+|output_knnDist_read_data_peek_read      |  out|    1|     ap_fifo|   output_knnDist_read_data_peek|       pointer|
+|output_knnDist_write_addr_din           |  out|   65|     ap_fifo|       output_knnDist_write_addr|       pointer|
+|output_knnDist_write_addr_full_n        |   in|    1|     ap_fifo|       output_knnDist_write_addr|       pointer|
+|output_knnDist_write_addr_write         |  out|    1|     ap_fifo|       output_knnDist_write_addr|       pointer|
+|output_knnDist_write_data_din           |  out|   33|     ap_fifo|       output_knnDist_write_data|       pointer|
+|output_knnDist_write_data_full_n        |   in|    1|     ap_fifo|       output_knnDist_write_data|       pointer|
+|output_knnDist_write_data_write         |  out|    1|     ap_fifo|       output_knnDist_write_data|       pointer|
+|output_knnDist_write_resp_s_dout        |   in|    9|     ap_fifo|     output_knnDist_write_resp_s|       pointer|
+|output_knnDist_write_resp_s_empty_n     |   in|    1|     ap_fifo|     output_knnDist_write_resp_s|       pointer|
+|output_knnDist_write_resp_s_read        |  out|    1|     ap_fifo|     output_knnDist_write_resp_s|       pointer|
+|output_knnDist_write_resp_peek_dout     |   in|    9|     ap_fifo|  output_knnDist_write_resp_peek|       pointer|
+|output_knnDist_write_resp_peek_empty_n  |   in|    1|     ap_fifo|  output_knnDist_write_resp_peek|       pointer|
+|output_knnDist_write_resp_peek_read     |  out|    1|     ap_fifo|  output_knnDist_write_resp_peek|       pointer|
+|output_knnId_read_addr_din              |  out|   65|     ap_fifo|          output_knnId_read_addr|       pointer|
+|output_knnId_read_addr_full_n           |   in|    1|     ap_fifo|          output_knnId_read_addr|       pointer|
+|output_knnId_read_addr_write            |  out|    1|     ap_fifo|          output_knnId_read_addr|       pointer|
+|output_knnId_read_data_s_dout           |   in|   33|     ap_fifo|        output_knnId_read_data_s|       pointer|
+|output_knnId_read_data_s_empty_n        |   in|    1|     ap_fifo|        output_knnId_read_data_s|       pointer|
+|output_knnId_read_data_s_read           |  out|    1|     ap_fifo|        output_knnId_read_data_s|       pointer|
+|output_knnId_read_data_peek_dout        |   in|   33|     ap_fifo|     output_knnId_read_data_peek|       pointer|
+|output_knnId_read_data_peek_empty_n     |   in|    1|     ap_fifo|     output_knnId_read_data_peek|       pointer|
+|output_knnId_read_data_peek_read        |  out|    1|     ap_fifo|     output_knnId_read_data_peek|       pointer|
+|output_knnId_write_addr_din             |  out|   65|     ap_fifo|         output_knnId_write_addr|       pointer|
+|output_knnId_write_addr_full_n          |   in|    1|     ap_fifo|         output_knnId_write_addr|       pointer|
+|output_knnId_write_addr_write           |  out|    1|     ap_fifo|         output_knnId_write_addr|       pointer|
+|output_knnId_write_data_din             |  out|   33|     ap_fifo|         output_knnId_write_data|       pointer|
+|output_knnId_write_data_full_n          |   in|    1|     ap_fifo|         output_knnId_write_data|       pointer|
+|output_knnId_write_data_write           |  out|    1|     ap_fifo|         output_knnId_write_data|       pointer|
+|output_knnId_write_resp_s_dout          |   in|    9|     ap_fifo|       output_knnId_write_resp_s|       pointer|
+|output_knnId_write_resp_s_empty_n       |   in|    1|     ap_fifo|       output_knnId_write_resp_s|       pointer|
+|output_knnId_write_resp_s_read          |  out|    1|     ap_fifo|       output_knnId_write_resp_s|       pointer|
+|output_knnId_write_resp_peek_dout       |   in|    9|     ap_fifo|    output_knnId_write_resp_peek|       pointer|
+|output_knnId_write_resp_peek_empty_n    |   in|    1|     ap_fifo|    output_knnId_write_resp_peek|       pointer|
+|output_knnId_write_resp_peek_read       |  out|    1|     ap_fifo|    output_knnId_write_resp_peek|       pointer|
++----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+

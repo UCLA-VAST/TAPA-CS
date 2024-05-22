@@ -1,4 +1,4 @@
-#include <cmath>
+// #include <cmath>
 #include <cstdint>
 #include <cstring>
 
@@ -14,7 +14,7 @@
 #include <stdexcept>
 #include <unordered_map>
 #include <vector>
-
+#include <ctime>
 #include <tapa.h>
 
 #include "nxgraph.hpp"
@@ -27,6 +27,8 @@ using std::deque;
 using std::endl;
 using std::ostream;
 using std::unordered_map;
+using std::chrono::duration;
+using std::chrono::high_resolution_clock;
 template <typename T>
 using vector = std::vector<T, tapa::aligned_allocator<T>>;
 using std::chrono::high_resolution_clock;
@@ -334,7 +336,7 @@ int main(int argc, char* argv[]) {
   }
 
   PageRankBaseline(base_vid, vertices_baseline, edges);
-
+  auto start = high_resolution_clock::now();
   tapa::invoke(
       PageRank, FLAGS_bitstream, num_partitions,
       tapa::read_write_mmap<uint64_t>(metadata),
@@ -344,7 +346,9 @@ int main(int argc, char* argv[]) {
       tapa::read_only_mmaps<Edge, kNumPes>(edges).vectorized<kEdgeVecLen>(),
       tapa::write_only_mmaps<Update, kNumPes>(updates)
           .vectorized<kUpdateVecLen>());
-
+  auto stop = high_resolution_clock::now();
+	duration<double> elapsed = stop - start;
+	clog << "elapsed time: " << elapsed.count() << " s" << endl;
   LOG(INFO) << "device code finished after " << *metadata.rbegin()
             << " iterations";
 

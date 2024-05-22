@@ -1,0 +1,5 @@
+I0122 12:39:41.869 tapa.util:162] logging level set to INFO
+I0122 12:39:41.869 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0122 12:39:41.869 tapa.tapac:496] Python recursion limit set to 3000
+I0122 12:39:41.869 tapa.tapac:416] Executing all steps of tapac
+W0122 12:39:41.869 tapa.tapac:438] The floorplan option is automatically enabled because a floorplan output file is provided

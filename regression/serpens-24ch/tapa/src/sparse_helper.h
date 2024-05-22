@@ -430,8 +430,8 @@ void edge_list_64bit(const vector<vector<edge> > & edge_list_pes,
                     x = x_col | x_row | x_float_val_64;
                 }
                 if (NUM_CH_SPARSE != 16 && NUM_CH_SPARSE != 24) {
-                    cout << "UPDATE me\n";
-                    exit(1);
+                    // cout << "UPDATE me\n";
+                    // exit(1);
                 }else if (NUM_CH_SPARSE == 16) {
                     int pe_idx = j + cc * 8;
                     //ch= 0: pe  0(  0,   1) pe 16( 32,  33) pe 32( 64,  65) pe 48( 96,  97) pe 64(128, 129) pe 80(160, 161) pe 96(192, 193) pe112(224, 225)

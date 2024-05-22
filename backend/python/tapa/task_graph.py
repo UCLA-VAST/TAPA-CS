@@ -28,14 +28,7 @@ def get_fifo_edges(
   fifo_edges = {}
   # Generate edges for FIFOs instantiated in the top task.
   for fifo_name, fifo in top_task.fifos.items():
-    # _logger.info('fifo_name %s', fifo_name)
-    # _logger.info('fifo %s', fifo)
-    # _logger.info('get_instance %s', util.get_instance_name(fifo['produced_by']))
-    # _logger.info('get_instance %s', util.get_instance_name(fifo['consumed_by']))
-    if fifo_name!='out_board' and fifo_name!='in_board':
-      _logger.info(fifo_name)
-      _logger.info('get_instance %s', util.get_instance_name(fifo['produced_by']))
-      _logger.info('get_instance %s', util.get_instance_name(fifo['consumed_by']))
+    if 'out_board' not in fifo_name and 'in_board' not in fifo_name:
       fifo_edges[rtl.sanitize_array_name(fifo_name)] = {
           'produced_by':
               'TASK_VERTEX_' + util.get_instance_name(fifo['produced_by']),

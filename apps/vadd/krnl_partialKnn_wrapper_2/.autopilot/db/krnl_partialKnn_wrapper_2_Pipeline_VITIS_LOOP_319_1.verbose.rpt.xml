@@ -1,0 +1,348 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'krnl_partialKnn_wrapper_2_Pipeline_VITIS_LOOP_319_1'" level="0">
+<item name = "Date">Wed May 22 14:57:30 2024
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">project</item>
+<item name = "Solution">krnl_partialKnn_wrapper_2 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu55c-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.348 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">26, 26, 86.580 ns, 86.580 ns, 26, 26, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_319_1">24, 24, 4, 2, 1, 11, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 154, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 1010, -</column>
+<column name="Register">-, -, 2679, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U608">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln319_fu_1934_p2">+, 0, 0, 12, 5, 2</column>
+<column name="idx_a_2_fu_2132_p2">+, 0, 0, 39, 32, 2</column>
+<column name="idx_b_2_fu_2118_p2">+, 0, 0, 39, 32, 2</column>
+<column name="and_ln321_2_fu_2109_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln321_fu_2103_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln321_4_fu_2073_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln321_5_fu_2085_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="icmp_ln321_6_fu_2091_p2">icmp, 0, 0, 16, 23, 1</column>
+<column name="icmp_ln321_fu_2067_p2">icmp, 0, 0, 11, 8, 2</column>
+<column name="or_ln321_2_fu_2097_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln321_fu_2079_p2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">14, 3, 1, 3</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
+<column name="ap_phi_mux_local_kNearstDist_35_phi_fu_1874_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_36_phi_fu_1863_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_37_phi_fu_1852_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_38_phi_fu_1841_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_39_phi_fu_1830_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_40_phi_fu_1819_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_41_phi_fu_1808_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_42_phi_fu_1797_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_43_phi_fu_1786_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_44_phi_fu_1775_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstDist_45_phi_fu_1764_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_13_phi_fu_1615_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_14_phi_fu_1587_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_15_phi_fu_1559_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_16_phi_fu_1531_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_17_phi_fu_1503_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_18_phi_fu_1475_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_19_phi_fu_1447_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_20_phi_fu_1419_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_21_phi_fu_1391_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_22_phi_fu_1363_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_23_phi_fu_1335_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_24_phi_fu_1010_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_25_phi_fu_982_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_26_phi_fu_954_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_27_phi_fu_926_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_28_phi_fu_898_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_29_phi_fu_870_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_30_phi_fu_842_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_31_phi_fu_814_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_32_phi_fu_786_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_33_phi_fu_758_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_34_phi_fu_730_p22">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_35_phi_fu_1753_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_36_phi_fu_1742_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_37_phi_fu_1731_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_38_phi_fu_1720_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_39_phi_fu_1709_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_40_phi_fu_1698_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_41_phi_fu_1687_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_42_phi_fu_1676_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_43_phi_fu_1665_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_44_phi_fu_1654_p4">14, 3, 32, 96</column>
+<column name="ap_phi_mux_local_kNearstId_45_phi_fu_1643_p4">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_13_reg_1305">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_14_reg_1278">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_15_reg_1251">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_16_reg_1224">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_17_reg_1197">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_18_reg_1170">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_19_reg_1143">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_20_reg_1116">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_21_reg_1089">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_22_reg_1062">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_23_reg_1035">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_24_reg_700">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_25_reg_673">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_26_reg_646">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_27_reg_619">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_28_reg_592">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_29_reg_565">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_30_reg_538">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_31_reg_511">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_32_reg_484">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_33_reg_457">14, 3, 32, 96</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_34_reg_430">14, 3, 32, 96</column>
+<column name="ap_sig_allocacmp_idx_a_load_1">9, 2, 32, 64</column>
+<column name="ap_sig_allocacmp_idx_b_load_1">9, 2, 32, 64</column>
+<column name="i_fu_124">9, 2, 5, 10</column>
+<column name="idx_a_fu_216">9, 2, 32, 64</column>
+<column name="idx_b_fu_220">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="and_ln321_2_reg_2998">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_13_reg_1305">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_14_reg_1278">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_15_reg_1251">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_16_reg_1224">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_17_reg_1197">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_18_reg_1170">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_19_reg_1143">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_20_reg_1116">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_21_reg_1089">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_22_reg_1062">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_23_reg_1035">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_24_reg_700">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_25_reg_673">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_26_reg_646">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_27_reg_619">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_28_reg_592">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_29_reg_565">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_30_reg_538">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_31_reg_511">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_32_reg_484">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_33_reg_457">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter1_local_kNearstDist_34_reg_430">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_13_reg_1305">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_14_reg_1278">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_15_reg_1251">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_16_reg_1224">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_17_reg_1197">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_18_reg_1170">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_19_reg_1143">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_20_reg_1116">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_21_reg_1089">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_22_reg_1062">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_23_reg_1035">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_24_reg_700">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_25_reg_673">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_26_reg_646">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_27_reg_619">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_28_reg_592">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_29_reg_565">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_30_reg_538">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_31_reg_511">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_32_reg_484">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_33_reg_457">32, 0, 32, 0</column>
+<column name="ap_phi_reg_pp0_iter2_local_kNearstDist_34_reg_430">32, 0, 32, 0</column>
+<column name="i_fu_124">5, 0, 5, 0</column>
+<column name="idx_a_fu_216">32, 0, 32, 0</column>
+<column name="idx_b_fu_220">32, 0, 32, 0</column>
+<column name="local_kNearstDist_10_fu_168">32, 0, 32, 0</column>
+<column name="local_kNearstDist_1_fu_132">32, 0, 32, 0</column>
+<column name="local_kNearstDist_2_fu_136">32, 0, 32, 0</column>
+<column name="local_kNearstDist_3_fu_140">32, 0, 32, 0</column>
+<column name="local_kNearstDist_4_fu_144">32, 0, 32, 0</column>
+<column name="local_kNearstDist_57_reg_2436">32, 0, 32, 0</column>
+<column name="local_kNearstDist_58_reg_2453">32, 0, 32, 0</column>
+<column name="local_kNearstDist_5_fu_148">32, 0, 32, 0</column>
+<column name="local_kNearstDist_6_fu_152">32, 0, 32, 0</column>
+<column name="local_kNearstDist_7_fu_156">32, 0, 32, 0</column>
+<column name="local_kNearstDist_8_fu_160">32, 0, 32, 0</column>
+<column name="local_kNearstDist_9_fu_164">32, 0, 32, 0</column>
+<column name="local_kNearstDist_fu_128">32, 0, 32, 0</column>
+<column name="local_kNearstId_10_fu_212">32, 0, 32, 0</column>
+<column name="local_kNearstId_1_fu_176">32, 0, 32, 0</column>
+<column name="local_kNearstId_2_fu_180">32, 0, 32, 0</column>
+<column name="local_kNearstId_3_fu_184">32, 0, 32, 0</column>
+<column name="local_kNearstId_46_reg_2734">32, 0, 32, 0</column>
+<column name="local_kNearstId_47_reg_2758">32, 0, 32, 0</column>
+<column name="local_kNearstId_48_reg_2782">32, 0, 32, 0</column>
+<column name="local_kNearstId_49_reg_2806">32, 0, 32, 0</column>
+<column name="local_kNearstId_4_fu_188">32, 0, 32, 0</column>
+<column name="local_kNearstId_50_reg_2830">32, 0, 32, 0</column>
+<column name="local_kNearstId_51_reg_2854">32, 0, 32, 0</column>
+<column name="local_kNearstId_52_reg_2878">32, 0, 32, 0</column>
+<column name="local_kNearstId_53_reg_2902">32, 0, 32, 0</column>
+<column name="local_kNearstId_54_reg_2926">32, 0, 32, 0</column>
+<column name="local_kNearstId_55_reg_2950">32, 0, 32, 0</column>
+<column name="local_kNearstId_56_reg_2974">32, 0, 32, 0</column>
+<column name="local_kNearstId_5_fu_192">32, 0, 32, 0</column>
+<column name="local_kNearstId_6_fu_196">32, 0, 32, 0</column>
+<column name="local_kNearstId_7_fu_200">32, 0, 32, 0</column>
+<column name="local_kNearstId_8_fu_204">32, 0, 32, 0</column>
+<column name="local_kNearstId_9_fu_208">32, 0, 32, 0</column>
+<column name="local_kNearstId_fu_172">32, 0, 32, 0</column>
+<column name="tmp_reg_2408">1, 0, 1, 0</column>
+<column name="tmp_reg_2408_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="trunc_ln323_reg_2432">4, 0, 4, 0</column>
+<column name="trunc_ln323_reg_2432_pp0_iter1_reg">4, 0, 4, 0</column>
+<column name="zext_ln321_2_reg_2422">32, 0, 64, 32</column>
+<column name="zext_ln321_reg_2412">32, 0, 64, 32</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_2_Pipeline_VITIS_LOOP_319_1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_2_Pipeline_VITIS_LOOP_319_1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_2_Pipeline_VITIS_LOOP_319_1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_2_Pipeline_VITIS_LOOP_319_1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_2_Pipeline_VITIS_LOOP_319_1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_2_Pipeline_VITIS_LOOP_319_1, return value</column>
+<column name="temp_kNearstId_address0">out, 4, ap_memory, temp_kNearstId, array</column>
+<column name="temp_kNearstId_ce0">out, 1, ap_memory, temp_kNearstId, array</column>
+<column name="temp_kNearstId_q0">in, 32, ap_memory, temp_kNearstId, array</column>
+<column name="temp_kNearstDist_address0">out, 4, ap_memory, temp_kNearstDist, array</column>
+<column name="temp_kNearstDist_ce0">out, 1, ap_memory, temp_kNearstDist, array</column>
+<column name="temp_kNearstDist_q0">in, 32, ap_memory, temp_kNearstDist, array</column>
+<column name="temp_kNearstDist_13_address0">out, 4, ap_memory, temp_kNearstDist_13, array</column>
+<column name="temp_kNearstDist_13_ce0">out, 1, ap_memory, temp_kNearstDist_13, array</column>
+<column name="temp_kNearstDist_13_q0">in, 32, ap_memory, temp_kNearstDist_13, array</column>
+<column name="temp_kNearstId_13_address0">out, 4, ap_memory, temp_kNearstId_13, array</column>
+<column name="temp_kNearstId_13_ce0">out, 1, ap_memory, temp_kNearstId_13, array</column>
+<column name="temp_kNearstId_13_q0">in, 32, ap_memory, temp_kNearstId_13, array</column>
+<column name="local_kNearstId_10_out">out, 32, ap_vld, local_kNearstId_10_out, pointer</column>
+<column name="local_kNearstId_10_out_ap_vld">out, 1, ap_vld, local_kNearstId_10_out, pointer</column>
+<column name="local_kNearstId_9_out">out, 32, ap_vld, local_kNearstId_9_out, pointer</column>
+<column name="local_kNearstId_9_out_ap_vld">out, 1, ap_vld, local_kNearstId_9_out, pointer</column>
+<column name="local_kNearstId_8_out">out, 32, ap_vld, local_kNearstId_8_out, pointer</column>
+<column name="local_kNearstId_8_out_ap_vld">out, 1, ap_vld, local_kNearstId_8_out, pointer</column>
+<column name="local_kNearstId_7_out">out, 32, ap_vld, local_kNearstId_7_out, pointer</column>
+<column name="local_kNearstId_7_out_ap_vld">out, 1, ap_vld, local_kNearstId_7_out, pointer</column>
+<column name="local_kNearstId_6_out">out, 32, ap_vld, local_kNearstId_6_out, pointer</column>
+<column name="local_kNearstId_6_out_ap_vld">out, 1, ap_vld, local_kNearstId_6_out, pointer</column>
+<column name="local_kNearstId_5_out">out, 32, ap_vld, local_kNearstId_5_out, pointer</column>
+<column name="local_kNearstId_5_out_ap_vld">out, 1, ap_vld, local_kNearstId_5_out, pointer</column>
+<column name="local_kNearstId_4_out">out, 32, ap_vld, local_kNearstId_4_out, pointer</column>
+<column name="local_kNearstId_4_out_ap_vld">out, 1, ap_vld, local_kNearstId_4_out, pointer</column>
+<column name="local_kNearstId_3_out">out, 32, ap_vld, local_kNearstId_3_out, pointer</column>
+<column name="local_kNearstId_3_out_ap_vld">out, 1, ap_vld, local_kNearstId_3_out, pointer</column>
+<column name="local_kNearstId_2_out">out, 32, ap_vld, local_kNearstId_2_out, pointer</column>
+<column name="local_kNearstId_2_out_ap_vld">out, 1, ap_vld, local_kNearstId_2_out, pointer</column>
+<column name="local_kNearstId_1_out">out, 32, ap_vld, local_kNearstId_1_out, pointer</column>
+<column name="local_kNearstId_1_out_ap_vld">out, 1, ap_vld, local_kNearstId_1_out, pointer</column>
+<column name="local_kNearstId_out">out, 32, ap_vld, local_kNearstId_out, pointer</column>
+<column name="local_kNearstId_out_ap_vld">out, 1, ap_vld, local_kNearstId_out, pointer</column>
+<column name="local_kNearstDist_10_out">out, 32, ap_vld, local_kNearstDist_10_out, pointer</column>
+<column name="local_kNearstDist_10_out_ap_vld">out, 1, ap_vld, local_kNearstDist_10_out, pointer</column>
+<column name="local_kNearstDist_9_out">out, 32, ap_vld, local_kNearstDist_9_out, pointer</column>
+<column name="local_kNearstDist_9_out_ap_vld">out, 1, ap_vld, local_kNearstDist_9_out, pointer</column>
+<column name="local_kNearstDist_8_out">out, 32, ap_vld, local_kNearstDist_8_out, pointer</column>
+<column name="local_kNearstDist_8_out_ap_vld">out, 1, ap_vld, local_kNearstDist_8_out, pointer</column>
+<column name="local_kNearstDist_7_out">out, 32, ap_vld, local_kNearstDist_7_out, pointer</column>
+<column name="local_kNearstDist_7_out_ap_vld">out, 1, ap_vld, local_kNearstDist_7_out, pointer</column>
+<column name="local_kNearstDist_6_out">out, 32, ap_vld, local_kNearstDist_6_out, pointer</column>
+<column name="local_kNearstDist_6_out_ap_vld">out, 1, ap_vld, local_kNearstDist_6_out, pointer</column>
+<column name="local_kNearstDist_5_out">out, 32, ap_vld, local_kNearstDist_5_out, pointer</column>
+<column name="local_kNearstDist_5_out_ap_vld">out, 1, ap_vld, local_kNearstDist_5_out, pointer</column>
+<column name="local_kNearstDist_4_out">out, 32, ap_vld, local_kNearstDist_4_out, pointer</column>
+<column name="local_kNearstDist_4_out_ap_vld">out, 1, ap_vld, local_kNearstDist_4_out, pointer</column>
+<column name="local_kNearstDist_3_out">out, 32, ap_vld, local_kNearstDist_3_out, pointer</column>
+<column name="local_kNearstDist_3_out_ap_vld">out, 1, ap_vld, local_kNearstDist_3_out, pointer</column>
+<column name="local_kNearstDist_2_out">out, 32, ap_vld, local_kNearstDist_2_out, pointer</column>
+<column name="local_kNearstDist_2_out_ap_vld">out, 1, ap_vld, local_kNearstDist_2_out, pointer</column>
+<column name="local_kNearstDist_1_out">out, 32, ap_vld, local_kNearstDist_1_out, pointer</column>
+<column name="local_kNearstDist_1_out_ap_vld">out, 1, ap_vld, local_kNearstDist_1_out, pointer</column>
+<column name="local_kNearstDist_out">out, 32, ap_vld, local_kNearstDist_out, pointer</column>
+<column name="local_kNearstDist_out_ap_vld">out, 1, ap_vld, local_kNearstDist_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

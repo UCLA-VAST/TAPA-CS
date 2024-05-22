@@ -1,0 +1,238 @@
+
+
+================================================================
+== Vitis HLS Report for 'seq_global_merge_L3'
+================================================================
+* Date:           Wed May 22 14:54:28 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_globalSort_L3 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.385 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       81|       81|  0.270 us|  0.270 us|   81|   81|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                                          |                                               |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                         Instance                         |                     Module                    |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +----------------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_seq_global_merge_L3_Pipeline_VITIS_LOOP_760_3_fu_474  |seq_global_merge_L3_Pipeline_VITIS_LOOP_760_3  |        5|        5|  16.650 ns|  16.650 ns|    5|    5|       no|
+        +----------------------------------------------------------+-----------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_756_2  |       80|       80|         8|          -|          -|    10|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      115|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|      174|      460|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       53|    -|
+|Register             |        -|     -|      778|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      952|      628|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------------+-----------------------------------------------+---------+----+-----+-----+-----+
+    |                         Instance                         |                     Module                    | BRAM_18K| DSP|  FF | LUT | URAM|
+    +----------------------------------------------------------+-----------------------------------------------+---------+----+-----+-----+-----+
+    |mux_1032_32_1_1_U78                                       |mux_1032_32_1_1                                |        0|   0|    0|   54|    0|
+    |mux_1032_32_1_1_U79                                       |mux_1032_32_1_1                                |        0|   0|    0|   54|    0|
+    |mux_232_32_1_1_U77                                        |mux_232_32_1_1                                 |        0|   0|    0|    9|    0|
+    |mux_232_32_1_1_U80                                        |mux_232_32_1_1                                 |        0|   0|    0|    9|    0|
+    |grp_seq_global_merge_L3_Pipeline_VITIS_LOOP_760_3_fu_474  |seq_global_merge_L3_Pipeline_VITIS_LOOP_760_3  |        0|   0|  174|  334|    0|
+    +----------------------------------------------------------+-----------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                     |                                               |        0|   0|  174|  460|    0|
+    +----------------------------------------------------------+-----------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln756_fu_901_p2  |         +|   0|  0|  12|           5|           2|
+    |idx_2_fu_875_p2      |         +|   0|  0|  39|          32|           2|
+    |idx_3_fu_885_p3      |    select|   0|  0|  32|           1|          32|
+    |idx_4_fu_893_p3      |    select|   0|  0|  32|           1|          32|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0| 115|          39|          68|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------+----+-----------+-----+-----------+
+    |     Name     | LUT| Input Size| Bits| Total Bits|
+    +--------------+----+-----------+-----+-----------+
+    |ap_NS_fsm     |  26|          5|    1|          5|
+    |i_fu_134      |   9|          2|    5|         10|
+    |idx_1_fu_142  |   9|          2|   32|         64|
+    |idx_fu_138    |   9|          2|   32|         64|
+    +--------------+----+-----------+-----+-----------+
+    |Total         |  53|         11|   70|        143|
+    +--------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------------+----+----+-----+-----------+
+    |                                  Name                                 | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                              |   4|   0|    4|          0|
+    |dist_0_062_fu_154                                                      |  32|   0|   32|          0|
+    |dist_1_065_fu_166                                                      |  32|   0|   32|          0|
+    |dist_2_068_fu_178                                                      |  32|   0|   32|          0|
+    |dist_3_071_fu_190                                                      |  32|   0|   32|          0|
+    |dist_4_074_fu_202                                                      |  32|   0|   32|          0|
+    |dist_5_077_fu_214                                                      |  32|   0|   32|          0|
+    |dist_6_079_fu_222                                                      |  32|   0|   32|          0|
+    |dist_7_078_fu_218                                                      |  32|   0|   32|          0|
+    |dist_8_076_fu_210                                                      |  32|   0|   32|          0|
+    |dist_9_075_fu_206                                                      |  32|   0|   32|          0|
+    |grp_seq_global_merge_L3_Pipeline_VITIS_LOOP_760_3_fu_474_ap_start_reg  |   1|   0|    1|          0|
+    |i_fu_134                                                               |   5|   0|    5|          0|
+    |id_0_073_fu_198                                                        |  32|   0|   32|          0|
+    |id_1_072_fu_194                                                        |  32|   0|   32|          0|
+    |id_2_070_fu_186                                                        |  32|   0|   32|          0|
+    |id_3_069_fu_182                                                        |  32|   0|   32|          0|
+    |id_4_067_fu_174                                                        |  32|   0|   32|          0|
+    |id_5_066_fu_170                                                        |  32|   0|   32|          0|
+    |id_6_064_fu_162                                                        |  32|   0|   32|          0|
+    |id_7_063_fu_158                                                        |  32|   0|   32|          0|
+    |id_8_061_fu_150                                                        |  32|   0|   32|          0|
+    |id_9_060_fu_146                                                        |  32|   0|   32|          0|
+    |idx_1_fu_142                                                           |  32|   0|   32|          0|
+    |idx_1_load_reg_1286                                                    |  32|   0|   32|          0|
+    |idx_fu_138                                                             |  32|   0|   32|          0|
+    |idx_load_reg_1280                                                      |  32|   0|   32|          0|
+    +-----------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                  | 778|   0|  778|          0|
+    +-----------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+---------------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++--------------+-----+-----+------------+---------------------+--------------+
+|ap_clk        |   in|    1|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_rst        |   in|    1|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_start      |   in|    1|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_done       |  out|    1|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_idle       |  out|    1|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_ready      |  out|    1|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_0   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_1   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_2   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_3   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_4   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_5   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_6   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_7   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_8   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_9   |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_10  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_11  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_12  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_13  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_14  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_15  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_16  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_17  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_18  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|ap_return_19  |  out|   32|  ap_ctrl_hs|  seq_global_merge_L3|  return value|
+|p_read        |   in|   32|     ap_none|               p_read|        scalar|
+|p_read1       |   in|   32|     ap_none|              p_read1|        scalar|
+|p_read2       |   in|   32|     ap_none|              p_read2|        scalar|
+|p_read3       |   in|   32|     ap_none|              p_read3|        scalar|
+|p_read4       |   in|   32|     ap_none|              p_read4|        scalar|
+|p_read5       |   in|   32|     ap_none|              p_read5|        scalar|
+|p_read6       |   in|   32|     ap_none|              p_read6|        scalar|
+|p_read7       |   in|   32|     ap_none|              p_read7|        scalar|
+|p_read8       |   in|   32|     ap_none|              p_read8|        scalar|
+|p_read9       |   in|   32|     ap_none|              p_read9|        scalar|
+|p_read10      |   in|   32|     ap_none|             p_read10|        scalar|
+|p_read11      |   in|   32|     ap_none|             p_read11|        scalar|
+|p_read12      |   in|   32|     ap_none|             p_read12|        scalar|
+|p_read13      |   in|   32|     ap_none|             p_read13|        scalar|
+|p_read14      |   in|   32|     ap_none|             p_read14|        scalar|
+|p_read15      |   in|   32|     ap_none|             p_read15|        scalar|
+|p_read16      |   in|   32|     ap_none|             p_read16|        scalar|
+|p_read17      |   in|   32|     ap_none|             p_read17|        scalar|
+|p_read18      |   in|   32|     ap_none|             p_read18|        scalar|
+|p_read19      |   in|   32|     ap_none|             p_read19|        scalar|
+|p_read20      |   in|   32|     ap_none|             p_read20|        scalar|
+|p_read21      |   in|   32|     ap_none|             p_read21|        scalar|
+|p_read22      |   in|   32|     ap_none|             p_read22|        scalar|
+|p_read23      |   in|   32|     ap_none|             p_read23|        scalar|
+|p_read24      |   in|   32|     ap_none|             p_read24|        scalar|
+|p_read25      |   in|   32|     ap_none|             p_read25|        scalar|
+|p_read26      |   in|   32|     ap_none|             p_read26|        scalar|
+|p_read27      |   in|   32|     ap_none|             p_read27|        scalar|
+|p_read28      |   in|   32|     ap_none|             p_read28|        scalar|
+|p_read29      |   in|   32|     ap_none|             p_read29|        scalar|
+|p_read30      |   in|   32|     ap_none|             p_read30|        scalar|
+|p_read31      |   in|   32|     ap_none|             p_read31|        scalar|
+|p_read32      |   in|   32|     ap_none|             p_read32|        scalar|
+|p_read33      |   in|   32|     ap_none|             p_read33|        scalar|
+|p_read34      |   in|   32|     ap_none|             p_read34|        scalar|
+|p_read35      |   in|   32|     ap_none|             p_read35|        scalar|
+|p_read36      |   in|   32|     ap_none|             p_read36|        scalar|
+|p_read37      |   in|   32|     ap_none|             p_read37|        scalar|
+|p_read38      |   in|   32|     ap_none|             p_read38|        scalar|
+|p_read39      |   in|   32|     ap_none|             p_read39|        scalar|
++--------------+-----+-----+------------+---------------------+--------------+
+

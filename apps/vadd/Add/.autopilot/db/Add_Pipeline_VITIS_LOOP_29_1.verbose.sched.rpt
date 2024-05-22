@@ -1,0 +1,228 @@
+
+
+================================================================
+== Vitis HLS Report for 'Add_Pipeline_VITIS_LOOP_29_1'
+================================================================
+* Date:           Wed May  8 14:03:53 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       Add (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.342 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_29_1  |        ?|        ?|        10|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 11, States = { 1 2 3 4 5 6 7 8 9 10 11 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.38>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 13 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %c, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %b_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i33 %a_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%n_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %n"   --->   Operation 17 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.38ns)   --->   "%store_ln0 = store i64 0, i64 %i"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 19 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.53>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%i_1 = load i64 %i" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29]   --->   Operation 20 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 21 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (1.06ns)   --->   "%icmp_ln29 = icmp_eq  i64 %i_1, i64 %n_read" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29]   --->   Operation 22 'icmp' 'icmp_ln29' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (1.14ns)   --->   "%i_2 = add i64 %i_1, i64 1" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29]   --->   Operation 23 'add' 'i_2' <Predicate = true> <Delay = 1.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln29 = br i1 %icmp_ln29, void %for.inc.split, void %for.end.loopexit.exitStub" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29]   --->   Operation 24 'br' 'br_ln29' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.38ns)   --->   "%store_ln29 = store i64 %i_2, i64 %i" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29]   --->   Operation 25 'store' 'store_ln29' <Predicate = (!icmp_ln29)> <Delay = 0.38>
+
+State 3 <SV = 2> <Delay = 1.21>
+ST_3 : Operation 26 [1/1] (1.21ns)   --->   "%a_s_read = read i33 @_ssdm_op_Read.ap_fifo.volatile.i33P0A, i33 %a_s" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 26 'read' 'a_s_read' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln145 = trunc i33 %a_s_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 27 'trunc' 'trunc_ln145' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (1.21ns)   --->   "%b_s_read = read i33 @_ssdm_op_Read.ap_fifo.volatile.i33P0A, i33 %b_s" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 28 'read' 'b_s_read' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%trunc_ln145_1 = trunc i33 %b_s_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 29 'trunc' 'trunc_ln145_1' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.34>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_val = bitcast i32 %trunc_ln145" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 30 'bitcast' 'tmp_val' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_val_1 = bitcast i32 %trunc_ln145_1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 31 'bitcast' 'tmp_val_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [7/7] (2.34ns)   --->   "%add = fadd i32 %tmp_val, i32 %tmp_val_1" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30]   --->   Operation 32 'fadd' 'add' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.34>
+ST_5 : Operation 33 [6/7] (2.34ns)   --->   "%add = fadd i32 %tmp_val, i32 %tmp_val_1" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30]   --->   Operation 33 'fadd' 'add' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.34>
+ST_6 : Operation 34 [5/7] (2.34ns)   --->   "%add = fadd i32 %tmp_val, i32 %tmp_val_1" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30]   --->   Operation 34 'fadd' 'add' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.34>
+ST_7 : Operation 35 [4/7] (2.34ns)   --->   "%add = fadd i32 %tmp_val, i32 %tmp_val_1" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30]   --->   Operation 35 'fadd' 'add' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.34>
+ST_8 : Operation 36 [3/7] (2.34ns)   --->   "%add = fadd i32 %tmp_val, i32 %tmp_val_1" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30]   --->   Operation 36 'fadd' 'add' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.34>
+ST_9 : Operation 37 [2/7] (2.34ns)   --->   "%add = fadd i32 %tmp_val, i32 %tmp_val_1" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30]   --->   Operation 37 'fadd' 'add' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.34>
+ST_10 : Operation 38 [1/7] (2.34ns)   --->   "%add = fadd i32 %tmp_val, i32 %tmp_val_1" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30]   --->   Operation 38 'fadd' 'add' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 44 'ret' 'ret_ln0' <Predicate = (icmp_ln29)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 1.21>
+ST_11 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln29 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29]   --->   Operation 39 'specloopname' 'specloopname_ln29' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 40 [1/1] (0.00ns)   --->   "%bitcast_ln174 = bitcast i32 %add" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 40 'bitcast' 'bitcast_ln174' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 41 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i33 @_ssdm_op_BitConcatenate.i33.i1.i32, i1 0, i32 %bitcast_ln174" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 41 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 42 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i33P0A, i33 %c, i33 %p_0" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 42 'write' 'write_ln174' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_11 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln29 = br void %for.inc" [/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29]   --->   Operation 43 'br' 'br_ln29' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.899ns.
+
+ <State 1>: 0.387ns
+The critical path consists of the following:
+	'alloca' operation ('i') [5]  (0 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'i' [10]  (0.387 ns)
+
+ <State 2>: 1.53ns
+The critical path consists of the following:
+	'load' operation ('i', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29) on local variable 'i' [13]  (0 ns)
+	'add' operation ('i', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29) [16]  (1.15 ns)
+	'store' operation ('store_ln29', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29) of variable 'i', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29 on local variable 'i' [30]  (0.387 ns)
+
+ <State 3>: 1.22ns
+The critical path consists of the following:
+	fifo read operation ('a_s_read', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'a_s' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [20]  (1.22 ns)
+
+ <State 4>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30) [26]  (2.34 ns)
+
+ <State 5>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30) [26]  (2.34 ns)
+
+ <State 6>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30) [26]  (2.34 ns)
+
+ <State 7>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30) [26]  (2.34 ns)
+
+ <State 8>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30) [26]  (2.34 ns)
+
+ <State 9>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30) [26]  (2.34 ns)
+
+ <State 10>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('add', /home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30) [26]  (2.34 ns)
+
+ <State 11>: 1.22ns
+The critical path consists of the following:
+	fifo write operation ('write_ln174', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'c' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [29]  (1.22 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,125 @@
+
+
+================================================================
+== Synthesis Summary Report of 'Add'
+================================================================
++ General Information: 
+    * Date:           Wed May  8 14:03:53 2024
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        project
+    * Solution:       Add (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu55c-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |             Modules             | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |         |           |           |     |
+    |             & Loops             | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +---------------------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ Add                            |     -|  0.09|        -|       -|         -|        -|     -|        no|     -|  2 (~0%)|  502 (~0%)|  414 (~0%)|    -|
+    | + Add_Pipeline_VITIS_LOOP_29_1  |     -|  0.09|        -|       -|         -|        -|     -|        no|     -|  2 (~0%)|  498 (~0%)|  367 (~0%)|    -|
+    |  o VITIS_LOOP_29_1              |     -|  2.43|        -|       -|        10|        1|     -|       yes|     -|        -|          -|          -|    -|
+    +---------------------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_FIFO
++-----------+------------+
+| Interface | Data Width |
++-----------+------------+
+| a_peek    | 33         |
+| a_s       | 33         |
+| b_peek    | 33         |
+| b_s       | 33         |
+| c         | 33         |
++-----------+------------+
+
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| n         | ap_none | 64       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------------+
+| Argument | Direction | Datatype          |
++----------+-----------+-------------------+
+| a        | in        | istream<float>&   |
+| b        | in        | istream<float>&   |
+| c        | out       | ostream<float>&   |
+| n        | in        | long unsigned int |
++----------+-----------+-------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| a        | a_s          | interface |
+| a        | a_peek       | interface |
+| b        | b_s          | interface |
+| b        | b_peek       | interface |
+| c        | c            | interface |
+| n        | n            | port      |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+----------+------+---------+---------+
+| Name                                 | DSP | Pragma | Variable | Op   | Impl    | Latency |
++--------------------------------------+-----+--------+----------+------+---------+---------+
+| + Add                                | 2   |        |          |      |         |         |
+|  + Add_Pipeline_VITIS_LOOP_29_1      | 2   |        |          |      |         |         |
+|    i_2_fu_88_p2                      | -   |        | i_2      | add  | fabric  | 0       |
+|    fadd_32ns_32ns_32_7_full_dsp_1_U1 | 2   |        | add      | fadd | fulldsp | 6       |
++--------------------------------------+-----+--------+----------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------------+------------------------+----------------------------------------------------------------------------+
+| Type         | Options                | Location                                                                   |
++--------------+------------------------+----------------------------------------------------------------------------+
+| disaggregate | variable = a           | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:7 in add  |
+| interface    | ap_fifo port = a._     | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:8 in add  |
+| aggregate    | variable = a._ bit     | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:9 in add  |
+| interface    | ap_fifo port = a._peek | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:10 in add |
+| aggregate    | variable = a._peek bit | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:11 in add |
+| disaggregate | variable = b           | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:15 in add |
+| interface    | ap_fifo port = b._     | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:16 in add |
+| aggregate    | variable = b._ bit     | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:17 in add |
+| interface    | ap_fifo port = b._peek | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:18 in add |
+| aggregate    | variable = b._peek bit | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:19 in add |
+| disaggregate | variable = c           | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:23 in add |
+| interface    | ap_fifo port = c._     | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:24 in add |
+| aggregate    | variable = c._ bit     | ../../home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:25 in add |
++--------------+------------------------+----------------------------------------------------------------------------+
+
+

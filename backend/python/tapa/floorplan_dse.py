@@ -154,6 +154,9 @@ def run_floorplan_dse(args):
                      check=True,
                      universal_newlines=True)
     except subprocess.CalledProcessError as e:
+      _logger.info("hello from floorplan dse")
+      _logger.info("error from floorplan dse")
+      _logger.info(e.output)
       _logger.error('Fail to run command: %s', ' '.join(hls_cmd))
       exit(1)
 

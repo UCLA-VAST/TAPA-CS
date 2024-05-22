@@ -1,0 +1,90 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tmp/run-hls-Add-80ed6l0r/commands.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=Add" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = a" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = a._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = a._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = a._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = a._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = b" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = b._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = b._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = b._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = b._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = c" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = c._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Add" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = c._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/usr/local/include/tapa/xilinx/hls/stream.h:156:2" msg_body="Inlining function 'tapa::ostream&lt;float&gt;::write(float const&amp;)' into 'tapa::ostream&lt;float&gt;::operator&lt;&lt;(float const&amp;)'">
+        <args Callee="tapa::ostream&lt;float&gt;::write(float const&amp;)" Caller="tapa::ostream&lt;float&gt;::operator&lt;&lt;(float const&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30:7" msg_body="Inlining function 'tapa::ostream&lt;float&gt;::operator&lt;&lt;(float const&amp;)' into 'Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)'">
+        <args Callee="tapa::ostream&lt;float&gt;::operator&lt;&lt;(float const&amp;)" Caller="Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30:24" msg_body="Inlining function 'tapa::istream&lt;float&gt;::read()' into 'Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)'">
+        <args Callee="tapa::istream&lt;float&gt;::read()" Caller="Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30:13" msg_body="Inlining function 'tapa::istream&lt;float&gt;::read()' into 'Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)'">
+        <args Callee="tapa::istream&lt;float&gt;::read()" Caller="Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:6:0" msg_body="Disaggregating variable 'a'">
+        <args Name="a"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:6:0" msg_body="Disaggregating variable 'b'">
+        <args Name="b"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:6:0" msg_body="Disaggregating variable 'c'">
+        <args Name="c"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:6:0" msg_body="Aggregating fifo (hls::stream) variable 'a__' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="a__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:6:0" msg_body="Aggregating fifo (hls::stream) variable 'a__peek' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="a__peek"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:6:0" msg_body="Aggregating fifo (hls::stream) variable 'b__' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="b__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:6:0" msg_body="Aggregating fifo (hls::stream) variable 'b__peek' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="b__peek"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:6:0" msg_body="Aggregating fifo (hls::stream) variable 'c' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="c"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9" msg_body="Inlining function '_llvm.fpga.unpack.bits.s_struct.tapa::internal::elem_t&lt;float&gt;s.i33' into 'Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)'">
+        <args Callee="_llvm.fpga.unpack.bits.s_struct.tapa::internal::elem_t&lt;float&gt;s.i33" Caller="Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.bits.i33.s_struct.tapa::internal::elem_t&lt;float&gt;s.1' into 'Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)'">
+        <args Callee="_llvm.fpga.pack.bits.i33.s_struct.tapa::internal::elem_t&lt;float&gt;s.1" Caller="Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.none.i64.s_struct.tapa::internal::elem_t&lt;float&gt;s' into 'Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)'">
+        <args Callee="_llvm.fpga.pack.none.i64.s_struct.tapa::internal::elem_t&lt;float&gt;s" Caller="Add(tapa::istream&lt;float&gt;&amp;, tapa::istream&lt;float&gt;&amp;, tapa::ostream&lt;float&gt;&amp;, unsigned long)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

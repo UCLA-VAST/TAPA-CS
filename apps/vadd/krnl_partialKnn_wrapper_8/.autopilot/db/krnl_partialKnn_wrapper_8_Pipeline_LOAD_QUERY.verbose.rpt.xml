@@ -1,0 +1,153 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'krnl_partialKnn_wrapper_8_Pipeline_LOAD_QUERY'" level="0">
+<item name = "Date">Wed May 22 14:58:40 2024
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">project</item>
+<item name = "Solution">krnl_partialKnn_wrapper_8 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu55c-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 3.847 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- LOAD_QUERY">?, ?, 2, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1299, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 45, -</column>
+<column name="Register">-, -, 427, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln401_fu_249_p2">+, 0, 0, 39, 32, 1</column>
+<column name="i_resp_5_fu_150_p2">+, 0, 0, 39, 32, 1</column>
+<column name="sub_ln399_1_fu_192_p2">-, 0, 0, 37, 1, 30</column>
+<column name="sub_ln399_fu_172_p2">-, 0, 0, 39, 1, 32</column>
+<column name="sub_ln407_1_fu_299_p2">-, 0, 0, 12, 1, 5</column>
+<column name="sub_ln407_fu_144_p2">-, 0, 0, 10, 1, 3</column>
+<column name="ap_condition_311">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_7_nbreadreq_fu_76_p3">and, 0, 0, 2, 1, 0</column>
+<column name="icmp_ln396_fu_138_p2">icmp, 0, 0, 19, 31, 1</column>
+<column name="icmp_ln400_fu_230_p2">icmp, 0, 0, 19, 31, 1</column>
+<column name="lshr_ln674_fu_328_p2">lshr, 0, 0, 950, 256, 256</column>
+<column name="input_rd_idx_fu_212_p3">select, 0, 0, 30, 1, 30</column>
+<column name="local_Query_0_2_fu_345_p3">select, 0, 0, 32, 1, 32</column>
+<column name="local_Query_0_3_fu_353_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln400_fu_255_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln407_fu_309_p3">select, 0, 0, 3, 1, 3</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i_resp_4">9, 2, 32, 64</column>
+<column name="i_req_fu_60">9, 2, 32, 64</column>
+<column name="i_resp_fu_64">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="i_req_fu_60">32, 0, 32, 0</column>
+<column name="i_resp_4_reg_407">32, 0, 32, 0</column>
+<column name="i_resp_fu_64">32, 0, 32, 0</column>
+<column name="local_Query_0_1_fu_72">32, 0, 32, 0</column>
+<column name="local_Query_0_fu_68">32, 0, 32, 0</column>
+<column name="searchSpace_0_read_data_s_read_reg_425_1">257, 0, 257, 0</column>
+<column name="sub_ln407_reg_430">3, 0, 3, 0</column>
+<column name="tmp_7_reg_421">1, 0, 1, 0</column>
+<column name="trunc_ln396_reg_413">3, 0, 3, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_8_Pipeline_LOAD_QUERY, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_8_Pipeline_LOAD_QUERY, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_8_Pipeline_LOAD_QUERY, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_8_Pipeline_LOAD_QUERY, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_8_Pipeline_LOAD_QUERY, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, krnl_partialKnn_wrapper_8_Pipeline_LOAD_QUERY, return value</column>
+<column name="searchSpace_0_read_data_s_dout">in, 257, ap_fifo, searchSpace_0_read_data_s, pointer</column>
+<column name="searchSpace_0_read_data_s_empty_n">in, 1, ap_fifo, searchSpace_0_read_data_s, pointer</column>
+<column name="searchSpace_0_read_data_s_read">out, 1, ap_fifo, searchSpace_0_read_data_s, pointer</column>
+<column name="searchSpace_0_read_addr_din">out, 65, ap_fifo, searchSpace_0_read_addr, pointer</column>
+<column name="searchSpace_0_read_addr_full_n">in, 1, ap_fifo, searchSpace_0_read_addr, pointer</column>
+<column name="searchSpace_0_read_addr_write">out, 1, ap_fifo, searchSpace_0_read_addr, pointer</column>
+<column name="local_Query_0_1_out">out, 32, ap_vld, local_Query_0_1_out, pointer</column>
+<column name="local_Query_0_1_out_ap_vld">out, 1, ap_vld, local_Query_0_1_out, pointer</column>
+<column name="local_Query_0_out">out, 32, ap_vld, local_Query_0_out, pointer</column>
+<column name="local_Query_0_out_ap_vld">out, 1, ap_vld, local_Query_0_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

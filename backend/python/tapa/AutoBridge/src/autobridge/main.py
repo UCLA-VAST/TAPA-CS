@@ -16,9 +16,6 @@ import logging
 _logger = logging.getLogger().getChild(__name__)
 def annotate_floorplan(config: Dict, multi_fpga:int) -> Dict:
   # print_start(config)
-  print("hello from autobridge")
-  _logger.info("multi_fpga from autobridge main")
-  _logger.info(multi_fpga)
   cli_logger = set_general_logger(config)
 
   print_start(config)
@@ -35,7 +32,6 @@ def annotate_floorplan(config: Dict, multi_fpga:int) -> Dict:
       ddr_list=get_ddr_list(config),
       is_vitis_enabled=True,
   ).getBoard()
-  # print("hello frmo next stafge")
   program_json_manager = ProgramJsonManager(
       config['edges'],
       get_vertex_section(config),
@@ -49,11 +45,6 @@ def annotate_floorplan(config: Dict, multi_fpga:int) -> Dict:
     for i in range(multi_fpga):
       slot_manager = SlotManager(board)
       slot_managers.append(slot_manager)
-  # _logger.info("slot_manager.pblock_to_slot")
-  # _logger.info(slot_manager.pblock_to_slot)
-  # _logger.info("slot_manager.pblock_to_routing_slot")
-  # _logger.info(slot_manager.pblock_to_routing_slot)
-  # which modules must be assigned to the same slot
   grouping_constraints: List[List[str]] = config.get('grouping_constraints', [])
 
   # process optional module pre-assignment constraints
@@ -85,12 +76,12 @@ def annotate_floorplan(config: Dict, multi_fpga:int) -> Dict:
       pre_assignment, 
       **kwargs,
     )
-    cli_logger.info(slot_list)
-    for slot in slot_list:
-      cli_logger.info(slot.getName())
-    for vertex in v2s:
-      cli_logger.info(vertex.name)
-      cli_logger.info(v2s[vertex].getName())
+    # cli_logger.info(slot_list)
+    # for slot in slot_list:
+    #   cli_logger.info(slot.getName())
+    # for vertex in v2s:
+    #   cli_logger.info(vertex.name)
+    #   cli_logger.info(v2s[vertex].getName())
     # get in_edges and out_edges to decide which one is assigned to out_board and in_board
     # for vertex in v2s:
     #   cli_logger.info(vertex.getEdgeNames())
@@ -146,7 +137,6 @@ def annotate_inter_fpga_floorplan(config: Dict, multi_fpga:int) -> Tuple[Dict[Ve
       ddr_list=get_ddr_list(config),
       is_vitis_enabled=True,
   ).getBoard()
-  # print("hello frmo next stafge")
   program_json_manager = ProgramJsonManager(
       config['edges'],
       get_vertex_section(config),
@@ -160,11 +150,6 @@ def annotate_inter_fpga_floorplan(config: Dict, multi_fpga:int) -> Tuple[Dict[Ve
     for i in range(multi_fpga):
       slot_manager = SlotManager(board)
       slot_managers.append(slot_manager)
-  # _logger.info("slot_manager.pblock_to_slot")
-  # _logger.info(slot_manager.pblock_to_slot)
-  # _logger.info("slot_manager.pblock_to_routing_slot")
-  # _logger.info(slot_manager.pblock_to_routing_slot)
-  # which modules must be assigned to the same slot
   grouping_constraints: List[List[str]] = config.get('grouping_constraints', [])
 
   # process optional module pre-assignment constraints
@@ -196,12 +181,12 @@ def annotate_inter_fpga_floorplan(config: Dict, multi_fpga:int) -> Tuple[Dict[Ve
     pre_assignment, 
     **kwargs,
   )
-  cli_logger.info(slot_list)
-  for slot in slot_list:
-    cli_logger.info(slot.getName())
-  for vertex in v2s:
-    cli_logger.info(vertex.name)
-    cli_logger.info(v2s[vertex].getName())
+  # cli_logger.info(slot_list)
+  # for slot in slot_list:
+  #   cli_logger.info(slot.getName())
+  # for vertex in v2s:
+  #   cli_logger.info(vertex.name)
+  #   cli_logger.info(v2s[vertex].getName())
   return v2s, slot_list
     # get in_edges and out_edges to decide which one is assigned to out_board and in_board
     # for vertex in v2s:
@@ -334,6 +319,7 @@ def get_annotated_config(
       for v, s in v2s.items():
         if  config['vertices'][v.name]['category'] == 'PORT_VERTEX' and \
             config['vertices'][v.name]['port_cat'] == 'HBM':
+          print(s.getSLR())
           assert s.getSLR() == 0
           name = config['vertices'][v.name]['top_arg_name']
           if s.isLeftHalf():

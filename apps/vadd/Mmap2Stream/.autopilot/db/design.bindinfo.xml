@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln18_fu_94_p2" SOURCE="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:18" VARIABLE="icmp_ln18" MODULE="Mmap2Stream_Pipeline_VITIS_LOOP_18_1" LOOP="VITIS_LOOP_18_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_99_p2" SOURCE="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:18" VARIABLE="i_2" MODULE="Mmap2Stream_Pipeline_VITIS_LOOP_18_1" LOOP="VITIS_LOOP_18_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln18_fu_92_p2" SOURCE="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:18" VARIABLE="icmp_ln18" MODULE="Mmap2Stream" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axi_master" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="mmap_m_axi_U" SOURCE="" VARIABLE="" MODULE="Mmap2Stream" LOOP="" BUNDLEDNAME="mmap" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 
-const int IWIDTH = 256;
+const int IWIDTH = 512;
 #define INTERFACE_WIDTH ap_uint<IWIDTH>
 #define INPUT_DIM (2)
 #define TOP (10)
@@ -14,7 +14,7 @@ const int IWIDTH = 256;
 #define NUM_PE (1)
 #define NUM_KERNEL (1)
 
-#define DATA_TYPE_TOTAL_SZ 32
+#define DATA_TYPE_TOTAL_SZ 128
 #define DATA_TYPE float
 #define LOCAL_DIST_SZ   (32)
 #define LOCAL_DIST_DTYPE float
@@ -46,8 +46,8 @@ const int I2D_FACTOR_W = ((INPUT_DIM * DATA_TYPE_TOTAL_SZ - 1) / (IWIDTH)) + 1;
 #define USING_CAT_CMP 0
 
 const int SWIDTH = DATA_TYPE_TOTAL_SZ;
-typedef ap_axiu<SWIDTH, 0, 0, 0> pkt;
-typedef ap_axiu<32, 0, 0, 0>    id_pkt;
+typedef ap_axiu<128, 0, 0, 0> pkt;
+typedef ap_axiu<128, 0, 0, 0>    id_pkt;
 #define STREAM_WIDTH ap_uint<SWIDTH>
 
 const int NUM_FEATURES_PER_READ = (IWIDTH/DATA_TYPE_TOTAL_SZ);

@@ -1,0 +1,265 @@
+
+
+================================================================
+== Synthesis Summary Report of 'krnl_globalSort_L1_L2'
+================================================================
++ General Information: 
+    * Date:           Wed May 22 14:54:28 2024
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        project
+    * Solution:       krnl_globalSort_L1_L2 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu55c-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |                        Modules                        | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |            |            |     |
+    |                        & Loops                        | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF     |     LUT    | URAM|
+    +-------------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |+ krnl_globalSort_L1_L2                                |     -|  0.05|      150|  499.500|         -|      151|     -|        no|     -|   -|  3599 (~0%)|  1266 (~0%)|    -|
+    | + krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1     |     -|  1.22|       12|   39.960|         -|       12|     -|        no|     -|   -|   971 (~0%)|    90 (~0%)|    -|
+    |  o VITIS_LOOP_811_1                                   |     -|  2.43|       10|   33.300|         2|        1|    10|       yes|     -|   -|           -|           -|    -|
+    | + krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2     |     -|  1.22|       12|   39.960|         -|       12|     -|        no|     -|   -|   971 (~0%)|    90 (~0%)|    -|
+    |  o VITIS_LOOP_824_2                                   |     -|  2.43|       10|   33.300|         2|        1|    10|       yes|     -|   -|           -|           -|    -|
+    | + seq_global_merge_L1_L2                              |     -|  0.05|       91|  303.030|         -|       91|     -|        no|     -|   -|   922 (~0%)|   701 (~0%)|    -|
+    |  o VITIS_LOOP_714_2                                   |     -|  2.43|       90|  299.700|         9|        -|    10|        no|     -|   -|           -|           -|    -|
+    |   + seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3  |     -|  0.05|        6|   19.980|         -|        6|     -|        no|     -|   -|   176 (~0%)|   398 (~0%)|    -|
+    |    o VITIS_LOOP_718_3                                 |     -|  2.43|        4|   13.320|         3|        1|     3|       yes|     -|   -|           -|           -|    -|
+    | + krnl_globalSort_L1_L2_Pipeline_DIST_OUT             |     -|  1.22|       12|   39.960|         -|       12|     -|        no|     -|   -|    39 (~0%)|   124 (~0%)|    -|
+    |  o DIST_OUT                                           |     -|  2.43|       10|   33.300|         2|        1|    10|       yes|     -|   -|           -|           -|    -|
+    | + krnl_globalSort_L1_L2_Pipeline_ID_OUT               |     -|  1.22|       12|   39.960|         -|       12|     -|        no|     -|   -|    39 (~0%)|   124 (~0%)|    -|
+    |  o ID_OUT                                             |     -|  2.43|       10|   33.300|         2|        1|    10|       yes|     -|   -|           -|           -|    -|
+    +-------------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_FIFO
++---------------+------------+
+| Interface     | Data Width |
++---------------+------------+
+| in_dist0_peek | 45         |
+| in_dist0_s    | 45         |
+| in_dist1_peek | 45         |
+| in_dist1_s    | 45         |
+| in_dist2_peek | 45         |
+| in_dist2_s    | 45         |
+| in_id0_peek   | 45         |
+| in_id0_s      | 45         |
+| in_id1_peek   | 45         |
+| in_id1_s      | 45         |
+| in_id2_peek   | 45         |
+| in_id2_s      | 45         |
+| out_dist      | 45         |
+| out_id        | 45         |
++---------------+------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------------+
+| Argument | Direction | Datatype                                   |
++----------+-----------+--------------------------------------------+
+| in_dist0 | in        | istream<hls::axis<ap_uint<32>, 0, 0, 0> >& |
+| in_id0   | in        | istream<hls::axis<ap_uint<32>, 0, 0, 0> >& |
+| in_dist1 | in        | istream<hls::axis<ap_uint<32>, 0, 0, 0> >& |
+| in_id1   | in        | istream<hls::axis<ap_uint<32>, 0, 0, 0> >& |
+| in_dist2 | in        | istream<hls::axis<ap_uint<32>, 0, 0, 0> >& |
+| in_id2   | in        | istream<hls::axis<ap_uint<32>, 0, 0, 0> >& |
+| out_dist | out       | ostream<hls::axis<ap_uint<32>, 0, 0, 0> >& |
+| out_id   | out       | ostream<hls::axis<ap_uint<32>, 0, 0, 0> >& |
++----------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+
+| Argument | HW Interface  | HW Type   |
++----------+---------------+-----------+
+| in_dist0 | in_dist0_s    | interface |
+| in_dist0 | in_dist0_peek | interface |
+| in_id0   | in_id0_s      | interface |
+| in_id0   | in_id0_peek   | interface |
+| in_dist1 | in_dist1_s    | interface |
+| in_dist1 | in_dist1_peek | interface |
+| in_id1   | in_id1_s      | interface |
+| in_id1   | in_id1_peek   | interface |
+| in_dist2 | in_dist2_s    | interface |
+| in_dist2 | in_dist2_peek | interface |
+| in_id2   | in_id2_s      | interface |
+| in_id2   | in_id2_peek   | interface |
+| out_dist | out_dist      | interface |
+| out_id   | out_id        | interface |
++----------+---------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| Name                                                 | DSP | Pragma | Variable  | Op  | Impl   | Latency |
++------------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| + krnl_globalSort_L1_L2                              | 0   |        |           |     |        |         |
+|  + krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1   | 0   |        |           |     |        |         |
+|    add_ln811_fu_478_p2                               | -   |        | add_ln811 | add | fabric | 0       |
+|  + krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2   | 0   |        |           |     |        |         |
+|    add_ln824_fu_478_p2                               | -   |        | add_ln824 | add | fabric | 0       |
+|  + seq_global_merge_L1_L2                            | 0   |        |           |     |        |         |
+|    idx_3_fu_1082_p2                                  | -   |        | idx_3     | add | fabric | 0       |
+|    add_ln714_fu_1107_p2                              | -   |        | add_ln714 | add | fabric | 0       |
+|   + seq_global_merge_L1_L2_Pipeline_VITIS_LOOP_718_3 | 0   |        |           |     |        |         |
+|     add_ln718_fu_372_p2                              | -   |        | add_ln718 | add | fabric | 0       |
+|  + krnl_globalSort_L1_L2_Pipeline_DIST_OUT           | 0   |        |           |     |        |         |
+|    add_ln838_fu_145_p2                               | -   |        | add_ln838 | add | fabric | 0       |
+|  + krnl_globalSort_L1_L2_Pipeline_ID_OUT             | 0   |        |           |     |        |         |
+|    add_ln849_fu_145_p2                               | -   |        | add_ln849 | add | fabric | 0       |
++------------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+| Type     | Options                                      | Location                                                                                                                                         | Messages                                                                                |
++----------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+| resource | variable=local_SP_0_A core=XPM_MEMORY uram   | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:366 in krnl_partialknn, local_SP_0_A     | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead              |
+|          |                                              |                                                                                                                                                  | 'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead |
+| resource | variable=local_SP_0_B core=XPM_MEMORY uram   | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:368 in krnl_partialknn, local_SP_0_B     | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead              |
+|          |                                              |                                                                                                                                                  | 'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead |
+| resource | variable=temp_kNearstDist core=RAM_1P_LUTRAM | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:469 in krnl_partialknn, temp_kNearstDist | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead              |
+| resource | variable=temp_kNearstId core=RAM_1P_LUTRAM   | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:474 in krnl_partialknn, temp_kNearstId   | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead              |
++----------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type            | Options                                                      | Location                                                                                                                                                        |
++-----------------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pipeline        |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:80 in compare_with_register                             |
+| inline          | off                                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:81 in compare_with_register                             |
+| latency         | min=2 max=2                                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:82 in compare_with_register                             |
+| inline          | OFF                                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:92 in load                                              |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:95 in load                                              |
+| inline          | OFF                                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:116 in compute                                          |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:121 in compute                                          |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:127 in compute                                          |
+| inline          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:169 in swap                                             |
+| inline          | OFF                                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:192 in para_partial_sort                                |
+| pipeline        | II=2                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:194 in para_partial_sort                                |
+| unroll          | FACTOR=D2L_FACTOR_W                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:195 in para_partial_sort                                |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:210 in para_partial_sort                                |
+| dependence      | variable="local_kNearstDist" inter false                     | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:211 in para_partial_sort, "local_kNearstDist"           |
+| dependence      | variable="local_kNearstId" inter false                       | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:212 in para_partial_sort, "local_kNearstId"             |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:225 in para_partial_sort                                |
+| dependence      | variable="local_kNearstDist" inter false                     | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:226 in para_partial_sort, "local_kNearstDist"           |
+| dependence      | variable="local_kNearstId" inter false                       | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:227 in para_partial_sort, "local_kNearstId"             |
+| inline          | OFF                                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:242 in sort                                             |
+| array_partition | variable=starting_id complete dim=0                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:245 in sort, starting_id                                |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:248 in sort                                             |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:255 in sort                                             |
+| unroll          | FACTOR=L2I_FACTOR_W                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:256 in sort                                             |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:271 in sort                                             |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:286 in sort                                             |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:344 in merge_dual_all_pes                               |
+| inline          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:361 in krnl_partialknn                                  |
+| array_partition | variable=local_Query_0 complete dim=1                        | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:364 in krnl_partialknn, local_Query_0                   |
+| array_partition | variable=local_distance_0_A complete dim=1                   | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:371 in krnl_partialknn, local_distance_0_A              |
+| array_partition | variable=local_distance_0_A cyclic factor=L2I_FACTOR_W dim=2 | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:372 in krnl_partialknn, local_distance_0_A              |
+| array_partition | variable=local_distance_0_B complete dim=1                   | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:374 in krnl_partialknn, local_distance_0_B              |
+| array_partition | variable=local_distance_0_B cyclic factor=L2I_FACTOR_W dim=2 | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:375 in krnl_partialknn, local_distance_0_B              |
+| array_partition | variable=local_kNearstDist_partial_0 complete dim=0          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:380 in krnl_partialknn, local_kNearstDist_partial_0     |
+| array_partition | variable=local_kNearstId_partial_0 complete dim=0            | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:382 in krnl_partialknn, local_kNearstId_partial_0       |
+| array_partition | variable=local_kNearstDist complete dim=0                    | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:386 in krnl_partialknn, local_kNearstDist               |
+| array_partition | variable=local_kNearstId complete dim=0                      | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:388 in krnl_partialknn, local_kNearstId                 |
+| array_partition | variable=global_kNearstDist complete                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:392 in krnl_partialknn, global_kNearstDist              |
+| array_partition | variable=global_kNearstId complete                           | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:394 in krnl_partialknn, global_kNearstId                |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:397 in krnl_partialknn                                  |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:422 in krnl_partialknn                                  |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:440 in krnl_partialknn                                  |
+| array_partition | variable=temp_kNearstDist complete dim=1                     | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:466 in krnl_partialknn, temp_kNearstDist                |
+| array_partition | variable=temp_kNearstDist complete dim=2                     | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:467 in krnl_partialknn, temp_kNearstDist                |
+| array_partition | variable=temp_kNearstDist complete dim=3                     | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:468 in krnl_partialknn, temp_kNearstDist                |
+| array_partition | variable=temp_kNearstId complete dim=1                       | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:471 in krnl_partialknn, temp_kNearstId                  |
+| array_partition | variable=temp_kNearstId complete dim=2                       | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:472 in krnl_partialknn, temp_kNearstId                  |
+| array_partition | variable=temp_kNearstId complete dim=3                       | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:473 in krnl_partialknn, temp_kNearstId                  |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:478 in krnl_partialknn                                  |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:481 in krnl_partialknn                                  |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:484 in krnl_partialknn                                  |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:497 in krnl_partialknn                                  |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:506 in krnl_partialknn                                  |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:516 in krnl_partialknn                                  |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:536 in krnl_partialknn                                  |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:547 in krnl_partialknn                                  |
+| inline          | OFF                                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:706 in seq_global_merge_l1_l2                           |
+| array_partition | variable=idx complete dim=0                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:708 in seq_global_merge_l1_l2, idx                      |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:711 in seq_global_merge_l1_l2                           |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:720 in seq_global_merge_l1_l2                           |
+| disaggregate    | variable = in_dist0                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:742 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_dist0._                                    | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:743 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_dist0._ bit                                    | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:744 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_dist0._peek                                | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:745 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_dist0._peek bit                                | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:746 in krnl_globalsort_l1_l2                            |
+| disaggregate    | variable = in_id0                                            | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:750 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_id0._                                      | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:751 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_id0._ bit                                      | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:752 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_id0._peek                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:753 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_id0._peek bit                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:754 in krnl_globalsort_l1_l2                            |
+| disaggregate    | variable = in_dist1                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:758 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_dist1._                                    | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:759 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_dist1._ bit                                    | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:760 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_dist1._peek                                | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:761 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_dist1._peek bit                                | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:762 in krnl_globalsort_l1_l2                            |
+| disaggregate    | variable = in_id1                                            | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:766 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_id1._                                      | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:767 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_id1._ bit                                      | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:768 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_id1._peek                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:769 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_id1._peek bit                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:770 in krnl_globalsort_l1_l2                            |
+| disaggregate    | variable = in_dist2                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:774 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_dist2._                                    | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:775 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_dist2._ bit                                    | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:776 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_dist2._peek                                | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:777 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_dist2._peek bit                                | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:778 in krnl_globalsort_l1_l2                            |
+| disaggregate    | variable = in_id2                                            | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:782 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_id2._                                      | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:783 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_id2._ bit                                      | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:784 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = in_id2._peek                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:785 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = in_id2._peek bit                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:786 in krnl_globalsort_l1_l2                            |
+| disaggregate    | variable = out_dist                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:790 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = out_dist._                                    | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:791 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = out_dist._ bit                                    | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:792 in krnl_globalsort_l1_l2                            |
+| disaggregate    | variable = out_id                                            | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:795 in krnl_globalsort_l1_l2                            |
+| interface       | ap_fifo port = out_id._                                      | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:796 in krnl_globalsort_l1_l2                            |
+| aggregate       | variable = out_id._ bit                                      | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:797 in krnl_globalsort_l1_l2                            |
+| array_partition | variable=local_kNearstDist_partial complete dim=0            | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:802 in krnl_globalsort_l1_l2, local_kNearstDist_partial |
+| array_partition | variable=local_kNearstId_partial complete dim=0              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:804 in krnl_globalsort_l1_l2, local_kNearstId_partial   |
+| array_partition | variable=output_dist complete                                | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:807 in krnl_globalsort_l1_l2, output_dist               |
+| array_partition | variable=output_id complete                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:809 in krnl_globalsort_l1_l2, output_id                 |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:812 in krnl_globalsort_l1_l2                            |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:825 in krnl_globalsort_l1_l2                            |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:840 in krnl_globalsort_l1_l2                            |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:851 in krnl_globalsort_l1_l2                            |
+| inline          | OFF                                                          | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:864 in seq_global_merge_l3                              |
+| array_partition | variable=idx complete dim=0                                  | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:866 in seq_global_merge_l3, idx                         |
+| unroll          |                                                              | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:869 in seq_global_merge_l3                              |
+| pipeline        | II=1                                                         | ../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:878 in seq_global_merge_l3                              |
++-----------------+--------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+

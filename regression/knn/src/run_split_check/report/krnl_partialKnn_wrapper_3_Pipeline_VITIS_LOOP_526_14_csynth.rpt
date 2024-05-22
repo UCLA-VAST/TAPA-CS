@@ -1,0 +1,225 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_partialKnn_wrapper_3_Pipeline_VITIS_LOOP_526_14'
+================================================================
+* Date:           Wed May 22 14:57:33 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_partialKnn_wrapper_3 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.095 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       13|       13|  43.290 ns|  43.290 ns|   13|   13|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_526_14  |       11|       11|         1|          1|          1|    11|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       21|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|      118|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       27|    -|
+|Register             |        -|     -|      646|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      646|      166|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+----------------+---------+----+---+----+-----+
+    |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +---------------------+----------------+---------+----+---+----+-----+
+    |mux_114_32_1_1_U635  |mux_114_32_1_1  |        0|   0|  0|  59|    0|
+    |mux_114_32_1_1_U636  |mux_114_32_1_1  |        0|   0|  0|  59|    0|
+    +---------------------+----------------+---------+----+---+----+-----+
+    |Total                |                |        0|   0|  0| 118|    0|
+    +---------------------+----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln526_fu_506_p2   |         +|   0|  0|  12|           4|           1|
+    |icmp_ln526_fu_500_p2  |      icmp|   0|  0|   9|           4|           4|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  21|           8|           5|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_1  |   9|          2|    4|          8|
+    |j_fu_136              |   9|          2|    4|          8|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  27|          6|    9|         18|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   1|   0|    1|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |global_kNearstDist_1_fu_148  |  32|   0|   32|          0|
+    |global_kNearstDist_2_fu_152  |  32|   0|   32|          0|
+    |global_kNearstDist_3_fu_156  |  32|   0|   32|          0|
+    |global_kNearstDist_4_fu_160  |  32|   0|   32|          0|
+    |global_kNearstDist_5_fu_164  |  32|   0|   32|          0|
+    |global_kNearstDist_6_fu_168  |  32|   0|   32|          0|
+    |global_kNearstDist_7_fu_172  |  32|   0|   32|          0|
+    |global_kNearstDist_8_fu_176  |  32|   0|   32|          0|
+    |global_kNearstDist_9_fu_180  |  32|   0|   32|          0|
+    |global_kNearstDist_fu_144    |  32|   0|   32|          0|
+    |global_kNearstId_1_fu_184    |  32|   0|   32|          0|
+    |global_kNearstId_2_fu_188    |  32|   0|   32|          0|
+    |global_kNearstId_3_fu_192    |  32|   0|   32|          0|
+    |global_kNearstId_4_fu_196    |  32|   0|   32|          0|
+    |global_kNearstId_5_fu_200    |  32|   0|   32|          0|
+    |global_kNearstId_6_fu_204    |  32|   0|   32|          0|
+    |global_kNearstId_7_fu_208    |  32|   0|   32|          0|
+    |global_kNearstId_8_fu_212    |  32|   0|   32|          0|
+    |global_kNearstId_9_fu_216    |  32|   0|   32|          0|
+    |global_kNearstId_fu_140      |  32|   0|   32|          0|
+    |j_fu_136                     |   4|   0|    4|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 646|   0|  646|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+------------------------------------------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |                     Source Object                    |    C Type    |
++---------------------------------+-----+-----+------------+------------------------------------------------------+--------------+
+|ap_clk                           |   in|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_3_Pipeline_VITIS_LOOP_526_14|  return value|
+|ap_rst                           |   in|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_3_Pipeline_VITIS_LOOP_526_14|  return value|
+|ap_start                         |   in|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_3_Pipeline_VITIS_LOOP_526_14|  return value|
+|ap_done                          |  out|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_3_Pipeline_VITIS_LOOP_526_14|  return value|
+|ap_idle                          |  out|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_3_Pipeline_VITIS_LOOP_526_14|  return value|
+|ap_ready                         |  out|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_3_Pipeline_VITIS_LOOP_526_14|  return value|
+|local_kNearstId_reload           |   in|   32|     ap_none|                                local_kNearstId_reload|        scalar|
+|local_kNearstId_1_reload         |   in|   32|     ap_none|                              local_kNearstId_1_reload|        scalar|
+|local_kNearstId_2_reload         |   in|   32|     ap_none|                              local_kNearstId_2_reload|        scalar|
+|local_kNearstId_3_reload         |   in|   32|     ap_none|                              local_kNearstId_3_reload|        scalar|
+|local_kNearstId_4_reload         |   in|   32|     ap_none|                              local_kNearstId_4_reload|        scalar|
+|local_kNearstId_5_reload         |   in|   32|     ap_none|                              local_kNearstId_5_reload|        scalar|
+|local_kNearstId_6_reload         |   in|   32|     ap_none|                              local_kNearstId_6_reload|        scalar|
+|local_kNearstId_7_reload         |   in|   32|     ap_none|                              local_kNearstId_7_reload|        scalar|
+|local_kNearstId_8_reload         |   in|   32|     ap_none|                              local_kNearstId_8_reload|        scalar|
+|local_kNearstId_9_reload         |   in|   32|     ap_none|                              local_kNearstId_9_reload|        scalar|
+|local_kNearstId_10_reload        |   in|   32|     ap_none|                             local_kNearstId_10_reload|        scalar|
+|local_kNearstDist_reload         |   in|   32|     ap_none|                              local_kNearstDist_reload|        scalar|
+|local_kNearstDist_1_reload       |   in|   32|     ap_none|                            local_kNearstDist_1_reload|        scalar|
+|local_kNearstDist_2_reload       |   in|   32|     ap_none|                            local_kNearstDist_2_reload|        scalar|
+|local_kNearstDist_3_reload       |   in|   32|     ap_none|                            local_kNearstDist_3_reload|        scalar|
+|local_kNearstDist_4_reload       |   in|   32|     ap_none|                            local_kNearstDist_4_reload|        scalar|
+|local_kNearstDist_5_reload       |   in|   32|     ap_none|                            local_kNearstDist_5_reload|        scalar|
+|local_kNearstDist_6_reload       |   in|   32|     ap_none|                            local_kNearstDist_6_reload|        scalar|
+|local_kNearstDist_7_reload       |   in|   32|     ap_none|                            local_kNearstDist_7_reload|        scalar|
+|local_kNearstDist_8_reload       |   in|   32|     ap_none|                            local_kNearstDist_8_reload|        scalar|
+|local_kNearstDist_9_reload       |   in|   32|     ap_none|                            local_kNearstDist_9_reload|        scalar|
+|local_kNearstDist_10_reload      |   in|   32|     ap_none|                           local_kNearstDist_10_reload|        scalar|
+|global_kNearstId_9_out           |  out|   32|      ap_vld|                                global_kNearstId_9_out|       pointer|
+|global_kNearstId_9_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstId_9_out|       pointer|
+|global_kNearstId_8_out           |  out|   32|      ap_vld|                                global_kNearstId_8_out|       pointer|
+|global_kNearstId_8_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstId_8_out|       pointer|
+|global_kNearstId_7_out           |  out|   32|      ap_vld|                                global_kNearstId_7_out|       pointer|
+|global_kNearstId_7_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstId_7_out|       pointer|
+|global_kNearstId_6_out           |  out|   32|      ap_vld|                                global_kNearstId_6_out|       pointer|
+|global_kNearstId_6_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstId_6_out|       pointer|
+|global_kNearstId_5_out           |  out|   32|      ap_vld|                                global_kNearstId_5_out|       pointer|
+|global_kNearstId_5_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstId_5_out|       pointer|
+|global_kNearstId_4_out           |  out|   32|      ap_vld|                                global_kNearstId_4_out|       pointer|
+|global_kNearstId_4_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstId_4_out|       pointer|
+|global_kNearstId_3_out           |  out|   32|      ap_vld|                                global_kNearstId_3_out|       pointer|
+|global_kNearstId_3_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstId_3_out|       pointer|
+|global_kNearstId_2_out           |  out|   32|      ap_vld|                                global_kNearstId_2_out|       pointer|
+|global_kNearstId_2_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstId_2_out|       pointer|
+|global_kNearstId_1_out           |  out|   32|      ap_vld|                                global_kNearstId_1_out|       pointer|
+|global_kNearstId_1_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstId_1_out|       pointer|
+|global_kNearstDist_9_out         |  out|   32|      ap_vld|                              global_kNearstDist_9_out|       pointer|
+|global_kNearstDist_9_out_ap_vld  |  out|    1|      ap_vld|                              global_kNearstDist_9_out|       pointer|
+|global_kNearstDist_8_out         |  out|   32|      ap_vld|                              global_kNearstDist_8_out|       pointer|
+|global_kNearstDist_8_out_ap_vld  |  out|    1|      ap_vld|                              global_kNearstDist_8_out|       pointer|
+|global_kNearstDist_7_out         |  out|   32|      ap_vld|                              global_kNearstDist_7_out|       pointer|
+|global_kNearstDist_7_out_ap_vld  |  out|    1|      ap_vld|                              global_kNearstDist_7_out|       pointer|
+|global_kNearstDist_6_out         |  out|   32|      ap_vld|                              global_kNearstDist_6_out|       pointer|
+|global_kNearstDist_6_out_ap_vld  |  out|    1|      ap_vld|                              global_kNearstDist_6_out|       pointer|
+|global_kNearstDist_5_out         |  out|   32|      ap_vld|                              global_kNearstDist_5_out|       pointer|
+|global_kNearstDist_5_out_ap_vld  |  out|    1|      ap_vld|                              global_kNearstDist_5_out|       pointer|
+|global_kNearstDist_4_out         |  out|   32|      ap_vld|                              global_kNearstDist_4_out|       pointer|
+|global_kNearstDist_4_out_ap_vld  |  out|    1|      ap_vld|                              global_kNearstDist_4_out|       pointer|
+|global_kNearstDist_3_out         |  out|   32|      ap_vld|                              global_kNearstDist_3_out|       pointer|
+|global_kNearstDist_3_out_ap_vld  |  out|    1|      ap_vld|                              global_kNearstDist_3_out|       pointer|
+|global_kNearstDist_2_out         |  out|   32|      ap_vld|                              global_kNearstDist_2_out|       pointer|
+|global_kNearstDist_2_out_ap_vld  |  out|    1|      ap_vld|                              global_kNearstDist_2_out|       pointer|
+|global_kNearstDist_1_out         |  out|   32|      ap_vld|                              global_kNearstDist_1_out|       pointer|
+|global_kNearstDist_1_out_ap_vld  |  out|    1|      ap_vld|                              global_kNearstDist_1_out|       pointer|
+|global_kNearstDist_out           |  out|   32|      ap_vld|                                global_kNearstDist_out|       pointer|
+|global_kNearstDist_out_ap_vld    |  out|    1|      ap_vld|                                global_kNearstDist_out|       pointer|
+|global_kNearstId_out             |  out|   32|      ap_vld|                                  global_kNearstId_out|       pointer|
+|global_kNearstId_out_ap_vld      |  out|    1|      ap_vld|                                  global_kNearstId_out|       pointer|
++---------------------------------+-----+-----+------------+------------------------------------------------------+--------------+
+

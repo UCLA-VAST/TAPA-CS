@@ -302,8 +302,6 @@ def checkpoint_floorplan(config_with_floorplan, autobridge_dir):
 
   region_to_inst = defaultdict(list)
   for vertex, properties in config_with_floorplan['vertices'].items():
-    _logger.info('vertex %s', vertex)
-    _logger.info('properties %s', properties)
     if properties['category'] == 'PORT_VERTEX':
       continue
     region = properties['floorplan_region']

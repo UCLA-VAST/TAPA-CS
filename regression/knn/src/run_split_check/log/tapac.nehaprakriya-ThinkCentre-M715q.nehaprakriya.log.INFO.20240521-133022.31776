@@ -1,0 +1,6 @@
+I0521 13:30:22.824 tapa.util:162] logging level set to INFO
+I0521 13:30:22.824 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0521 13:30:22.824 tapa.tapac:496] Python recursion limit set to 3000
+I0521 13:30:22.824 tapa.tapac:416] Executing all steps of tapac
+W0521 13:30:22.824 tapa.tapac:438] The floorplan option is automatically enabled because a floorplan output file is provided
+I0521 13:30:22.951 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`

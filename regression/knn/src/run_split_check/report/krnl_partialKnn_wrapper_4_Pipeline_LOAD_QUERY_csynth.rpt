@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_partialKnn_wrapper_4_Pipeline_LOAD_QUERY'
+================================================================
+* Date:           Wed May 22 14:57:19 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_partialKnn_wrapper_4 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  3.847 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |              |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOAD_QUERY  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|     1299|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       45|    -|
+|Register             |        -|     -|      427|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      427|     1344|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+-----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+-----+------------+------------+
+    |add_ln401_fu_249_p2        |         +|   0|  0|   39|          32|           1|
+    |i_resp_5_fu_150_p2         |         +|   0|  0|   39|          32|           1|
+    |sub_ln399_1_fu_192_p2      |         -|   0|  0|   37|           1|          30|
+    |sub_ln399_fu_172_p2        |         -|   0|  0|   39|           1|          32|
+    |sub_ln407_1_fu_299_p2      |         -|   0|  0|   12|           1|           5|
+    |sub_ln407_fu_144_p2        |         -|   0|  0|   10|           1|           3|
+    |ap_condition_311           |       and|   0|  0|    2|           1|           1|
+    |tmp_7_nbreadreq_fu_76_p3   |       and|   0|  0|    2|           1|           0|
+    |icmp_ln396_fu_138_p2       |      icmp|   0|  0|   19|          31|           1|
+    |icmp_ln400_fu_230_p2       |      icmp|   0|  0|   19|          31|           1|
+    |lshr_ln674_fu_328_p2       |      lshr|   0|  0|  950|         256|         256|
+    |input_rd_idx_fu_212_p3     |    select|   0|  0|   30|           1|          30|
+    |local_Query_0_2_fu_345_p3  |    select|   0|  0|   32|           1|          32|
+    |local_Query_0_3_fu_353_p3  |    select|   0|  0|   32|           1|          32|
+    |select_ln400_fu_255_p3     |    select|   0|  0|   32|           1|          32|
+    |select_ln407_fu_309_p3     |    select|   0|  0|    3|           1|           3|
+    |ap_enable_pp0              |       xor|   0|  0|    2|           1|           2|
+    +---------------------------+----------+----+---+-----+------------+------------+
+    |Total                      |          |   0|  0| 1299|         394|         462|
+    +---------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_done_int                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1    |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_resp_4  |   9|          2|   32|         64|
+    |i_req_fu_60                |   9|          2|   32|         64|
+    |i_resp_fu_64               |   9|          2|   32|         64|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      |  45|         10|   98|        196|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------+-----+----+-----+-----------+
+    |                   Name                   |  FF | LUT| Bits| Const Bits|
+    +------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                 |    1|   0|    1|          0|
+    |ap_done_reg                               |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                   |    1|   0|    1|          0|
+    |i_req_fu_60                               |   32|   0|   32|          0|
+    |i_resp_4_reg_407                          |   32|   0|   32|          0|
+    |i_resp_fu_64                              |   32|   0|   32|          0|
+    |local_Query_0_1_fu_72                     |   32|   0|   32|          0|
+    |local_Query_0_fu_68                       |   32|   0|   32|          0|
+    |searchSpace_0_read_data_s_read_reg_425_1  |  257|   0|  257|          0|
+    |sub_ln407_reg_430                         |    3|   0|    3|          0|
+    |tmp_7_reg_421                             |    1|   0|    1|          0|
+    |trunc_ln396_reg_413                       |    3|   0|    3|          0|
+    +------------------------------------------+-----+----+-----+-----------+
+    |Total                                     |  427|   0|  427|          0|
+    +------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+-----------------------------------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |                 Source Object                 |    C Type    |
++-----------------------------------+-----+-----+------------+-----------------------------------------------+--------------+
+|ap_clk                             |   in|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_4_Pipeline_LOAD_QUERY|  return value|
+|ap_rst                             |   in|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_4_Pipeline_LOAD_QUERY|  return value|
+|ap_start                           |   in|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_4_Pipeline_LOAD_QUERY|  return value|
+|ap_done                            |  out|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_4_Pipeline_LOAD_QUERY|  return value|
+|ap_idle                            |  out|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_4_Pipeline_LOAD_QUERY|  return value|
+|ap_ready                           |  out|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_4_Pipeline_LOAD_QUERY|  return value|
+|searchSpace_0_read_data_s_dout     |   in|  257|     ap_fifo|                      searchSpace_0_read_data_s|       pointer|
+|searchSpace_0_read_data_s_empty_n  |   in|    1|     ap_fifo|                      searchSpace_0_read_data_s|       pointer|
+|searchSpace_0_read_data_s_read     |  out|    1|     ap_fifo|                      searchSpace_0_read_data_s|       pointer|
+|searchSpace_0_read_addr_din        |  out|   65|     ap_fifo|                        searchSpace_0_read_addr|       pointer|
+|searchSpace_0_read_addr_full_n     |   in|    1|     ap_fifo|                        searchSpace_0_read_addr|       pointer|
+|searchSpace_0_read_addr_write      |  out|    1|     ap_fifo|                        searchSpace_0_read_addr|       pointer|
+|local_Query_0_1_out                |  out|   32|      ap_vld|                            local_Query_0_1_out|       pointer|
+|local_Query_0_1_out_ap_vld         |  out|    1|      ap_vld|                            local_Query_0_1_out|       pointer|
+|local_Query_0_out                  |  out|   32|      ap_vld|                              local_Query_0_out|       pointer|
+|local_Query_0_out_ap_vld           |  out|    1|      ap_vld|                              local_Query_0_out|       pointer|
++-----------------------------------+-----+-----+------------+-----------------------------------------------+--------------+
+

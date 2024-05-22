@@ -176,7 +176,6 @@ void load(tapa::async_mmap<INTERFACE_WIDTH>& a, tapa::async_mmap<INTERFACE_WIDTH
   #pragma HLS inline off
   // unsigned int loop_bound = GRID_COLS/WIDTH_FACTOR*PART_ROWS + (TOP_APPEND+BOTTOM_APPEND)*(iters-1) + 65 + 66;
   unsigned int loop_bound = GRID_COLS/WIDTH_FACTOR*PART_ROWS + (TOP_APPEND+BOTTOM_APPEND)*(iters-1) + 1026;
-
   for(int k_wr_req = (1026), k_wr_resp = (1026), k_rd_req = 0, k_rd_resp = 0; k_rd_resp < loop_bound || k_wr_resp < loop_bound; ) {
     // read from a
     if (k_rd_req < loop_bound && a.read_addr.try_write(k_rd_req)) {
@@ -230,9 +229,24 @@ void unikernel(tapa::mmap<INTERFACE_WIDTH> in_0, tapa::mmap<INTERFACE_WIDTH> out
                tapa::mmap<INTERFACE_WIDTH> in_12, tapa::mmap<INTERFACE_WIDTH> out_12,
                tapa::mmap<INTERFACE_WIDTH> in_13, tapa::mmap<INTERFACE_WIDTH> out_13,
                tapa::mmap<INTERFACE_WIDTH> in_14, tapa::mmap<INTERFACE_WIDTH> out_14,
+              tapa::mmap<INTERFACE_WIDTH> in_15, tapa::mmap<INTERFACE_WIDTH> out_15,
+              tapa::mmap<INTERFACE_WIDTH> in_16, tapa::mmap<INTERFACE_WIDTH> out_16,
+              tapa::mmap<INTERFACE_WIDTH> in_17, tapa::mmap<INTERFACE_WIDTH> out_17,
+              tapa::mmap<INTERFACE_WIDTH> in_18, tapa::mmap<INTERFACE_WIDTH> out_18,
+              tapa::mmap<INTERFACE_WIDTH> in_19, tapa::mmap<INTERFACE_WIDTH> out_19,
+              tapa::mmap<INTERFACE_WIDTH> in_20, tapa::mmap<INTERFACE_WIDTH> out_20,
+              tapa::mmap<INTERFACE_WIDTH> in_21, tapa::mmap<INTERFACE_WIDTH> out_21,
+              tapa::mmap<INTERFACE_WIDTH> in_22, tapa::mmap<INTERFACE_WIDTH> out_22,
+              tapa::mmap<INTERFACE_WIDTH> in_23, tapa::mmap<INTERFACE_WIDTH> out_23,
+              tapa::mmap<INTERFACE_WIDTH> in_24, tapa::mmap<INTERFACE_WIDTH> out_24,
+              tapa::mmap<INTERFACE_WIDTH> in_25, tapa::mmap<INTERFACE_WIDTH> out_25,
+              tapa::mmap<INTERFACE_WIDTH> in_26, tapa::mmap<INTERFACE_WIDTH> out_26,
+              tapa::mmap<INTERFACE_WIDTH> in_27, tapa::mmap<INTERFACE_WIDTH> out_27,
+              tapa::mmap<INTERFACE_WIDTH> in_28, tapa::mmap<INTERFACE_WIDTH> out_28,
+              tapa::mmap<INTERFACE_WIDTH> in_29, tapa::mmap<INTERFACE_WIDTH> out_29,
                 uint32_t iters){
-  tapa::streams<INTERFACE_WIDTH, 15, 3> k_wr;
-  tapa::streams<INTERFACE_WIDTH, 15, 3> k_rd;
+  tapa::streams<INTERFACE_WIDTH, 30, 3> k_wr;
+  tapa::streams<INTERFACE_WIDTH, 30, 3> k_rd;
 
   tapa::task()
     .invoke(inter_kernel, in_0, out_0, k_rd[0], k_wr[0], iters)
@@ -265,5 +279,35 @@ void unikernel(tapa::mmap<INTERFACE_WIDTH> in_0, tapa::mmap<INTERFACE_WIDTH> out
     .invoke(DILATE, k_rd[13], k_wr[13], iters)
     .invoke(inter_kernel, in_14, out_14, k_rd[14], k_wr[14], iters)
     .invoke(DILATE, k_rd[14], k_wr[14], iters)
+    .invoke(inter_kernel, in_15, out_15, k_rd[15], k_wr[15], iters)
+    .invoke(DILATE, k_rd[15], k_wr[15], iters)
+    .invoke(inter_kernel, in_16, out_16, k_rd[16], k_wr[16], iters)
+    .invoke(DILATE, k_rd[16], k_wr[16], iters)
+    .invoke(inter_kernel, in_17, out_17, k_rd[17], k_wr[17], iters)
+    .invoke(DILATE, k_rd[17], k_wr[17], iters)
+    .invoke(inter_kernel, in_18, out_18, k_rd[18], k_wr[18], iters)
+    .invoke(DILATE, k_rd[18], k_wr[18], iters)
+    .invoke(inter_kernel, in_19, out_19, k_rd[19], k_wr[19], iters)
+    .invoke(DILATE, k_rd[19], k_wr[19], iters)
+    .invoke(inter_kernel, in_20, out_20, k_rd[20], k_wr[20], iters)
+    .invoke(DILATE, k_rd[20], k_wr[20], iters)
+    .invoke(inter_kernel, in_21, out_21, k_rd[21], k_wr[21], iters)
+    .invoke(DILATE, k_rd[21], k_wr[21], iters)
+    .invoke(inter_kernel, in_22, out_22, k_rd[22], k_wr[22], iters)
+    .invoke(DILATE, k_rd[22], k_wr[22], iters)
+    .invoke(inter_kernel, in_23, out_23, k_rd[23], k_wr[23], iters)
+    .invoke(DILATE, k_rd[23], k_wr[23], iters)
+    .invoke(inter_kernel, in_24, out_24, k_rd[24], k_wr[24], iters)
+    .invoke(DILATE, k_rd[24], k_wr[24], iters)
+    .invoke(inter_kernel, in_25, out_25, k_rd[25], k_wr[25], iters)
+    .invoke(DILATE, k_rd[25], k_wr[25], iters)
+    .invoke(inter_kernel, in_26, out_26, k_rd[26], k_wr[26], iters)
+    .invoke(DILATE, k_rd[26], k_wr[26], iters)
+    .invoke(inter_kernel, in_27, out_27, k_rd[27], k_wr[27], iters)
+    .invoke(DILATE, k_rd[27], k_wr[27], iters)
+    .invoke(inter_kernel, in_28, out_28, k_rd[28], k_wr[28], iters)
+    .invoke(DILATE, k_rd[28], k_wr[28], iters)
+    .invoke(inter_kernel, in_29, out_29, k_rd[29], k_wr[29], iters)
+    .invoke(DILATE, k_rd[29], k_wr[29], iters)
     ;
 }

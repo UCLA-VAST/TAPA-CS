@@ -12,7 +12,7 @@ from tapa.AutoBridge.src.autobridge.Floorplan.Utilities import (
   get_two_way_partition_slots,
   get_actual_usage,
 )
-from tapa.AutoBridge.src.autobridge.Floorplan.Bipartition import Bipartition
+from tapa.AutoBridge.src.autobridge.Floorplan.Bipartition import Bipartition, Bipartition_multiFPGA
 from tapa.AutoBridge.src.autobridge.Opt.DataflowGraph import Vertex, DataflowGraph
 from tapa.AutoBridge.src.autobridge.Opt.Slot import Slot
 from tapa.AutoBridge.src.autobridge.Opt.SlotManager import SlotManager, Dir
@@ -43,7 +43,6 @@ def get_floorplan(
   Note that an empty slot will not be in (1), but will occur in (2)
   """
   # get initial v2s
-  cli_logger.info("we are in get_floorplan")
   init_slot = slot_manager.getInitialSlot()
   init_v2s = {v : init_slot for v in graph.getAllVertices()}
 
@@ -116,17 +115,9 @@ def get_floorplan(
       return v2s, get_four_way_partition_slots(slot_manager)
     else:
       return None, None
-  # cli_logger.info("iterative bipartition from single")
-  # v2s = iterative_bipartition(init_v2s, slot_manager, grouping_constraints, pre_assignments)
-  # cli_logger.info(v2s)
   elif floorplan_strategy == 'QUICK_FLOORPLANNING':
     _logger.info(f'user specifies to prioritize speed')
-    cli_logger.info("we chose quick floorplanning and came here")
     v2s = iterative_bipartition(init_v2s, slot_manager, grouping_constraints, pre_assignments)
-    cli_logger.info(v2s)
-    for vertex in v2s:
-      cli_logger.info(vertex.name)
-      cli_logger.info(v2s[vertex].getName())
     if v2s:
       return v2s, get_eight_way_partition_slots(slot_manager)
     else:
@@ -189,8 +180,6 @@ def get_multi_fpga_floorplan(
   (2) a list of all potential slots
   Note that an empty slot will not be in (1), but will occur in (2)
   """
-  # cli_logger.info("slot managers")
-  # cli_logger.info(len(slot_managers))
   for i in range(len(slot_managers)):
     init_slot = slot_managers[i].getInitialSlot()
     init_v2s = {v: init_slot for v in graph.getAllVertices()}
@@ -230,12 +219,6 @@ def get_multi_fpga_floorplan(
   hbm_port_v_list = [graph.getVertex(v_name) for v_name in hbm_port_v_name_list]
   for v_name in hbm_port_v_name_list:
     _logger.info('Binding of HBM vertex %s is subject to change', v_name)
-
-  
-  # for i in range(multi_fpga):
-  #   cli_logger.info("FPGA %d", i+1)
-  #   print_pre_assignment(pre_assignments[i])
-  #   print_vertex_areas(init_v2s.keys(), slot_managers[i].getInitialSlot())
   params = {
     'floorplan_opt_priority': floorplan_opt_priority,
     'min_area_limit': min_area_limit,
@@ -245,25 +228,10 @@ def get_multi_fpga_floorplan(
     'max_search_time': max_search_time,
     'hbm_port_v_list': hbm_port_v_list,
   }
-  # cli_logger.info(graph.getAllVertices())
-  # for vertex in graph.getAllVertices():
-  #   cli_logger.info(vertex.name)
   num_vertices = len(graph.getAllVertices())
-  # cli_logger.info("num_vertices")
-  # cli_logger.info(num_vertices)
   v2s: Dict[Vertex, Slot] = {}
-  # cli_logger.info("floorplan strategy")
-  # cli_logger.info(floorplan_strategy)
   floorplan_strategy = 'QUICK_FLOORPLANNING'
-  # v2s = multi_fpga_iterative_bipartition(init_v2s, slot_managers, grouping_constraints, pre_assignments)
-  # v2s = iterative_bipartition(init_v2s, slot_managers[0], grouping_constraints, pre_assignments[0])
   v2s = Bipartition(
     init_v2s, grouping_constraints, pre_assignments[0], slot_managers[0]
   ).get_bipartition(Dir.horizontal, max_area_limit, max_search_time)
-  cli_logger.info("2-way v2s")
-  cli_logger.info(v2s)
-  for vertex in v2s:
-    cli_logger.info(vertex.name)
-    cli_logger.info(v2s[vertex].getName())
-  cli_logger.info("running 2 way partition")
-  return v2s, get_four_way_partition_slots(slot_managers[0])
+  return v2s, get_eight_way_partition_slots(slot_managers[0])

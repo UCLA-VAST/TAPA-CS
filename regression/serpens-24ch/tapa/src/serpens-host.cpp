@@ -155,6 +155,9 @@ int main(int argc, char **argv) {
     int vec_Y_fpga_chunk_size = ((vec_Y_fpga_column_size + 1023)/1024) * 1024;
     aligned_vector<float> vec_Y_fpga(vec_Y_fpga_chunk_size, 0.0);
     aligned_vector<float> vec_Y_out_fpga(vec_Y_fpga_chunk_size, 0.0);
+    aligned_vector<int> temp0(16,0);
+    aligned_vector<float> temp1(500000, 0.0); 
+    aligned_vector<float> temp2(400000, 0.0);
     
     for (int mm = 0; mm < M; ++mm) {
         vec_Y_fpga[mm] = vec_Y_cpu[mm];
@@ -186,19 +189,26 @@ int main(int argc, char **argv) {
     tmpPointer_v = (int*) &BETA;
     int beta_int = *tmpPointer_v;
 
+    // std::string bitstream="/home/nehaprakriya/serpens-testing/Serpens_xilinx_u55c_gen3x16_xdma_3_202210_1.xclbin";
     std::string bitstream;
     if (const auto bitstream_ptr = getenv("TAPAB")) {
         bitstream = bitstream_ptr;
     }
-    
+    vector<aligned_vector<unsigned long> > split_sparse_A_fpga_vec_1(sparse_A_fpga_vec.begin(), sparse_A_fpga_vec.begin()+sparse_A_fpga_vec.size()/2);
+    vector<aligned_vector<unsigned long> > split_sparse_A_fpga_vec_2(sparse_A_fpga_vec.begin()+sparse_A_fpga_vec.size()/2, sparse_A_fpga_vec.end());
+    // bitstream="./vitis_run_hw_emu/Serpens_xilinx_u55c_gen3x16_xdma_3_202210_1.xclbin";
+    // bitstream="./run/Serpens.xo";
     cout << "launch kernel\n";
     double time_taken
     = tapa::invoke(Serpens, bitstream,
                    tapa::read_only_mmap<int>(edge_list_ptr_fpga),
-                   tapa::read_only_mmaps<unsigned long, NUM_CH_SPARSE>(sparse_A_fpga_vec).reinterpret<ap_uint<512>>(),
+                   tapa::read_only_mmaps<unsigned long, 24>(split_sparse_A_fpga_vec_2).reinterpret<ap_uint<512>>(),
                    tapa::read_only_mmap<float>(vec_X_fpga).reinterpret<float_v16>(),
-                   tapa::read_only_mmap<float>(vec_Y_fpga).reinterpret<float_v16>(),
-                   tapa::write_only_mmap<float>(vec_Y_out_fpga).reinterpret<float_v16>(),
+                //    tapa::read_only_mmap<float>(vec_Y_fpga).reinterpret<float_v16>(),
+                //    tapa::write_only_mmap<float>(vec_Y_out_fpga).reinterpret<float_v16>(),
+                   tapa::read_write_mmap<int>(temp0),
+                   tapa::read_write_mmap<float>(temp1).reinterpret<float_v16>(),
+                   tapa::read_write_mmap<float>(temp2).reinterpret<float_v2>(),
                    MAX_SIZE_edge_LIST_PTR,
                    MAX_LEN_edge_PTR,
                    M,

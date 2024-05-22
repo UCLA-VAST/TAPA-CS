@@ -1,0 +1,10 @@
+<pragmas>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp" line="10" pragmaType="interface" parentfunction="Mmap2Stream" mode="m_axi" port="mmap" bundle="mmap" offset="direct" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp" line="13" pragmaType="disaggregate" parentfunction="Mmap2Stream" variable="stream"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp" line="14" pragmaType="interface" parentfunction="Mmap2Stream" mode="ap_fifo" port="" register="0" name="" depth="-1"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp" line="15" pragmaType="aggregate" parentfunction="Mmap2Stream" compact="1" variable=""/>
+<pragma file="/usr/local/include/tapa/xilinx/hls/stream.h" line="0" pragmaType="inline" parentfunction="tapa::ostream<float>::operator<<(float const&)" off="0" region="0" recursive="0"/>
+<pragma file="/usr/local/include/tapa/xilinx/hls/stream.h" line="150" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="173" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="0" pragmaType="inline" parentfunction="full" off="0" region="0" recursive="0"/>
+</pragmas>

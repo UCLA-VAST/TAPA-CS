@@ -1,0 +1,119 @@
+
+
+================================================================
+== Vitis HLS Report for 'compute'
+================================================================
+* Date:           Wed May 22 14:54:42 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_partialKnn_wrapper_10 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.390 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min   |    max    | min |  max |   Type  |
+    +---------+---------+----------+-----------+-----+------+---------+
+    |        1|     4128|  3.330 ns|  13.746 us|    1|  4128|       no|
+    +---------+---------+----------+-----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%p_read17 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read1"   --->   Operation 3 'read' 'p_read17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_read_21 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_read"   --->   Operation 4 'read' 'p_read_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%flag_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %flag"   --->   Operation 5 'read' 'flag_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i256 %local_SP, i64 666, i64 164, i64 18446744073709551615"   --->   Operation 6 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln117 = br i1 %flag_read, void %if.end43, void %for.inc.3.preheader" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_10.cpp:117]   --->   Operation 7 'br' 'br_ln117' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @compute_Pipeline_VITIS_LOOP_119_1_VITIS_LOOP_120_2, i32 %local_distance_7_3, i32 %local_distance_7_2, i32 %local_distance_7_1, i32 %local_distance_7_0, i32 %local_distance_6_3, i32 %local_distance_6_2, i32 %local_distance_6_1, i32 %local_distance_6_0, i32 %local_distance_5_3, i32 %local_distance_5_2, i32 %local_distance_5_1, i32 %local_distance_5_0, i32 %local_distance_4_3, i32 %local_distance_4_2, i32 %local_distance_4_1, i32 %local_distance_4_0, i32 %local_distance_3_3, i32 %local_distance_3_2, i32 %local_distance_3_1, i32 %local_distance_3_0, i32 %local_distance_2_3, i32 %local_distance_2_2, i32 %local_distance_2_1, i32 %local_distance_2_0, i32 %local_distance_1_3, i32 %local_distance_1_2, i32 %local_distance_1_1, i32 %local_distance_1_0, i32 %local_distance_0_3, i32 %local_distance_0_2, i32 %local_distance_0_1, i32 %local_distance_0_0, i256 %local_SP, i32 %p_read_21, i32 %p_read17"   --->   Operation 8 'call' 'call_ln0' <Predicate = (flag_read)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln0 = call void @compute_Pipeline_VITIS_LOOP_119_1_VITIS_LOOP_120_2, i32 %local_distance_7_3, i32 %local_distance_7_2, i32 %local_distance_7_1, i32 %local_distance_7_0, i32 %local_distance_6_3, i32 %local_distance_6_2, i32 %local_distance_6_1, i32 %local_distance_6_0, i32 %local_distance_5_3, i32 %local_distance_5_2, i32 %local_distance_5_1, i32 %local_distance_5_0, i32 %local_distance_4_3, i32 %local_distance_4_2, i32 %local_distance_4_1, i32 %local_distance_4_0, i32 %local_distance_3_3, i32 %local_distance_3_2, i32 %local_distance_3_1, i32 %local_distance_3_0, i32 %local_distance_2_3, i32 %local_distance_2_2, i32 %local_distance_2_1, i32 %local_distance_2_0, i32 %local_distance_1_3, i32 %local_distance_1_2, i32 %local_distance_1_1, i32 %local_distance_1_0, i32 %local_distance_0_3, i32 %local_distance_0_2, i32 %local_distance_0_1, i32 %local_distance_0_0, i256 %local_SP, i32 %p_read_21, i32 %p_read17"   --->   Operation 9 'call' 'call_ln0' <Predicate = (flag_read)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end43"   --->   Operation 10 'br' 'br_ln0' <Predicate = (flag_read)> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%ret_ln165 = ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_10.cpp:165]   --->   Operation 11 'ret' 'ret_ln165' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.899ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

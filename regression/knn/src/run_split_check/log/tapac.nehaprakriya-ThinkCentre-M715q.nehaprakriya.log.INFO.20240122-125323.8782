@@ -1,0 +1,9 @@
+I0122 12:53:23.257 tapa.util:162] logging level set to INFO
+I0122 12:53:23.258 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0122 12:53:23.258 tapa.tapac:496] Python recursion limit set to 3000
+I0122 12:53:23.258 tapa.tapac:416] Executing all steps of tapac
+W0122 12:53:23.258 tapa.tapac:438] The floorplan option is automatically enabled because a floorplan output file is provided
+I0122 12:53:23.374 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+I0122 12:53:31.071 tapa.core:179] extracting HLS C++ files
+I0122 12:53:31.093 tapa.core:201] running HLS
+I0122 12:53:31.096 tapa.core:239] spawn 8 workers for parallel HLS synthesis of the tasks

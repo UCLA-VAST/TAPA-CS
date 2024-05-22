@@ -1,20 +1,20 @@
-#include "/home/nehaprakriya/HLS_arbitrary_Precision_Types/include/ap_int.h"
+#include <ap_int.h>
 #include <inttypes.h>
 #ifndef DILATE_H
 
 #define DILATE_H
 
-#define GRID_ROWS 4096
-#define GRID_COLS 4096
+#define GRID_ROWS 2048
+#define GRID_COLS 2048
 
-#define KERNEL_COUNT 15
+#define KERNEL_COUNT 30
 #define PART_ROWS GRID_ROWS / KERNEL_COUNT
 
-#define ITERATION 128
+#define ITERATION 64
 
 // #define ITERATION 64
 
-#define DWIDTH 512
+#define DWIDTH 128
 #define INTERFACE_WIDTH ap_uint<DWIDTH>
 	const int WIDTH_FACTOR = DWIDTH/32;
 #define PARA_FACTOR 16

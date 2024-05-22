@@ -1,0 +1,246 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_globalSort_L3_Pipeline_VITIS_LOOP_885_2'
+================================================================
+* Date:           Wed May 22 14:54:24 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_globalSort_L3 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.215 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       12|       12|  39.960 ns|  39.960 ns|   12|   12|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_885_2  |       10|       10|         2|          1|          1|    10|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.09>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1"   --->   Operation 5 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%local_kNearstId_partial = alloca i32 1"   --->   Operation 6 'alloca' 'local_kNearstId_partial' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1 = alloca i32 1"   --->   Operation 7 'alloca' 'local_kNearstId_partial_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2 = alloca i32 1"   --->   Operation 8 'alloca' 'local_kNearstId_partial_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_3 = alloca i32 1"   --->   Operation 9 'alloca' 'local_kNearstId_partial_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_4 = alloca i32 1"   --->   Operation 10 'alloca' 'local_kNearstId_partial_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_5 = alloca i32 1"   --->   Operation 11 'alloca' 'local_kNearstId_partial_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_6 = alloca i32 1"   --->   Operation 12 'alloca' 'local_kNearstId_partial_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_7 = alloca i32 1"   --->   Operation 13 'alloca' 'local_kNearstId_partial_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_8 = alloca i32 1"   --->   Operation 14 'alloca' 'local_kNearstId_partial_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_9 = alloca i32 1"   --->   Operation 15 'alloca' 'local_kNearstId_partial_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_10 = alloca i32 1"   --->   Operation 16 'alloca' 'local_kNearstId_partial_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_11 = alloca i32 1"   --->   Operation 17 'alloca' 'local_kNearstId_partial_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_12 = alloca i32 1"   --->   Operation 18 'alloca' 'local_kNearstId_partial_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_13 = alloca i32 1"   --->   Operation 19 'alloca' 'local_kNearstId_partial_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_14 = alloca i32 1"   --->   Operation 20 'alloca' 'local_kNearstId_partial_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_15 = alloca i32 1"   --->   Operation 21 'alloca' 'local_kNearstId_partial_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_16 = alloca i32 1"   --->   Operation 22 'alloca' 'local_kNearstId_partial_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_17 = alloca i32 1"   --->   Operation 23 'alloca' 'local_kNearstId_partial_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_18 = alloca i32 1"   --->   Operation 24 'alloca' 'local_kNearstId_partial_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_19 = alloca i32 1"   --->   Operation 25 'alloca' 'local_kNearstId_partial_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_id1_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_id0_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.38ns)   --->   "%store_ln0 = store i4 0, i4 %i_1"   --->   Operation 28 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc73"   --->   Operation 29 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%i = load i4 %i_1" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885]   --->   Operation 30 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.65ns)   --->   "%icmp_ln885 = icmp_eq  i4 %i, i4 10" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885]   --->   Operation 31 'icmp' 'icmp_ln885' <Predicate = true> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 32 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.70ns)   --->   "%add_ln885 = add i4 %i, i4 1" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885]   --->   Operation 33 'add' 'add_ln885' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln885 = br i1 %icmp_ln885, void %for.inc73.split, void %for.end75.exitStub" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885]   --->   Operation 34 'br' 'br_ln885' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 35 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i == 8)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 36 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i == 7)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 37 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i == 6)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 38 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i == 5)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 39 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i == 4)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 40 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i == 3)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 41 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i == 2)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 42 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i == 1)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 43 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i == 0)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln888 = br void %arrayidx6615.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 44 'br' 'br_ln888' <Predicate = (!icmp_ln885 & i != 0 & i != 1 & i != 2 & i != 3 & i != 4 & i != 5 & i != 6 & i != 7 & i != 8)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.38ns)   --->   "%store_ln885 = store i4 %add_ln885, i4 %i_1" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885]   --->   Operation 45 'store' 'store_ln885' <Predicate = (!icmp_ln885)> <Delay = 0.38>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln885 = br void %for.inc73" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885]   --->   Operation 46 'br' 'br_ln885' <Predicate = (!icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_load = load i32 %local_kNearstId_partial"   --->   Operation 85 'load' 'local_kNearstId_partial_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1_load = load i32 %local_kNearstId_partial_1"   --->   Operation 86 'load' 'local_kNearstId_partial_1_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2_load = load i32 %local_kNearstId_partial_2"   --->   Operation 87 'load' 'local_kNearstId_partial_2_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_3_load = load i32 %local_kNearstId_partial_3"   --->   Operation 88 'load' 'local_kNearstId_partial_3_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_4_load = load i32 %local_kNearstId_partial_4"   --->   Operation 89 'load' 'local_kNearstId_partial_4_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_5_load = load i32 %local_kNearstId_partial_5"   --->   Operation 90 'load' 'local_kNearstId_partial_5_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_6_load = load i32 %local_kNearstId_partial_6"   --->   Operation 91 'load' 'local_kNearstId_partial_6_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_7_load = load i32 %local_kNearstId_partial_7"   --->   Operation 92 'load' 'local_kNearstId_partial_7_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_8_load = load i32 %local_kNearstId_partial_8"   --->   Operation 93 'load' 'local_kNearstId_partial_8_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_9_load = load i32 %local_kNearstId_partial_9"   --->   Operation 94 'load' 'local_kNearstId_partial_9_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_10_load = load i32 %local_kNearstId_partial_10"   --->   Operation 95 'load' 'local_kNearstId_partial_10_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_11_load = load i32 %local_kNearstId_partial_11"   --->   Operation 96 'load' 'local_kNearstId_partial_11_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_12_load = load i32 %local_kNearstId_partial_12"   --->   Operation 97 'load' 'local_kNearstId_partial_12_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_13_load = load i32 %local_kNearstId_partial_13"   --->   Operation 98 'load' 'local_kNearstId_partial_13_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_14_load = load i32 %local_kNearstId_partial_14"   --->   Operation 99 'load' 'local_kNearstId_partial_14_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_15_load = load i32 %local_kNearstId_partial_15"   --->   Operation 100 'load' 'local_kNearstId_partial_15_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_16_load = load i32 %local_kNearstId_partial_16"   --->   Operation 101 'load' 'local_kNearstId_partial_16_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_17_load = load i32 %local_kNearstId_partial_17"   --->   Operation 102 'load' 'local_kNearstId_partial_17_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_18_load = load i32 %local_kNearstId_partial_18"   --->   Operation 103 'load' 'local_kNearstId_partial_18_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_19_load = load i32 %local_kNearstId_partial_19"   --->   Operation 104 'load' 'local_kNearstId_partial_19_load' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1948_out, i32 %local_kNearstId_partial_19_load"   --->   Operation 105 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1847_out, i32 %local_kNearstId_partial_18_load"   --->   Operation 106 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1746_out, i32 %local_kNearstId_partial_17_load"   --->   Operation 107 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1645_out, i32 %local_kNearstId_partial_16_load"   --->   Operation 108 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1544_out, i32 %local_kNearstId_partial_15_load"   --->   Operation 109 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1443_out, i32 %local_kNearstId_partial_14_load"   --->   Operation 110 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1342_out, i32 %local_kNearstId_partial_13_load"   --->   Operation 111 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1241_out, i32 %local_kNearstId_partial_12_load"   --->   Operation 112 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1140_out, i32 %local_kNearstId_partial_11_load"   --->   Operation 113 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_1039_out, i32 %local_kNearstId_partial_10_load"   --->   Operation 114 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_938_out, i32 %local_kNearstId_partial_9_load"   --->   Operation 115 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_837_out, i32 %local_kNearstId_partial_8_load"   --->   Operation 116 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_736_out, i32 %local_kNearstId_partial_7_load"   --->   Operation 117 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_635_out, i32 %local_kNearstId_partial_6_load"   --->   Operation 118 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_534_out, i32 %local_kNearstId_partial_5_load"   --->   Operation 119 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_433_out, i32 %local_kNearstId_partial_4_load"   --->   Operation 120 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_332_out, i32 %local_kNearstId_partial_3_load"   --->   Operation 121 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_231_out, i32 %local_kNearstId_partial_2_load"   --->   Operation 122 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial_130_out, i32 %local_kNearstId_partial_1_load"   --->   Operation 123 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %local_kNearstId_partial29_out, i32 %local_kNearstId_partial_load"   --->   Operation 124 'write' 'write_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 125 'ret' 'ret_ln0' <Predicate = (icmp_ln885)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.21>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%specpipeline_ln886 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:886]   --->   Operation 47 'specpipeline' 'specpipeline_ln886' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [/usr/local/include/tapa/xilinx/hls/stream.h:0]   --->   Operation 48 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (1.21ns)   --->   "%in_id0_s_read = read i45 @_ssdm_op_Read.ap_fifo.volatile.i45P0A, i45 %in_id0_s" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 49 'read' 'in_id0_s_read' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_21 = trunc i45 %in_id0_s_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 50 'trunc' 'local_kNearstId_partial_21' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.34ns)   --->   "%switch_ln888 = switch i4 %i, void %arrayidx6615.case.9, i4 0, void %for.inc73.split.arrayidx6615.exit_crit_edge, i4 1, void %for.inc73.split.arrayidx6615.exit_crit_edge3, i4 2, void %arrayidx6615.case.2, i4 3, void %arrayidx6615.case.3, i4 4, void %arrayidx6615.case.4, i4 5, void %arrayidx6615.case.5, i4 6, void %arrayidx6615.case.6, i4 7, void %arrayidx6615.case.7, i4 8, void %arrayidx6615.case.8" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 51 'switch' 'switch_ln888' <Predicate = true> <Delay = 0.34>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial_8" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 52 'store' 'store_ln888' <Predicate = (i == 8)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial_7" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 53 'store' 'store_ln888' <Predicate = (i == 7)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial_6" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 54 'store' 'store_ln888' <Predicate = (i == 6)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial_5" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 55 'store' 'store_ln888' <Predicate = (i == 5)> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial_4" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 56 'store' 'store_ln888' <Predicate = (i == 4)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial_3" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 57 'store' 'store_ln888' <Predicate = (i == 3)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial_2" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 58 'store' 'store_ln888' <Predicate = (i == 2)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial_1" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 59 'store' 'store_ln888' <Predicate = (i == 1)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 60 'store' 'store_ln888' <Predicate = (i == 0)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%store_ln888 = store i32 %local_kNearstId_partial_21, i32 %local_kNearstId_partial_9" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:888]   --->   Operation 61 'store' 'store_ln888' <Predicate = (i == 15) | (i == 14) | (i == 13) | (i == 12) | (i == 11) | (i == 10) | (i == 9)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (1.21ns)   --->   "%in_id1_s_read = read i45 @_ssdm_op_Read.ap_fifo.volatile.i45P0A, i45 %in_id1_s" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 62 'read' 'in_id1_s_read' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_23 = trunc i45 %in_id1_s_read" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 63 'trunc' 'local_kNearstId_partial_23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.34ns)   --->   "%switch_ln890 = switch i4 %i, void %arrayidx7216.case.9, i4 0, void %arrayidx6615.exit.arrayidx7216.exit_crit_edge, i4 1, void %arrayidx6615.exit.arrayidx7216.exit_crit_edge2, i4 2, void %arrayidx7216.case.2, i4 3, void %arrayidx7216.case.3, i4 4, void %arrayidx7216.case.4, i4 5, void %arrayidx7216.case.5, i4 6, void %arrayidx7216.case.6, i4 7, void %arrayidx7216.case.7, i4 8, void %arrayidx7216.case.8" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 64 'switch' 'switch_ln890' <Predicate = true> <Delay = 0.34>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_18" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 65 'store' 'store_ln890' <Predicate = (i == 8)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 66 'br' 'br_ln890' <Predicate = (i == 8)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_17" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 67 'store' 'store_ln890' <Predicate = (i == 7)> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 68 'br' 'br_ln890' <Predicate = (i == 7)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_16" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 69 'store' 'store_ln890' <Predicate = (i == 6)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 70 'br' 'br_ln890' <Predicate = (i == 6)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_15" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 71 'store' 'store_ln890' <Predicate = (i == 5)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 72 'br' 'br_ln890' <Predicate = (i == 5)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_14" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 73 'store' 'store_ln890' <Predicate = (i == 4)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 74 'br' 'br_ln890' <Predicate = (i == 4)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_13" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 75 'store' 'store_ln890' <Predicate = (i == 3)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 76 'br' 'br_ln890' <Predicate = (i == 3)> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_12" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 77 'store' 'store_ln890' <Predicate = (i == 2)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 78 'br' 'br_ln890' <Predicate = (i == 2)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_11" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 79 'store' 'store_ln890' <Predicate = (i == 1)> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 80 'br' 'br_ln890' <Predicate = (i == 1)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_10" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 81 'store' 'store_ln890' <Predicate = (i == 0)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 82 'br' 'br_ln890' <Predicate = (i == 0)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%store_ln890 = store i32 %local_kNearstId_partial_23, i32 %local_kNearstId_partial_19" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 83 'store' 'store_ln890' <Predicate = (i == 15) | (i == 14) | (i == 13) | (i == 12) | (i == 11) | (i == 10) | (i == 9)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%br_ln890 = br void %arrayidx7216.exit" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890]   --->   Operation 84 'br' 'br_ln890' <Predicate = (i == 15) | (i == 14) | (i == 13) | (i == 12) | (i == 11) | (i == 10) | (i == 9)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.899ns.
+
+ <State 1>: 1.09ns
+The critical path consists of the following:
+	'alloca' operation ('i') [23]  (0 ns)
+	'load' operation ('i', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885) on local variable 'i' [49]  (0 ns)
+	'add' operation ('add_ln885', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885) [52]  (0.708 ns)
+	'store' operation ('store_ln885', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885) of variable 'add_ln885', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:885 on local variable 'i' [125]  (0.387 ns)
+
+ <State 2>: 1.22ns
+The critical path consists of the following:
+	fifo read operation ('in_id1_s_read', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'in_id1_s' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [91]  (1.22 ns)
+	'store' operation ('store_ln890', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:890) of variable 'local_kNearstId_partial', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145 on local variable 'local_kNearstId_partial' [110]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

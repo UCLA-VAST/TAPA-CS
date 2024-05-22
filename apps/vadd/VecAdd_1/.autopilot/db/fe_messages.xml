@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tmp/run-hls-VecAdd_1-g_nzogb1/commands.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="VecAdd_1" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=VecAdd_1" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="VecAdd_1" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = a bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="VecAdd_1" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = b bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="VecAdd_1" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = c bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="VecAdd_1" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = n bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/VecAdd_1.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="VecAdd_1" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = return bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

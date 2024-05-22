@@ -249,7 +249,6 @@ class Program:
       part_num: str = '',
   ) -> 'Program':
     """Extract HDL files from tarballs generated from HLS."""
-    _logger.info('extracting RTL files')
     for task in self._tasks.values():
       with tarfile.open(self.get_tar(task.name), 'r') as tarfileobj:
         tarfileobj.extractall(path=self.work_dir)
@@ -535,7 +534,6 @@ class Program:
 
     for fifo_name, fifo in fifos.items():
       _logger.info('    instantiating %s.%s', task.name, fifo_name)
-
       # add FIFO instances
       task.module.add_fifo_instance(
           name=fifo_name,

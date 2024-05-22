@@ -1,0 +1,1037 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcu55c-fsvh2892-2L-e</Part>
+        <TopModelName>Knn</TopModelName>
+        <TargetClockPeriod>3.33</TargetClockPeriod>
+        <ClockUncertainty>0.90</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>1.000</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>0</Best-caseLatency>
+            <Average-caseLatency>0</Average-caseLatency>
+            <Worst-caseLatency>0</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <FF>1436</FF>
+            <LUT>2600</LUT>
+            <URAM>0</URAM>
+            <DSP>0</DSP>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>Knn</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>Knn</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>interrupt</name>
+            <Object>Knn</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="1">
+            <ModuleName>Knn</ModuleName>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>Knn</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>3.33</TargetClockPeriod>
+                    <ClockUncertainty>0.90</ClockUncertainty>
+                    <EstimatedClockPeriod>1.000</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>1436</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2600</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+        <config_compile name_max_length="253"/>
+        <config_rtl reset_level="low"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="in_0" index="0" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_0_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_0_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_1" index="1" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_1_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_1_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_2" index="2" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_2_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_2_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_3" index="3" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_3_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_3_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_4" index="4" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_4_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_4_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_5" index="5" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_5_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_5_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_6" index="6" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_6_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_6_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_7" index="7" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_7_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_7_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_8" index="8" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_8_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_8_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_9" index="9" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_9_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_9_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_10" index="10" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_10_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_10_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_11" index="11" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_11_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_11_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_12" index="12" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_12_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_12_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_13" index="13" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_13_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_13_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_14" index="14" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_14_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_14_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_15" index="15" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_15_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_15_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_16" index="16" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_16_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_16_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_17" index="17" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="in_17_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="in_17_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="L3_out_dist" index="18" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="L3_out_dist_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="L3_out_dist_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="L3_out_id" index="19" direction="in" srcType="long unsigned int" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="L3_out_id_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="L3_out_id_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="8" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="R" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="R" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x10" name="in_0_1" access="W" description="Data signal of in_0" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_0" access="W" description="Bit 31 to 0 of in_0"/>
+                    </fields>
+                </register>
+                <register offset="0x14" name="in_0_2" access="W" description="Data signal of in_0" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_0" access="W" description="Bit 63 to 32 of in_0"/>
+                    </fields>
+                </register>
+                <register offset="0x1c" name="in_1_1" access="W" description="Data signal of in_1" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_1" access="W" description="Bit 31 to 0 of in_1"/>
+                    </fields>
+                </register>
+                <register offset="0x20" name="in_1_2" access="W" description="Data signal of in_1" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_1" access="W" description="Bit 63 to 32 of in_1"/>
+                    </fields>
+                </register>
+                <register offset="0x28" name="in_2_1" access="W" description="Data signal of in_2" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_2" access="W" description="Bit 31 to 0 of in_2"/>
+                    </fields>
+                </register>
+                <register offset="0x2c" name="in_2_2" access="W" description="Data signal of in_2" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_2" access="W" description="Bit 63 to 32 of in_2"/>
+                    </fields>
+                </register>
+                <register offset="0x34" name="in_3_1" access="W" description="Data signal of in_3" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_3" access="W" description="Bit 31 to 0 of in_3"/>
+                    </fields>
+                </register>
+                <register offset="0x38" name="in_3_2" access="W" description="Data signal of in_3" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_3" access="W" description="Bit 63 to 32 of in_3"/>
+                    </fields>
+                </register>
+                <register offset="0x40" name="in_4_1" access="W" description="Data signal of in_4" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_4" access="W" description="Bit 31 to 0 of in_4"/>
+                    </fields>
+                </register>
+                <register offset="0x44" name="in_4_2" access="W" description="Data signal of in_4" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_4" access="W" description="Bit 63 to 32 of in_4"/>
+                    </fields>
+                </register>
+                <register offset="0x4c" name="in_5_1" access="W" description="Data signal of in_5" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_5" access="W" description="Bit 31 to 0 of in_5"/>
+                    </fields>
+                </register>
+                <register offset="0x50" name="in_5_2" access="W" description="Data signal of in_5" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_5" access="W" description="Bit 63 to 32 of in_5"/>
+                    </fields>
+                </register>
+                <register offset="0x58" name="in_6_1" access="W" description="Data signal of in_6" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_6" access="W" description="Bit 31 to 0 of in_6"/>
+                    </fields>
+                </register>
+                <register offset="0x5c" name="in_6_2" access="W" description="Data signal of in_6" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_6" access="W" description="Bit 63 to 32 of in_6"/>
+                    </fields>
+                </register>
+                <register offset="0x64" name="in_7_1" access="W" description="Data signal of in_7" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_7" access="W" description="Bit 31 to 0 of in_7"/>
+                    </fields>
+                </register>
+                <register offset="0x68" name="in_7_2" access="W" description="Data signal of in_7" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_7" access="W" description="Bit 63 to 32 of in_7"/>
+                    </fields>
+                </register>
+                <register offset="0x70" name="in_8_1" access="W" description="Data signal of in_8" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_8" access="W" description="Bit 31 to 0 of in_8"/>
+                    </fields>
+                </register>
+                <register offset="0x74" name="in_8_2" access="W" description="Data signal of in_8" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_8" access="W" description="Bit 63 to 32 of in_8"/>
+                    </fields>
+                </register>
+                <register offset="0x7c" name="in_9_1" access="W" description="Data signal of in_9" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_9" access="W" description="Bit 31 to 0 of in_9"/>
+                    </fields>
+                </register>
+                <register offset="0x80" name="in_9_2" access="W" description="Data signal of in_9" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_9" access="W" description="Bit 63 to 32 of in_9"/>
+                    </fields>
+                </register>
+                <register offset="0x88" name="in_10_1" access="W" description="Data signal of in_10" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_10" access="W" description="Bit 31 to 0 of in_10"/>
+                    </fields>
+                </register>
+                <register offset="0x8c" name="in_10_2" access="W" description="Data signal of in_10" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_10" access="W" description="Bit 63 to 32 of in_10"/>
+                    </fields>
+                </register>
+                <register offset="0x94" name="in_11_1" access="W" description="Data signal of in_11" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_11" access="W" description="Bit 31 to 0 of in_11"/>
+                    </fields>
+                </register>
+                <register offset="0x98" name="in_11_2" access="W" description="Data signal of in_11" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_11" access="W" description="Bit 63 to 32 of in_11"/>
+                    </fields>
+                </register>
+                <register offset="0xa0" name="in_12_1" access="W" description="Data signal of in_12" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_12" access="W" description="Bit 31 to 0 of in_12"/>
+                    </fields>
+                </register>
+                <register offset="0xa4" name="in_12_2" access="W" description="Data signal of in_12" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_12" access="W" description="Bit 63 to 32 of in_12"/>
+                    </fields>
+                </register>
+                <register offset="0xac" name="in_13_1" access="W" description="Data signal of in_13" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_13" access="W" description="Bit 31 to 0 of in_13"/>
+                    </fields>
+                </register>
+                <register offset="0xb0" name="in_13_2" access="W" description="Data signal of in_13" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_13" access="W" description="Bit 63 to 32 of in_13"/>
+                    </fields>
+                </register>
+                <register offset="0xb8" name="in_14_1" access="W" description="Data signal of in_14" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_14" access="W" description="Bit 31 to 0 of in_14"/>
+                    </fields>
+                </register>
+                <register offset="0xbc" name="in_14_2" access="W" description="Data signal of in_14" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_14" access="W" description="Bit 63 to 32 of in_14"/>
+                    </fields>
+                </register>
+                <register offset="0xc4" name="in_15_1" access="W" description="Data signal of in_15" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_15" access="W" description="Bit 31 to 0 of in_15"/>
+                    </fields>
+                </register>
+                <register offset="0xc8" name="in_15_2" access="W" description="Data signal of in_15" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_15" access="W" description="Bit 63 to 32 of in_15"/>
+                    </fields>
+                </register>
+                <register offset="0xd0" name="in_16_1" access="W" description="Data signal of in_16" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_16" access="W" description="Bit 31 to 0 of in_16"/>
+                    </fields>
+                </register>
+                <register offset="0xd4" name="in_16_2" access="W" description="Data signal of in_16" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_16" access="W" description="Bit 63 to 32 of in_16"/>
+                    </fields>
+                </register>
+                <register offset="0xdc" name="in_17_1" access="W" description="Data signal of in_17" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_17" access="W" description="Bit 31 to 0 of in_17"/>
+                    </fields>
+                </register>
+                <register offset="0xe0" name="in_17_2" access="W" description="Data signal of in_17" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="in_17" access="W" description="Bit 63 to 32 of in_17"/>
+                    </fields>
+                </register>
+                <register offset="0xe8" name="L3_out_dist_1" access="W" description="Data signal of L3_out_dist" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="L3_out_dist" access="W" description="Bit 31 to 0 of L3_out_dist"/>
+                    </fields>
+                </register>
+                <register offset="0xec" name="L3_out_dist_2" access="W" description="Data signal of L3_out_dist" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="L3_out_dist" access="W" description="Bit 63 to 32 of L3_out_dist"/>
+                    </fields>
+                </register>
+                <register offset="0xf4" name="L3_out_id_1" access="W" description="Data signal of L3_out_id" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="L3_out_id" access="W" description="Bit 31 to 0 of L3_out_id"/>
+                    </fields>
+                </register>
+                <register offset="0xf8" name="L3_out_id_2" access="W" description="Data signal of L3_out_id" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="L3_out_id" access="W" description="Bit 63 to 32 of L3_out_id"/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="in_0"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="28" argName="in_1"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40" argName="in_2"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="52" argName="in_3"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64" argName="in_4"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="76" argName="in_5"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="88" argName="in_6"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="100" argName="in_7"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="112" argName="in_8"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="124" argName="in_9"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="136" argName="in_10"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="148" argName="in_11"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="160" argName="in_12"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="172" argName="in_13"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="184" argName="in_14"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="196" argName="in_15"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="208" argName="in_16"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="220" argName="in_17"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="232" argName="L3_out_dist"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="244" argName="L3_out_id"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
+            </portMaps>
+            <ports>
+                <port>interrupt</port>
+            </ports>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table isCollapsed="0">
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_control">32, 8, 16, 0, , , , , </column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table isCollapsed="0">
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_control">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_control">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_control">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
+                    <column name="s_axi_control">in_0_1, 0x10, 32, W, Data signal of in_0, </column>
+                    <column name="s_axi_control">in_0_2, 0x14, 32, W, Data signal of in_0, </column>
+                    <column name="s_axi_control">in_1_1, 0x1c, 32, W, Data signal of in_1, </column>
+                    <column name="s_axi_control">in_1_2, 0x20, 32, W, Data signal of in_1, </column>
+                    <column name="s_axi_control">in_2_1, 0x28, 32, W, Data signal of in_2, </column>
+                    <column name="s_axi_control">in_2_2, 0x2c, 32, W, Data signal of in_2, </column>
+                    <column name="s_axi_control">in_3_1, 0x34, 32, W, Data signal of in_3, </column>
+                    <column name="s_axi_control">in_3_2, 0x38, 32, W, Data signal of in_3, </column>
+                    <column name="s_axi_control">in_4_1, 0x40, 32, W, Data signal of in_4, </column>
+                    <column name="s_axi_control">in_4_2, 0x44, 32, W, Data signal of in_4, </column>
+                    <column name="s_axi_control">in_5_1, 0x4c, 32, W, Data signal of in_5, </column>
+                    <column name="s_axi_control">in_5_2, 0x50, 32, W, Data signal of in_5, </column>
+                    <column name="s_axi_control">in_6_1, 0x58, 32, W, Data signal of in_6, </column>
+                    <column name="s_axi_control">in_6_2, 0x5c, 32, W, Data signal of in_6, </column>
+                    <column name="s_axi_control">in_7_1, 0x64, 32, W, Data signal of in_7, </column>
+                    <column name="s_axi_control">in_7_2, 0x68, 32, W, Data signal of in_7, </column>
+                    <column name="s_axi_control">in_8_1, 0x70, 32, W, Data signal of in_8, </column>
+                    <column name="s_axi_control">in_8_2, 0x74, 32, W, Data signal of in_8, </column>
+                    <column name="s_axi_control">in_9_1, 0x7c, 32, W, Data signal of in_9, </column>
+                    <column name="s_axi_control">in_9_2, 0x80, 32, W, Data signal of in_9, </column>
+                    <column name="s_axi_control">in_10_1, 0x88, 32, W, Data signal of in_10, </column>
+                    <column name="s_axi_control">in_10_2, 0x8c, 32, W, Data signal of in_10, </column>
+                    <column name="s_axi_control">in_11_1, 0x94, 32, W, Data signal of in_11, </column>
+                    <column name="s_axi_control">in_11_2, 0x98, 32, W, Data signal of in_11, </column>
+                    <column name="s_axi_control">in_12_1, 0xa0, 32, W, Data signal of in_12, </column>
+                    <column name="s_axi_control">in_12_2, 0xa4, 32, W, Data signal of in_12, </column>
+                    <column name="s_axi_control">in_13_1, 0xac, 32, W, Data signal of in_13, </column>
+                    <column name="s_axi_control">in_13_2, 0xb0, 32, W, Data signal of in_13, </column>
+                    <column name="s_axi_control">in_14_1, 0xb8, 32, W, Data signal of in_14, </column>
+                    <column name="s_axi_control">in_14_2, 0xbc, 32, W, Data signal of in_14, </column>
+                    <column name="s_axi_control">in_15_1, 0xc4, 32, W, Data signal of in_15, </column>
+                    <column name="s_axi_control">in_15_2, 0xc8, 32, W, Data signal of in_15, </column>
+                    <column name="s_axi_control">in_16_1, 0xd0, 32, W, Data signal of in_16, </column>
+                    <column name="s_axi_control">in_16_2, 0xd4, 32, W, Data signal of in_16, </column>
+                    <column name="s_axi_control">in_17_1, 0xdc, 32, W, Data signal of in_17, </column>
+                    <column name="s_axi_control">in_17_2, 0xe0, 32, W, Data signal of in_17, </column>
+                    <column name="s_axi_control">L3_out_dist_1, 0xe8, 32, W, Data signal of L3_out_dist, </column>
+                    <column name="s_axi_control">L3_out_dist_2, 0xec, 32, W, Data signal of L3_out_dist, </column>
+                    <column name="s_axi_control">L3_out_id_1, 0xf4, 32, W, Data signal of L3_out_id, </column>
+                    <column name="s_axi_control">L3_out_id_2, 0xf8, 32, W, Data signal of L3_out_id, </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="interrupt">interrupt, interrupt, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="in_0">in, long unsigned int</column>
+                    <column name="in_1">in, long unsigned int</column>
+                    <column name="in_2">in, long unsigned int</column>
+                    <column name="in_3">in, long unsigned int</column>
+                    <column name="in_4">in, long unsigned int</column>
+                    <column name="in_5">in, long unsigned int</column>
+                    <column name="in_6">in, long unsigned int</column>
+                    <column name="in_7">in, long unsigned int</column>
+                    <column name="in_8">in, long unsigned int</column>
+                    <column name="in_9">in, long unsigned int</column>
+                    <column name="in_10">in, long unsigned int</column>
+                    <column name="in_11">in, long unsigned int</column>
+                    <column name="in_12">in, long unsigned int</column>
+                    <column name="in_13">in, long unsigned int</column>
+                    <column name="in_14">in, long unsigned int</column>
+                    <column name="in_15">in, long unsigned int</column>
+                    <column name="in_16">in, long unsigned int</column>
+                    <column name="in_17">in, long unsigned int</column>
+                    <column name="L3_out_dist">in, long unsigned int</column>
+                    <column name="L3_out_id">in, long unsigned int</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <column name="in_0">s_axi_control, register, name=in_0_1 offset=0x10 range=32, </column>
+                    <column name="in_0">s_axi_control, register, name=in_0_2 offset=0x14 range=32, </column>
+                    <column name="in_1">s_axi_control, register, name=in_1_1 offset=0x1c range=32, </column>
+                    <column name="in_1">s_axi_control, register, name=in_1_2 offset=0x20 range=32, </column>
+                    <column name="in_2">s_axi_control, register, name=in_2_1 offset=0x28 range=32, </column>
+                    <column name="in_2">s_axi_control, register, name=in_2_2 offset=0x2c range=32, </column>
+                    <column name="in_3">s_axi_control, register, name=in_3_1 offset=0x34 range=32, </column>
+                    <column name="in_3">s_axi_control, register, name=in_3_2 offset=0x38 range=32, </column>
+                    <column name="in_4">s_axi_control, register, name=in_4_1 offset=0x40 range=32, </column>
+                    <column name="in_4">s_axi_control, register, name=in_4_2 offset=0x44 range=32, </column>
+                    <column name="in_5">s_axi_control, register, name=in_5_1 offset=0x4c range=32, </column>
+                    <column name="in_5">s_axi_control, register, name=in_5_2 offset=0x50 range=32, </column>
+                    <column name="in_6">s_axi_control, register, name=in_6_1 offset=0x58 range=32, </column>
+                    <column name="in_6">s_axi_control, register, name=in_6_2 offset=0x5c range=32, </column>
+                    <column name="in_7">s_axi_control, register, name=in_7_1 offset=0x64 range=32, </column>
+                    <column name="in_7">s_axi_control, register, name=in_7_2 offset=0x68 range=32, </column>
+                    <column name="in_8">s_axi_control, register, name=in_8_1 offset=0x70 range=32, </column>
+                    <column name="in_8">s_axi_control, register, name=in_8_2 offset=0x74 range=32, </column>
+                    <column name="in_9">s_axi_control, register, name=in_9_1 offset=0x7c range=32, </column>
+                    <column name="in_9">s_axi_control, register, name=in_9_2 offset=0x80 range=32, </column>
+                    <column name="in_10">s_axi_control, register, name=in_10_1 offset=0x88 range=32, </column>
+                    <column name="in_10">s_axi_control, register, name=in_10_2 offset=0x8c range=32, </column>
+                    <column name="in_11">s_axi_control, register, name=in_11_1 offset=0x94 range=32, </column>
+                    <column name="in_11">s_axi_control, register, name=in_11_2 offset=0x98 range=32, </column>
+                    <column name="in_12">s_axi_control, register, name=in_12_1 offset=0xa0 range=32, </column>
+                    <column name="in_12">s_axi_control, register, name=in_12_2 offset=0xa4 range=32, </column>
+                    <column name="in_13">s_axi_control, register, name=in_13_1 offset=0xac range=32, </column>
+                    <column name="in_13">s_axi_control, register, name=in_13_2 offset=0xb0 range=32, </column>
+                    <column name="in_14">s_axi_control, register, name=in_14_1 offset=0xb8 range=32, </column>
+                    <column name="in_14">s_axi_control, register, name=in_14_2 offset=0xbc range=32, </column>
+                    <column name="in_15">s_axi_control, register, name=in_15_1 offset=0xc4 range=32, </column>
+                    <column name="in_15">s_axi_control, register, name=in_15_2 offset=0xc8 range=32, </column>
+                    <column name="in_16">s_axi_control, register, name=in_16_1 offset=0xd0 range=32, </column>
+                    <column name="in_16">s_axi_control, register, name=in_16_2 offset=0xd4 range=32, </column>
+                    <column name="in_17">s_axi_control, register, name=in_17_1 offset=0xdc range=32, </column>
+                    <column name="in_17">s_axi_control, register, name=in_17_2 offset=0xe0 range=32, </column>
+                    <column name="L3_out_dist">s_axi_control, register, name=L3_out_dist_1 offset=0xe8 range=32, </column>
+                    <column name="L3_out_dist">s_axi_control, register, name=L3_out_dist_2 offset=0xec range=32, </column>
+                    <column name="L3_out_id">s_axi_control, register, name=L3_out_id_1 offset=0xf4 range=32, </column>
+                    <column name="L3_out_id">s_axi_control, register, name=L3_out_id_2 offset=0xf8 range=32, </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:80" status="valid" parentFunction="compare_with_register" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:81" status="valid" parentFunction="compare_with_register" variable="" isDirective="0" options="off"/>
+        <Pragma type="latency" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:82" status="valid" parentFunction="compare_with_register" variable="" isDirective="0" options="min=2 max=2"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:92" status="valid" parentFunction="load" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:95" status="valid" parentFunction="load" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:116" status="valid" parentFunction="compute" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:121" status="valid" parentFunction="compute" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:127" status="valid" parentFunction="compute" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:169" status="valid" parentFunction="swap" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:192" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:194" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options="II=2"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:195" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options="FACTOR=D2L_FACTOR_W"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:210" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options=""/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:211" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstDist&quot;" isDirective="0" options="variable=&quot;local_kNearstDist&quot; inter false"/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:212" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstId&quot;" isDirective="0" options="variable=&quot;local_kNearstId&quot; inter false"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:225" status="valid" parentFunction="para_partial_sort" variable="" isDirective="0" options=""/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:226" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstDist&quot;" isDirective="0" options="variable=&quot;local_kNearstDist&quot; inter false"/>
+        <Pragma type="dependence" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:227" status="valid" parentFunction="para_partial_sort" variable="&quot;local_kNearstId&quot;" isDirective="0" options="variable=&quot;local_kNearstId&quot; inter false"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:242" status="valid" parentFunction="sort" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:245" status="valid" parentFunction="sort" variable="starting_id" isDirective="0" options="variable=starting_id complete dim=0"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:248" status="valid" parentFunction="sort" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:255" status="valid" parentFunction="sort" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:256" status="valid" parentFunction="sort" variable="" isDirective="0" options="FACTOR=L2I_FACTOR_W"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:271" status="valid" parentFunction="sort" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:286" status="valid" parentFunction="sort" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:344" status="valid" parentFunction="merge_dual_all_pes" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:361" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:364" status="valid" parentFunction="krnl_partialknn" variable="local_Query_0" isDirective="0" options="variable=local_Query_0 complete dim=1"/>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:366" status="warning" parentFunction="krnl_partialknn" variable="local_SP_0_A" isDirective="0" options="variable=local_SP_0_A core=XPM_MEMORY uram">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5526" msg_severity="WARNING" msg_body="'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead"/>
+        </Pragma>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:368" status="warning" parentFunction="krnl_partialknn" variable="local_SP_0_B" isDirective="0" options="variable=local_SP_0_B core=XPM_MEMORY uram">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+            <Msg msg_id="207-5526" msg_severity="WARNING" msg_body="'xpm_memory' in '#pragma HLS Resource' is deprecated, use 'Bind_Storage Pragma' instead"/>
+        </Pragma>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:371" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_A" isDirective="0" options="variable=local_distance_0_A complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:372" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_A" isDirective="0" options="variable=local_distance_0_A cyclic factor=L2I_FACTOR_W dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:374" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_B" isDirective="0" options="variable=local_distance_0_B complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:375" status="valid" parentFunction="krnl_partialknn" variable="local_distance_0_B" isDirective="0" options="variable=local_distance_0_B cyclic factor=L2I_FACTOR_W dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:380" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstDist_partial_0" isDirective="0" options="variable=local_kNearstDist_partial_0 complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:382" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstId_partial_0" isDirective="0" options="variable=local_kNearstId_partial_0 complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:386" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstDist" isDirective="0" options="variable=local_kNearstDist complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:388" status="valid" parentFunction="krnl_partialknn" variable="local_kNearstId" isDirective="0" options="variable=local_kNearstId complete dim=0"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:392" status="valid" parentFunction="krnl_partialknn" variable="global_kNearstDist" isDirective="0" options="variable=global_kNearstDist complete"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:394" status="valid" parentFunction="krnl_partialknn" variable="global_kNearstId" isDirective="0" options="variable=global_kNearstId complete"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:397" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:422" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:440" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:466" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:467" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist complete dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:468" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist complete dim=3"/>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:469" status="warning" parentFunction="krnl_partialknn" variable="temp_kNearstDist" isDirective="0" options="variable=temp_kNearstDist core=RAM_1P_LUTRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:471" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId complete dim=1"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:472" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId complete dim=2"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:473" status="valid" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId complete dim=3"/>
+        <Pragma type="resource" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:474" status="warning" parentFunction="krnl_partialknn" variable="temp_kNearstId" isDirective="0" options="variable=temp_kNearstId core=RAM_1P_LUTRAM">
+            <Msg msg_id="207-5525" msg_severity="WARNING" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead"/>
+        </Pragma>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:478" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:481" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:484" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:497" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:506" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:516" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:536" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:547" status="valid" parentFunction="krnl_partialknn" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:706" status="valid" parentFunction="seq_global_merge_l1_l2" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:708" status="valid" parentFunction="seq_global_merge_l1_l2" variable="idx" isDirective="0" options="variable=idx complete dim=0"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:711" status="valid" parentFunction="seq_global_merge_l1_l2" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:720" status="valid" parentFunction="seq_global_merge_l1_l2" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="inline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:748" status="valid" parentFunction="seq_global_merge_l3" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="array_partition" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:750" status="valid" parentFunction="seq_global_merge_l3" variable="idx" isDirective="0" options="variable=idx complete dim=0"/>
+        <Pragma type="unroll" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:753" status="valid" parentFunction="seq_global_merge_l3" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:762" status="valid" parentFunction="seq_global_merge_l3" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:808" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_0 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:812" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_1 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:816" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_2 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:820" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_3 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:824" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_4 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:828" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_5 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:832" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_6 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:836" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_7 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:840" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_8 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:844" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_9 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:848" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_10 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:852" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_11 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:856" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_12 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:860" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_13 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:864" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_14 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:868" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_15 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:872" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_16 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:876" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = in_17 bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:880" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = L3_out_dist bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:884" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = L3_out_id bundle = control"/>
+        <Pragma type="interface" location="../../home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/Knn.cpp:889" status="valid" parentFunction="knn" variable="" isDirective="0" options="s_axilite port = return bundle = control"/>
+    </PragmaReport>
+</profile>
+

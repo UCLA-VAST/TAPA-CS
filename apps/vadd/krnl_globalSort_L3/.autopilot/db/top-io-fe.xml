@@ -1,0 +1,87 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="krnl_globalSort_L3" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="r" src_name="in_dist0" src_type="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" src_isptr="1" src_bitwidth="256" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="in_dist0_s" hw_bitwidth="45" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="in_dist0_peek" hw_bitwidth="45" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="r" src_name="in_id0" src_type="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" src_isptr="1" src_bitwidth="256" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="in_id0_s" hw_bitwidth="45" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="in_id0_peek" hw_bitwidth="45" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="r" src_name="in_dist1" src_type="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" src_isptr="1" src_bitwidth="256" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="in_dist1_s" hw_bitwidth="45" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="in_dist1_peek" hw_bitwidth="45" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="3" access_type="r" src_name="in_id1" src_type="istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0, 0, 0&gt; &gt;&amp;" src_isptr="1" src_bitwidth="256" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="in_id1_s" hw_bitwidth="45" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="in_id1_peek" hw_bitwidth="45" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="4" access_type="rw" src_name="output_knnDist" src_type="async_mmap&lt;float&gt;&amp;" src_isptr="1" src_bitwidth="512" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnDist_read_addr" hw_bitwidth="65" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnDist_read_data_s" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnDist_read_data_peek" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnDist_write_addr" hw_bitwidth="65" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnDist_write_data" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnDist_write_resp_s" hw_bitwidth="9" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnDist_write_resp_peek" hw_bitwidth="9" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+      <arg id="5" access_type="rw" src_name="output_knnId" src_type="async_mmap&lt;int&gt;&amp;" src_isptr="1" src_bitwidth="512" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnId_read_addr" hw_bitwidth="65" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnId_read_data_s" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnId_read_data_peek" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnId_write_addr" hw_bitwidth="65" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnId_write_data" hw_bitwidth="33" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnId_write_resp_s" hw_bitwidth="9" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+        <hw hw_usage="data" hw_interface="FIFO" hw_name="output_knnId_write_resp_peek" hw_bitwidth="9" hw_size_or_depth="0" hw_kernel_support="false">
+          <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0" hw_kernel_support="true"/>
+    </return>
+  </kernel>
+</root>

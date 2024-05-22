@@ -1,246 +1,1000 @@
-I0517 01:18:35.252 tapa.util:162] logging level set to INFO
-I0517 01:18:35.252 tapa.tapac:492] tapa version: 0.0.20221113.1
-I0517 01:18:35.252 tapa.tapac:496] Python recursion limit set to 3000
-I0517 01:18:35.252 tapa.tapac:416] Executing all steps of tapac
-I0517 01:18:35.280 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:75:20: error: type 'tapa::ostream<Eid>' (aka 'ostream<unsigned int>') does not provide a subscript operator
-    update_config_q[pid].write(update_offset);
-    ~~~~~~~~~~~~~~~^~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:182:28: error: invalid operands to binary expression ('Pid [8]' and 'const int')
-        Pid pid = pid_send * kNumPes + pe;
-                  ~~~~~~~~ ^ ~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:203:13: error: use of undeclared identifier 'pid_recv'
-          ++pid_recv;
-            ^
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:218:16: error: use of undeclared identifier 'num_partitions'
-  metadata[2 + num_partitions * kNumPes + num_partitions] = iter;
-               ^
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:218:43: error: use of undeclared identifier 'num_partitions'
-  metadata[2 + num_partitions * kNumPes + num_partitions] = iter;
-                                          ^
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:218:3: error: C++ requires a type specifier for all declarations
-  metadata[2 + num_partitions * kNumPes + num_partitions] = iter;
-  ^
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:218:61: error: use of undeclared identifier 'iter'
-  metadata[2 + num_partitions * kNumPes + num_partitions] = iter;
-                                                            ^
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:219:1: error: extraneous closing brace ('}')
-}
-^
-In file included from /home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:6:
-In file included from /usr/local/include/tapa.h:6:
-In file included from /usr/local/include/tapa/host/tapa.h:9:
-/usr/local/include/tapa/host/task.h:48:74: error: pack expansion contains parameter packs 'Params' and 'Args' that have different lengths (9 vs. 8)
-                                                std::forward<Args>(args))...));
-                                                                         ^
-/usr/local/include/tapa/host/task.h:167:39: note: in instantiation of function template specialization 'tapa::internal::invoker<void (&)(unsigned short, tapa::mmap<unsigned long>, tapa::ostream<VertexReq> &, tapa::ostream<unsigned int> &, tapa::ostream<bool> &, tapa::istream<tapa::packet<unsigned short, unsigned int> > &, tapa::ostream<TaskReq> &, tapa::istream<TaskResp> &, int)>::invoke<unsigned short &, tapa::mmap<unsigned long> &, tapa::stream<VertexReq, 2> &, tapa::stream<unsigned int, 2>, tapa::stream<bool, 2>, tapa::stream<tapa::packet<unsigned short, unsigned int>, 2>, tapa::stream<TaskReq, 2>, tapa::stream<TaskResp, 2> >' requested here
-    internal::invoker<Func>::template invoke<Args...>(
-                                      ^
-/usr/local/include/tapa/host/task.h:158:12: note: in instantiation of function template specialization 'tapa::task::invoke<0, void (&)(unsigned short, tapa::mmap<unsigned long>, tapa::ostream<VertexReq> &, tapa::ostream<unsigned int> &, tapa::ostream<bool> &, tapa::istream<tapa::packet<unsigned short, unsigned int> > &, tapa::ostream<TaskReq> &, tapa::istream<TaskResp> &, int), unsigned short &, tapa::mmap<unsigned long> &, tapa::stream<VertexReq, 2> &, tapa::stream<unsigned int, 2>, tapa::stream<bool, 2>, tapa::stream<tapa::packet<unsigned short, unsigned int>, 2>, tapa::stream<TaskReq, 2>, tapa::stream<TaskResp, 2> , 8>' requested here
-    return invoke<join>(std::forward<Func>(func), name,
-           ^
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:936:2: note: in instantiation of function template specialization 'tapa::task::invoke<void (&)(unsigned short, tapa::mmap<unsigned long>, tapa::ostream<VertexReq> &, tapa::ostream<unsigned int> &, tapa::ostream<bool> &, tapa::istream<tapa::packet<unsigned short, unsigned int> > &, tapa::ostream<TaskReq> &, tapa::istream<TaskResp> &, int), unsigned short &, tapa::mmap<unsigned long> &, tapa::stream<VertexReq, 2> &, tapa::stream<unsigned int, 2>, tapa::stream<bool, 2>, tapa::stream<tapa::packet<unsigned short, unsigned int>, 2>, tapa::stream<TaskReq, 2>, tapa::stream<TaskResp, 2> , 8>' requested here
-.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[0],  update_phase[0], num_updates[0],  task_req[0],  task_resp[0])
- ^
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:937:58: error: tapa::stream 'scatter_phase_vertex_req' produced more than once
-.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[1],  update_phase[1], num_updates[1],  task_req[1],  task_resp[1])
-                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:938:58: error: tapa::stream 'scatter_phase_vertex_req' produced more than once
-.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[2],  update_phase[2], num_updates[2],  task_req[2],  task_resp[2])
-                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:939:58: error: tapa::stream 'scatter_phase_vertex_req' produced more than once
-.invoke(Control,  "Control",  num_partitions,  metadata, scatter_phase_vertex_req,  update_config[3],  update_phase[3], num_updates[3],  task_req[3],  task_resp[3])
-                                                         ^~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:899:3: warning: unused stream: edge_req[4]
-  tapa::streams<Eid, kNumPes, 2> edge_req("edge_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:899:3: warning: unused stream: edge_req[5]
-  tapa::streams<Eid, kNumPes, 2> edge_req("edge_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:899:3: warning: unused stream: edge_req[6]
-  tapa::streams<Eid, kNumPes, 2> edge_req("edge_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:899:3: warning: unused stream: edge_req[7]
-  tapa::streams<Eid, kNumPes, 2> edge_req("edge_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:900:3: warning: unused stream: edge_resp[4]
-  tapa::streams<EdgeVec, kNumPes, 2> edge_resp("edge_resp");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:900:3: warning: unused stream: edge_resp[5]
-  tapa::streams<EdgeVec, kNumPes, 2> edge_resp("edge_resp");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:900:3: warning: unused stream: edge_resp[6]
-  tapa::streams<EdgeVec, kNumPes, 2> edge_resp("edge_resp");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:900:3: warning: unused stream: edge_resp[7]
-  tapa::streams<EdgeVec, kNumPes, 2> edge_resp("edge_resp");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:917:3: warning: unused stream: num_updates[4]
-  tapa::streams<NumUpdates, kNumPes, 2> num_updates("num_updates");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:917:3: warning: unused stream: num_updates[5]
-  tapa::streams<NumUpdates, kNumPes, 2> num_updates("num_updates");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:917:3: warning: unused stream: num_updates[6]
-  tapa::streams<NumUpdates, kNumPes, 2> num_updates("num_updates");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:917:3: warning: unused stream: num_updates[7]
-  tapa::streams<NumUpdates, kNumPes, 2> num_updates("num_updates");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:872:3: warning: unused stream: task_req[4]
-  tapa::streams<TaskReq, kNumPes, 2> task_req("task_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:872:3: warning: unused stream: task_req[5]
-  tapa::streams<TaskReq, kNumPes, 2> task_req("task_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:872:3: warning: unused stream: task_req[6]
-  tapa::streams<TaskReq, kNumPes, 2> task_req("task_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:872:3: warning: unused stream: task_req[7]
-  tapa::streams<TaskReq, kNumPes, 2> task_req("task_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:873:3: warning: unused stream: task_resp[4]
-  tapa::streams<TaskResp, kNumPes, 2> task_resp("task_resp");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:873:3: warning: unused stream: task_resp[5]
-  tapa::streams<TaskResp, kNumPes, 2> task_resp("task_resp");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:873:3: warning: unused stream: task_resp[6]
-  tapa::streams<TaskResp, kNumPes, 2> task_resp("task_resp");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:873:3: warning: unused stream: task_resp[7]
-  tapa::streams<TaskResp, kNumPes, 2> task_resp("task_resp");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:903:3: warning: unused stream: update_config[4]
-  tapa::streams<Eid, kNumPes, 2> update_config("update_config");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:903:3: warning: unused stream: update_config[5]
-  tapa::streams<Eid, kNumPes, 2> update_config("update_config");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:903:3: warning: unused stream: update_config[6]
-  tapa::streams<Eid, kNumPes, 2> update_config("update_config");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:903:3: warning: unused stream: update_config[7]
-  tapa::streams<Eid, kNumPes, 2> update_config("update_config");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:915:3: warning: unused stream: update_mm2pe[4]
-  tapa::streams<UpdateVec, kNumPes, 2> update_mm2pe("update_mm2pe");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:915:3: warning: unused stream: update_mm2pe[5]
-  tapa::streams<UpdateVec, kNumPes, 2> update_mm2pe("update_mm2pe");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:915:3: warning: unused stream: update_mm2pe[6]
-  tapa::streams<UpdateVec, kNumPes, 2> update_mm2pe("update_mm2pe");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:915:3: warning: unused stream: update_mm2pe[7]
-  tapa::streams<UpdateVec, kNumPes, 2> update_mm2pe("update_mm2pe");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:914:3: warning: unused stream: update_pe2mm[4]
-  tapa::streams<UpdateVecPacket, kNumPes, 2> update_pe2mm("update_pe2mm");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:914:3: warning: unused stream: update_pe2mm[5]
-  tapa::streams<UpdateVecPacket, kNumPes, 2> update_pe2mm("update_pe2mm");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:914:3: warning: unused stream: update_pe2mm[6]
-  tapa::streams<UpdateVecPacket, kNumPes, 2> update_pe2mm("update_pe2mm");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:914:3: warning: unused stream: update_pe2mm[7]
-  tapa::streams<UpdateVecPacket, kNumPes, 2> update_pe2mm("update_pe2mm");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:904:3: warning: unused stream: update_phase[4]
-  tapa::streams<bool, kNumPes, 2> update_phase("update_phase");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:904:3: warning: unused stream: update_phase[5]
-  tapa::streams<bool, kNumPes, 2> update_phase("update_phase");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:904:3: warning: unused stream: update_phase[6]
-  tapa::streams<bool, kNumPes, 2> update_phase("update_phase");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:904:3: warning: unused stream: update_phase[7]
-  tapa::streams<bool, kNumPes, 2> update_phase("update_phase");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:909:3: warning: unused stream: update_read_addr[4]
-  tapa::streams<uint64_t, kNumPes, 2> update_read_addr("update_read_addr");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:909:3: warning: unused stream: update_read_addr[5]
-  tapa::streams<uint64_t, kNumPes, 2> update_read_addr("update_read_addr");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:909:3: warning: unused stream: update_read_addr[6]
-  tapa::streams<uint64_t, kNumPes, 2> update_read_addr("update_read_addr");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:909:3: warning: unused stream: update_read_addr[7]
-  tapa::streams<uint64_t, kNumPes, 2> update_read_addr("update_read_addr");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:910:3: warning: unused stream: update_read_data[4]
-  tapa::streams<UpdateVec, kNumPes, 2> update_read_data("update_read_data");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:910:3: warning: unused stream: update_read_data[5]
-  tapa::streams<UpdateVec, kNumPes, 2> update_read_data("update_read_data");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:910:3: warning: unused stream: update_read_data[6]
-  tapa::streams<UpdateVec, kNumPes, 2> update_read_data("update_read_data");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:910:3: warning: unused stream: update_read_data[7]
-  tapa::streams<UpdateVec, kNumPes, 2> update_read_data("update_read_data");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:907:3: warning: unused stream: update_req[4]
-  tapa::streams<UpdateReq, kNumPes, 2> update_req("update_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:907:3: warning: unused stream: update_req[5]
-  tapa::streams<UpdateReq, kNumPes, 2> update_req("update_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:907:3: warning: unused stream: update_req[6]
-  tapa::streams<UpdateReq, kNumPes, 2> update_req("update_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:907:3: warning: unused stream: update_req[7]
-  tapa::streams<UpdateReq, kNumPes, 2> update_req("update_req");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:911:3: warning: unused stream: update_write_addr[4]
-  tapa::streams<uint64_t, kNumPes, 2> update_write_addr("update_write_addr");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:911:3: warning: unused stream: update_write_addr[5]
-  tapa::streams<uint64_t, kNumPes, 2> update_write_addr("update_write_addr");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:911:3: warning: unused stream: update_write_addr[6]
-  tapa::streams<uint64_t, kNumPes, 2> update_write_addr("update_write_addr");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:911:3: warning: unused stream: update_write_addr[7]
-  tapa::streams<uint64_t, kNumPes, 2> update_write_addr("update_write_addr");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:912:3: warning: unused stream: update_write_data[4]
-  tapa::streams<UpdateVec, kNumPes, 2> update_write_data("update_write_data");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:912:3: warning: unused stream: update_write_data[5]
-  tapa::streams<UpdateVec, kNumPes, 2> update_write_data("update_write_data");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:912:3: warning: unused stream: update_write_data[6]
-  tapa::streams<UpdateVec, kNumPes, 2> update_write_data("update_write_data");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:912:3: warning: unused stream: update_write_data[7]
-  tapa::streams<UpdateVec, kNumPes, 2> update_write_data("update_write_data");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:896:3: error: produced but not consumed stream: vertex_mm2pe_r2[0]
+I0102 13:44:14.976 tapa.util:162] logging level set to INFO
+I0102 13:44:14.976 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0102 13:44:14.976 tapa.tapac:496] Python recursion limit set to 3000
+I0102 13:44:14.977 tapa.tapac:416] Executing all steps of tapac
+W0102 13:44:14.977 tapa.tapac:438] The floorplan option is automatically enabled because a floorplan output file is provided
+I0102 13:44:15.092 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+/home/nehaprakriya/Documents/tapa/regression/page_rank/tapa/src/page-rank.cpp:896:3: warning: unused stream: vertex_mm2pe_r2[0]
   tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_mm2pe_r2("vertex_mm2pe_r2");
   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:896:3: error: produced but not consumed stream: vertex_mm2pe_r2[1]
+/home/nehaprakriya/Documents/tapa/regression/page_rank/tapa/src/page-rank.cpp:896:3: warning: unused stream: vertex_mm2pe_r2[1]
   tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_mm2pe_r2("vertex_mm2pe_r2");
   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:896:3: error: produced but not consumed stream: vertex_mm2pe_r2[2]
-  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_mm2pe_r2("vertex_mm2pe_r2");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:896:3: error: produced but not consumed stream: vertex_mm2pe_r2[3]
-  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_mm2pe_r2("vertex_mm2pe_r2");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:895:3: error: consumed but not produced stream: vertex_pe2mm_r2[0]
+/home/nehaprakriya/Documents/tapa/regression/page_rank/tapa/src/page-rank.cpp:895:3: warning: unused stream: vertex_pe2mm_r2[0]
   tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_pe2mm_r2("vertex_pe2mm_r2");
   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:895:3: error: consumed but not produced stream: vertex_pe2mm_r2[1]
+/home/nehaprakriya/Documents/tapa/regression/page_rank/tapa/src/page-rank.cpp:895:3: warning: unused stream: vertex_pe2mm_r2[1]
   tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_pe2mm_r2("vertex_pe2mm_r2");
   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp:895:3: error: consumed but not produced stream: vertex_pe2mm_r2[2]
-  tapa::streams<VertexAttrVec, kNumPesR2, 2> vertex_pe2mm_r2("vertex_pe2mm_r2");
-  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-fatal error: too many errors emitted, stopping now [-ferror-limit=]
-56 warnings and 20 errors generated.
-Error while processing /home/ubuntu/tapa_m/regression/page_rank/tapa/src/kernel_1.cpp.
-E0517 01:18:40.081 tapa.tapac:566] tapacc command ['/usr/local/bin/tapacc', 'kernel_1.cpp', '-top', 'PageRank_1', '--', '-I', '/home/ubuntu/.local/lib/python3.8/site-packages/tapa/../../../src', '-isystem', '/home/ubuntu/.local/lib/python3.8/site-packages/tapa/assets/clang', '-isystem', '/tools/Xilinx/Vitis_HLS/2022.1/include', '-std=c++17'] failed with exit code 1
+/home/nehaprakriya/Documents/tapa/regression/page_rank/tapa/src/page-rank.cpp:894:3: warning: unused stream: vertex_req_r2[0]
+  tapa::streams<VertexReq, kNumPesR2, 2> vertex_req_r2("vertex_req_r2");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/nehaprakriya/Documents/tapa/regression/page_rank/tapa/src/page-rank.cpp:894:3: warning: unused stream: vertex_req_r2[1]
+  tapa::streams<VertexReq, kNumPesR2, 2> vertex_req_r2("vertex_req_r2");
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6 warnings generated.
+I0102 13:44:18.789 tapa.core:179] extracting HLS C++ files
+I0102 13:44:18.800 tapa.core:201] running HLS
+I0102 13:44:18.810 tapa.core:239] spawn 8 workers for parallel HLS synthesis of the tasks
+I0102 13:45:11.238 tapa.core:252] extracting RTL files
+I0102 13:45:11.281 tapa.core:283] parsing RTL files and populating tasks
+I0102 13:45:13.475 tapa.core:292] parsing Control
+I0102 13:45:13.480 tapa.core:296] populating Control
+I0102 13:45:13.480 tapa.core:292] parsing EdgeMem
+I0102 13:45:13.481 tapa.core:296] populating EdgeMem
+I0102 13:45:13.481 tapa.core:292] parsing ProcElem
+I0102 13:45:13.482 tapa.core:296] populating ProcElem
+I0102 13:45:13.482 tapa.core:292] parsing UpdateHandler
+I0102 13:45:13.483 tapa.core:296] populating UpdateHandler
+I0102 13:45:13.484 tapa.core:292] parsing UpdateMem
+I0102 13:45:13.484 tapa.core:296] populating UpdateMem
+I0102 13:45:13.533 tapa.core:292] parsing VertexMem
+I0102 13:45:13.543 tapa.core:296] populating VertexMem
+I0102 13:45:13.543 tapa.core:292] parsing VertexRouterR1
+I0102 13:45:13.544 tapa.core:296] populating VertexRouterR1
+I0102 13:45:13.544 tapa.core:292] parsing PageRank
+I0102 13:45:13.544 tapa.core:296] populating PageRank
+I0102 13:45:13.546 tapa.core:300] instrumenting upper-level RTL
+I0102 13:45:13.546 tapa.core:336] Running floorplanning
+I0102 13:45:13.546 tapa.floorplan:47] mulit_fpga from floorplan
+I0102 13:45:13.546 tapa.floorplan:48] None
+I0102 13:45:13.547 tapa.task_graph:35] edge_req[0]
+I0102 13:45:13.547 tapa.task_graph:37] edge_req[0]
+I0102 13:45:13.547 tapa.task_graph:38] get_instance ProcElem_0
+I0102 13:45:13.547 tapa.task_graph:39] get_instance EdgeMem_0
+I0102 13:45:13.547 tapa.task_graph:40] 2
+I0102 13:45:13.547 tapa.task_graph:35] edge_req[1]
+I0102 13:45:13.548 tapa.task_graph:37] edge_req[1]
+I0102 13:45:13.548 tapa.task_graph:38] get_instance ProcElem_1
+I0102 13:45:13.548 tapa.task_graph:39] get_instance EdgeMem_1
+I0102 13:45:13.548 tapa.task_graph:40] 2
+I0102 13:45:13.548 tapa.task_graph:35] edge_req[2]
+I0102 13:45:13.548 tapa.task_graph:37] edge_req[2]
+I0102 13:45:13.548 tapa.task_graph:38] get_instance ProcElem_2
+I0102 13:45:13.548 tapa.task_graph:39] get_instance EdgeMem_2
+I0102 13:45:13.548 tapa.task_graph:40] 2
+I0102 13:45:13.548 tapa.task_graph:35] edge_req[3]
+I0102 13:45:13.548 tapa.task_graph:37] edge_req[3]
+I0102 13:45:13.548 tapa.task_graph:38] get_instance ProcElem_3
+I0102 13:45:13.548 tapa.task_graph:39] get_instance EdgeMem_3
+I0102 13:45:13.548 tapa.task_graph:40] 2
+I0102 13:45:13.548 tapa.task_graph:35] edge_resp[0]
+I0102 13:45:13.549 tapa.task_graph:37] edge_resp[0]
+I0102 13:45:13.549 tapa.task_graph:38] get_instance EdgeMem_0
+I0102 13:45:13.549 tapa.task_graph:39] get_instance ProcElem_0
+I0102 13:45:13.549 tapa.task_graph:40] 2
+I0102 13:45:13.549 tapa.task_graph:35] edge_resp[1]
+I0102 13:45:13.549 tapa.task_graph:37] edge_resp[1]
+I0102 13:45:13.549 tapa.task_graph:38] get_instance EdgeMem_1
+I0102 13:45:13.549 tapa.task_graph:39] get_instance ProcElem_1
+I0102 13:45:13.549 tapa.task_graph:40] 2
+I0102 13:45:13.549 tapa.task_graph:35] edge_resp[2]
+I0102 13:45:13.549 tapa.task_graph:37] edge_resp[2]
+I0102 13:45:13.549 tapa.task_graph:38] get_instance EdgeMem_2
+I0102 13:45:13.549 tapa.task_graph:39] get_instance ProcElem_2
+I0102 13:45:13.549 tapa.task_graph:40] 2
+I0102 13:45:13.549 tapa.task_graph:35] edge_resp[3]
+I0102 13:45:13.549 tapa.task_graph:37] edge_resp[3]
+I0102 13:45:13.549 tapa.task_graph:38] get_instance EdgeMem_3
+I0102 13:45:13.549 tapa.task_graph:39] get_instance ProcElem_3
+I0102 13:45:13.550 tapa.task_graph:40] 2
+I0102 13:45:13.550 tapa.task_graph:35] num_updates[0]
+I0102 13:45:13.550 tapa.task_graph:37] num_updates[0]
+I0102 13:45:13.550 tapa.task_graph:38] get_instance UpdateHandler_0
+I0102 13:45:13.550 tapa.task_graph:39] get_instance Control_0
+I0102 13:45:13.550 tapa.task_graph:40] 2
+I0102 13:45:13.550 tapa.task_graph:35] num_updates[1]
+I0102 13:45:13.550 tapa.task_graph:37] num_updates[1]
+I0102 13:45:13.550 tapa.task_graph:38] get_instance UpdateHandler_1
+I0102 13:45:13.550 tapa.task_graph:39] get_instance Control_0
+I0102 13:45:13.550 tapa.task_graph:40] 2
+I0102 13:45:13.550 tapa.task_graph:35] num_updates[2]
+I0102 13:45:13.550 tapa.task_graph:37] num_updates[2]
+I0102 13:45:13.550 tapa.task_graph:38] get_instance UpdateHandler_2
+I0102 13:45:13.550 tapa.task_graph:39] get_instance Control_0
+I0102 13:45:13.550 tapa.task_graph:40] 2
+I0102 13:45:13.551 tapa.task_graph:35] num_updates[3]
+I0102 13:45:13.551 tapa.task_graph:37] num_updates[3]
+I0102 13:45:13.551 tapa.task_graph:38] get_instance UpdateHandler_3
+I0102 13:45:13.551 tapa.task_graph:39] get_instance Control_0
+I0102 13:45:13.551 tapa.task_graph:40] 2
+I0102 13:45:13.551 tapa.task_graph:35] scatter_phase_vertex_req
+I0102 13:45:13.551 tapa.task_graph:37] scatter_phase_vertex_req
+I0102 13:45:13.551 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.551 tapa.task_graph:39] get_instance VertexMem_0
+I0102 13:45:13.551 tapa.task_graph:40] 2
+I0102 13:45:13.551 tapa.task_graph:35] task_req[0]
+I0102 13:45:13.551 tapa.task_graph:37] task_req[0]
+I0102 13:45:13.551 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.551 tapa.task_graph:39] get_instance ProcElem_0
+I0102 13:45:13.552 tapa.task_graph:40] 2
+I0102 13:45:13.552 tapa.task_graph:35] task_req[1]
+I0102 13:45:13.552 tapa.task_graph:37] task_req[1]
+I0102 13:45:13.552 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.552 tapa.task_graph:39] get_instance ProcElem_1
+I0102 13:45:13.552 tapa.task_graph:40] 2
+I0102 13:45:13.552 tapa.task_graph:35] task_req[2]
+I0102 13:45:13.552 tapa.task_graph:37] task_req[2]
+I0102 13:45:13.552 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.552 tapa.task_graph:39] get_instance ProcElem_2
+I0102 13:45:13.552 tapa.task_graph:40] 2
+I0102 13:45:13.553 tapa.task_graph:35] task_req[3]
+I0102 13:45:13.553 tapa.task_graph:37] task_req[3]
+I0102 13:45:13.553 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.553 tapa.task_graph:39] get_instance ProcElem_3
+I0102 13:45:13.553 tapa.task_graph:40] 2
+I0102 13:45:13.553 tapa.task_graph:35] task_resp[0]
+I0102 13:45:13.553 tapa.task_graph:37] task_resp[0]
+I0102 13:45:13.553 tapa.task_graph:38] get_instance ProcElem_0
+I0102 13:45:13.553 tapa.task_graph:39] get_instance Control_0
+I0102 13:45:13.553 tapa.task_graph:40] 2
+I0102 13:45:13.553 tapa.task_graph:35] task_resp[1]
+I0102 13:45:13.553 tapa.task_graph:37] task_resp[1]
+I0102 13:45:13.553 tapa.task_graph:38] get_instance ProcElem_1
+I0102 13:45:13.553 tapa.task_graph:39] get_instance Control_0
+I0102 13:45:13.553 tapa.task_graph:40] 2
+I0102 13:45:13.554 tapa.task_graph:35] task_resp[2]
+I0102 13:45:13.554 tapa.task_graph:37] task_resp[2]
+I0102 13:45:13.554 tapa.task_graph:38] get_instance ProcElem_2
+I0102 13:45:13.554 tapa.task_graph:39] get_instance Control_0
+I0102 13:45:13.554 tapa.task_graph:40] 2
+I0102 13:45:13.554 tapa.task_graph:35] task_resp[3]
+I0102 13:45:13.554 tapa.task_graph:37] task_resp[3]
+I0102 13:45:13.554 tapa.task_graph:38] get_instance ProcElem_3
+I0102 13:45:13.554 tapa.task_graph:39] get_instance Control_0
+I0102 13:45:13.554 tapa.task_graph:40] 2
+I0102 13:45:13.554 tapa.task_graph:35] update_config[0]
+I0102 13:45:13.554 tapa.task_graph:37] update_config[0]
+I0102 13:45:13.554 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.554 tapa.task_graph:39] get_instance UpdateHandler_0
+I0102 13:45:13.554 tapa.task_graph:40] 2
+I0102 13:45:13.555 tapa.task_graph:35] update_config[1]
+I0102 13:45:13.555 tapa.task_graph:37] update_config[1]
+I0102 13:45:13.555 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.555 tapa.task_graph:39] get_instance UpdateHandler_1
+I0102 13:45:13.555 tapa.task_graph:40] 2
+I0102 13:45:13.555 tapa.task_graph:35] update_config[2]
+I0102 13:45:13.555 tapa.task_graph:37] update_config[2]
+I0102 13:45:13.555 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.555 tapa.task_graph:39] get_instance UpdateHandler_2
+I0102 13:45:13.555 tapa.task_graph:40] 2
+I0102 13:45:13.555 tapa.task_graph:35] update_config[3]
+I0102 13:45:13.555 tapa.task_graph:37] update_config[3]
+I0102 13:45:13.555 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.555 tapa.task_graph:39] get_instance UpdateHandler_3
+I0102 13:45:13.555 tapa.task_graph:40] 2
+I0102 13:45:13.556 tapa.task_graph:35] update_mm2pe[0]
+I0102 13:45:13.556 tapa.task_graph:37] update_mm2pe[0]
+I0102 13:45:13.556 tapa.task_graph:38] get_instance UpdateHandler_0
+I0102 13:45:13.556 tapa.task_graph:39] get_instance ProcElem_0
+I0102 13:45:13.556 tapa.task_graph:40] 2
+I0102 13:45:13.556 tapa.task_graph:35] update_mm2pe[1]
+I0102 13:45:13.556 tapa.task_graph:37] update_mm2pe[1]
+I0102 13:45:13.556 tapa.task_graph:38] get_instance UpdateHandler_1
+I0102 13:45:13.556 tapa.task_graph:39] get_instance ProcElem_1
+I0102 13:45:13.556 tapa.task_graph:40] 2
+I0102 13:45:13.556 tapa.task_graph:35] update_mm2pe[2]
+I0102 13:45:13.556 tapa.task_graph:37] update_mm2pe[2]
+I0102 13:45:13.556 tapa.task_graph:38] get_instance UpdateHandler_2
+I0102 13:45:13.556 tapa.task_graph:39] get_instance ProcElem_2
+I0102 13:45:13.556 tapa.task_graph:40] 2
+I0102 13:45:13.557 tapa.task_graph:35] update_mm2pe[3]
+I0102 13:45:13.557 tapa.task_graph:37] update_mm2pe[3]
+I0102 13:45:13.557 tapa.task_graph:38] get_instance UpdateHandler_3
+I0102 13:45:13.557 tapa.task_graph:39] get_instance ProcElem_3
+I0102 13:45:13.557 tapa.task_graph:40] 2
+I0102 13:45:13.557 tapa.task_graph:35] update_pe2mm[0]
+I0102 13:45:13.557 tapa.task_graph:37] update_pe2mm[0]
+I0102 13:45:13.557 tapa.task_graph:38] get_instance ProcElem_0
+I0102 13:45:13.557 tapa.task_graph:39] get_instance UpdateHandler_0
+I0102 13:45:13.557 tapa.task_graph:40] 2
+I0102 13:45:13.557 tapa.task_graph:35] update_pe2mm[1]
+I0102 13:45:13.557 tapa.task_graph:37] update_pe2mm[1]
+I0102 13:45:13.557 tapa.task_graph:38] get_instance ProcElem_1
+I0102 13:45:13.557 tapa.task_graph:39] get_instance UpdateHandler_1
+I0102 13:45:13.557 tapa.task_graph:40] 2
+I0102 13:45:13.557 tapa.task_graph:35] update_pe2mm[2]
+I0102 13:45:13.557 tapa.task_graph:37] update_pe2mm[2]
+I0102 13:45:13.557 tapa.task_graph:38] get_instance ProcElem_2
+I0102 13:45:13.558 tapa.task_graph:39] get_instance UpdateHandler_2
+I0102 13:45:13.558 tapa.task_graph:40] 2
+I0102 13:45:13.558 tapa.task_graph:35] update_pe2mm[3]
+I0102 13:45:13.558 tapa.task_graph:37] update_pe2mm[3]
+I0102 13:45:13.558 tapa.task_graph:38] get_instance ProcElem_3
+I0102 13:45:13.558 tapa.task_graph:39] get_instance UpdateHandler_3
+I0102 13:45:13.558 tapa.task_graph:40] 2
+I0102 13:45:13.558 tapa.task_graph:35] update_phase[0]
+I0102 13:45:13.558 tapa.task_graph:37] update_phase[0]
+I0102 13:45:13.558 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.558 tapa.task_graph:39] get_instance UpdateHandler_0
+I0102 13:45:13.558 tapa.task_graph:40] 2
+I0102 13:45:13.558 tapa.task_graph:35] update_phase[1]
+I0102 13:45:13.558 tapa.task_graph:37] update_phase[1]
+I0102 13:45:13.558 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.558 tapa.task_graph:39] get_instance UpdateHandler_1
+I0102 13:45:13.559 tapa.task_graph:40] 2
+I0102 13:45:13.559 tapa.task_graph:35] update_phase[2]
+I0102 13:45:13.559 tapa.task_graph:37] update_phase[2]
+I0102 13:45:13.559 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.559 tapa.task_graph:39] get_instance UpdateHandler_2
+I0102 13:45:13.559 tapa.task_graph:40] 2
+I0102 13:45:13.559 tapa.task_graph:35] update_phase[3]
+I0102 13:45:13.559 tapa.task_graph:37] update_phase[3]
+I0102 13:45:13.559 tapa.task_graph:38] get_instance Control_0
+I0102 13:45:13.559 tapa.task_graph:39] get_instance UpdateHandler_3
+I0102 13:45:13.559 tapa.task_graph:40] 2
+I0102 13:45:13.560 tapa.task_graph:35] update_read_addr[0]
+I0102 13:45:13.560 tapa.task_graph:37] update_read_addr[0]
+I0102 13:45:13.560 tapa.task_graph:38] get_instance UpdateHandler_0
+I0102 13:45:13.560 tapa.task_graph:39] get_instance UpdateMem_0
+I0102 13:45:13.560 tapa.task_graph:40] 2
+I0102 13:45:13.560 tapa.task_graph:35] update_read_addr[1]
+I0102 13:45:13.560 tapa.task_graph:37] update_read_addr[1]
+I0102 13:45:13.560 tapa.task_graph:38] get_instance UpdateHandler_1
+I0102 13:45:13.560 tapa.task_graph:39] get_instance UpdateMem_1
+I0102 13:45:13.560 tapa.task_graph:40] 2
+I0102 13:45:13.560 tapa.task_graph:35] update_read_addr[2]
+I0102 13:45:13.560 tapa.task_graph:37] update_read_addr[2]
+I0102 13:45:13.560 tapa.task_graph:38] get_instance UpdateHandler_2
+I0102 13:45:13.560 tapa.task_graph:39] get_instance UpdateMem_2
+I0102 13:45:13.560 tapa.task_graph:40] 2
+I0102 13:45:13.560 tapa.task_graph:35] update_read_addr[3]
+I0102 13:45:13.560 tapa.task_graph:37] update_read_addr[3]
+I0102 13:45:13.561 tapa.task_graph:38] get_instance UpdateHandler_3
+I0102 13:45:13.561 tapa.task_graph:39] get_instance UpdateMem_3
+I0102 13:45:13.561 tapa.task_graph:40] 2
+I0102 13:45:13.561 tapa.task_graph:35] update_read_data[0]
+I0102 13:45:13.561 tapa.task_graph:37] update_read_data[0]
+I0102 13:45:13.561 tapa.task_graph:38] get_instance UpdateMem_0
+I0102 13:45:13.561 tapa.task_graph:39] get_instance UpdateHandler_0
+I0102 13:45:13.561 tapa.task_graph:40] 2
+I0102 13:45:13.561 tapa.task_graph:35] update_read_data[1]
+I0102 13:45:13.561 tapa.task_graph:37] update_read_data[1]
+I0102 13:45:13.561 tapa.task_graph:38] get_instance UpdateMem_1
+I0102 13:45:13.561 tapa.task_graph:39] get_instance UpdateHandler_1
+I0102 13:45:13.561 tapa.task_graph:40] 2
+I0102 13:45:13.561 tapa.task_graph:35] update_read_data[2]
+I0102 13:45:13.561 tapa.task_graph:37] update_read_data[2]
+I0102 13:45:13.561 tapa.task_graph:38] get_instance UpdateMem_2
+I0102 13:45:13.561 tapa.task_graph:39] get_instance UpdateHandler_2
+I0102 13:45:13.561 tapa.task_graph:40] 2
+I0102 13:45:13.562 tapa.task_graph:35] update_read_data[3]
+I0102 13:45:13.562 tapa.task_graph:37] update_read_data[3]
+I0102 13:45:13.562 tapa.task_graph:38] get_instance UpdateMem_3
+I0102 13:45:13.562 tapa.task_graph:39] get_instance UpdateHandler_3
+I0102 13:45:13.562 tapa.task_graph:40] 2
+I0102 13:45:13.562 tapa.task_graph:35] update_req[0]
+I0102 13:45:13.562 tapa.task_graph:37] update_req[0]
+I0102 13:45:13.562 tapa.task_graph:38] get_instance ProcElem_0
+I0102 13:45:13.562 tapa.task_graph:39] get_instance UpdateHandler_0
+I0102 13:45:13.562 tapa.task_graph:40] 2
+I0102 13:45:13.562 tapa.task_graph:35] update_req[1]
+I0102 13:45:13.562 tapa.task_graph:37] update_req[1]
+I0102 13:45:13.562 tapa.task_graph:38] get_instance ProcElem_1
+I0102 13:45:13.562 tapa.task_graph:39] get_instance UpdateHandler_1
+I0102 13:45:13.562 tapa.task_graph:40] 2
+I0102 13:45:13.562 tapa.task_graph:35] update_req[2]
+I0102 13:45:13.562 tapa.task_graph:37] update_req[2]
+I0102 13:45:13.562 tapa.task_graph:38] get_instance ProcElem_2
+I0102 13:45:13.563 tapa.task_graph:39] get_instance UpdateHandler_2
+I0102 13:45:13.563 tapa.task_graph:40] 2
+I0102 13:45:13.563 tapa.task_graph:35] update_req[3]
+I0102 13:45:13.563 tapa.task_graph:37] update_req[3]
+I0102 13:45:13.563 tapa.task_graph:38] get_instance ProcElem_3
+I0102 13:45:13.563 tapa.task_graph:39] get_instance UpdateHandler_3
+I0102 13:45:13.563 tapa.task_graph:40] 2
+I0102 13:45:13.563 tapa.task_graph:35] update_write_addr[0]
+I0102 13:45:13.563 tapa.task_graph:37] update_write_addr[0]
+I0102 13:45:13.563 tapa.task_graph:38] get_instance UpdateHandler_0
+I0102 13:45:13.563 tapa.task_graph:39] get_instance UpdateMem_0
+I0102 13:45:13.563 tapa.task_graph:40] 2
+I0102 13:45:13.563 tapa.task_graph:35] update_write_addr[1]
+I0102 13:45:13.563 tapa.task_graph:37] update_write_addr[1]
+I0102 13:45:13.563 tapa.task_graph:38] get_instance UpdateHandler_1
+I0102 13:45:13.563 tapa.task_graph:39] get_instance UpdateMem_1
+I0102 13:45:13.563 tapa.task_graph:40] 2
+I0102 13:45:13.564 tapa.task_graph:35] update_write_addr[2]
+I0102 13:45:13.564 tapa.task_graph:37] update_write_addr[2]
+I0102 13:45:13.564 tapa.task_graph:38] get_instance UpdateHandler_2
+I0102 13:45:13.564 tapa.task_graph:39] get_instance UpdateMem_2
+I0102 13:45:13.564 tapa.task_graph:40] 2
+I0102 13:45:13.564 tapa.task_graph:35] update_write_addr[3]
+I0102 13:45:13.564 tapa.task_graph:37] update_write_addr[3]
+I0102 13:45:13.564 tapa.task_graph:38] get_instance UpdateHandler_3
+I0102 13:45:13.564 tapa.task_graph:39] get_instance UpdateMem_3
+I0102 13:45:13.564 tapa.task_graph:40] 2
+I0102 13:45:13.564 tapa.task_graph:35] update_write_data[0]
+I0102 13:45:13.564 tapa.task_graph:37] update_write_data[0]
+I0102 13:45:13.564 tapa.task_graph:38] get_instance UpdateHandler_0
+I0102 13:45:13.564 tapa.task_graph:39] get_instance UpdateMem_0
+I0102 13:45:13.564 tapa.task_graph:40] 2
+I0102 13:45:13.564 tapa.task_graph:35] update_write_data[1]
+I0102 13:45:13.564 tapa.task_graph:37] update_write_data[1]
+I0102 13:45:13.564 tapa.task_graph:38] get_instance UpdateHandler_1
+I0102 13:45:13.565 tapa.task_graph:39] get_instance UpdateMem_1
+I0102 13:45:13.565 tapa.task_graph:40] 2
+I0102 13:45:13.565 tapa.task_graph:35] update_write_data[2]
+I0102 13:45:13.565 tapa.task_graph:37] update_write_data[2]
+I0102 13:45:13.565 tapa.task_graph:38] get_instance UpdateHandler_2
+I0102 13:45:13.565 tapa.task_graph:39] get_instance UpdateMem_2
+I0102 13:45:13.565 tapa.task_graph:40] 2
+I0102 13:45:13.565 tapa.task_graph:35] update_write_data[3]
+I0102 13:45:13.565 tapa.task_graph:37] update_write_data[3]
+I0102 13:45:13.565 tapa.task_graph:38] get_instance UpdateHandler_3
+I0102 13:45:13.565 tapa.task_graph:39] get_instance UpdateMem_3
+I0102 13:45:13.565 tapa.task_graph:40] 2
+I0102 13:45:13.565 tapa.task_graph:35] vertex_mm2pe_r0[0]
+I0102 13:45:13.565 tapa.task_graph:37] vertex_mm2pe_r0[0]
+I0102 13:45:13.565 tapa.task_graph:38] get_instance VertexMem_0
+I0102 13:45:13.565 tapa.task_graph:39] get_instance ProcElem_0
+I0102 13:45:13.565 tapa.task_graph:40] 2
+I0102 13:45:13.566 tapa.task_graph:35] vertex_mm2pe_r0[1]
+I0102 13:45:13.566 tapa.task_graph:37] vertex_mm2pe_r0[1]
+I0102 13:45:13.566 tapa.task_graph:38] get_instance VertexMem_0
+I0102 13:45:13.566 tapa.task_graph:39] get_instance VertexRouterR1_0
+I0102 13:45:13.566 tapa.task_graph:40] 2
+I0102 13:45:13.566 tapa.task_graph:35] vertex_mm2pe_r1[0]
+I0102 13:45:13.566 tapa.task_graph:37] vertex_mm2pe_r1[0]
+I0102 13:45:13.566 tapa.task_graph:38] get_instance VertexRouterR1_0
+I0102 13:45:13.566 tapa.task_graph:39] get_instance ProcElem_1
+I0102 13:45:13.566 tapa.task_graph:40] 2
+I0102 13:45:13.566 tapa.task_graph:35] vertex_mm2pe_r1[1]
+I0102 13:45:13.566 tapa.task_graph:37] vertex_mm2pe_r1[1]
+I0102 13:45:13.566 tapa.task_graph:38] get_instance VertexRouterR1_0
+I0102 13:45:13.566 tapa.task_graph:39] get_instance ProcElem_2
+I0102 13:45:13.566 tapa.task_graph:40] 2
+I0102 13:45:13.566 tapa.task_graph:35] vertex_mm2pe_r1[2]
+I0102 13:45:13.567 tapa.task_graph:37] vertex_mm2pe_r1[2]
+I0102 13:45:13.567 tapa.task_graph:38] get_instance VertexRouterR1_0
+I0102 13:45:13.567 tapa.task_graph:39] get_instance ProcElem_3
+I0102 13:45:13.567 tapa.task_graph:40] 2
+I0102 13:45:13.567 tapa.task_graph:35] vertex_pe2mm_r0[0]
+I0102 13:45:13.567 tapa.task_graph:37] vertex_pe2mm_r0[0]
+I0102 13:45:13.567 tapa.task_graph:38] get_instance ProcElem_0
+I0102 13:45:13.567 tapa.task_graph:39] get_instance VertexMem_0
+I0102 13:45:13.567 tapa.task_graph:40] 2
+I0102 13:45:13.567 tapa.task_graph:35] vertex_pe2mm_r0[1]
+I0102 13:45:13.567 tapa.task_graph:37] vertex_pe2mm_r0[1]
+I0102 13:45:13.567 tapa.task_graph:38] get_instance VertexRouterR1_0
+I0102 13:45:13.567 tapa.task_graph:39] get_instance VertexMem_0
+I0102 13:45:13.567 tapa.task_graph:40] 2
+I0102 13:45:13.567 tapa.task_graph:35] vertex_pe2mm_r1[0]
+I0102 13:45:13.567 tapa.task_graph:37] vertex_pe2mm_r1[0]
+I0102 13:45:13.567 tapa.task_graph:38] get_instance ProcElem_1
+I0102 13:45:13.567 tapa.task_graph:39] get_instance VertexRouterR1_0
+I0102 13:45:13.568 tapa.task_graph:40] 2
+I0102 13:45:13.568 tapa.task_graph:35] vertex_pe2mm_r1[1]
+I0102 13:45:13.568 tapa.task_graph:37] vertex_pe2mm_r1[1]
+I0102 13:45:13.568 tapa.task_graph:38] get_instance ProcElem_2
+I0102 13:45:13.568 tapa.task_graph:39] get_instance VertexRouterR1_0
+I0102 13:45:13.568 tapa.task_graph:40] 2
+I0102 13:45:13.568 tapa.task_graph:35] vertex_pe2mm_r1[2]
+I0102 13:45:13.568 tapa.task_graph:37] vertex_pe2mm_r1[2]
+I0102 13:45:13.568 tapa.task_graph:38] get_instance ProcElem_3
+I0102 13:45:13.568 tapa.task_graph:39] get_instance VertexRouterR1_0
+I0102 13:45:13.568 tapa.task_graph:40] 2
+I0102 13:45:13.568 tapa.task_graph:35] vertex_req_r0[0]
+I0102 13:45:13.568 tapa.task_graph:37] vertex_req_r0[0]
+I0102 13:45:13.568 tapa.task_graph:38] get_instance ProcElem_0
+I0102 13:45:13.568 tapa.task_graph:39] get_instance VertexMem_0
+I0102 13:45:13.568 tapa.task_graph:40] 2
+I0102 13:45:13.568 tapa.task_graph:35] vertex_req_r0[1]
+I0102 13:45:13.568 tapa.task_graph:37] vertex_req_r0[1]
+I0102 13:45:13.569 tapa.task_graph:38] get_instance VertexRouterR1_0
+I0102 13:45:13.569 tapa.task_graph:39] get_instance VertexMem_0
+I0102 13:45:13.569 tapa.task_graph:40] 2
+I0102 13:45:13.569 tapa.task_graph:35] vertex_req_r1[0]
+I0102 13:45:13.569 tapa.task_graph:37] vertex_req_r1[0]
+I0102 13:45:13.569 tapa.task_graph:38] get_instance ProcElem_1
+I0102 13:45:13.569 tapa.task_graph:39] get_instance VertexRouterR1_0
+I0102 13:45:13.569 tapa.task_graph:40] 2
+I0102 13:45:13.569 tapa.task_graph:35] vertex_req_r1[1]
+I0102 13:45:13.569 tapa.task_graph:37] vertex_req_r1[1]
+I0102 13:45:13.569 tapa.task_graph:38] get_instance ProcElem_2
+I0102 13:45:13.569 tapa.task_graph:39] get_instance VertexRouterR1_0
+I0102 13:45:13.569 tapa.task_graph:40] 2
+I0102 13:45:13.569 tapa.task_graph:35] vertex_req_r1[2]
+I0102 13:45:13.569 tapa.task_graph:37] vertex_req_r1[2]
+I0102 13:45:13.569 tapa.task_graph:38] get_instance ProcElem_3
+I0102 13:45:13.569 tapa.task_graph:39] get_instance VertexRouterR1_0
+I0102 13:45:13.569 tapa.task_graph:40] 2
+W0102 13:45:13.570 tapa.task_graph:88] metadata is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] edges_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] edges_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] edges_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] edges_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] updates_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] updates_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] updates_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] updates_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] degrees is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] rankings is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0102 13:45:13.570 tapa.task_graph:88] tmps is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+I0102 13:45:13.571 tapa.AutoBridge.src.autobridge.main:20] multi_fpga from autobridge main
+I0102 13:45:13.571 tapa.AutoBridge.src.autobridge.main:21] None
+
+*********************************************
+***         Starting AutoBridge           ***
+*********************************************
+
+Version: 0.0.20220512.dev1
+
+Running details logged to /home/nehaprakriya/Documents/tapa/regression/page_rank/tapa/src/run_pagerank/autobridge/autobridge-Jan-02-2024-13:45.log
+
+----------------------------------------------
+
+*** CRITICAL WARNING: Gurobi solver not detected. Floorplanning may take extra time. 
+The Gurobi solver is much faster than the open-source solver, and it is free for academia. 
+  - Register and download the Gurobi Optimizer at https://www.gurobi.com/downloads/gurobi-optimizer-eula/
+  - Unzip the package to your desired directory
+  - Obtain an academic license at https://www.gurobi.com/downloads/end-user-license-agreement-academic/
+  - Set environment variables GUROBI_HOME and GRB_LICENSE_FILE
+      export GUROBI_HOME=[WHERE-YOU-INSTALL] 
+      export GRB_LICENSE_FILE=[ADDRESS-OF-YOUR-LICENSE-FILE] 
+      export PATH="${PATH}:${GUROBI_HOME}/bin" 
+      export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib" 
+
+Generate task graph visualization in graphviz format: /home/nehaprakriya/Documents/tapa/regression/page_rank/tapa/src/run_pagerank/autobridge/task_graph.dot
+we are in get_floorplan
+
+Floorplan parameters:
+
+  floorplan_strategy: HALF_SLR_LEVEL_FLOORPLANNING
+  threshold for switching to iterative partitioning: 200
+  floorplan_opt_priority: AREA_PRIORITIZED
+  min_area_limit: 0.650000
+  max_area_limit: 0.850000
+  min_slr_width_limit: 10000
+  max_slr_width_limit: 15000
+  max_search_time per solving: 600
+
+Start floorplanning, please check the log for the progress...
+
+The total area of the design:
+  BRAM: 44 / 3504 = 1.3%
+  DSP: 648 / 8496 = 7.6%
+  FF: 299057 / 2331840 = 12.8%
+  LUT: 618456.25 / 1165920 = 53.0%
+  URAM: 256 / 960 = 26.7%
+
+hello from autobridge
+helloo
+from analyze
+('xcu280', 'xcu250', 'xcu55c')
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}I0102 13:45:31.830 tapa.AutoBridge.src.autobridge:287] succeed with optimal solution
+
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2b0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac240>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac128>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac390>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}I0102 13:45:34.119 tapa.AutoBridge.src.autobridge:291] failed
+
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d94e0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d95c0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9630>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c7d9550>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}I0102 13:45:36.121 tapa.AutoBridge.src.autobridge:291] failed
+
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aac8>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68aba8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ac18>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c68ab38>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}I0102 13:45:38.824 tapa.AutoBridge.src.autobridge:291] failed
+total wire length: 111632
+SLR boundary 0 - 1 has 11417 crossings
+SLR boundary 1 - 2 has 8056 crossings
+SLR boundary 2 - 3 has 0 crossings
+
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee20ba8>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ee0b390>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd19b0>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6ebd1f98>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac080>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac278>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac048>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba6d6ac2e8>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d0f0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d1d0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d240>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fba4c53d160>: (1, 1, -1)}
+Failed to balance reconvergent paths at loop level. Most likely there is a loop of streams.
+Floorplan finishes
+
++---------------------+----------+---------+--------+---------+----------+
+|      Slot Name      | BRAM (%) | DSP (%) | FF (%) | LUT (%) | URAM (%) |
++---------------------+----------+---------+--------+---------+----------+
+|  CR_X0Y4_To_CR_X3Y7 |   5.7    |   10.9  |  11.7  |   65.4  |   50.0   |
+|  CR_X0Y0_To_CR_X3Y3 |   0.0    |   0.0   |  18.3  |   33.3  |   0.0    |
+|  CR_X4Y4_To_CR_X7Y7 |   0.0    |   11.9  |  11.2  |   71.0  |   33.3   |
+| CR_X4Y8_To_CR_X7Y11 |   0.0    |   11.9  |  11.2  |   71.0  |   33.3   |
+| CR_X0Y8_To_CR_X3Y11 |   0.0    |   10.4  |  8.5   |   54.0  |   50.0   |
+|  CR_X4Y0_To_CR_X7Y3 |   0.0    |   0.0   |  15.6  |   28.3  |   0.0    |
++---------------------+----------+---------+--------+---------+----------+
+
+The device could be partitioned into 6 slots.
+
+The number of wires between slots are:
+
+CR_X4Y0_To_CR_X7Y3 <--> CR_X4Y4_To_CR_X7Y7 : 4297
+CR_X0Y0_To_CR_X3Y3 <--> CR_X4Y0_To_CR_X7Y3 : 2496
+CR_X4Y4_To_CR_X7Y7 <--> CR_X4Y8_To_CR_X7Y11 : 869
+CR_X0Y0_To_CR_X3Y3 <--> CR_X0Y4_To_CR_X3Y7 : 7120
+CR_X0Y4_To_CR_X3Y7 <--> CR_X0Y8_To_CR_X3Y11 : 7187
+CR_X0Y4_To_CR_X3Y7 <--> CR_X4Y4_To_CR_X7Y7 : 2780
+CR_X0Y8_To_CR_X3Y11 <--> CR_X4Y8_To_CR_X7Y11 : 3159
+
+*********************************************
+***          AutoBridge Finishes          ***
+*********************************************
+
+I0102 13:45:39.039 tapa.floorplan:305] vertex TASK_VERTEX_Control_0
+I0102 13:45:39.039 tapa.floorplan:306] properties {'module': 'Control', 'instance': 'Control_0', 'area': {'BRAM': 36, 'DSP': 8, 'FF': 3265, 'LUT': 6800, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0102 13:45:39.039 tapa.floorplan:305] vertex TASK_VERTEX_EdgeMem_0
+I0102 13:45:39.039 tapa.floorplan:306] properties {'module': 'EdgeMem', 'instance': 'EdgeMem_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 519, 'LUT': 136, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.039 tapa.floorplan:305] vertex TASK_VERTEX_EdgeMem_1
+I0102 13:45:39.039 tapa.floorplan:306] properties {'module': 'EdgeMem', 'instance': 'EdgeMem_1', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 519, 'LUT': 136, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.039 tapa.floorplan:305] vertex TASK_VERTEX_EdgeMem_2
+I0102 13:45:39.039 tapa.floorplan:306] properties {'module': 'EdgeMem', 'instance': 'EdgeMem_2', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 519, 'LUT': 136, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.039 tapa.floorplan:305] vertex TASK_VERTEX_EdgeMem_3
+I0102 13:45:39.039 tapa.floorplan:306] properties {'module': 'EdgeMem', 'instance': 'EdgeMem_3', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 519, 'LUT': 136, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.039 tapa.floorplan:305] vertex TASK_VERTEX_ProcElem_0
+I0102 13:45:39.039 tapa.floorplan:306] properties {'module': 'ProcElem', 'instance': 'ProcElem_0', 'area': {'BRAM': 0, 'DSP': 160, 'FF': 36985, 'LUT': 114731, 'URAM': 64}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y4_To_CR_X7Y7', 'SLR': 1}
+I0102 13:45:39.039 tapa.floorplan:305] vertex TASK_VERTEX_ProcElem_1
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'ProcElem', 'instance': 'ProcElem_1', 'area': {'BRAM': 0, 'DSP': 160, 'FF': 36985, 'LUT': 114731, 'URAM': 64}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y8_To_CR_X7Y11', 'SLR': 2}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_ProcElem_2
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'ProcElem', 'instance': 'ProcElem_2', 'area': {'BRAM': 0, 'DSP': 160, 'FF': 36985, 'LUT': 114731, 'URAM': 64}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_ProcElem_3
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'ProcElem', 'instance': 'ProcElem_3', 'area': {'BRAM': 0, 'DSP': 160, 'FF': 36985, 'LUT': 114731, 'URAM': 64}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y8_To_CR_X3Y11', 'SLR': 2}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_UpdateHandler_0
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'UpdateHandler', 'instance': 'UpdateHandler_0', 'area': {'BRAM': 2, 'DSP': 0, 'FF': 1974, 'LUT': 1583, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_UpdateHandler_1
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'UpdateHandler', 'instance': 'UpdateHandler_1', 'area': {'BRAM': 2, 'DSP': 0, 'FF': 1974, 'LUT': 1583, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_UpdateHandler_2
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'UpdateHandler', 'instance': 'UpdateHandler_2', 'area': {'BRAM': 2, 'DSP': 0, 'FF': 1974, 'LUT': 1583, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_UpdateHandler_3
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'UpdateHandler', 'instance': 'UpdateHandler_3', 'area': {'BRAM': 2, 'DSP': 0, 'FF': 1974, 'LUT': 1583, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_UpdateMem_0
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'UpdateMem', 'instance': 'UpdateMem_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 1037, 'LUT': 249, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_UpdateMem_1
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'UpdateMem', 'instance': 'UpdateMem_1', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 1037, 'LUT': 249, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_UpdateMem_2
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'UpdateMem', 'instance': 'UpdateMem_2', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 1037, 'LUT': 249, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_UpdateMem_3
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'UpdateMem', 'instance': 'UpdateMem_3', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 1037, 'LUT': 249, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.040 tapa.floorplan:305] vertex TASK_VERTEX_VertexMem_0
+I0102 13:45:39.040 tapa.floorplan:306] properties {'module': 'VertexMem', 'instance': 'VertexMem_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 3236, 'LUT': 3616, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex TASK_VERTEX_VertexRouterR1_0
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'VertexRouterR1', 'instance': 'VertexRouterR1_0', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 2217, 'LUT': 1158, 'URAM': 0}, 'category': 'TASK_VERTEX', 'floorplan_region': 'CR_X0Y4_To_CR_X3Y7', 'SLR': 1}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_edges_0__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'edges_0__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_edges_1__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'edges_1__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_edges_2__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'edges_2__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_edges_3__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'edges_3__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_updates_0__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'updates_0__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_updates_1__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'updates_1__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_updates_2__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'updates_2__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_updates_3__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'updates_3__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_degrees__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'degrees__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_rankings__m_axi
+I0102 13:45:39.041 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'rankings__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.041 tapa.floorplan:305] vertex ASYNC_MMAP_VERTEX_tmps__m_axi
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'async_mmap', 'instance': 'tmps__m_axi', 'area': {'BRAM': 0, 'DSP': 0, 'FF': 369, 'LUT': 1735, 'URAM': 0}, 'category': 'ASYNC_MMAP_VERTEX', 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_edges_0_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'edges_0', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 0, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_edges_1_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'edges_1', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 3, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_edges_2_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'edges_2', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 6, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_edges_3_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'edges_3', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 9, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_edges_4_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'edges_4', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 12, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_edges_5_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'edges_5', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 15, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_edges_6_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'edges_6', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 18, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_edges_7_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'edges_7', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 21, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_updates_0_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'updates_0', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 2, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_updates_1_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'updates_1', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 5, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_updates_2_external_controller
+I0102 13:45:39.042 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'updates_2', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 8, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.042 tapa.floorplan:305] vertex PORT_VERTEX_updates_3_external_controller
+I0102 13:45:39.043 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'updates_3', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 11, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.043 tapa.floorplan:305] vertex PORT_VERTEX_updates_4_external_controller
+I0102 13:45:39.043 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'updates_4', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 14, 'floorplan_region': 'CR_X0Y0_To_CR_X3Y3', 'SLR': 0}
+I0102 13:45:39.043 tapa.floorplan:305] vertex PORT_VERTEX_updates_5_external_controller
+I0102 13:45:39.043 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'updates_5', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 17, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.043 tapa.floorplan:305] vertex PORT_VERTEX_updates_6_external_controller
+I0102 13:45:39.043 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'updates_6', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 20, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.043 tapa.floorplan:305] vertex PORT_VERTEX_updates_7_external_controller
+I0102 13:45:39.043 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'updates_7', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 23, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.043 tapa.floorplan:305] vertex PORT_VERTEX_metadata_external_controller
+I0102 13:45:39.043 tapa.floorplan:306] properties {'module': 'external_PLRAM_controller', 'top_arg_name': 'metadata', 'area': {'LUT': 0, 'FF': 0, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'PLRAM', 'port_id': 0, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.043 tapa.floorplan:305] vertex PORT_VERTEX_degrees_external_controller
+I0102 13:45:39.043 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'degrees', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 24, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.043 tapa.floorplan:305] vertex PORT_VERTEX_rankings_external_controller
+I0102 13:45:39.043 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'rankings', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 26, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.043 tapa.floorplan:305] vertex PORT_VERTEX_tmps_external_controller
+I0102 13:45:39.043 tapa.floorplan:306] properties {'module': 'external_HBM_controller', 'top_arg_name': 'tmps', 'area': {'LUT': 5000, 'FF': 6500, 'BRAM': 0, 'URAM': 0, 'DSP': 0}, 'category': 'PORT_VERTEX', 'port_cat': 'HBM', 'port_id': 27, 'floorplan_region': 'CR_X4Y0_To_CR_X7Y3', 'SLR': 0}
+I0102 13:45:39.044 tapa.floorplan:114] generate the floorplan constraint at run_pagerank/pagerank_floorplan.tcl
+W0102 13:45:39.044 tapa.floorplan:135] No latency balancing information found, skip FIFO depth adjusting
+I0102 13:45:39.044 tapa.core:466] top task register level set to 3
+I0102 13:45:39.044 tapa.core:469] instrumenting top-level RTL
+I0102 13:45:39.060 tapa.core:524]   instantiating FIFOs in PageRank
+I0102 13:45:39.060 tapa.core:537]     instantiating PageRank.edge_req[0]
+I0102 13:45:39.060 tapa.core:538] depth
+I0102 13:45:39.060 tapa.core:539] 2
+I0102 13:45:39.060 tapa.core:537]     instantiating PageRank.edge_req[1]
+I0102 13:45:39.060 tapa.core:538] depth
+I0102 13:45:39.060 tapa.core:539] 2
+I0102 13:45:39.061 tapa.core:537]     instantiating PageRank.edge_req[2]
+I0102 13:45:39.061 tapa.core:538] depth
+I0102 13:45:39.061 tapa.core:539] 2
+I0102 13:45:39.061 tapa.core:537]     instantiating PageRank.edge_req[3]
+I0102 13:45:39.061 tapa.core:538] depth
+I0102 13:45:39.061 tapa.core:539] 2
+I0102 13:45:39.061 tapa.core:537]     instantiating PageRank.edge_resp[0]
+I0102 13:45:39.061 tapa.core:538] depth
+I0102 13:45:39.061 tapa.core:539] 2
+I0102 13:45:39.062 tapa.core:537]     instantiating PageRank.edge_resp[1]
+I0102 13:45:39.062 tapa.core:538] depth
+I0102 13:45:39.062 tapa.core:539] 2
+I0102 13:45:39.062 tapa.core:537]     instantiating PageRank.edge_resp[2]
+I0102 13:45:39.062 tapa.core:538] depth
+I0102 13:45:39.062 tapa.core:539] 2
+I0102 13:45:39.062 tapa.core:537]     instantiating PageRank.edge_resp[3]
+I0102 13:45:39.062 tapa.core:538] depth
+I0102 13:45:39.062 tapa.core:539] 2
+I0102 13:45:39.062 tapa.core:537]     instantiating PageRank.num_updates[0]
+I0102 13:45:39.062 tapa.core:538] depth
+I0102 13:45:39.062 tapa.core:539] 2
+I0102 13:45:39.063 tapa.core:537]     instantiating PageRank.num_updates[1]
+I0102 13:45:39.063 tapa.core:538] depth
+I0102 13:45:39.063 tapa.core:539] 2
+I0102 13:45:39.063 tapa.core:537]     instantiating PageRank.num_updates[2]
+I0102 13:45:39.063 tapa.core:538] depth
+I0102 13:45:39.063 tapa.core:539] 2
+I0102 13:45:39.063 tapa.core:537]     instantiating PageRank.num_updates[3]
+I0102 13:45:39.063 tapa.core:538] depth
+I0102 13:45:39.063 tapa.core:539] 2
+I0102 13:45:39.064 tapa.core:537]     instantiating PageRank.scatter_phase_vertex_req
+I0102 13:45:39.064 tapa.core:538] depth
+I0102 13:45:39.064 tapa.core:539] 2
+I0102 13:45:39.064 tapa.core:537]     instantiating PageRank.task_req[0]
+I0102 13:45:39.064 tapa.core:538] depth
+I0102 13:45:39.064 tapa.core:539] 2
+I0102 13:45:39.064 tapa.core:537]     instantiating PageRank.task_req[1]
+I0102 13:45:39.065 tapa.core:538] depth
+I0102 13:45:39.065 tapa.core:539] 2
+I0102 13:45:39.065 tapa.core:537]     instantiating PageRank.task_req[2]
+I0102 13:45:39.065 tapa.core:538] depth
+I0102 13:45:39.065 tapa.core:539] 2
+I0102 13:45:39.065 tapa.core:537]     instantiating PageRank.task_req[3]
+I0102 13:45:39.065 tapa.core:538] depth
+I0102 13:45:39.065 tapa.core:539] 2
+I0102 13:45:39.066 tapa.core:537]     instantiating PageRank.task_resp[0]
+I0102 13:45:39.066 tapa.core:538] depth
+I0102 13:45:39.066 tapa.core:539] 2
+I0102 13:45:39.066 tapa.core:537]     instantiating PageRank.task_resp[1]
+I0102 13:45:39.066 tapa.core:538] depth
+I0102 13:45:39.066 tapa.core:539] 2
+I0102 13:45:39.066 tapa.core:537]     instantiating PageRank.task_resp[2]
+I0102 13:45:39.066 tapa.core:538] depth
+I0102 13:45:39.066 tapa.core:539] 2
+I0102 13:45:39.067 tapa.core:537]     instantiating PageRank.task_resp[3]
+I0102 13:45:39.067 tapa.core:538] depth
+I0102 13:45:39.067 tapa.core:539] 2
+I0102 13:45:39.067 tapa.core:537]     instantiating PageRank.update_config[0]
+I0102 13:45:39.067 tapa.core:538] depth
+I0102 13:45:39.067 tapa.core:539] 2
+I0102 13:45:39.067 tapa.core:537]     instantiating PageRank.update_config[1]
+I0102 13:45:39.067 tapa.core:538] depth
+I0102 13:45:39.067 tapa.core:539] 2
+I0102 13:45:39.068 tapa.core:537]     instantiating PageRank.update_config[2]
+I0102 13:45:39.068 tapa.core:538] depth
+I0102 13:45:39.068 tapa.core:539] 2
+I0102 13:45:39.068 tapa.core:537]     instantiating PageRank.update_config[3]
+I0102 13:45:39.068 tapa.core:538] depth
+I0102 13:45:39.068 tapa.core:539] 2
+I0102 13:45:39.069 tapa.core:537]     instantiating PageRank.update_mm2pe[0]
+I0102 13:45:39.069 tapa.core:538] depth
+I0102 13:45:39.069 tapa.core:539] 2
+I0102 13:45:39.069 tapa.core:537]     instantiating PageRank.update_mm2pe[1]
+I0102 13:45:39.069 tapa.core:538] depth
+I0102 13:45:39.069 tapa.core:539] 2
+I0102 13:45:39.069 tapa.core:537]     instantiating PageRank.update_mm2pe[2]
+I0102 13:45:39.069 tapa.core:538] depth
+I0102 13:45:39.069 tapa.core:539] 2
+I0102 13:45:39.069 tapa.core:537]     instantiating PageRank.update_mm2pe[3]
+I0102 13:45:39.069 tapa.core:538] depth
+I0102 13:45:39.070 tapa.core:539] 2
+I0102 13:45:39.070 tapa.core:537]     instantiating PageRank.update_pe2mm[0]
+I0102 13:45:39.070 tapa.core:538] depth
+I0102 13:45:39.070 tapa.core:539] 2
+I0102 13:45:39.070 tapa.core:537]     instantiating PageRank.update_pe2mm[1]
+I0102 13:45:39.070 tapa.core:538] depth
+I0102 13:45:39.070 tapa.core:539] 2
+I0102 13:45:39.070 tapa.core:537]     instantiating PageRank.update_pe2mm[2]
+I0102 13:45:39.070 tapa.core:538] depth
+I0102 13:45:39.070 tapa.core:539] 2
+I0102 13:45:39.071 tapa.core:537]     instantiating PageRank.update_pe2mm[3]
+I0102 13:45:39.071 tapa.core:538] depth
+I0102 13:45:39.071 tapa.core:539] 2
+I0102 13:45:39.071 tapa.core:537]     instantiating PageRank.update_phase[0]
+I0102 13:45:39.071 tapa.core:538] depth
+I0102 13:45:39.071 tapa.core:539] 2
+I0102 13:45:39.071 tapa.core:537]     instantiating PageRank.update_phase[1]
+I0102 13:45:39.071 tapa.core:538] depth
+I0102 13:45:39.071 tapa.core:539] 2
+I0102 13:45:39.072 tapa.core:537]     instantiating PageRank.update_phase[2]
+I0102 13:45:39.072 tapa.core:538] depth
+I0102 13:45:39.072 tapa.core:539] 2
+I0102 13:45:39.072 tapa.core:537]     instantiating PageRank.update_phase[3]
+I0102 13:45:39.072 tapa.core:538] depth
+I0102 13:45:39.072 tapa.core:539] 2
+I0102 13:45:39.073 tapa.core:537]     instantiating PageRank.update_read_addr[0]
+I0102 13:45:39.073 tapa.core:538] depth
+I0102 13:45:39.073 tapa.core:539] 2
+I0102 13:45:39.073 tapa.core:537]     instantiating PageRank.update_read_addr[1]
+I0102 13:45:39.073 tapa.core:538] depth
+I0102 13:45:39.073 tapa.core:539] 2
+I0102 13:45:39.073 tapa.core:537]     instantiating PageRank.update_read_addr[2]
+I0102 13:45:39.073 tapa.core:538] depth
+I0102 13:45:39.073 tapa.core:539] 2
+I0102 13:45:39.074 tapa.core:537]     instantiating PageRank.update_read_addr[3]
+I0102 13:45:39.074 tapa.core:538] depth
+I0102 13:45:39.074 tapa.core:539] 2
+I0102 13:45:39.074 tapa.core:537]     instantiating PageRank.update_read_data[0]
+I0102 13:45:39.074 tapa.core:538] depth
+I0102 13:45:39.074 tapa.core:539] 2
+I0102 13:45:39.074 tapa.core:537]     instantiating PageRank.update_read_data[1]
+I0102 13:45:39.074 tapa.core:538] depth
+I0102 13:45:39.074 tapa.core:539] 2
+I0102 13:45:39.074 tapa.core:537]     instantiating PageRank.update_read_data[2]
+I0102 13:45:39.075 tapa.core:538] depth
+I0102 13:45:39.075 tapa.core:539] 2
+I0102 13:45:39.075 tapa.core:537]     instantiating PageRank.update_read_data[3]
+I0102 13:45:39.075 tapa.core:538] depth
+I0102 13:45:39.075 tapa.core:539] 2
+I0102 13:45:39.075 tapa.core:537]     instantiating PageRank.update_req[0]
+I0102 13:45:39.075 tapa.core:538] depth
+I0102 13:45:39.075 tapa.core:539] 2
+I0102 13:45:39.075 tapa.core:537]     instantiating PageRank.update_req[1]
+I0102 13:45:39.075 tapa.core:538] depth
+I0102 13:45:39.075 tapa.core:539] 2
+I0102 13:45:39.076 tapa.core:537]     instantiating PageRank.update_req[2]
+I0102 13:45:39.076 tapa.core:538] depth
+I0102 13:45:39.076 tapa.core:539] 2
+I0102 13:45:39.076 tapa.core:537]     instantiating PageRank.update_req[3]
+I0102 13:45:39.076 tapa.core:538] depth
+I0102 13:45:39.076 tapa.core:539] 2
+I0102 13:45:39.076 tapa.core:537]     instantiating PageRank.update_write_addr[0]
+I0102 13:45:39.076 tapa.core:538] depth
+I0102 13:45:39.076 tapa.core:539] 2
+I0102 13:45:39.077 tapa.core:537]     instantiating PageRank.update_write_addr[1]
+I0102 13:45:39.077 tapa.core:538] depth
+I0102 13:45:39.077 tapa.core:539] 2
+I0102 13:45:39.077 tapa.core:537]     instantiating PageRank.update_write_addr[2]
+I0102 13:45:39.077 tapa.core:538] depth
+I0102 13:45:39.077 tapa.core:539] 2
+I0102 13:45:39.077 tapa.core:537]     instantiating PageRank.update_write_addr[3]
+I0102 13:45:39.077 tapa.core:538] depth
+I0102 13:45:39.077 tapa.core:539] 2
+I0102 13:45:39.077 tapa.core:537]     instantiating PageRank.update_write_data[0]
+I0102 13:45:39.078 tapa.core:538] depth
+I0102 13:45:39.078 tapa.core:539] 2
+I0102 13:45:39.078 tapa.core:537]     instantiating PageRank.update_write_data[1]
+I0102 13:45:39.078 tapa.core:538] depth
+I0102 13:45:39.078 tapa.core:539] 2
+I0102 13:45:39.078 tapa.core:537]     instantiating PageRank.update_write_data[2]
+I0102 13:45:39.078 tapa.core:538] depth
+I0102 13:45:39.078 tapa.core:539] 2
+I0102 13:45:39.078 tapa.core:537]     instantiating PageRank.update_write_data[3]
+I0102 13:45:39.078 tapa.core:538] depth
+I0102 13:45:39.079 tapa.core:539] 2
+I0102 13:45:39.079 tapa.core:537]     instantiating PageRank.vertex_mm2pe_r0[0]
+I0102 13:45:39.079 tapa.core:538] depth
+I0102 13:45:39.079 tapa.core:539] 2
+I0102 13:45:39.079 tapa.core:537]     instantiating PageRank.vertex_mm2pe_r0[1]
+I0102 13:45:39.079 tapa.core:538] depth
+I0102 13:45:39.079 tapa.core:539] 2
+I0102 13:45:39.079 tapa.core:537]     instantiating PageRank.vertex_mm2pe_r1[0]
+I0102 13:45:39.080 tapa.core:538] depth
+I0102 13:45:39.080 tapa.core:539] 2
+I0102 13:45:39.080 tapa.core:537]     instantiating PageRank.vertex_mm2pe_r1[1]
+I0102 13:45:39.080 tapa.core:538] depth
+I0102 13:45:39.080 tapa.core:539] 2
+I0102 13:45:39.080 tapa.core:537]     instantiating PageRank.vertex_mm2pe_r1[2]
+I0102 13:45:39.080 tapa.core:538] depth
+I0102 13:45:39.080 tapa.core:539] 2
+I0102 13:45:39.080 tapa.core:537]     instantiating PageRank.vertex_pe2mm_r0[0]
+I0102 13:45:39.080 tapa.core:538] depth
+I0102 13:45:39.081 tapa.core:539] 2
+I0102 13:45:39.081 tapa.core:537]     instantiating PageRank.vertex_pe2mm_r0[1]
+I0102 13:45:39.081 tapa.core:538] depth
+I0102 13:45:39.081 tapa.core:539] 2
+I0102 13:45:39.081 tapa.core:537]     instantiating PageRank.vertex_pe2mm_r1[0]
+I0102 13:45:39.081 tapa.core:538] depth
+I0102 13:45:39.081 tapa.core:539] 2
+I0102 13:45:39.081 tapa.core:537]     instantiating PageRank.vertex_pe2mm_r1[1]
+I0102 13:45:39.081 tapa.core:538] depth
+I0102 13:45:39.081 tapa.core:539] 2
+I0102 13:45:39.082 tapa.core:537]     instantiating PageRank.vertex_pe2mm_r1[2]
+I0102 13:45:39.082 tapa.core:538] depth
+I0102 13:45:39.082 tapa.core:539] 2
+I0102 13:45:39.082 tapa.core:537]     instantiating PageRank.vertex_req_r0[0]
+I0102 13:45:39.082 tapa.core:538] depth
+I0102 13:45:39.082 tapa.core:539] 2
+I0102 13:45:39.082 tapa.core:537]     instantiating PageRank.vertex_req_r0[1]
+I0102 13:45:39.082 tapa.core:538] depth
+I0102 13:45:39.082 tapa.core:539] 2
+I0102 13:45:39.083 tapa.core:537]     instantiating PageRank.vertex_req_r1[0]
+I0102 13:45:39.083 tapa.core:538] depth
+I0102 13:45:39.083 tapa.core:539] 2
+I0102 13:45:39.083 tapa.core:537]     instantiating PageRank.vertex_req_r1[1]
+I0102 13:45:39.083 tapa.core:538] depth
+I0102 13:45:39.083 tapa.core:539] 2
+I0102 13:45:39.083 tapa.core:537]     instantiating PageRank.vertex_req_r1[2]
+I0102 13:45:39.083 tapa.core:538] depth
+I0102 13:45:39.083 tapa.core:539] 2
+I0102 13:45:39.084 tapa.core:503]   connecting PageRank's children tasks
+I0102 13:45:39.222 tapa.core:812] Set the address width of async_mmap to 64
+I0102 13:45:39.564 tapa.core:473] generating report
+I0102 13:45:39.570 tapa.core:481] writing generated auxiliary RTL files
+I0102 13:45:39.570 tapa.core:489] packaging RTL code
+I0102 13:46:05.399 tapa.tapac:705] generate the v++ xo file at run_pagerank/pagerank.xo
+I0102 13:46:05.399 tapa.bitstream:74] use the original connectivity configuration at /home/nehaprakriya/Documents/tapa/regression/page_rank/tapa/src/link_config.ini in the v++ script
+I0102 13:46:05.399 tapa.tapac:723] generate the v++ script at run_pagerank/pagerank_generate_bitstream.sh

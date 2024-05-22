@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tmp/run-hls-Mmap2Stream-e7a2xhrl/commands.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="Mmap2Stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=Mmap2Stream" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Mmap2Stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = mmap offset = direct bundle = mmap" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Mmap2Stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = stream" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Mmap2Stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = stream._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Mmap2Stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = stream._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/usr/local/include/tapa/xilinx/hls/stream.h:156:2" msg_body="Inlining function 'tapa::ostream&lt;float&gt;::write(float const&amp;)' into 'tapa::ostream&lt;float&gt;::operator&lt;&lt;(float const&amp;)'">
+        <args Callee="tapa::ostream&lt;float&gt;::write(float const&amp;)" Caller="tapa::ostream&lt;float&gt;::operator&lt;&lt;(float const&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:19:12" msg_body="Inlining function 'tapa::ostream&lt;float&gt;::operator&lt;&lt;(float const&amp;)' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream&lt;float&gt;&amp;)'">
+        <args Callee="tapa::ostream&lt;float&gt;::operator&lt;&lt;(float const&amp;)" Caller="Mmap2Stream(float const*, unsigned long, tapa::ostream&lt;float&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:9:0" msg_body="Disaggregating variable 'stream'">
+        <args Name="stream"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Mmap2Stream.cpp:9:0" msg_body="Aggregating fifo (hls::stream) variable 'stream' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="stream"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.none.i64.s_struct.tapa::internal::elem_t&lt;float&gt;s' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream&lt;float&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.none.i64.s_struct.tapa::internal::elem_t&lt;float&gt;s" Caller="Mmap2Stream(float const*, unsigned long, tapa::ostream&lt;float&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.bits.i33.s_struct.tapa::internal::elem_t&lt;float&gt;s.1' into 'Mmap2Stream(float const*, unsigned long, tapa::ostream&lt;float&gt;&amp;)'">
+        <args Callee="_llvm.fpga.pack.bits.i33.s_struct.tapa::internal::elem_t&lt;float&gt;s.1" Caller="Mmap2Stream(float const*, unsigned long, tapa::ostream&lt;float&gt;&amp;)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

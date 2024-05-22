@@ -1,0 +1,4 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:895:19" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L3.cpp:895:19" LoopName="VITIS_LOOP_895_3" ParentFunc="krnl_globalSort_L3(tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::istream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul&gt; &gt;&amp;, tapa::async_mmap&lt;float&gt;&amp;, tapa::async_mmap&lt;int&gt;&amp;)"/>
+</VitisHLS:BurstInfo>
+

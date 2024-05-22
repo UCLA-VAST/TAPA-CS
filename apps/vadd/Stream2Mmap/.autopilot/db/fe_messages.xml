@@ -1,0 +1,42 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tmp/run-hls-Stream2Mmap-okae8ol4/commands.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="Stream2Mmap" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=Stream2Mmap" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Stream2Mmap" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = stream" ARG_PragmaType="disaggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Stream2Mmap" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = stream._" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Stream2Mmap" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = stream._ bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Stream2Mmap" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port = stream._peek" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Stream2Mmap" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = stream._peek bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Stream2Mmap" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port = mmap offset = direct bundle = mmap" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/usr/local/include/tapa/xilinx/hls/stream.h:90:10" msg_body="Inlining function 'tapa::istream&lt;float&gt;::read()' into 'tapa::istream&lt;float&gt;::operator&gt;&gt;(float&amp;)'">
+        <args Callee="tapa::istream&lt;float&gt;::read()" Caller="tapa::istream&lt;float&gt;::operator&gt;&gt;(float&amp;)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:25:12" msg_body="Inlining function 'tapa::istream&lt;float&gt;::operator&gt;&gt;(float&amp;)' into 'Stream2Mmap(tapa::istream&lt;float&gt;&amp;, float*, unsigned long)'">
+        <args Callee="tapa::istream&lt;float&gt;::operator&gt;&gt;(float&amp;)" Caller="Stream2Mmap(tapa::istream&lt;float&gt;&amp;, float*, unsigned long)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:12:0" msg_body="Disaggregating variable 'stream'">
+        <args Name="stream"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:12:0" msg_body="Aggregating fifo (hls::stream) variable 'stream__' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="stream__"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp:12:0" msg_body="Aggregating fifo (hls::stream) variable 'stream__peek' with compact=bit mode in 33-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="33" HwTyName="fifo (hls::stream)" Name="stream__peek"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9" msg_body="Inlining function '_llvm.fpga.unpack.bits.s_struct.tapa::internal::elem_t&lt;float&gt;s.i33' into 'Stream2Mmap(tapa::istream&lt;float&gt;&amp;, float*, unsigned long)'">
+        <args Callee="_llvm.fpga.unpack.bits.s_struct.tapa::internal::elem_t&lt;float&gt;s.i33" Caller="Stream2Mmap(tapa::istream&lt;float&gt;&amp;, float*, unsigned long)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

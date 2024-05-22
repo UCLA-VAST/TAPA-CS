@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln29_fu_83_p2" SOURCE="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29" VARIABLE="icmp_ln29" MODULE="Add_Pipeline_VITIS_LOOP_29_1" LOOP="VITIS_LOOP_29_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_88_p2" SOURCE="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:29" VARIABLE="i_2" MODULE="Add_Pipeline_VITIS_LOOP_29_1" LOOP="VITIS_LOOP_29_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op fadd" ID="" IMPL="fulldsp" LATENCY="6" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_7_full_dsp_1_U1" SOURCE="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Add.cpp:30" VARIABLE="add" MODULE="Add_Pipeline_VITIS_LOOP_29_1" LOOP="VITIS_LOOP_29_1" BUNDLEDNAME="" DSP="2" BRAM="0" URAM="0"/>
+</BindInfo>

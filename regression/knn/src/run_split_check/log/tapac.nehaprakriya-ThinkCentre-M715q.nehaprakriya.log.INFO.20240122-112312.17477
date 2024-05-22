@@ -1,0 +1,452 @@
+I0122 11:23:12.578 tapa.util:162] logging level set to INFO
+I0122 11:23:12.579 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0122 11:23:12.579 tapa.tapac:496] Python recursion limit set to 3000
+I0122 11:23:12.579 tapa.tapac:416] Executing all steps of tapac
+W0122 11:23:12.579 tapa.tapac:438] The floorplan option is automatically enabled because a floorplan output file is provided
+I0122 11:23:12.692 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+I0122 11:23:21.482 tapa.core:179] extracting HLS C++ files
+I0122 11:23:21.502 tapa.core:201] running HLS
+I0122 11:23:21.506 tapa.core:239] spawn 8 workers for parallel HLS synthesis of the tasks
+I0122 11:28:12.993 tapa.core:252] extracting RTL files
+I0122 11:28:13.425 tapa.core:283] parsing RTL files and populating tasks
+I0122 11:28:15.788 tapa.core:292] parsing krnl_globalSort_L1_L2
+I0122 11:28:15.790 tapa.core:296] populating krnl_globalSort_L1_L2
+I0122 11:28:15.790 tapa.core:292] parsing krnl_globalSort_L3
+I0122 11:28:15.792 tapa.core:296] populating krnl_globalSort_L3
+I0122 11:28:15.792 tapa.core:292] parsing krnl_partialKnn_wrapper_0
+I0122 11:28:15.793 tapa.core:296] populating krnl_partialKnn_wrapper_0
+I0122 11:28:15.793 tapa.core:292] parsing krnl_partialKnn_wrapper_1
+I0122 11:28:15.794 tapa.core:296] populating krnl_partialKnn_wrapper_1
+I0122 11:28:15.802 tapa.core:292] parsing krnl_partialKnn_wrapper_10
+I0122 11:28:15.803 tapa.core:296] populating krnl_partialKnn_wrapper_10
+I0122 11:28:15.803 tapa.core:292] parsing krnl_partialKnn_wrapper_11
+I0122 11:28:15.804 tapa.core:296] populating krnl_partialKnn_wrapper_11
+I0122 11:28:15.804 tapa.core:292] parsing krnl_partialKnn_wrapper_12
+I0122 11:28:15.805 tapa.core:296] populating krnl_partialKnn_wrapper_12
+I0122 11:28:15.805 tapa.core:292] parsing krnl_partialKnn_wrapper_13
+I0122 11:28:15.806 tapa.core:296] populating krnl_partialKnn_wrapper_13
+I0122 11:28:17.955 tapa.core:292] parsing krnl_partialKnn_wrapper_14
+I0122 11:28:17.956 tapa.core:296] populating krnl_partialKnn_wrapper_14
+I0122 11:28:18.130 tapa.core:292] parsing krnl_partialKnn_wrapper_15
+I0122 11:28:18.131 tapa.core:296] populating krnl_partialKnn_wrapper_15
+I0122 11:28:18.131 tapa.core:292] parsing krnl_partialKnn_wrapper_16
+I0122 11:28:18.132 tapa.core:296] populating krnl_partialKnn_wrapper_16
+I0122 11:28:18.235 tapa.core:292] parsing krnl_partialKnn_wrapper_17
+I0122 11:28:18.236 tapa.core:296] populating krnl_partialKnn_wrapper_17
+I0122 11:28:18.236 tapa.core:292] parsing krnl_partialKnn_wrapper_2
+I0122 11:28:18.237 tapa.core:296] populating krnl_partialKnn_wrapper_2
+I0122 11:28:18.294 tapa.core:292] parsing krnl_partialKnn_wrapper_3
+I0122 11:28:18.295 tapa.core:296] populating krnl_partialKnn_wrapper_3
+I0122 11:28:18.296 tapa.core:292] parsing krnl_partialKnn_wrapper_4
+I0122 11:28:18.297 tapa.core:296] populating krnl_partialKnn_wrapper_4
+I0122 11:28:18.297 tapa.core:292] parsing krnl_partialKnn_wrapper_5
+I0122 11:28:18.298 tapa.core:296] populating krnl_partialKnn_wrapper_5
+I0122 11:28:19.801 tapa.core:292] parsing krnl_partialKnn_wrapper_6
+I0122 11:28:19.803 tapa.core:296] populating krnl_partialKnn_wrapper_6
+I0122 11:28:19.803 tapa.core:292] parsing krnl_partialKnn_wrapper_7
+I0122 11:28:19.804 tapa.core:296] populating krnl_partialKnn_wrapper_7
+I0122 11:28:19.804 tapa.core:292] parsing krnl_partialKnn_wrapper_8
+I0122 11:28:19.805 tapa.core:296] populating krnl_partialKnn_wrapper_8
+I0122 11:28:19.821 tapa.core:292] parsing krnl_partialKnn_wrapper_9
+I0122 11:28:19.822 tapa.core:296] populating krnl_partialKnn_wrapper_9
+I0122 11:28:19.993 tapa.core:292] parsing Knn
+I0122 11:28:19.995 tapa.core:296] populating Knn
+D0122 11:28:19.998 tapa.task:136] mmap argument 'Knn.L3_out_dist' (id_width=1, thread_count=1) is connected to port 'krnl_globalSort_L3_0.output_knnDist'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.L3_out_id' (id_width=1, thread_count=1) is connected to port 'krnl_globalSort_L3_0.output_knnId'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_0' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_0_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_1' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_1_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_10' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_10_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_11' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_11_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_12' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_12_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_13' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_13_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_14' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_14_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_15' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_15_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_16' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_16_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_17' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_17_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_2' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_2_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_3' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_3_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_4' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_4_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_5' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_5_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_6' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_6_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_7' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_7_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_8' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_8_0.searchSpace_0'
+D0122 11:28:19.999 tapa.task:136] mmap argument 'Knn.in_9' (id_width=1, thread_count=1) is connected to port 'krnl_partialKnn_wrapper_9_0.searchSpace_0'
+I0122 11:28:19.999 tapa.core:300] instrumenting upper-level RTL
+I0122 11:28:20.000 tapa.core:374] Running Inter-FPGA floorplanning
+I0122 11:28:20.000 tapa.floorplan:80] Inter FPGA floorplan
+I0122 11:28:20.001 tapa.task_graph:35] L1_out_dist[0]
+I0122 11:28:20.001 tapa.task_graph:37] L1_out_dist[0]
+I0122 11:28:20.001 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0122 11:28:20.001 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0122 11:28:20.001 tapa.task_graph:40] 2
+I0122 11:28:20.001 tapa.task_graph:35] L1_out_dist[1]
+I0122 11:28:20.001 tapa.task_graph:37] L1_out_dist[1]
+I0122 11:28:20.001 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0122 11:28:20.001 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0122 11:28:20.002 tapa.task_graph:40] 2
+I0122 11:28:20.002 tapa.task_graph:35] L1_out_dist[2]
+I0122 11:28:20.002 tapa.task_graph:37] L1_out_dist[2]
+I0122 11:28:20.002 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0122 11:28:20.002 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0122 11:28:20.002 tapa.task_graph:40] 2
+I0122 11:28:20.002 tapa.task_graph:35] L1_out_dist[3]
+I0122 11:28:20.002 tapa.task_graph:37] L1_out_dist[3]
+I0122 11:28:20.002 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+I0122 11:28:20.003 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0122 11:28:20.003 tapa.task_graph:40] 2
+I0122 11:28:20.003 tapa.task_graph:35] L1_out_dist[4]
+I0122 11:28:20.003 tapa.task_graph:37] L1_out_dist[4]
+I0122 11:28:20.003 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_4
+I0122 11:28:20.003 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0122 11:28:20.003 tapa.task_graph:40] 2
+I0122 11:28:20.003 tapa.task_graph:35] L1_out_dist[5]
+I0122 11:28:20.003 tapa.task_graph:37] L1_out_dist[5]
+I0122 11:28:20.003 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_5
+I0122 11:28:20.004 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0122 11:28:20.004 tapa.task_graph:40] 2
+I0122 11:28:20.004 tapa.task_graph:35] L1_out_id[0]
+I0122 11:28:20.004 tapa.task_graph:37] L1_out_id[0]
+I0122 11:28:20.004 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0122 11:28:20.004 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0122 11:28:20.004 tapa.task_graph:40] 2
+I0122 11:28:20.004 tapa.task_graph:35] L1_out_id[1]
+I0122 11:28:20.004 tapa.task_graph:37] L1_out_id[1]
+I0122 11:28:20.004 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0122 11:28:20.004 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0122 11:28:20.005 tapa.task_graph:40] 2
+I0122 11:28:20.005 tapa.task_graph:35] L1_out_id[2]
+I0122 11:28:20.005 tapa.task_graph:37] L1_out_id[2]
+I0122 11:28:20.005 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0122 11:28:20.005 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0122 11:28:20.005 tapa.task_graph:40] 2
+I0122 11:28:20.006 tapa.task_graph:35] L1_out_id[3]
+I0122 11:28:20.006 tapa.task_graph:37] L1_out_id[3]
+I0122 11:28:20.006 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+I0122 11:28:20.006 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0122 11:28:20.006 tapa.task_graph:40] 2
+I0122 11:28:20.006 tapa.task_graph:35] L1_out_id[4]
+I0122 11:28:20.007 tapa.task_graph:37] L1_out_id[4]
+I0122 11:28:20.007 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_4
+I0122 11:28:20.007 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0122 11:28:20.007 tapa.task_graph:40] 2
+I0122 11:28:20.007 tapa.task_graph:35] L1_out_id[5]
+I0122 11:28:20.007 tapa.task_graph:37] L1_out_id[5]
+I0122 11:28:20.007 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_5
+I0122 11:28:20.007 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0122 11:28:20.007 tapa.task_graph:40] 2
+I0122 11:28:20.007 tapa.task_graph:35] L2_out_dist0
+I0122 11:28:20.008 tapa.task_graph:37] L2_out_dist0
+I0122 11:28:20.008 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_6
+I0122 11:28:20.008 tapa.task_graph:39] get_instance krnl_globalSort_L3_0
+I0122 11:28:20.008 tapa.task_graph:40] 2
+I0122 11:28:20.008 tapa.task_graph:35] L2_out_dist1
+I0122 11:28:20.008 tapa.task_graph:37] L2_out_dist1
+I0122 11:28:20.008 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_7
+I0122 11:28:20.009 tapa.task_graph:39] get_instance krnl_globalSort_L3_0
+I0122 11:28:20.009 tapa.task_graph:40] 2
+I0122 11:28:20.009 tapa.task_graph:35] L2_out_id0
+I0122 11:28:20.009 tapa.task_graph:37] L2_out_id0
+I0122 11:28:20.009 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_6
+I0122 11:28:20.009 tapa.task_graph:39] get_instance krnl_globalSort_L3_0
+I0122 11:28:20.009 tapa.task_graph:40] 2
+I0122 11:28:20.010 tapa.task_graph:35] L2_out_id1
+I0122 11:28:20.010 tapa.task_graph:37] L2_out_id1
+I0122 11:28:20.010 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_7
+I0122 11:28:20.010 tapa.task_graph:39] get_instance krnl_globalSort_L3_0
+I0122 11:28:20.010 tapa.task_graph:40] 2
+I0122 11:28:20.010 tapa.task_graph:35] out_dist[0]
+I0122 11:28:20.010 tapa.task_graph:37] out_dist[0]
+I0122 11:28:20.010 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_0_0
+I0122 11:28:20.010 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0122 11:28:20.011 tapa.task_graph:40] 2
+I0122 11:28:20.011 tapa.task_graph:35] out_dist[10]
+I0122 11:28:20.011 tapa.task_graph:37] out_dist[10]
+I0122 11:28:20.011 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_10_0
+I0122 11:28:20.011 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0122 11:28:20.011 tapa.task_graph:40] 2
+I0122 11:28:20.011 tapa.task_graph:35] out_dist[11]
+I0122 11:28:20.011 tapa.task_graph:37] out_dist[11]
+I0122 11:28:20.011 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_11_0
+I0122 11:28:20.011 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0122 11:28:20.012 tapa.task_graph:40] 2
+I0122 11:28:20.012 tapa.task_graph:35] out_dist[12]
+I0122 11:28:20.012 tapa.task_graph:37] out_dist[12]
+I0122 11:28:20.012 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_12_0
+I0122 11:28:20.012 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0122 11:28:20.012 tapa.task_graph:40] 2
+I0122 11:28:20.012 tapa.task_graph:35] out_dist[13]
+I0122 11:28:20.012 tapa.task_graph:37] out_dist[13]
+I0122 11:28:20.012 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_13_0
+I0122 11:28:20.012 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0122 11:28:20.013 tapa.task_graph:40] 2
+I0122 11:28:20.013 tapa.task_graph:35] out_dist[14]
+I0122 11:28:20.013 tapa.task_graph:37] out_dist[14]
+I0122 11:28:20.013 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_14_0
+I0122 11:28:20.013 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0122 11:28:20.013 tapa.task_graph:40] 2
+I0122 11:28:20.013 tapa.task_graph:35] out_dist[15]
+I0122 11:28:20.013 tapa.task_graph:37] out_dist[15]
+I0122 11:28:20.013 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_15_0
+I0122 11:28:20.013 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0122 11:28:20.013 tapa.task_graph:40] 2
+I0122 11:28:20.014 tapa.task_graph:35] out_dist[16]
+I0122 11:28:20.014 tapa.task_graph:37] out_dist[16]
+I0122 11:28:20.014 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_16_0
+I0122 11:28:20.014 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0122 11:28:20.014 tapa.task_graph:40] 2
+I0122 11:28:20.014 tapa.task_graph:35] out_dist[17]
+I0122 11:28:20.014 tapa.task_graph:37] out_dist[17]
+I0122 11:28:20.014 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_17_0
+I0122 11:28:20.014 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0122 11:28:20.014 tapa.task_graph:40] 2
+I0122 11:28:20.014 tapa.task_graph:35] out_dist[1]
+I0122 11:28:20.015 tapa.task_graph:37] out_dist[1]
+I0122 11:28:20.015 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_1_0
+I0122 11:28:20.015 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0122 11:28:20.015 tapa.task_graph:40] 2
+I0122 11:28:20.015 tapa.task_graph:35] out_dist[2]
+I0122 11:28:20.015 tapa.task_graph:37] out_dist[2]
+I0122 11:28:20.015 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_2_0
+I0122 11:28:20.015 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0122 11:28:20.015 tapa.task_graph:40] 2
+I0122 11:28:20.015 tapa.task_graph:35] out_dist[3]
+I0122 11:28:20.015 tapa.task_graph:37] out_dist[3]
+I0122 11:28:20.015 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_3_0
+I0122 11:28:20.016 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0122 11:28:20.016 tapa.task_graph:40] 2
+I0122 11:28:20.016 tapa.task_graph:35] out_dist[4]
+I0122 11:28:20.016 tapa.task_graph:37] out_dist[4]
+I0122 11:28:20.016 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_4_0
+I0122 11:28:20.016 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0122 11:28:20.016 tapa.task_graph:40] 2
+I0122 11:28:20.016 tapa.task_graph:35] out_dist[5]
+I0122 11:28:20.016 tapa.task_graph:37] out_dist[5]
+I0122 11:28:20.016 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_5_0
+I0122 11:28:20.016 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0122 11:28:20.016 tapa.task_graph:40] 2
+I0122 11:28:20.017 tapa.task_graph:35] out_dist[6]
+I0122 11:28:20.017 tapa.task_graph:37] out_dist[6]
+I0122 11:28:20.017 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_6_0
+I0122 11:28:20.017 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0122 11:28:20.017 tapa.task_graph:40] 2
+I0122 11:28:20.017 tapa.task_graph:35] out_dist[7]
+I0122 11:28:20.017 tapa.task_graph:37] out_dist[7]
+I0122 11:28:20.017 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_7_0
+I0122 11:28:20.017 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0122 11:28:20.017 tapa.task_graph:40] 2
+I0122 11:28:20.018 tapa.task_graph:35] out_dist[8]
+I0122 11:28:20.018 tapa.task_graph:37] out_dist[8]
+I0122 11:28:20.018 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_8_0
+I0122 11:28:20.018 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0122 11:28:20.018 tapa.task_graph:40] 2
+I0122 11:28:20.018 tapa.task_graph:35] out_dist[9]
+I0122 11:28:20.018 tapa.task_graph:37] out_dist[9]
+I0122 11:28:20.018 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_9_0
+I0122 11:28:20.018 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0122 11:28:20.018 tapa.task_graph:40] 2
+I0122 11:28:20.018 tapa.task_graph:35] out_id[0]
+I0122 11:28:20.018 tapa.task_graph:37] out_id[0]
+I0122 11:28:20.019 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_0_0
+I0122 11:28:20.019 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0122 11:28:20.019 tapa.task_graph:40] 2
+I0122 11:28:20.019 tapa.task_graph:35] out_id[10]
+I0122 11:28:20.019 tapa.task_graph:37] out_id[10]
+I0122 11:28:20.019 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_10_0
+I0122 11:28:20.019 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0122 11:28:20.019 tapa.task_graph:40] 2
+I0122 11:28:20.019 tapa.task_graph:35] out_id[11]
+I0122 11:28:20.019 tapa.task_graph:37] out_id[11]
+I0122 11:28:20.019 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_11_0
+I0122 11:28:20.019 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0122 11:28:20.019 tapa.task_graph:40] 2
+I0122 11:28:20.020 tapa.task_graph:35] out_id[12]
+I0122 11:28:20.020 tapa.task_graph:37] out_id[12]
+I0122 11:28:20.020 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_12_0
+I0122 11:28:20.020 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0122 11:28:20.020 tapa.task_graph:40] 2
+I0122 11:28:20.020 tapa.task_graph:35] out_id[13]
+I0122 11:28:20.020 tapa.task_graph:37] out_id[13]
+I0122 11:28:20.020 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_13_0
+I0122 11:28:20.020 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0122 11:28:20.020 tapa.task_graph:40] 2
+I0122 11:28:20.020 tapa.task_graph:35] out_id[14]
+I0122 11:28:20.020 tapa.task_graph:37] out_id[14]
+I0122 11:28:20.020 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_14_0
+I0122 11:28:20.021 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0122 11:28:20.021 tapa.task_graph:40] 2
+I0122 11:28:20.021 tapa.task_graph:35] out_id[15]
+I0122 11:28:20.021 tapa.task_graph:37] out_id[15]
+I0122 11:28:20.021 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_15_0
+I0122 11:28:20.021 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0122 11:28:20.021 tapa.task_graph:40] 2
+I0122 11:28:20.021 tapa.task_graph:35] out_id[16]
+I0122 11:28:20.021 tapa.task_graph:37] out_id[16]
+I0122 11:28:20.021 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_16_0
+I0122 11:28:20.021 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0122 11:28:20.021 tapa.task_graph:40] 2
+I0122 11:28:20.022 tapa.task_graph:35] out_id[17]
+I0122 11:28:20.022 tapa.task_graph:37] out_id[17]
+I0122 11:28:20.022 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_17_0
+I0122 11:28:20.022 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0122 11:28:20.022 tapa.task_graph:40] 2
+I0122 11:28:20.022 tapa.task_graph:35] out_id[1]
+I0122 11:28:20.022 tapa.task_graph:37] out_id[1]
+I0122 11:28:20.022 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_1_0
+I0122 11:28:20.022 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0122 11:28:20.022 tapa.task_graph:40] 2
+I0122 11:28:20.023 tapa.task_graph:35] out_id[2]
+I0122 11:28:20.023 tapa.task_graph:37] out_id[2]
+I0122 11:28:20.023 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_2_0
+I0122 11:28:20.023 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0122 11:28:20.023 tapa.task_graph:40] 2
+I0122 11:28:20.023 tapa.task_graph:35] out_id[3]
+I0122 11:28:20.023 tapa.task_graph:37] out_id[3]
+I0122 11:28:20.023 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_3_0
+I0122 11:28:20.023 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0122 11:28:20.023 tapa.task_graph:40] 2
+I0122 11:28:20.023 tapa.task_graph:35] out_id[4]
+I0122 11:28:20.023 tapa.task_graph:37] out_id[4]
+I0122 11:28:20.023 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_4_0
+I0122 11:28:20.024 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0122 11:28:20.024 tapa.task_graph:40] 2
+I0122 11:28:20.024 tapa.task_graph:35] out_id[5]
+I0122 11:28:20.024 tapa.task_graph:37] out_id[5]
+I0122 11:28:20.024 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_5_0
+I0122 11:28:20.024 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0122 11:28:20.024 tapa.task_graph:40] 2
+I0122 11:28:20.024 tapa.task_graph:35] out_id[6]
+I0122 11:28:20.024 tapa.task_graph:37] out_id[6]
+I0122 11:28:20.024 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_6_0
+I0122 11:28:20.024 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0122 11:28:20.024 tapa.task_graph:40] 2
+I0122 11:28:20.025 tapa.task_graph:35] out_id[7]
+I0122 11:28:20.025 tapa.task_graph:37] out_id[7]
+I0122 11:28:20.025 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_7_0
+I0122 11:28:20.025 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0122 11:28:20.025 tapa.task_graph:40] 2
+I0122 11:28:20.025 tapa.task_graph:35] out_id[8]
+I0122 11:28:20.025 tapa.task_graph:37] out_id[8]
+I0122 11:28:20.025 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_8_0
+I0122 11:28:20.025 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0122 11:28:20.025 tapa.task_graph:40] 2
+I0122 11:28:20.025 tapa.task_graph:35] out_id[9]
+I0122 11:28:20.025 tapa.task_graph:37] out_id[9]
+I0122 11:28:20.025 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_9_0
+I0122 11:28:20.026 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0122 11:28:20.026 tapa.task_graph:40] 2
+W0122 11:28:20.026 tapa.task_graph:88] L3_out_dist is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] L3_out_id is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] in_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] in_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] in_10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] in_11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] in_12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] in_13 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] in_14 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] in_15 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.027 tapa.task_graph:88] in_16 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.028 tapa.task_graph:88] in_17 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.028 tapa.task_graph:88] in_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.028 tapa.task_graph:88] in_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.028 tapa.task_graph:88] in_4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.028 tapa.task_graph:88] in_5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.028 tapa.task_graph:88] in_6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.028 tapa.task_graph:88] in_7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.028 tapa.task_graph:88] in_8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0122 11:28:20.028 tapa.task_graph:88] in_9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_globalSort_L1_L2: {'BRAM': 0, 'DSP': 0, 'FF': 3599, 'LUT': 1266, 'URAM': 0}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_globalSort_L3: {'BRAM': 0, 'DSP': 0, 'FF': 3038, 'LUT': 1380, 'URAM': 0}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_partialKnn_wrapper_0: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_partialKnn_wrapper_1: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_partialKnn_wrapper_10: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_partialKnn_wrapper_11: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_partialKnn_wrapper_12: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_partialKnn_wrapper_13: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_partialKnn_wrapper_14: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.029 tapa.task_graph:167] area of krnl_partialKnn_wrapper_15: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_16: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_17: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_2: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_3: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_4: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_5: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_6: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_7: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_8: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+D0122 11:28:20.030 tapa.task_graph:167] area of krnl_partialKnn_wrapper_9: {'BRAM': 128, 'DSP': 56, 'FF': 34358, 'LUT': 41127, 'URAM': 8}
+I0122 11:28:21.880 tapa.tapac:686] got v2s and slot_list from autobridge
+I0122 11:28:21.880 tapa.tapac:690] Splitting kernel code into 2 FPGAs
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_globalSort_L1_L2_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_globalSort_L1_L2_1
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_globalSort_L1_L2_2
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_globalSort_L1_L2_5
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_globalSort_L1_L2_6
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_globalSort_L3_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_0_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_1_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_11_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_15_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_16_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_17_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_2_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_3_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_4_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_5_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_6_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_7_0
+I0122 11:28:21.881 tapa.split_kernel:726] TASK_VERTEX_krnl_partialKnn_wrapper_8_0
+I0122 11:28:21.881 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_L3_out_dist__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_L3_out_id__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_0__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_1__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_11__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_15__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_16__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_17__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_2__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_3__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_4__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_5__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_6__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_7__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] ASYNC_MMAP_VERTEX_in_8__m_axi
+I0122 11:28:21.882 tapa.split_kernel:726] PORT_VERTEX_in_0_external_controller
+I0122 11:28:21.882 tapa.split_kernel:726] PORT_VERTEX_in_1_external_controller
+I0122 11:28:21.882 tapa.split_kernel:726] PORT_VERTEX_in_2_external_controller
+I0122 11:28:21.882 tapa.split_kernel:726] PORT_VERTEX_in_3_external_controller
+I0122 11:28:21.882 tapa.split_kernel:726] PORT_VERTEX_in_4_external_controller
+I0122 11:28:21.882 tapa.split_kernel:726] PORT_VERTEX_in_5_external_controller
+I0122 11:28:21.882 tapa.split_kernel:726] PORT_VERTEX_in_6_external_controller
+I0122 11:28:21.882 tapa.split_kernel:726] PORT_VERTEX_in_7_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_8_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_9_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_10_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_11_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_12_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_13_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_14_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_15_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_16_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_in_17_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_L3_out_dist_external_controller
+I0122 11:28:21.883 tapa.split_kernel:726] PORT_VERTEX_L3_out_id_external_controller
+I0122 11:28:21.883 tapa.split_kernel:728] TASK_VERTEX_krnl_globalSort_L1_L2_3
+I0122 11:28:21.883 tapa.split_kernel:728] TASK_VERTEX_krnl_globalSort_L1_L2_4
+I0122 11:28:21.883 tapa.split_kernel:728] TASK_VERTEX_krnl_globalSort_L1_L2_7
+I0122 11:28:21.883 tapa.split_kernel:728] TASK_VERTEX_krnl_partialKnn_wrapper_10_0
+I0122 11:28:21.883 tapa.split_kernel:728] TASK_VERTEX_krnl_partialKnn_wrapper_12_0
+I0122 11:28:21.883 tapa.split_kernel:728] TASK_VERTEX_krnl_partialKnn_wrapper_13_0
+I0122 11:28:21.883 tapa.split_kernel:728] TASK_VERTEX_krnl_partialKnn_wrapper_14_0
+I0122 11:28:21.883 tapa.split_kernel:728] TASK_VERTEX_krnl_partialKnn_wrapper_9_0
+I0122 11:28:21.883 tapa.split_kernel:728] ASYNC_MMAP_VERTEX_in_10__m_axi
+I0122 11:28:21.883 tapa.split_kernel:728] ASYNC_MMAP_VERTEX_in_12__m_axi
+I0122 11:28:21.883 tapa.split_kernel:728] ASYNC_MMAP_VERTEX_in_13__m_axi
+I0122 11:28:21.884 tapa.split_kernel:728] ASYNC_MMAP_VERTEX_in_14__m_axi
+I0122 11:28:21.884 tapa.split_kernel:728] ASYNC_MMAP_VERTEX_in_9__m_axi

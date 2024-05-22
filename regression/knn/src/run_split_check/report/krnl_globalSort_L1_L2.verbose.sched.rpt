@@ -1,0 +1,386 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_globalSort_L1_L2'
+================================================================
+* Date:           Wed May 22 14:54:25 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_globalSort_L1_L2 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.385 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      150|      150|  0.499 us|  0.499 us|  151|  151|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%local_kNearstId_partial39_loc = alloca i64 1"   --->   Operation 13 'alloca' 'local_kNearstId_partial39_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_140_loc = alloca i64 1"   --->   Operation 14 'alloca' 'local_kNearstId_partial_140_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_241_loc = alloca i64 1"   --->   Operation 15 'alloca' 'local_kNearstId_partial_241_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_342_loc = alloca i64 1"   --->   Operation 16 'alloca' 'local_kNearstId_partial_342_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_443_loc = alloca i64 1"   --->   Operation 17 'alloca' 'local_kNearstId_partial_443_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_544_loc = alloca i64 1"   --->   Operation 18 'alloca' 'local_kNearstId_partial_544_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_645_loc = alloca i64 1"   --->   Operation 19 'alloca' 'local_kNearstId_partial_645_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_746_loc = alloca i64 1"   --->   Operation 20 'alloca' 'local_kNearstId_partial_746_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_847_loc = alloca i64 1"   --->   Operation 21 'alloca' 'local_kNearstId_partial_847_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_948_loc = alloca i64 1"   --->   Operation 22 'alloca' 'local_kNearstId_partial_948_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1049_loc = alloca i64 1"   --->   Operation 23 'alloca' 'local_kNearstId_partial_1049_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1150_loc = alloca i64 1"   --->   Operation 24 'alloca' 'local_kNearstId_partial_1150_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1251_loc = alloca i64 1"   --->   Operation 25 'alloca' 'local_kNearstId_partial_1251_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1352_loc = alloca i64 1"   --->   Operation 26 'alloca' 'local_kNearstId_partial_1352_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1453_loc = alloca i64 1"   --->   Operation 27 'alloca' 'local_kNearstId_partial_1453_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1554_loc = alloca i64 1"   --->   Operation 28 'alloca' 'local_kNearstId_partial_1554_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1655_loc = alloca i64 1"   --->   Operation 29 'alloca' 'local_kNearstId_partial_1655_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1756_loc = alloca i64 1"   --->   Operation 30 'alloca' 'local_kNearstId_partial_1756_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1857_loc = alloca i64 1"   --->   Operation 31 'alloca' 'local_kNearstId_partial_1857_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1958_loc = alloca i64 1"   --->   Operation 32 'alloca' 'local_kNearstId_partial_1958_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2059_loc = alloca i64 1"   --->   Operation 33 'alloca' 'local_kNearstId_partial_2059_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2160_loc = alloca i64 1"   --->   Operation 34 'alloca' 'local_kNearstId_partial_2160_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2261_loc = alloca i64 1"   --->   Operation 35 'alloca' 'local_kNearstId_partial_2261_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2362_loc = alloca i64 1"   --->   Operation 36 'alloca' 'local_kNearstId_partial_2362_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2463_loc = alloca i64 1"   --->   Operation 37 'alloca' 'local_kNearstId_partial_2463_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2564_loc = alloca i64 1"   --->   Operation 38 'alloca' 'local_kNearstId_partial_2564_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2665_loc = alloca i64 1"   --->   Operation 39 'alloca' 'local_kNearstId_partial_2665_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2766_loc = alloca i64 1"   --->   Operation 40 'alloca' 'local_kNearstId_partial_2766_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2867_loc = alloca i64 1"   --->   Operation 41 'alloca' 'local_kNearstId_partial_2867_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2968_loc = alloca i64 1"   --->   Operation 42 'alloca' 'local_kNearstId_partial_2968_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial1_loc = alloca i64 1"   --->   Operation 43 'alloca' 'local_kNearstDist_partial1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_110_loc = alloca i64 1"   --->   Operation 44 'alloca' 'local_kNearstDist_partial_110_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_211_loc = alloca i64 1"   --->   Operation 45 'alloca' 'local_kNearstDist_partial_211_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_312_loc = alloca i64 1"   --->   Operation 46 'alloca' 'local_kNearstDist_partial_312_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_413_loc = alloca i64 1"   --->   Operation 47 'alloca' 'local_kNearstDist_partial_413_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_514_loc = alloca i64 1"   --->   Operation 48 'alloca' 'local_kNearstDist_partial_514_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_615_loc = alloca i64 1"   --->   Operation 49 'alloca' 'local_kNearstDist_partial_615_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_716_loc = alloca i64 1"   --->   Operation 50 'alloca' 'local_kNearstDist_partial_716_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_817_loc = alloca i64 1"   --->   Operation 51 'alloca' 'local_kNearstDist_partial_817_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_918_loc = alloca i64 1"   --->   Operation 52 'alloca' 'local_kNearstDist_partial_918_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1019_loc = alloca i64 1"   --->   Operation 53 'alloca' 'local_kNearstDist_partial_1019_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1120_loc = alloca i64 1"   --->   Operation 54 'alloca' 'local_kNearstDist_partial_1120_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1221_loc = alloca i64 1"   --->   Operation 55 'alloca' 'local_kNearstDist_partial_1221_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1322_loc = alloca i64 1"   --->   Operation 56 'alloca' 'local_kNearstDist_partial_1322_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1423_loc = alloca i64 1"   --->   Operation 57 'alloca' 'local_kNearstDist_partial_1423_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1524_loc = alloca i64 1"   --->   Operation 58 'alloca' 'local_kNearstDist_partial_1524_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1625_loc = alloca i64 1"   --->   Operation 59 'alloca' 'local_kNearstDist_partial_1625_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1726_loc = alloca i64 1"   --->   Operation 60 'alloca' 'local_kNearstDist_partial_1726_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1827_loc = alloca i64 1"   --->   Operation 61 'alloca' 'local_kNearstDist_partial_1827_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1928_loc = alloca i64 1"   --->   Operation 62 'alloca' 'local_kNearstDist_partial_1928_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2029_loc = alloca i64 1"   --->   Operation 63 'alloca' 'local_kNearstDist_partial_2029_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2130_loc = alloca i64 1"   --->   Operation 64 'alloca' 'local_kNearstDist_partial_2130_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2231_loc = alloca i64 1"   --->   Operation 65 'alloca' 'local_kNearstDist_partial_2231_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2332_loc = alloca i64 1"   --->   Operation 66 'alloca' 'local_kNearstDist_partial_2332_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2433_loc = alloca i64 1"   --->   Operation 67 'alloca' 'local_kNearstDist_partial_2433_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2534_loc = alloca i64 1"   --->   Operation 68 'alloca' 'local_kNearstDist_partial_2534_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2635_loc = alloca i64 1"   --->   Operation 69 'alloca' 'local_kNearstDist_partial_2635_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2736_loc = alloca i64 1"   --->   Operation 70 'alloca' 'local_kNearstDist_partial_2736_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2837_loc = alloca i64 1"   --->   Operation 71 'alloca' 'local_kNearstDist_partial_2837_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2938_loc = alloca i64 1"   --->   Operation 72 'alloca' 'local_kNearstDist_partial_2938_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%empty = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_dist0_s, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 73 'nbreadreq' 'empty' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%empty_14 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_dist0_peek, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 74 'nbreadreq' 'empty_14' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%empty_15 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_id0_s, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 75 'nbreadreq' 'empty_15' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%empty_16 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_id0_peek, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 76 'nbreadreq' 'empty_16' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%empty_17 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_dist1_s, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 77 'nbreadreq' 'empty_17' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%empty_18 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_dist1_peek, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 78 'nbreadreq' 'empty_18' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%empty_19 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_id1_s, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 79 'nbreadreq' 'empty_19' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%empty_20 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_id1_peek, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 80 'nbreadreq' 'empty_20' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%empty_21 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_dist2_s, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 81 'nbreadreq' 'empty_21' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%empty_22 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_dist2_peek, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 82 'nbreadreq' 'empty_22' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%empty_23 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_id2_s, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 83 'nbreadreq' 'empty_23' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%empty_24 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i45P0A, i45 %in_id2_peek, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:136]   --->   Operation 84 'nbreadreq' 'empty_24' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%empty_25 = nbwritereq i1 @_ssdm_op_NbWriteReq.ap_fifo.i45P0A, i45 %out_dist, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:140]   --->   Operation 85 'nbwritereq' 'empty_25' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%empty_26 = nbwritereq i1 @_ssdm_op_NbWriteReq.ap_fifo.i45P0A, i45 %out_id, i32 1" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:140]   --->   Operation 86 'nbwritereq' 'empty_26' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%empty_27 = wait i32 @_ssdm_op_Wait"   --->   Operation 87 'wait' 'empty_27' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 88 [2/2] (0.00ns)   --->   "%call_ln0 = call void @krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1, i45 %in_dist2_s, i45 %in_dist1_s, i45 %in_dist0_s, i32 %local_kNearstDist_partial_2938_loc, i32 %local_kNearstDist_partial_2837_loc, i32 %local_kNearstDist_partial_2736_loc, i32 %local_kNearstDist_partial_2635_loc, i32 %local_kNearstDist_partial_2534_loc, i32 %local_kNearstDist_partial_2433_loc, i32 %local_kNearstDist_partial_2332_loc, i32 %local_kNearstDist_partial_2231_loc, i32 %local_kNearstDist_partial_2130_loc, i32 %local_kNearstDist_partial_2029_loc, i32 %local_kNearstDist_partial_1928_loc, i32 %local_kNearstDist_partial_1827_loc, i32 %local_kNearstDist_partial_1726_loc, i32 %local_kNearstDist_partial_1625_loc, i32 %local_kNearstDist_partial_1524_loc, i32 %local_kNearstDist_partial_1423_loc, i32 %local_kNearstDist_partial_1322_loc, i32 %local_kNearstDist_partial_1221_loc, i32 %local_kNearstDist_partial_1120_loc, i32 %local_kNearstDist_partial_1019_loc, i32 %local_kNearstDist_partial_918_loc, i32 %local_kNearstDist_partial_817_loc, i32 %local_kNearstDist_partial_716_loc, i32 %local_kNearstDist_partial_615_loc, i32 %local_kNearstDist_partial_514_loc, i32 %local_kNearstDist_partial_413_loc, i32 %local_kNearstDist_partial_312_loc, i32 %local_kNearstDist_partial_211_loc, i32 %local_kNearstDist_partial_110_loc, i32 %local_kNearstDist_partial1_loc"   --->   Operation 88 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.04>
+ST_3 : Operation 89 [1/2] (1.04ns)   --->   "%call_ln0 = call void @krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1, i45 %in_dist2_s, i45 %in_dist1_s, i45 %in_dist0_s, i32 %local_kNearstDist_partial_2938_loc, i32 %local_kNearstDist_partial_2837_loc, i32 %local_kNearstDist_partial_2736_loc, i32 %local_kNearstDist_partial_2635_loc, i32 %local_kNearstDist_partial_2534_loc, i32 %local_kNearstDist_partial_2433_loc, i32 %local_kNearstDist_partial_2332_loc, i32 %local_kNearstDist_partial_2231_loc, i32 %local_kNearstDist_partial_2130_loc, i32 %local_kNearstDist_partial_2029_loc, i32 %local_kNearstDist_partial_1928_loc, i32 %local_kNearstDist_partial_1827_loc, i32 %local_kNearstDist_partial_1726_loc, i32 %local_kNearstDist_partial_1625_loc, i32 %local_kNearstDist_partial_1524_loc, i32 %local_kNearstDist_partial_1423_loc, i32 %local_kNearstDist_partial_1322_loc, i32 %local_kNearstDist_partial_1221_loc, i32 %local_kNearstDist_partial_1120_loc, i32 %local_kNearstDist_partial_1019_loc, i32 %local_kNearstDist_partial_918_loc, i32 %local_kNearstDist_partial_817_loc, i32 %local_kNearstDist_partial_716_loc, i32 %local_kNearstDist_partial_615_loc, i32 %local_kNearstDist_partial_514_loc, i32 %local_kNearstDist_partial_413_loc, i32 %local_kNearstDist_partial_312_loc, i32 %local_kNearstDist_partial_211_loc, i32 %local_kNearstDist_partial_110_loc, i32 %local_kNearstDist_partial1_loc"   --->   Operation 89 'call' 'call_ln0' <Predicate = true> <Delay = 1.04> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "%empty_28 = wait i32 @_ssdm_op_Wait"   --->   Operation 90 'wait' 'empty_28' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%empty_29 = wait i32 @_ssdm_op_Wait"   --->   Operation 91 'wait' 'empty_29' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 92 [2/2] (0.00ns)   --->   "%call_ln0 = call void @krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2, i45 %in_id2_s, i45 %in_id1_s, i45 %in_id0_s, i32 %local_kNearstId_partial_2968_loc, i32 %local_kNearstId_partial_2867_loc, i32 %local_kNearstId_partial_2766_loc, i32 %local_kNearstId_partial_2665_loc, i32 %local_kNearstId_partial_2564_loc, i32 %local_kNearstId_partial_2463_loc, i32 %local_kNearstId_partial_2362_loc, i32 %local_kNearstId_partial_2261_loc, i32 %local_kNearstId_partial_2160_loc, i32 %local_kNearstId_partial_2059_loc, i32 %local_kNearstId_partial_1958_loc, i32 %local_kNearstId_partial_1857_loc, i32 %local_kNearstId_partial_1756_loc, i32 %local_kNearstId_partial_1655_loc, i32 %local_kNearstId_partial_1554_loc, i32 %local_kNearstId_partial_1453_loc, i32 %local_kNearstId_partial_1352_loc, i32 %local_kNearstId_partial_1251_loc, i32 %local_kNearstId_partial_1150_loc, i32 %local_kNearstId_partial_1049_loc, i32 %local_kNearstId_partial_948_loc, i32 %local_kNearstId_partial_847_loc, i32 %local_kNearstId_partial_746_loc, i32 %local_kNearstId_partial_645_loc, i32 %local_kNearstId_partial_544_loc, i32 %local_kNearstId_partial_443_loc, i32 %local_kNearstId_partial_342_loc, i32 %local_kNearstId_partial_241_loc, i32 %local_kNearstId_partial_140_loc, i32 %local_kNearstId_partial39_loc"   --->   Operation 92 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 1.04>
+ST_6 : Operation 93 [1/2] (1.04ns)   --->   "%call_ln0 = call void @krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2, i45 %in_id2_s, i45 %in_id1_s, i45 %in_id0_s, i32 %local_kNearstId_partial_2968_loc, i32 %local_kNearstId_partial_2867_loc, i32 %local_kNearstId_partial_2766_loc, i32 %local_kNearstId_partial_2665_loc, i32 %local_kNearstId_partial_2564_loc, i32 %local_kNearstId_partial_2463_loc, i32 %local_kNearstId_partial_2362_loc, i32 %local_kNearstId_partial_2261_loc, i32 %local_kNearstId_partial_2160_loc, i32 %local_kNearstId_partial_2059_loc, i32 %local_kNearstId_partial_1958_loc, i32 %local_kNearstId_partial_1857_loc, i32 %local_kNearstId_partial_1756_loc, i32 %local_kNearstId_partial_1655_loc, i32 %local_kNearstId_partial_1554_loc, i32 %local_kNearstId_partial_1453_loc, i32 %local_kNearstId_partial_1352_loc, i32 %local_kNearstId_partial_1251_loc, i32 %local_kNearstId_partial_1150_loc, i32 %local_kNearstId_partial_1049_loc, i32 %local_kNearstId_partial_948_loc, i32 %local_kNearstId_partial_847_loc, i32 %local_kNearstId_partial_746_loc, i32 %local_kNearstId_partial_645_loc, i32 %local_kNearstId_partial_544_loc, i32 %local_kNearstId_partial_443_loc, i32 %local_kNearstId_partial_342_loc, i32 %local_kNearstId_partial_241_loc, i32 %local_kNearstId_partial_140_loc, i32 %local_kNearstId_partial39_loc"   --->   Operation 93 'call' 'call_ln0' <Predicate = true> <Delay = 1.04> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2938_loc_load = load i32 %local_kNearstDist_partial_2938_loc"   --->   Operation 94 'load' 'local_kNearstDist_partial_2938_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2837_loc_load = load i32 %local_kNearstDist_partial_2837_loc"   --->   Operation 95 'load' 'local_kNearstDist_partial_2837_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 96 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2736_loc_load = load i32 %local_kNearstDist_partial_2736_loc"   --->   Operation 96 'load' 'local_kNearstDist_partial_2736_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2635_loc_load = load i32 %local_kNearstDist_partial_2635_loc"   --->   Operation 97 'load' 'local_kNearstDist_partial_2635_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 98 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2534_loc_load = load i32 %local_kNearstDist_partial_2534_loc"   --->   Operation 98 'load' 'local_kNearstDist_partial_2534_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 99 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2433_loc_load = load i32 %local_kNearstDist_partial_2433_loc"   --->   Operation 99 'load' 'local_kNearstDist_partial_2433_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 100 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2332_loc_load = load i32 %local_kNearstDist_partial_2332_loc"   --->   Operation 100 'load' 'local_kNearstDist_partial_2332_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 101 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2231_loc_load = load i32 %local_kNearstDist_partial_2231_loc"   --->   Operation 101 'load' 'local_kNearstDist_partial_2231_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 102 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2130_loc_load = load i32 %local_kNearstDist_partial_2130_loc"   --->   Operation 102 'load' 'local_kNearstDist_partial_2130_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 103 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_2029_loc_load = load i32 %local_kNearstDist_partial_2029_loc"   --->   Operation 103 'load' 'local_kNearstDist_partial_2029_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 104 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1928_loc_load = load i32 %local_kNearstDist_partial_1928_loc"   --->   Operation 104 'load' 'local_kNearstDist_partial_1928_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 105 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1827_loc_load = load i32 %local_kNearstDist_partial_1827_loc"   --->   Operation 105 'load' 'local_kNearstDist_partial_1827_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 106 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1726_loc_load = load i32 %local_kNearstDist_partial_1726_loc"   --->   Operation 106 'load' 'local_kNearstDist_partial_1726_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 107 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1625_loc_load = load i32 %local_kNearstDist_partial_1625_loc"   --->   Operation 107 'load' 'local_kNearstDist_partial_1625_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 108 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1524_loc_load = load i32 %local_kNearstDist_partial_1524_loc"   --->   Operation 108 'load' 'local_kNearstDist_partial_1524_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 109 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1423_loc_load = load i32 %local_kNearstDist_partial_1423_loc"   --->   Operation 109 'load' 'local_kNearstDist_partial_1423_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 110 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1322_loc_load = load i32 %local_kNearstDist_partial_1322_loc"   --->   Operation 110 'load' 'local_kNearstDist_partial_1322_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 111 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1221_loc_load = load i32 %local_kNearstDist_partial_1221_loc"   --->   Operation 111 'load' 'local_kNearstDist_partial_1221_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 112 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1120_loc_load = load i32 %local_kNearstDist_partial_1120_loc"   --->   Operation 112 'load' 'local_kNearstDist_partial_1120_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 113 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_1019_loc_load = load i32 %local_kNearstDist_partial_1019_loc"   --->   Operation 113 'load' 'local_kNearstDist_partial_1019_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 114 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_918_loc_load = load i32 %local_kNearstDist_partial_918_loc"   --->   Operation 114 'load' 'local_kNearstDist_partial_918_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 115 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_817_loc_load = load i32 %local_kNearstDist_partial_817_loc"   --->   Operation 115 'load' 'local_kNearstDist_partial_817_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 116 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_716_loc_load = load i32 %local_kNearstDist_partial_716_loc"   --->   Operation 116 'load' 'local_kNearstDist_partial_716_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 117 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_615_loc_load = load i32 %local_kNearstDist_partial_615_loc"   --->   Operation 117 'load' 'local_kNearstDist_partial_615_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_514_loc_load = load i32 %local_kNearstDist_partial_514_loc"   --->   Operation 118 'load' 'local_kNearstDist_partial_514_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 119 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_413_loc_load = load i32 %local_kNearstDist_partial_413_loc"   --->   Operation 119 'load' 'local_kNearstDist_partial_413_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 120 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_312_loc_load = load i32 %local_kNearstDist_partial_312_loc"   --->   Operation 120 'load' 'local_kNearstDist_partial_312_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 121 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_211_loc_load = load i32 %local_kNearstDist_partial_211_loc"   --->   Operation 121 'load' 'local_kNearstDist_partial_211_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 122 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial_110_loc_load = load i32 %local_kNearstDist_partial_110_loc"   --->   Operation 122 'load' 'local_kNearstDist_partial_110_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 123 [1/1] (0.00ns)   --->   "%local_kNearstDist_partial1_loc_load = load i32 %local_kNearstDist_partial1_loc"   --->   Operation 123 'load' 'local_kNearstDist_partial1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 124 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2968_loc_load = load i32 %local_kNearstId_partial_2968_loc"   --->   Operation 124 'load' 'local_kNearstId_partial_2968_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 125 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2867_loc_load = load i32 %local_kNearstId_partial_2867_loc"   --->   Operation 125 'load' 'local_kNearstId_partial_2867_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 126 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2766_loc_load = load i32 %local_kNearstId_partial_2766_loc"   --->   Operation 126 'load' 'local_kNearstId_partial_2766_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 127 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2665_loc_load = load i32 %local_kNearstId_partial_2665_loc"   --->   Operation 127 'load' 'local_kNearstId_partial_2665_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 128 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2564_loc_load = load i32 %local_kNearstId_partial_2564_loc"   --->   Operation 128 'load' 'local_kNearstId_partial_2564_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 129 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2463_loc_load = load i32 %local_kNearstId_partial_2463_loc"   --->   Operation 129 'load' 'local_kNearstId_partial_2463_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 130 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2362_loc_load = load i32 %local_kNearstId_partial_2362_loc"   --->   Operation 130 'load' 'local_kNearstId_partial_2362_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 131 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2261_loc_load = load i32 %local_kNearstId_partial_2261_loc"   --->   Operation 131 'load' 'local_kNearstId_partial_2261_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 132 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2160_loc_load = load i32 %local_kNearstId_partial_2160_loc"   --->   Operation 132 'load' 'local_kNearstId_partial_2160_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 133 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_2059_loc_load = load i32 %local_kNearstId_partial_2059_loc"   --->   Operation 133 'load' 'local_kNearstId_partial_2059_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 134 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1958_loc_load = load i32 %local_kNearstId_partial_1958_loc"   --->   Operation 134 'load' 'local_kNearstId_partial_1958_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 135 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1857_loc_load = load i32 %local_kNearstId_partial_1857_loc"   --->   Operation 135 'load' 'local_kNearstId_partial_1857_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 136 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1756_loc_load = load i32 %local_kNearstId_partial_1756_loc"   --->   Operation 136 'load' 'local_kNearstId_partial_1756_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 137 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1655_loc_load = load i32 %local_kNearstId_partial_1655_loc"   --->   Operation 137 'load' 'local_kNearstId_partial_1655_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 138 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1554_loc_load = load i32 %local_kNearstId_partial_1554_loc"   --->   Operation 138 'load' 'local_kNearstId_partial_1554_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 139 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1453_loc_load = load i32 %local_kNearstId_partial_1453_loc"   --->   Operation 139 'load' 'local_kNearstId_partial_1453_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 140 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1352_loc_load = load i32 %local_kNearstId_partial_1352_loc"   --->   Operation 140 'load' 'local_kNearstId_partial_1352_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 141 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1251_loc_load = load i32 %local_kNearstId_partial_1251_loc"   --->   Operation 141 'load' 'local_kNearstId_partial_1251_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 142 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1150_loc_load = load i32 %local_kNearstId_partial_1150_loc"   --->   Operation 142 'load' 'local_kNearstId_partial_1150_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 143 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_1049_loc_load = load i32 %local_kNearstId_partial_1049_loc"   --->   Operation 143 'load' 'local_kNearstId_partial_1049_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 144 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_948_loc_load = load i32 %local_kNearstId_partial_948_loc"   --->   Operation 144 'load' 'local_kNearstId_partial_948_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 145 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_847_loc_load = load i32 %local_kNearstId_partial_847_loc"   --->   Operation 145 'load' 'local_kNearstId_partial_847_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 146 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_746_loc_load = load i32 %local_kNearstId_partial_746_loc"   --->   Operation 146 'load' 'local_kNearstId_partial_746_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 147 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_645_loc_load = load i32 %local_kNearstId_partial_645_loc"   --->   Operation 147 'load' 'local_kNearstId_partial_645_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 148 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_544_loc_load = load i32 %local_kNearstId_partial_544_loc"   --->   Operation 148 'load' 'local_kNearstId_partial_544_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 149 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_443_loc_load = load i32 %local_kNearstId_partial_443_loc"   --->   Operation 149 'load' 'local_kNearstId_partial_443_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 150 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_342_loc_load = load i32 %local_kNearstId_partial_342_loc"   --->   Operation 150 'load' 'local_kNearstId_partial_342_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 151 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_241_loc_load = load i32 %local_kNearstId_partial_241_loc"   --->   Operation 151 'load' 'local_kNearstId_partial_241_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 152 [1/1] (0.00ns)   --->   "%local_kNearstId_partial_140_loc_load = load i32 %local_kNearstId_partial_140_loc"   --->   Operation 152 'load' 'local_kNearstId_partial_140_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 153 [1/1] (0.00ns)   --->   "%local_kNearstId_partial39_loc_load = load i32 %local_kNearstId_partial39_loc"   --->   Operation 153 'load' 'local_kNearstId_partial39_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 154 [1/1] (0.00ns)   --->   "%empty_30 = wait i32 @_ssdm_op_Wait"   --->   Operation 154 'wait' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 155 [2/2] (0.00ns)   --->   "%call_ret = call i640 @seq_global_merge_L1_L2, i32 %local_kNearstDist_partial1_loc_load, i32 %local_kNearstDist_partial_110_loc_load, i32 %local_kNearstDist_partial_211_loc_load, i32 %local_kNearstDist_partial_312_loc_load, i32 %local_kNearstDist_partial_413_loc_load, i32 %local_kNearstDist_partial_514_loc_load, i32 %local_kNearstDist_partial_615_loc_load, i32 %local_kNearstDist_partial_716_loc_load, i32 %local_kNearstDist_partial_817_loc_load, i32 %local_kNearstDist_partial_918_loc_load, i32 %local_kNearstDist_partial_1019_loc_load, i32 %local_kNearstDist_partial_1120_loc_load, i32 %local_kNearstDist_partial_1221_loc_load, i32 %local_kNearstDist_partial_1322_loc_load, i32 %local_kNearstDist_partial_1423_loc_load, i32 %local_kNearstDist_partial_1524_loc_load, i32 %local_kNearstDist_partial_1625_loc_load, i32 %local_kNearstDist_partial_1726_loc_load, i32 %local_kNearstDist_partial_1827_loc_load, i32 %local_kNearstDist_partial_1928_loc_load, i32 %local_kNearstDist_partial_2029_loc_load, i32 %local_kNearstDist_partial_2130_loc_load, i32 %local_kNearstDist_partial_2231_loc_load, i32 %local_kNearstDist_partial_2332_loc_load, i32 %local_kNearstDist_partial_2433_loc_load, i32 %local_kNearstDist_partial_2534_loc_load, i32 %local_kNearstDist_partial_2635_loc_load, i32 %local_kNearstDist_partial_2736_loc_load, i32 %local_kNearstDist_partial_2837_loc_load, i32 %local_kNearstDist_partial_2938_loc_load, i32 %local_kNearstId_partial39_loc_load, i32 %local_kNearstId_partial_140_loc_load, i32 %local_kNearstId_partial_241_loc_load, i32 %local_kNearstId_partial_342_loc_load, i32 %local_kNearstId_partial_443_loc_load, i32 %local_kNearstId_partial_544_loc_load, i32 %local_kNearstId_partial_645_loc_load, i32 %local_kNearstId_partial_746_loc_load, i32 %local_kNearstId_partial_847_loc_load, i32 %local_kNearstId_partial_948_loc_load, i32 %local_kNearstId_partial_1049_loc_load, i32 %local_kNearstId_partial_1150_loc_load, i32 %local_kNearstId_partial_1251_loc_load, i32 %local_kNearstId_partial_1352_loc_load, i32 %local_kNearstId_partial_1453_loc_load, i32 %local_kNearstId_partial_1554_loc_load, i32 %local_kNearstId_partial_1655_loc_load, i32 %local_kNearstId_partial_1756_loc_load, i32 %local_kNearstId_partial_1857_loc_load, i32 %local_kNearstId_partial_1958_loc_load, i32 %local_kNearstId_partial_2059_loc_load, i32 %local_kNearstId_partial_2160_loc_load, i32 %local_kNearstId_partial_2261_loc_load, i32 %local_kNearstId_partial_2362_loc_load, i32 %local_kNearstId_partial_2463_loc_load, i32 %local_kNearstId_partial_2564_loc_load, i32 %local_kNearstId_partial_2665_loc_load, i32 %local_kNearstId_partial_2766_loc_load, i32 %local_kNearstId_partial_2867_loc_load, i32 %local_kNearstId_partial_2968_loc_load" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 155 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.61>
+ST_8 : Operation 156 [1/2] (0.00ns)   --->   "%call_ret = call i640 @seq_global_merge_L1_L2, i32 %local_kNearstDist_partial1_loc_load, i32 %local_kNearstDist_partial_110_loc_load, i32 %local_kNearstDist_partial_211_loc_load, i32 %local_kNearstDist_partial_312_loc_load, i32 %local_kNearstDist_partial_413_loc_load, i32 %local_kNearstDist_partial_514_loc_load, i32 %local_kNearstDist_partial_615_loc_load, i32 %local_kNearstDist_partial_716_loc_load, i32 %local_kNearstDist_partial_817_loc_load, i32 %local_kNearstDist_partial_918_loc_load, i32 %local_kNearstDist_partial_1019_loc_load, i32 %local_kNearstDist_partial_1120_loc_load, i32 %local_kNearstDist_partial_1221_loc_load, i32 %local_kNearstDist_partial_1322_loc_load, i32 %local_kNearstDist_partial_1423_loc_load, i32 %local_kNearstDist_partial_1524_loc_load, i32 %local_kNearstDist_partial_1625_loc_load, i32 %local_kNearstDist_partial_1726_loc_load, i32 %local_kNearstDist_partial_1827_loc_load, i32 %local_kNearstDist_partial_1928_loc_load, i32 %local_kNearstDist_partial_2029_loc_load, i32 %local_kNearstDist_partial_2130_loc_load, i32 %local_kNearstDist_partial_2231_loc_load, i32 %local_kNearstDist_partial_2332_loc_load, i32 %local_kNearstDist_partial_2433_loc_load, i32 %local_kNearstDist_partial_2534_loc_load, i32 %local_kNearstDist_partial_2635_loc_load, i32 %local_kNearstDist_partial_2736_loc_load, i32 %local_kNearstDist_partial_2837_loc_load, i32 %local_kNearstDist_partial_2938_loc_load, i32 %local_kNearstId_partial39_loc_load, i32 %local_kNearstId_partial_140_loc_load, i32 %local_kNearstId_partial_241_loc_load, i32 %local_kNearstId_partial_342_loc_load, i32 %local_kNearstId_partial_443_loc_load, i32 %local_kNearstId_partial_544_loc_load, i32 %local_kNearstId_partial_645_loc_load, i32 %local_kNearstId_partial_746_loc_load, i32 %local_kNearstId_partial_847_loc_load, i32 %local_kNearstId_partial_948_loc_load, i32 %local_kNearstId_partial_1049_loc_load, i32 %local_kNearstId_partial_1150_loc_load, i32 %local_kNearstId_partial_1251_loc_load, i32 %local_kNearstId_partial_1352_loc_load, i32 %local_kNearstId_partial_1453_loc_load, i32 %local_kNearstId_partial_1554_loc_load, i32 %local_kNearstId_partial_1655_loc_load, i32 %local_kNearstId_partial_1756_loc_load, i32 %local_kNearstId_partial_1857_loc_load, i32 %local_kNearstId_partial_1958_loc_load, i32 %local_kNearstId_partial_2059_loc_load, i32 %local_kNearstId_partial_2160_loc_load, i32 %local_kNearstId_partial_2261_loc_load, i32 %local_kNearstId_partial_2362_loc_load, i32 %local_kNearstId_partial_2463_loc_load, i32 %local_kNearstId_partial_2564_loc_load, i32 %local_kNearstId_partial_2665_loc_load, i32 %local_kNearstId_partial_2766_loc_load, i32 %local_kNearstId_partial_2867_loc_load, i32 %local_kNearstId_partial_2968_loc_load" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 156 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 157 [1/1] (0.00ns)   --->   "%output_dist = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 157 'extractvalue' 'output_dist' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 158 [1/1] (0.00ns)   --->   "%output_dist_1 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 158 'extractvalue' 'output_dist_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 159 [1/1] (0.00ns)   --->   "%output_dist_2 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 159 'extractvalue' 'output_dist_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 160 [1/1] (0.00ns)   --->   "%output_dist_3 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 160 'extractvalue' 'output_dist_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 161 [1/1] (0.00ns)   --->   "%output_dist_4 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 161 'extractvalue' 'output_dist_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 162 [1/1] (0.00ns)   --->   "%output_dist_5 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 162 'extractvalue' 'output_dist_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 163 [1/1] (0.00ns)   --->   "%output_dist_6 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 163 'extractvalue' 'output_dist_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 164 [1/1] (0.00ns)   --->   "%output_dist_7 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 164 'extractvalue' 'output_dist_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 165 [1/1] (0.00ns)   --->   "%output_dist_8 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 165 'extractvalue' 'output_dist_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 166 [1/1] (0.00ns)   --->   "%output_dist_9 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 166 'extractvalue' 'output_dist_9' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 167 [1/1] (0.00ns)   --->   "%output_id = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 167 'extractvalue' 'output_id' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 168 [1/1] (0.00ns)   --->   "%output_id_1 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 168 'extractvalue' 'output_id_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 169 [1/1] (0.00ns)   --->   "%output_id_2 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 169 'extractvalue' 'output_id_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 170 [1/1] (0.00ns)   --->   "%output_id_3 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 170 'extractvalue' 'output_id_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 171 [1/1] (0.00ns)   --->   "%output_id_4 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 171 'extractvalue' 'output_id_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 172 [1/1] (0.00ns)   --->   "%output_id_5 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 172 'extractvalue' 'output_id_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 173 [1/1] (0.00ns)   --->   "%output_id_6 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 173 'extractvalue' 'output_id_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 174 [1/1] (0.00ns)   --->   "%output_id_7 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 174 'extractvalue' 'output_id_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 175 [1/1] (0.00ns)   --->   "%output_id_8 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 175 'extractvalue' 'output_id_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 176 [1/1] (0.00ns)   --->   "%output_id_9 = extractvalue i640 %call_ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 176 'extractvalue' 'output_id_9' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 177 [1/1] (0.00ns)   --->   "%empty_31 = wait i32 @_ssdm_op_Wait"   --->   Operation 177 'wait' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 178 [2/2] (0.61ns)   --->   "%call_ln834 = call void @krnl_globalSort_L1_L2_Pipeline_DIST_OUT, i32 %output_dist, i32 %output_dist_1, i32 %output_dist_2, i32 %output_dist_3, i32 %output_dist_4, i32 %output_dist_5, i32 %output_dist_6, i32 %output_dist_7, i32 %output_dist_8, i32 %output_dist_9, i45 %out_dist" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 178 'call' 'call_ln834' <Predicate = true> <Delay = 0.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 179 [1/2] (0.00ns)   --->   "%call_ln834 = call void @krnl_globalSort_L1_L2_Pipeline_DIST_OUT, i32 %output_dist, i32 %output_dist_1, i32 %output_dist_2, i32 %output_dist_3, i32 %output_dist_4, i32 %output_dist_5, i32 %output_dist_6, i32 %output_dist_7, i32 %output_dist_8, i32 %output_dist_9, i45 %out_dist" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 179 'call' 'call_ln834' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 180 [1/1] (0.00ns)   --->   "%empty_32 = wait i32 @_ssdm_op_Wait"   --->   Operation 180 'wait' 'empty_32' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 0.61>
+ST_11 : Operation 181 [1/1] (0.00ns)   --->   "%empty_33 = wait i32 @_ssdm_op_Wait"   --->   Operation 181 'wait' 'empty_33' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 182 [2/2] (0.61ns)   --->   "%call_ln834 = call void @krnl_globalSort_L1_L2_Pipeline_ID_OUT, i32 %output_id, i32 %output_id_1, i32 %output_id_2, i32 %output_id_3, i32 %output_id_4, i32 %output_id_5, i32 %output_id_6, i32 %output_id_7, i32 %output_id_8, i32 %output_id_9, i45 %out_id" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 182 'call' 'call_ln834' <Predicate = true> <Delay = 0.61> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 183 [1/1] (0.00ns)   --->   "%spectopmodule_ln732 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:732]   --->   Operation 183 'spectopmodule' 'spectopmodule_ln732' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 184 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_dist0_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 184 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 185 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_dist0_s"   --->   Operation 185 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 186 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_dist0_peek, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 186 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 187 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_dist0_peek"   --->   Operation 187 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 188 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_id0_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 188 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 189 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_id0_s"   --->   Operation 189 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 190 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_id0_peek, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 190 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 191 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_id0_peek"   --->   Operation 191 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 192 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_dist1_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 192 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 193 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_dist1_s"   --->   Operation 193 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 194 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_dist1_peek, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 194 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 195 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_dist1_peek"   --->   Operation 195 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 196 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_id1_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 196 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 197 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_id1_s"   --->   Operation 197 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 198 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_id1_peek, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 198 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 199 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_id1_peek"   --->   Operation 199 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 200 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_dist2_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 200 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 201 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_dist2_s"   --->   Operation 201 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 202 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_dist2_peek, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 202 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 203 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_dist2_peek"   --->   Operation 203 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 204 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_id2_s, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 204 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 205 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_id2_s"   --->   Operation 205 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 206 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %in_id2_peek, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 206 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 207 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %in_id2_peek"   --->   Operation 207 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 208 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %out_dist, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 208 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 209 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %out_dist"   --->   Operation 209 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 210 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i45 %out_id, void @empty_0, i32 0, i32 0, void @empty, i32 0, i32 0, void @empty, void @empty, void @empty, i32 0, i32 0, i32 0, i32 0, void @empty, void @empty, i32 4294967295, i32 0"   --->   Operation 210 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 211 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i45 %out_id"   --->   Operation 211 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 212 [1/2] (0.00ns)   --->   "%call_ln834 = call void @krnl_globalSort_L1_L2_Pipeline_ID_OUT, i32 %output_id, i32 %output_id_1, i32 %output_id_2, i32 %output_id_3, i32 %output_id_4, i32 %output_id_5, i32 %output_id_6, i32 %output_id_7, i32 %output_id_8, i32 %output_id_9, i45 %out_id" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834]   --->   Operation 212 'call' 'call_ln834' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 213 [1/1] (0.00ns)   --->   "%ret_ln857 = ret" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:857]   --->   Operation 213 'ret' 'ret_ln857' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.899ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.04ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_811_1' [119]  (1.04 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 1.04ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'krnl_globalSort_L1_L2_Pipeline_VITIS_LOOP_824_2' [152]  (1.04 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0.617ns
+The critical path consists of the following:
+	'call' operation ('call_ret', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834) to 'seq_global_merge_L1_L2' [184]  (0 ns)
+	'call' operation ('call_ln834', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834) to 'krnl_globalSort_L1_L2_Pipeline_DIST_OUT' [206]  (0.617 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0.617ns
+The critical path consists of the following:
+	'call' operation ('call_ln834', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_globalSort_L1_L2.cpp:834) to 'krnl_globalSort_L1_L2_Pipeline_ID_OUT' [209]  (0.617 ns)
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

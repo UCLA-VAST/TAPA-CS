@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vitis HLS Report for 'krnl_partialKnn_wrapper_13_Pipeline_ID_OUT'
+================================================================
+* Date:           Wed May 22 14:55:26 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_partialKnn_wrapper_13 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.215 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       12|       12|  39.960 ns|  39.960 ns|   12|   12|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- ID_OUT  |       10|       10|         2|          1|          1|    10|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       25|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|       59|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       45|    -|
+|Register             |        -|     -|       39|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       39|      129|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+----------------+---------+----+---+----+-----+
+    |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +---------------------+----------------+---------+----+---+----+-----+
+    |mux_114_32_1_1_U692  |mux_114_32_1_1  |        0|   0|  0|  59|    0|
+    +---------------------+----------------+---------+----+---+----+-----+
+    |Total                |                |        0|   0|  0|  59|    0|
+    +---------------------+----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln545_fu_173_p2        |         +|   0|  0|  12|           4|           1|
+    |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln545_fu_139_p2       |      icmp|   0|  0|   9|           4|           4|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  25|          10|           8|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_4     |   9|          2|    4|          8|
+    |i_fu_60                  |   9|          2|    4|          8|
+    |out_id_blk_n             |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  45|         10|   11|         22|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_fu_60                  |   4|   0|    4|          0|
+    |v_id_data_V_reg_206      |  32|   0|   32|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  39|   0|   39|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
++---------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_13_Pipeline_ID_OUT|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_13_Pipeline_ID_OUT|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_13_Pipeline_ID_OUT|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_13_Pipeline_ID_OUT|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_13_Pipeline_ID_OUT|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  krnl_partialKnn_wrapper_13_Pipeline_ID_OUT|  return value|
+|out_id_din                 |  out|   45|     ap_fifo|                                      out_id|       pointer|
+|out_id_full_n              |   in|    1|     ap_fifo|                                      out_id|       pointer|
+|out_id_write               |  out|    1|     ap_fifo|                                      out_id|       pointer|
+|global_kNearstId_2_reload  |   in|   32|     ap_none|                   global_kNearstId_2_reload|        scalar|
+|global_kNearstId_3_reload  |   in|   32|     ap_none|                   global_kNearstId_3_reload|        scalar|
+|global_kNearstId_4_reload  |   in|   32|     ap_none|                   global_kNearstId_4_reload|        scalar|
+|global_kNearstId_5_reload  |   in|   32|     ap_none|                   global_kNearstId_5_reload|        scalar|
+|global_kNearstId_6_reload  |   in|   32|     ap_none|                   global_kNearstId_6_reload|        scalar|
+|global_kNearstId_7_reload  |   in|   32|     ap_none|                   global_kNearstId_7_reload|        scalar|
+|global_kNearstId_8_reload  |   in|   32|     ap_none|                   global_kNearstId_8_reload|        scalar|
+|global_kNearstId_9_reload  |   in|   32|     ap_none|                   global_kNearstId_9_reload|        scalar|
+|global_kNearstId_1_reload  |   in|   32|     ap_none|                   global_kNearstId_1_reload|        scalar|
+|global_kNearstId_reload    |   in|   32|     ap_none|                     global_kNearstId_reload|        scalar|
++---------------------------+-----+-----+------------+--------------------------------------------+--------------+
+

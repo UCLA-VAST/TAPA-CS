@@ -1,5 +1,538 @@
-krnl_globalSort_L1_L2_0        krnl_globalSort_L1_L2_1 krnl_globalSort_L1_L2_6 krnl_globalSort_L3_0    krnl_partialKnn_wrapper_0_0       krnl_partialKnn_wrapper_1_0     krnl_partialKnn_wrapper_2_0     krnl_partialKnn_wrapper_3_0     krnl_partialKnn_wrapper_5_0       ERTEX_L3_out_dist__m_axi        ERTEX_L3_out_id__m_axi  ERTEX_in_0__m_axi       ERTEX_in_1__m_axi       ERTEX_in_2__m_axi       ERTEX_in_3__m_axi ERTEX_in_5__m_axi       in_0_external_controller        in_1_external_controller        in_2_external_controller        in_3_external_controller  in_4_external_controller        in_5_external_controller        in_6_external_controller        in_7_external_controller        in_8_external_controller  in_9_external_controller        in_10_external_controller       in_11_external_controller       in_12_external_controllerin_13_external_controller        in_14_external_controller       in_15_external_controller       in_16_external_controller       in_17_external_controller L3_out_dist_external_controller L3_out_id_external_controller   krnl_globalSort_L1_L2_2 krnl_globalSort_L1_L2_5 krnl_partialKnn_wrapper_15_0      krnl_partialKnn_wrapper_16_0    krnl_partialKnn_wrapper_17_0    krnl_partialKnn_wrapper_4_0     krnl_partialKnn_wrapper_6_0     krnl_partialKnn_wrapper_7_0       krnl_partialKnn_wrapper_8_0     ERTEX_in_15__m_axi      ERTEX_in_16__m_axi      ERTEX_in_17__m_axi      ERTEX_in_4__m_axiERTEX_in_6__m_axi        ERTEX_in_7__m_axi       ERTEX_in_8__m_axi
+run_tapa.sh: line 2: /opt/tools/xilinx/Vitis_HLS/2022.1/settings64.sh: No such file or directory
+I0104 14:46:09.478 tapa.util:162] logging level set to INFO
+I0104 14:46:09.478 tapa.tapac:492] tapa version: 0.0.20221113.1
+I0104 14:46:09.478 tapa.tapac:496] Python recursion limit set to 3000
+I0104 14:46:09.479 tapa.tapac:416] Executing all steps of tapac
+W0104 14:46:09.479 tapa.tapac:438] The floorplan option is automatically enabled because a floorplan output file is provided
+I0104 14:46:09.608 tapa.tapac:556] added vendor include path `/tools/Xilinx/Vitis_HLS/2022.1/include`
+I0104 14:46:19.286 tapa.core:179] extracting HLS C++ files
+I0104 14:46:19.341 tapa.core:201] running HLS
+I0104 14:46:19.362 tapa.core:239] spawn 8 workers for parallel HLS synthesis of the tasks
+I0104 14:51:58.043 tapa.core:252] extracting RTL files
+I0104 14:51:58.476 tapa.core:283] parsing RTL files and populating tasks
+I0104 14:52:00.877 tapa.core:292] parsing krnl_globalSort_L1_L2
+I0104 14:52:00.879 tapa.core:296] populating krnl_globalSort_L1_L2
+I0104 14:52:00.919 tapa.core:292] parsing krnl_globalSort_L3
+I0104 14:52:00.921 tapa.core:296] populating krnl_globalSort_L3
+I0104 14:52:00.921 tapa.core:292] parsing krnl_partialKnn_wrapper_0
+I0104 14:52:00.922 tapa.core:296] populating krnl_partialKnn_wrapper_0
+I0104 14:52:00.922 tapa.core:292] parsing krnl_partialKnn_wrapper_1
+I0104 14:52:00.923 tapa.core:296] populating krnl_partialKnn_wrapper_1
+I0104 14:52:00.923 tapa.core:292] parsing krnl_partialKnn_wrapper_10
+I0104 14:52:00.925 tapa.core:296] populating krnl_partialKnn_wrapper_10
+I0104 14:52:01.064 tapa.core:292] parsing krnl_partialKnn_wrapper_11
+I0104 14:52:01.065 tapa.core:296] populating krnl_partialKnn_wrapper_11
+I0104 14:52:01.065 tapa.core:292] parsing krnl_partialKnn_wrapper_12
+I0104 14:52:01.066 tapa.core:296] populating krnl_partialKnn_wrapper_12
+I0104 14:52:01.067 tapa.core:292] parsing krnl_partialKnn_wrapper_13
+I0104 14:52:01.068 tapa.core:296] populating krnl_partialKnn_wrapper_13
+I0104 14:52:03.209 tapa.core:292] parsing krnl_partialKnn_wrapper_14
+I0104 14:52:03.210 tapa.core:296] populating krnl_partialKnn_wrapper_14
+I0104 14:52:03.210 tapa.core:292] parsing krnl_partialKnn_wrapper_15
+I0104 14:52:03.211 tapa.core:296] populating krnl_partialKnn_wrapper_15
+I0104 14:52:03.314 tapa.core:292] parsing krnl_partialKnn_wrapper_16
+I0104 14:52:03.315 tapa.core:296] populating krnl_partialKnn_wrapper_16
+I0104 14:52:03.439 tapa.core:292] parsing krnl_partialKnn_wrapper_17
+I0104 14:52:03.440 tapa.core:296] populating krnl_partialKnn_wrapper_17
+I0104 14:52:03.440 tapa.core:292] parsing krnl_partialKnn_wrapper_2
+I0104 14:52:03.441 tapa.core:296] populating krnl_partialKnn_wrapper_2
+I0104 14:52:03.528 tapa.core:292] parsing krnl_partialKnn_wrapper_3
+I0104 14:52:03.529 tapa.core:296] populating krnl_partialKnn_wrapper_3
+I0104 14:52:03.529 tapa.core:292] parsing krnl_partialKnn_wrapper_4
+I0104 14:52:03.530 tapa.core:296] populating krnl_partialKnn_wrapper_4
+I0104 14:52:03.743 tapa.core:292] parsing krnl_partialKnn_wrapper_5
+I0104 14:52:03.744 tapa.core:296] populating krnl_partialKnn_wrapper_5
+I0104 14:52:04.753 tapa.core:292] parsing krnl_partialKnn_wrapper_6
+I0104 14:52:04.754 tapa.core:296] populating krnl_partialKnn_wrapper_6
+I0104 14:52:04.851 tapa.core:292] parsing krnl_partialKnn_wrapper_7
+I0104 14:52:04.853 tapa.core:296] populating krnl_partialKnn_wrapper_7
+I0104 14:52:05.110 tapa.core:292] parsing krnl_partialKnn_wrapper_8
+I0104 14:52:05.110 tapa.core:296] populating krnl_partialKnn_wrapper_8
+I0104 14:52:05.111 tapa.core:292] parsing krnl_partialKnn_wrapper_9
+I0104 14:52:05.111 tapa.core:296] populating krnl_partialKnn_wrapper_9
+I0104 14:52:05.182 tapa.core:292] parsing Knn
+I0104 14:52:05.184 tapa.core:296] populating Knn
+I0104 14:52:05.188 tapa.core:300] instrumenting upper-level RTL
+I0104 14:52:05.189 tapa.core:336] Running floorplanning
+I0104 14:52:05.189 tapa.floorplan:47] mulit_fpga from floorplan
+I0104 14:52:05.189 tapa.floorplan:48] None
+I0104 14:52:05.192 tapa.task_graph:35] L1_out_dist[0]
+I0104 14:52:05.193 tapa.task_graph:37] L1_out_dist[0]
+I0104 14:52:05.193 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0104 14:52:05.193 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0104 14:52:05.193 tapa.task_graph:40] 2
+I0104 14:52:05.194 tapa.task_graph:35] L1_out_dist[1]
+I0104 14:52:05.194 tapa.task_graph:37] L1_out_dist[1]
+I0104 14:52:05.194 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0104 14:52:05.194 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0104 14:52:05.194 tapa.task_graph:40] 2
+I0104 14:52:05.194 tapa.task_graph:35] L1_out_dist[2]
+I0104 14:52:05.194 tapa.task_graph:37] L1_out_dist[2]
+I0104 14:52:05.194 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0104 14:52:05.194 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0104 14:52:05.194 tapa.task_graph:40] 2
+I0104 14:52:05.194 tapa.task_graph:35] L1_out_dist[3]
+I0104 14:52:05.195 tapa.task_graph:37] L1_out_dist[3]
+I0104 14:52:05.195 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+I0104 14:52:05.195 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0104 14:52:05.195 tapa.task_graph:40] 2
+I0104 14:52:05.195 tapa.task_graph:35] L1_out_dist[4]
+I0104 14:52:05.195 tapa.task_graph:37] L1_out_dist[4]
+I0104 14:52:05.195 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_4
+I0104 14:52:05.195 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0104 14:52:05.195 tapa.task_graph:40] 2
+I0104 14:52:05.195 tapa.task_graph:35] L1_out_dist[5]
+I0104 14:52:05.195 tapa.task_graph:37] L1_out_dist[5]
+I0104 14:52:05.195 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_5
+I0104 14:52:05.195 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0104 14:52:05.195 tapa.task_graph:40] 2
+I0104 14:52:05.196 tapa.task_graph:35] L1_out_id[0]
+I0104 14:52:05.196 tapa.task_graph:37] L1_out_id[0]
+I0104 14:52:05.196 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_0
+I0104 14:52:05.196 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0104 14:52:05.196 tapa.task_graph:40] 2
+I0104 14:52:05.196 tapa.task_graph:35] L1_out_id[1]
+I0104 14:52:05.196 tapa.task_graph:37] L1_out_id[1]
+I0104 14:52:05.196 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_1
+I0104 14:52:05.196 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0104 14:52:05.196 tapa.task_graph:40] 2
+I0104 14:52:05.197 tapa.task_graph:35] L1_out_id[2]
+I0104 14:52:05.197 tapa.task_graph:37] L1_out_id[2]
+I0104 14:52:05.197 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_2
+I0104 14:52:05.197 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_6
+I0104 14:52:05.197 tapa.task_graph:40] 2
+I0104 14:52:05.197 tapa.task_graph:35] L1_out_id[3]
+I0104 14:52:05.197 tapa.task_graph:37] L1_out_id[3]
+I0104 14:52:05.197 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_3
+I0104 14:52:05.197 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0104 14:52:05.197 tapa.task_graph:40] 2
+I0104 14:52:05.197 tapa.task_graph:35] L1_out_id[4]
+I0104 14:52:05.197 tapa.task_graph:37] L1_out_id[4]
+I0104 14:52:05.198 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_4
+I0104 14:52:05.198 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0104 14:52:05.198 tapa.task_graph:40] 2
+I0104 14:52:05.198 tapa.task_graph:35] L1_out_id[5]
+I0104 14:52:05.198 tapa.task_graph:37] L1_out_id[5]
+I0104 14:52:05.198 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_5
+I0104 14:52:05.198 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_7
+I0104 14:52:05.198 tapa.task_graph:40] 2
+I0104 14:52:05.198 tapa.task_graph:35] L2_out_dist0
+I0104 14:52:05.198 tapa.task_graph:37] L2_out_dist0
+I0104 14:52:05.198 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_6
+I0104 14:52:05.198 tapa.task_graph:39] get_instance krnl_globalSort_L3_0
+I0104 14:52:05.199 tapa.task_graph:40] 2
+I0104 14:52:05.199 tapa.task_graph:35] L2_out_dist1
+I0104 14:52:05.199 tapa.task_graph:37] L2_out_dist1
+I0104 14:52:05.199 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_7
+I0104 14:52:05.199 tapa.task_graph:39] get_instance krnl_globalSort_L3_0
+I0104 14:52:05.199 tapa.task_graph:40] 2
+I0104 14:52:05.199 tapa.task_graph:35] L2_out_id0
+I0104 14:52:05.199 tapa.task_graph:37] L2_out_id0
+I0104 14:52:05.199 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_6
+I0104 14:52:05.199 tapa.task_graph:39] get_instance krnl_globalSort_L3_0
+I0104 14:52:05.199 tapa.task_graph:40] 2
+I0104 14:52:05.199 tapa.task_graph:35] L2_out_id1
+I0104 14:52:05.199 tapa.task_graph:37] L2_out_id1
+I0104 14:52:05.200 tapa.task_graph:38] get_instance krnl_globalSort_L1_L2_7
+I0104 14:52:05.200 tapa.task_graph:39] get_instance krnl_globalSort_L3_0
+I0104 14:52:05.200 tapa.task_graph:40] 2
+I0104 14:52:05.200 tapa.task_graph:35] out_dist[0]
+I0104 14:52:05.200 tapa.task_graph:37] out_dist[0]
+I0104 14:52:05.200 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_0_0
+I0104 14:52:05.200 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0104 14:52:05.200 tapa.task_graph:40] 2
+I0104 14:52:05.200 tapa.task_graph:35] out_dist[10]
+I0104 14:52:05.200 tapa.task_graph:37] out_dist[10]
+I0104 14:52:05.200 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_10_0
+I0104 14:52:05.200 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0104 14:52:05.200 tapa.task_graph:40] 2
+I0104 14:52:05.201 tapa.task_graph:35] out_dist[11]
+I0104 14:52:05.201 tapa.task_graph:37] out_dist[11]
+I0104 14:52:05.201 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_11_0
+I0104 14:52:05.201 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0104 14:52:05.201 tapa.task_graph:40] 2
+I0104 14:52:05.201 tapa.task_graph:35] out_dist[12]
+I0104 14:52:05.201 tapa.task_graph:37] out_dist[12]
+I0104 14:52:05.201 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_12_0
+I0104 14:52:05.201 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0104 14:52:05.201 tapa.task_graph:40] 2
+I0104 14:52:05.202 tapa.task_graph:35] out_dist[13]
+I0104 14:52:05.202 tapa.task_graph:37] out_dist[13]
+I0104 14:52:05.202 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_13_0
+I0104 14:52:05.202 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0104 14:52:05.202 tapa.task_graph:40] 2
+I0104 14:52:05.202 tapa.task_graph:35] out_dist[14]
+I0104 14:52:05.202 tapa.task_graph:37] out_dist[14]
+I0104 14:52:05.202 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_14_0
+I0104 14:52:05.202 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0104 14:52:05.202 tapa.task_graph:40] 2
+I0104 14:52:05.203 tapa.task_graph:35] out_dist[15]
+I0104 14:52:05.203 tapa.task_graph:37] out_dist[15]
+I0104 14:52:05.203 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_15_0
+I0104 14:52:05.203 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0104 14:52:05.203 tapa.task_graph:40] 2
+I0104 14:52:05.203 tapa.task_graph:35] out_dist[16]
+I0104 14:52:05.203 tapa.task_graph:37] out_dist[16]
+I0104 14:52:05.203 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_16_0
+I0104 14:52:05.203 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0104 14:52:05.203 tapa.task_graph:40] 2
+I0104 14:52:05.203 tapa.task_graph:35] out_dist[17]
+I0104 14:52:05.203 tapa.task_graph:37] out_dist[17]
+I0104 14:52:05.203 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_17_0
+I0104 14:52:05.204 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0104 14:52:05.204 tapa.task_graph:40] 2
+I0104 14:52:05.204 tapa.task_graph:35] out_dist[1]
+I0104 14:52:05.204 tapa.task_graph:37] out_dist[1]
+I0104 14:52:05.204 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_1_0
+I0104 14:52:05.204 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0104 14:52:05.204 tapa.task_graph:40] 2
+I0104 14:52:05.204 tapa.task_graph:35] out_dist[2]
+I0104 14:52:05.204 tapa.task_graph:37] out_dist[2]
+I0104 14:52:05.204 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_2_0
+I0104 14:52:05.204 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0104 14:52:05.204 tapa.task_graph:40] 2
+I0104 14:52:05.205 tapa.task_graph:35] out_dist[3]
+I0104 14:52:05.205 tapa.task_graph:37] out_dist[3]
+I0104 14:52:05.205 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_3_0
+I0104 14:52:05.205 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0104 14:52:05.205 tapa.task_graph:40] 2
+I0104 14:52:05.205 tapa.task_graph:35] out_dist[4]
+I0104 14:52:05.205 tapa.task_graph:37] out_dist[4]
+I0104 14:52:05.205 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_4_0
+I0104 14:52:05.205 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0104 14:52:05.205 tapa.task_graph:40] 2
+I0104 14:52:05.205 tapa.task_graph:35] out_dist[5]
+I0104 14:52:05.205 tapa.task_graph:37] out_dist[5]
+I0104 14:52:05.205 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_5_0
+I0104 14:52:05.206 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0104 14:52:05.206 tapa.task_graph:40] 2
+I0104 14:52:05.206 tapa.task_graph:35] out_dist[6]
+I0104 14:52:05.206 tapa.task_graph:37] out_dist[6]
+I0104 14:52:05.206 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_6_0
+I0104 14:52:05.206 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0104 14:52:05.206 tapa.task_graph:40] 2
+I0104 14:52:05.206 tapa.task_graph:35] out_dist[7]
+I0104 14:52:05.206 tapa.task_graph:37] out_dist[7]
+I0104 14:52:05.206 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_7_0
+I0104 14:52:05.206 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0104 14:52:05.206 tapa.task_graph:40] 2
+I0104 14:52:05.207 tapa.task_graph:35] out_dist[8]
+I0104 14:52:05.207 tapa.task_graph:37] out_dist[8]
+I0104 14:52:05.207 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_8_0
+I0104 14:52:05.207 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0104 14:52:05.207 tapa.task_graph:40] 2
+I0104 14:52:05.207 tapa.task_graph:35] out_dist[9]
+I0104 14:52:05.207 tapa.task_graph:37] out_dist[9]
+I0104 14:52:05.207 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_9_0
+I0104 14:52:05.207 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0104 14:52:05.207 tapa.task_graph:40] 2
+I0104 14:52:05.207 tapa.task_graph:35] out_id[0]
+I0104 14:52:05.207 tapa.task_graph:37] out_id[0]
+I0104 14:52:05.207 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_0_0
+I0104 14:52:05.207 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0104 14:52:05.208 tapa.task_graph:40] 2
+I0104 14:52:05.208 tapa.task_graph:35] out_id[10]
+I0104 14:52:05.208 tapa.task_graph:37] out_id[10]
+I0104 14:52:05.208 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_10_0
+I0104 14:52:05.208 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0104 14:52:05.208 tapa.task_graph:40] 2
+I0104 14:52:05.208 tapa.task_graph:35] out_id[11]
+I0104 14:52:05.208 tapa.task_graph:37] out_id[11]
+I0104 14:52:05.208 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_11_0
+I0104 14:52:05.208 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0104 14:52:05.208 tapa.task_graph:40] 2
+I0104 14:52:05.208 tapa.task_graph:35] out_id[12]
+I0104 14:52:05.208 tapa.task_graph:37] out_id[12]
+I0104 14:52:05.208 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_12_0
+I0104 14:52:05.209 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0104 14:52:05.209 tapa.task_graph:40] 2
+I0104 14:52:05.209 tapa.task_graph:35] out_id[13]
+I0104 14:52:05.209 tapa.task_graph:37] out_id[13]
+I0104 14:52:05.209 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_13_0
+I0104 14:52:05.209 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0104 14:52:05.209 tapa.task_graph:40] 2
+I0104 14:52:05.209 tapa.task_graph:35] out_id[14]
+I0104 14:52:05.209 tapa.task_graph:37] out_id[14]
+I0104 14:52:05.209 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_14_0
+I0104 14:52:05.209 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_4
+I0104 14:52:05.209 tapa.task_graph:40] 2
+I0104 14:52:05.209 tapa.task_graph:35] out_id[15]
+I0104 14:52:05.209 tapa.task_graph:37] out_id[15]
+I0104 14:52:05.209 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_15_0
+I0104 14:52:05.210 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0104 14:52:05.210 tapa.task_graph:40] 2
+I0104 14:52:05.210 tapa.task_graph:35] out_id[16]
+I0104 14:52:05.210 tapa.task_graph:37] out_id[16]
+I0104 14:52:05.210 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_16_0
+I0104 14:52:05.210 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0104 14:52:05.210 tapa.task_graph:40] 2
+I0104 14:52:05.210 tapa.task_graph:35] out_id[17]
+I0104 14:52:05.210 tapa.task_graph:37] out_id[17]
+I0104 14:52:05.210 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_17_0
+I0104 14:52:05.210 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_5
+I0104 14:52:05.210 tapa.task_graph:40] 2
+I0104 14:52:05.210 tapa.task_graph:35] out_id[1]
+I0104 14:52:05.210 tapa.task_graph:37] out_id[1]
+I0104 14:52:05.211 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_1_0
+I0104 14:52:05.211 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0104 14:52:05.211 tapa.task_graph:40] 2
+I0104 14:52:05.211 tapa.task_graph:35] out_id[2]
+I0104 14:52:05.211 tapa.task_graph:37] out_id[2]
+I0104 14:52:05.211 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_2_0
+I0104 14:52:05.211 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_0
+I0104 14:52:05.211 tapa.task_graph:40] 2
+I0104 14:52:05.211 tapa.task_graph:35] out_id[3]
+I0104 14:52:05.211 tapa.task_graph:37] out_id[3]
+I0104 14:52:05.211 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_3_0
+I0104 14:52:05.211 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0104 14:52:05.211 tapa.task_graph:40] 2
+I0104 14:52:05.211 tapa.task_graph:35] out_id[4]
+I0104 14:52:05.211 tapa.task_graph:37] out_id[4]
+I0104 14:52:05.212 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_4_0
+I0104 14:52:05.212 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0104 14:52:05.212 tapa.task_graph:40] 2
+I0104 14:52:05.212 tapa.task_graph:35] out_id[5]
+I0104 14:52:05.212 tapa.task_graph:37] out_id[5]
+I0104 14:52:05.212 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_5_0
+I0104 14:52:05.212 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_1
+I0104 14:52:05.212 tapa.task_graph:40] 2
+I0104 14:52:05.212 tapa.task_graph:35] out_id[6]
+I0104 14:52:05.212 tapa.task_graph:37] out_id[6]
+I0104 14:52:05.212 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_6_0
+I0104 14:52:05.212 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0104 14:52:05.212 tapa.task_graph:40] 2
+I0104 14:52:05.212 tapa.task_graph:35] out_id[7]
+I0104 14:52:05.212 tapa.task_graph:37] out_id[7]
+I0104 14:52:05.213 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_7_0
+I0104 14:52:05.213 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0104 14:52:05.213 tapa.task_graph:40] 2
+I0104 14:52:05.213 tapa.task_graph:35] out_id[8]
+I0104 14:52:05.213 tapa.task_graph:37] out_id[8]
+I0104 14:52:05.213 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_8_0
+I0104 14:52:05.213 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_2
+I0104 14:52:05.213 tapa.task_graph:40] 2
+I0104 14:52:05.213 tapa.task_graph:35] out_id[9]
+I0104 14:52:05.213 tapa.task_graph:37] out_id[9]
+I0104 14:52:05.213 tapa.task_graph:38] get_instance krnl_partialKnn_wrapper_9_0
+I0104 14:52:05.213 tapa.task_graph:39] get_instance krnl_globalSort_L1_L2_3
+I0104 14:52:05.213 tapa.task_graph:40] 2
+W0104 14:52:05.214 tapa.task_graph:88] L3_out_dist is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] L3_out_id is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_0 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_1 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_10 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_11 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_12 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_13 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_14 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_15 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_16 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.214 tapa.task_graph:88] in_17 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.215 tapa.task_graph:88] in_2 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.215 tapa.task_graph:88] in_3 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.215 tapa.task_graph:88] in_4 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.215 tapa.task_graph:88] in_5 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.215 tapa.task_graph:88] in_6 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.215 tapa.task_graph:88] in_7 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.215 tapa.task_graph:88] in_8 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+W0104 14:52:05.215 tapa.task_graph:88] in_9 is assumed to be both read from and written to. If not, please use --read-only-args or --write-only-args for better optimization results.
+I0104 14:52:05.217 tapa.AutoBridge.src.autobridge.main:20] multi_fpga from autobridge main
+I0104 14:52:05.217 tapa.AutoBridge.src.autobridge.main:21] None
 
+*********************************************
+***         Starting AutoBridge           ***
+*********************************************
 
+Version: 0.0.20220512.dev1
 
-krnl_globalSort_L1_L2_3        krnl_globalSort_L1_L2_4 krnl_globalSort_L1_L2_7 krnl_partialKnn_wrapper_10_0      krnl_partialKnn_wrapper_11_0    krnl_partialKnn_wrapper_12_0    krnl_partialKnn_wrapper_13_0    krnl_partialKnn_wrapper_14_0    krnl_partialKnn_wrapper_9_0       ERTEX_in_10__m_axi      ERTEX_in_11__m_axi      ERTEX_in_12__m_axi      ERTEX_in_13__m_axi      ERTEX_in_14__m_axi      ERTEX_in_9__m_axi
+Running details logged to /home/nehaprakriya/Documents/tapa/regression/knn/scripts/run/autobridge/autobridge-Jan-04-2024-14:52.log
+
+----------------------------------------------
+
+*** CRITICAL WARNING: Gurobi solver not detected. Floorplanning may take extra time. 
+The Gurobi solver is much faster than the open-source solver, and it is free for academia. 
+  - Register and download the Gurobi Optimizer at https://www.gurobi.com/downloads/gurobi-optimizer-eula/
+  - Unzip the package to your desired directory
+  - Obtain an academic license at https://www.gurobi.com/downloads/end-user-license-agreement-academic/
+  - Set environment variables GUROBI_HOME and GRB_LICENSE_FILE
+      export GUROBI_HOME=[WHERE-YOU-INSTALL] 
+      export GRB_LICENSE_FILE=[ADDRESS-OF-YOUR-LICENSE-FILE] 
+      export PATH="${PATH}:${GUROBI_HOME}/bin" 
+      export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib" 
+
+Generate task graph visualization in graphviz format: /home/nehaprakriya/Documents/tapa/regression/knn/scripts/run/autobridge/task_graph.dot
+we are in get_floorplan
+Adjust the min_area_limit to the actual usage of the design: 0.750000
+
+Floorplan parameters:
+
+  floorplan_strategy: HALF_SLR_LEVEL_FLOORPLANNING
+  threshold for switching to iterative partitioning: 200
+  floorplan_opt_priority: AREA_PRIORITIZED
+  min_area_limit: 0.750000
+  max_area_limit: 0.850000
+  min_slr_width_limit: 10000
+  max_slr_width_limit: 15000
+  max_search_time per solving: 600
+
+Start floorplanning, please check the log for the progress...
+
+The total area of the design:
+  BRAM: 2304 / 3504 = 65.8%
+  DSP: 1008 / 8496 = 11.9%
+  FF: 788214 / 2331840 = 33.8%
+  LUT: 879716.25 / 1165920 = 75.5%
+  URAM: 144 / 960 = 15.0%
+
+hello from autobridge
+helloo
+from analyze
+('xcu280', 'xcu250', 'xcu55c')
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}I0104 14:58:48.076 tapa.AutoBridge.src.autobridge:291] failed
+
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6240>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb60b8>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6390>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6080>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}I0104 15:08:49.496 tapa.AutoBridge.src.autobridge:291] failed
+
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f6a0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f780>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f7f0>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc28e9f710>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>
+{<tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378358>: (0, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b378320>: (0, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001dd8>: (0, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2b001ef0>: (0, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6048>: (1, 0, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6208>: (1, 0, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6198>: (1, 1, 0), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc2afb6278>: (1, 1, 1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb01d0>: (0, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb02b0>: (0, 1, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0320>: (1, 0, -1), <tapa.AutoBridge.src.autobridge.Opt.Slot.Slot object at 0x7fdc08cb0240>: (1, 1, -1)}
+Traceback (most recent call last):
+  File "/home/nehaprakriya/.local/bin/tapac", line 8, in <module>
+    sys.exit(main())
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/tapac.py", line 674, in main
+    **kwargs,
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/core.py", line 350, in run_floorplanning
+    **kwargs,
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/floorplan.py", line 60, in generate_floorplan
+    config_with_floorplan = annotate_floorplan(config, multi_fpga)
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/AutoBridge/src/autobridge/main.py", line 77, in annotate_floorplan
+    **kwargs,
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/AutoBridge/src/autobridge/Floorplan/__init__.py", line 147, in get_floorplan
+    init_v2s, slot_manager, grouping_constraints, pre_assignments, partition_method='EIGHT_WAY_PARTITION', **params
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/AutoBridge/src/autobridge/Floorplan/Partition.py", line 61, in partition
+    partitioner,
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/AutoBridge/src/autobridge/Floorplan/Partition.py", line 97, in partition_area_prioritized
+    partitioner,
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/AutoBridge/src/autobridge/Floorplan/Partition.py", line 244, in _binary_search_area_limit
+    hbm_port_v_list=hbm_port_v_list,
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/tapa/AutoBridge/src/autobridge/Floorplan/EightWayPartition.py", line 60, in eight_way_partition
+    m.optimize(max_seconds=max_search_time)
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/mip/model.py", line 618, in optimize
+    self._status = self.solver.optimize(relax)
+  File "/home/nehaprakriya/.local/lib/python3.6/site-packages/mip/cbc.py", line 1221, in optimize
+    cbclib.Cbc_solve(self._model)
+KeyboardInterrupt

@@ -1661,7 +1661,7 @@ extern "C" {
         tapa::stream<C_t2, 2> fifo_C_drain_C_drain_IO_L2_out_15;
         tapa::stream<C_t2, 2> fifo_C_drain_C_drain_IO_L2_out_16;
         tapa::task()
-            .invoke( A_IO_L3_in,A,fifo_A_A_IO_L2_in_0 )
+        .invoke( A_IO_L3_in,A,fifo_A_A_IO_L2_in_0 )
         .invoke( A_IO_L2_in,0,fifo_A_A_IO_L2_in_0,fifo_A_A_IO_L2_in_1,fifo_A_PE_0_0 )
         .invoke( A_IO_L2_in,1,fifo_A_A_IO_L2_in_1,fifo_A_A_IO_L2_in_2,fifo_A_PE_1_0 )
         .invoke( A_IO_L2_in,2,fifo_A_A_IO_L2_in_2,fifo_A_A_IO_L2_in_3,fifo_A_PE_2_0 )

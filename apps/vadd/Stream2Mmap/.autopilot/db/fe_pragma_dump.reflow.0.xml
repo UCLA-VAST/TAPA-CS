@@ -1,0 +1,13 @@
+<pragmas>
+<pragma file="/usr/local/include/tapa/xilinx/hls/stream.h" line="0" pragmaType="inline" parentfunction="tapa::istream<float>::operator>>(float&)" off="0" region="0" recursive="0"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp" line="13" pragmaType="disaggregate" parentfunction="Stream2Mmap" variable="stream"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp" line="14" pragmaType="interface" parentfunction="Stream2Mmap" mode="ap_fifo" port="" register="0" name="" depth="-1"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp" line="15" pragmaType="aggregate" parentfunction="Stream2Mmap" compact="1" variable=""/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp" line="16" pragmaType="interface" parentfunction="Stream2Mmap" mode="ap_fifo" port="" register="0" name="" depth="-1"/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp" line="17" pragmaType="aggregate" parentfunction="Stream2Mmap" compact="1" variable=""/>
+<pragma file="/home/nehaprakriya/Documents/tapa/apps/vadd/run/cpp/Stream2Mmap.cpp" line="21" pragmaType="interface" parentfunction="Stream2Mmap" mode="m_axi" port="mmap" bundle="mmap" offset="direct" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="/usr/local/include/tapa/xilinx/hls/stream.h" line="84" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="154" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="144" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+</pragmas>

@@ -1,0 +1,146 @@
+
+
+================================================================
+== Vitis HLS Report for 'compare_with_register'
+================================================================
+* Date:           Wed May 22 14:56:43 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        project
+* Solution:       krnl_partialKnn_wrapper_16 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.771 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        2|        2|  6.660 ns|  6.660 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.64>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%in_2_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %in_2" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:79]   --->   Operation 4 'read' 'in_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%in_1_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %in_1" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:79]   --->   Operation 5 'read' 'in_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%bitcast_ln83 = bitcast i32 %in_1_read" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 6 'bitcast' 'bitcast_ln83' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln83, i32 23, i32 30" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 7 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%trunc_ln83 = trunc i32 %bitcast_ln83" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 8 'trunc' 'trunc_ln83' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%bitcast_ln83_1 = bitcast i32 %in_2_read" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 9 'bitcast' 'bitcast_ln83_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln83_1, i32 23, i32 30" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 10 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%trunc_ln83_1 = trunc i32 %bitcast_ln83_1" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 11 'trunc' 'trunc_ln83_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.58ns)   --->   "%icmp_ln83 = icmp_ne  i8 %tmp, i8 255" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 12 'icmp' 'icmp_ln83' <Predicate = true> <Delay = 0.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.75ns)   --->   "%icmp_ln83_1 = icmp_eq  i23 %trunc_ln83, i23 0" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 13 'icmp' 'icmp_ln83_1' <Predicate = true> <Delay = 0.75> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.58ns)   --->   "%icmp_ln83_2 = icmp_ne  i8 %tmp_s, i8 255" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 14 'icmp' 'icmp_ln83_2' <Predicate = true> <Delay = 0.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.75ns)   --->   "%icmp_ln83_3 = icmp_eq  i23 %trunc_ln83_1, i23 0" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 15 'icmp' 'icmp_ln83_3' <Predicate = true> <Delay = 0.75> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [2/2] (1.64ns)   --->   "%tmp_23 = fcmp_olt  i32 %in_1_read, i32 %in_2_read" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 16 'fcmp' 'tmp_23' <Predicate = true> <Delay = 1.64> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 1.64> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 1.77>
+ST_2 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node and_ln83_1)   --->   "%or_ln83 = or i1 %icmp_ln83_1, i1 %icmp_ln83" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 17 'or' 'or_ln83' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node and_ln83_1)   --->   "%or_ln83_1 = or i1 %icmp_ln83_3, i1 %icmp_ln83_2" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 18 'or' 'or_ln83_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node and_ln83_1)   --->   "%and_ln83 = and i1 %or_ln83, i1 %or_ln83_1" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 19 'and' 'and_ln83' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/2] (1.64ns)   --->   "%tmp_23 = fcmp_olt  i32 %in_1_read, i32 %in_2_read" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 20 'fcmp' 'tmp_23' <Predicate = true> <Delay = 1.64> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 1.64> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.12ns) (out node of the LUT)   --->   "%and_ln83_1 = and i1 %and_ln83, i1 %tmp_23" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 21 'and' 'and_ln83_1' <Predicate = true> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%specpipeline_ln80 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_10" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:80]   --->   Operation 22 'specpipeline' 'specpipeline_ln80' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%speclatency_ln82 = speclatency void @_ssdm_op_SpecLatency, i64 2, i64 2, void @empty_10" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:82]   --->   Operation 23 'speclatency' 'speclatency_ln82' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%ret_ln83 = ret i1 %and_ln83_1" [/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83]   --->   Operation 24 'ret' 'ret_ln83' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.899ns.
+
+ <State 1>: 1.65ns
+The critical path consists of the following:
+	wire read operation ('in_2', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:79) on port 'in_2' (/home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:79) [5]  (0 ns)
+	'fcmp' operation ('tmp_23', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83) [20]  (1.65 ns)
+
+ <State 2>: 1.77ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_23', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83) [20]  (1.65 ns)
+	'and' operation ('and_ln83_1', /home/nehaprakriya/Documents/tapa/regression/knn/src/run_split_check/cpp/krnl_partialKnn_wrapper_16.cpp:83) [21]  (0.122 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,1578 @@
+{
+  "Top": "Knn",
+  "RtlTop": "Knn",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "Knn_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "virtexuplushbm",
+    "Device": "xcu55c",
+    "Package": "-fsvh2892",
+    "Speed": "-2L-e",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "in_0": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_0_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_0_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_1": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_1_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_1_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_2": {
+      "index": "2",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_2_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_2_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_3": {
+      "index": "3",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_3_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_3_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_4": {
+      "index": "4",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_4_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_4_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_5": {
+      "index": "5",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_5_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_5_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_6": {
+      "index": "6",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_6_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_6_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_7": {
+      "index": "7",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_7_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_7_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_8": {
+      "index": "8",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_8_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_8_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_9": {
+      "index": "9",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_9_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_9_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_10": {
+      "index": "10",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_10_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_10_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_11": {
+      "index": "11",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_11_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_11_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_12": {
+      "index": "12",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_12_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_12_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_13": {
+      "index": "13",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_13_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_13_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_14": {
+      "index": "14",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_14_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_14_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_15": {
+      "index": "15",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_15_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_15_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_16": {
+      "index": "16",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_16_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_16_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "in_17": {
+      "index": "17",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_17_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "in_17_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "L3_out_dist": {
+      "index": "18",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "L3_out_dist_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "L3_out_dist_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    },
+    "L3_out_id": {
+      "index": "19",
+      "direction": "in",
+      "srcType": "long unsigned int",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "L3_out_id_1",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "L3_out_id_2",
+          "usage": "data",
+          "direction": "in"
+        }
+      ]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_interface -m_axi_latency=0",
+      "config_interface -m_axi_addr64=1",
+      "config_compile -complex-mul-dsp=0",
+      "config_compile -name_max_length=253",
+      "config_rtl -module_auto_prefix=1",
+      "config_rtl -reset_level=low"
+    ],
+    "DirectiveTcl": ["set_directive_top Knn -name Knn"],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "Knn"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "3.33",
+    "Uncertainty": "0.8991",
+    "IsCombinational": "1",
+    "II": "1",
+    "Latency": "0"
+  },
+  "Xdc": {
+    
+  },
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "Knn",
+    "Version": "1.0",
+    "DisplayName": "Knn",
+    "Revision": "2113568878",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_Knn_1_0.zip"
+  },
+  "Files": {
+    "CSource": ["\/home\/nehaprakriya\/Documents\/tapa\/regression\/knn\/src\/run_split_check\/cpp\/Knn.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/Knn_control_s_axi.vhd",
+      "impl\/vhdl\/Knn.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/Knn_control_s_axi.v",
+      "impl\/verilog\/Knn.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/Knn_v1_0\/data\/Knn.mdd",
+      "impl\/misc\/drivers\/Knn_v1_0\/data\/Knn.tcl",
+      "impl\/misc\/drivers\/Knn_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/Knn_v1_0\/src\/xknn.c",
+      "impl\/misc\/drivers\/Knn_v1_0\/src\/xknn.h",
+      "impl\/misc\/drivers\/Knn_v1_0\/src\/xknn_hw.h",
+      "impl\/misc\/drivers\/Knn_v1_0\/src\/xknn_linux.c",
+      "impl\/misc\/drivers\/Knn_v1_0\/src\/xknn_sinit.c"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/Knn.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": []
+  },
+  "Interfaces": {
+    "s_axi_control": {
+      "type": "axi4lite",
+      "busTypeName": "aximm",
+      "mode": "slave",
+      "dataWidth": "32",
+      "addrWidth": "8",
+      "portPrefix": "s_axi_control_",
+      "paramPrefix": "C_S_AXI_CONTROL_",
+      "ports": [
+        "s_axi_control_ARADDR",
+        "s_axi_control_ARREADY",
+        "s_axi_control_ARVALID",
+        "s_axi_control_AWADDR",
+        "s_axi_control_AWREADY",
+        "s_axi_control_AWVALID",
+        "s_axi_control_BREADY",
+        "s_axi_control_BRESP",
+        "s_axi_control_BVALID",
+        "s_axi_control_RDATA",
+        "s_axi_control_RREADY",
+        "s_axi_control_RRESP",
+        "s_axi_control_RVALID",
+        "s_axi_control_WDATA",
+        "s_axi_control_WREADY",
+        "s_axi_control_WSTRB",
+        "s_axi_control_WVALID"
+      ],
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "description": "Control signals",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "1",
+              "name": "RESERVED_2",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "9",
+              "width": "1",
+              "name": "INTERRUPT",
+              "access": "R",
+              "description": "Control signal Register for 'interrupt'."
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED_3",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "description": "Global Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "description": "IP Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "description": "IP Interrupt Status Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "R",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "R",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x10",
+          "name": "in_0_1",
+          "access": "W",
+          "description": "Data signal of in_0",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_0",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_0"
+            }]
+        },
+        {
+          "offset": "0x14",
+          "name": "in_0_2",
+          "access": "W",
+          "description": "Data signal of in_0",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_0",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_0"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "in_1_1",
+          "access": "W",
+          "description": "Data signal of in_1",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_1",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_1"
+            }]
+        },
+        {
+          "offset": "0x20",
+          "name": "in_1_2",
+          "access": "W",
+          "description": "Data signal of in_1",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_1",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_1"
+            }]
+        },
+        {
+          "offset": "0x28",
+          "name": "in_2_1",
+          "access": "W",
+          "description": "Data signal of in_2",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_2",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_2"
+            }]
+        },
+        {
+          "offset": "0x2c",
+          "name": "in_2_2",
+          "access": "W",
+          "description": "Data signal of in_2",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_2",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_2"
+            }]
+        },
+        {
+          "offset": "0x34",
+          "name": "in_3_1",
+          "access": "W",
+          "description": "Data signal of in_3",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_3",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_3"
+            }]
+        },
+        {
+          "offset": "0x38",
+          "name": "in_3_2",
+          "access": "W",
+          "description": "Data signal of in_3",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_3",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_3"
+            }]
+        },
+        {
+          "offset": "0x40",
+          "name": "in_4_1",
+          "access": "W",
+          "description": "Data signal of in_4",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_4",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_4"
+            }]
+        },
+        {
+          "offset": "0x44",
+          "name": "in_4_2",
+          "access": "W",
+          "description": "Data signal of in_4",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_4",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_4"
+            }]
+        },
+        {
+          "offset": "0x4c",
+          "name": "in_5_1",
+          "access": "W",
+          "description": "Data signal of in_5",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_5",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_5"
+            }]
+        },
+        {
+          "offset": "0x50",
+          "name": "in_5_2",
+          "access": "W",
+          "description": "Data signal of in_5",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_5",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_5"
+            }]
+        },
+        {
+          "offset": "0x58",
+          "name": "in_6_1",
+          "access": "W",
+          "description": "Data signal of in_6",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_6",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_6"
+            }]
+        },
+        {
+          "offset": "0x5c",
+          "name": "in_6_2",
+          "access": "W",
+          "description": "Data signal of in_6",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_6",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_6"
+            }]
+        },
+        {
+          "offset": "0x64",
+          "name": "in_7_1",
+          "access": "W",
+          "description": "Data signal of in_7",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_7",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_7"
+            }]
+        },
+        {
+          "offset": "0x68",
+          "name": "in_7_2",
+          "access": "W",
+          "description": "Data signal of in_7",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_7",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_7"
+            }]
+        },
+        {
+          "offset": "0x70",
+          "name": "in_8_1",
+          "access": "W",
+          "description": "Data signal of in_8",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_8",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_8"
+            }]
+        },
+        {
+          "offset": "0x74",
+          "name": "in_8_2",
+          "access": "W",
+          "description": "Data signal of in_8",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_8",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_8"
+            }]
+        },
+        {
+          "offset": "0x7c",
+          "name": "in_9_1",
+          "access": "W",
+          "description": "Data signal of in_9",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_9",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_9"
+            }]
+        },
+        {
+          "offset": "0x80",
+          "name": "in_9_2",
+          "access": "W",
+          "description": "Data signal of in_9",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_9",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_9"
+            }]
+        },
+        {
+          "offset": "0x88",
+          "name": "in_10_1",
+          "access": "W",
+          "description": "Data signal of in_10",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_10",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_10"
+            }]
+        },
+        {
+          "offset": "0x8c",
+          "name": "in_10_2",
+          "access": "W",
+          "description": "Data signal of in_10",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_10",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_10"
+            }]
+        },
+        {
+          "offset": "0x94",
+          "name": "in_11_1",
+          "access": "W",
+          "description": "Data signal of in_11",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_11",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_11"
+            }]
+        },
+        {
+          "offset": "0x98",
+          "name": "in_11_2",
+          "access": "W",
+          "description": "Data signal of in_11",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_11",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_11"
+            }]
+        },
+        {
+          "offset": "0xa0",
+          "name": "in_12_1",
+          "access": "W",
+          "description": "Data signal of in_12",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_12",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_12"
+            }]
+        },
+        {
+          "offset": "0xa4",
+          "name": "in_12_2",
+          "access": "W",
+          "description": "Data signal of in_12",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_12",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_12"
+            }]
+        },
+        {
+          "offset": "0xac",
+          "name": "in_13_1",
+          "access": "W",
+          "description": "Data signal of in_13",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_13",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_13"
+            }]
+        },
+        {
+          "offset": "0xb0",
+          "name": "in_13_2",
+          "access": "W",
+          "description": "Data signal of in_13",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_13",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_13"
+            }]
+        },
+        {
+          "offset": "0xb8",
+          "name": "in_14_1",
+          "access": "W",
+          "description": "Data signal of in_14",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_14",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_14"
+            }]
+        },
+        {
+          "offset": "0xbc",
+          "name": "in_14_2",
+          "access": "W",
+          "description": "Data signal of in_14",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_14",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_14"
+            }]
+        },
+        {
+          "offset": "0xc4",
+          "name": "in_15_1",
+          "access": "W",
+          "description": "Data signal of in_15",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_15",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_15"
+            }]
+        },
+        {
+          "offset": "0xc8",
+          "name": "in_15_2",
+          "access": "W",
+          "description": "Data signal of in_15",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_15",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_15"
+            }]
+        },
+        {
+          "offset": "0xd0",
+          "name": "in_16_1",
+          "access": "W",
+          "description": "Data signal of in_16",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_16",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_16"
+            }]
+        },
+        {
+          "offset": "0xd4",
+          "name": "in_16_2",
+          "access": "W",
+          "description": "Data signal of in_16",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_16",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_16"
+            }]
+        },
+        {
+          "offset": "0xdc",
+          "name": "in_17_1",
+          "access": "W",
+          "description": "Data signal of in_17",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_17",
+              "access": "W",
+              "description": "Bit 31 to 0 of in_17"
+            }]
+        },
+        {
+          "offset": "0xe0",
+          "name": "in_17_2",
+          "access": "W",
+          "description": "Data signal of in_17",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "in_17",
+              "access": "W",
+              "description": "Bit 63 to 32 of in_17"
+            }]
+        },
+        {
+          "offset": "0xe8",
+          "name": "L3_out_dist_1",
+          "access": "W",
+          "description": "Data signal of L3_out_dist",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "L3_out_dist",
+              "access": "W",
+              "description": "Bit 31 to 0 of L3_out_dist"
+            }]
+        },
+        {
+          "offset": "0xec",
+          "name": "L3_out_dist_2",
+          "access": "W",
+          "description": "Data signal of L3_out_dist",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "L3_out_dist",
+              "access": "W",
+              "description": "Bit 63 to 32 of L3_out_dist"
+            }]
+        },
+        {
+          "offset": "0xf4",
+          "name": "L3_out_id_1",
+          "access": "W",
+          "description": "Data signal of L3_out_id",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "L3_out_id",
+              "access": "W",
+              "description": "Bit 31 to 0 of L3_out_id"
+            }]
+        },
+        {
+          "offset": "0xf8",
+          "name": "L3_out_id_2",
+          "access": "W",
+          "description": "Data signal of L3_out_id",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "L3_out_id",
+              "access": "W",
+              "description": "Bit 63 to 32 of L3_out_id"
+            }]
+        }
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "16",
+          "argName": "in_0"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "28",
+          "argName": "in_1"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "40",
+          "argName": "in_2"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "52",
+          "argName": "in_3"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "64",
+          "argName": "in_4"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "76",
+          "argName": "in_5"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "88",
+          "argName": "in_6"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "100",
+          "argName": "in_7"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "112",
+          "argName": "in_8"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "124",
+          "argName": "in_9"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "136",
+          "argName": "in_10"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "148",
+          "argName": "in_11"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "160",
+          "argName": "in_12"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "172",
+          "argName": "in_13"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "184",
+          "argName": "in_14"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "196",
+          "argName": "in_15"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "208",
+          "argName": "in_16"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "220",
+          "argName": "in_17"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "232",
+          "argName": "L3_out_dist"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "244",
+          "argName": "L3_out_id"
+        }
+      ]
+    },
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "s_axi_control",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "busTypeName": "interrupt",
+      "mode": "master",
+      "dataWidth": "1",
+      "busParams": {"SENSITIVITY": "LEVEL_HIGH"},
+      "portMap": {"interrupt": "INTERRUPT"},
+      "ports": ["interrupt"]
+    }
+  },
+  "RtlPorts": {
+    "s_axi_control_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_AWADDR": {
+      "dir": "in",
+      "width": "8"
+    },
+    "s_axi_control_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_control_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_control_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_ARADDR": {
+      "dir": "in",
+      "width": "8"
+    },
+    "s_axi_control_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_control_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_control_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "Knn"},
+    "Info": {"Knn": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "1",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"Knn": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "1",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "3.33",
+          "Uncertainty": "0.90",
+          "Estimate": "1.000"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "FF": "1436",
+          "AVAIL_FF": "2607360",
+          "UTIL_FF": "~0",
+          "LUT": "2600",
+          "AVAIL_LUT": "1303680",
+          "UTIL_LUT": "~0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9024",
+          "UTIL_DSP": "0"
+        }
+      }}
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2024-05-22 14:58:22 PDT",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2022.1"
+  }
+}
