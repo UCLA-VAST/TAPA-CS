@@ -32,11 +32,15 @@ TAPA-CS is a task-parallel dataflow programming framework built upon [TAPA](http
 Our results across the benchmarks are summarized in the table below:
 
 Benchmark  | Vitis Single FPGA baseline | 2 FPGAs | 3 FPGAs | 4 FPGAs|
-------------- | -------------
+------------- | ------------- | ------------- | -------------  | -------------
 Stencil  | 1x | 1.7x | 2.4x| 3.0x|
+------------- | ------------- | ------------- | -------------  | -------------
 PageRank  | 1x | 2.6x | 4.3x | 6.0x |
+------------- | ------------- | ------------- | -------------  | -------------
 KNN | 1x | 1.2x | 1.7x| 2.5x| 3.6x|
+------------- | ------------- | ------------- | -------------  | -------------
 CNN | 1x | 1.4x| 2.0x| 2.54x|
+
 
 ## TAPA-CS Publications
 + Neha Prakriya, Yuze Chi, Suhail Basalama, Linghao Song, and Jason Cong. 2024. TAPA-CS: Enabling Scalable Accelerator Design on Distributed HBM-FPGAs. In Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3 (ASPLOS '24), Vol. 3. Association for Computing Machinery, New York, NY, USA, 966–980. https://doi.org/10.1145/3620666.3651347.
