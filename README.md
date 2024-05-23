@@ -20,6 +20,23 @@ TAPA-CS is a task-parallel dataflow programming framework built upon [TAPA](http
 + TAPA-CS uses the same backend as the TAPA compiler. Examples of running the TAPA compiler can be found [here](https://tapa.readthedocs.io/en/release/getting_started.html#). Each application in the regression folder also contains the run_tapa.sh files which can be used to launch TAPA. 
 + To use TAPA-CS, pass the --multi-fpga N option to the TAPA compiler. 
 
+## Benchmarks
+
++ Stencil: We implement the 2D 13-point Dilate kernel from the Rodinia HLS benchmark over an input size of 4096x4096 and vary iterations between 64 and 512. The input sizes and iteration values can be configured in the Dilate.h file. Since designs with smaller iteration counts are memory-bound and designs with larger iterations are compute-bound, the design can be scaled to multiple FPGAs as follows:
+  - 64 and 128 iterations: increase HBM access bitwidth and channels from 128 to 512 and 32 (single FPGA) to 32N (N FPGAs) respectively.
+  - 256 and 512 iterations: increase the number of PEs from 15 (single FPGA) to 15N (N FPGAs).
++ PageRank: We implement the Citation Ranking algorithm which takes as input graphs from the [SNAP dataset](https://snap.stanford.edu/data/). To scale the design from a single to multiple FPGAs, increase the number of PEs from 4 to 4N (N FPGAs).
++ KNN: We use the KNN design implemented in [ChipKNN](https://ieeexplore.ieee.org/document/9415564). The search space of the design can be varied by changing the size of the data (N) and the dimensions (D) in the knn.h file. The scale of the single FPGA design is limited by the port width and buffer sizes. To scale the design to multiple FPGAs, we increase the PEs as well as the port width and buffer sizes from 256 bits and 32KB to 512 bits and 128KB respectively.
++ CNN: We present a systolic-array based implementation of the third-layer of the VGG model. The rectangular grid of PEs can be varied in dimensions between 13x4 and 13x20.
+
+Our results across the benchmarks are summarized in the table below:
+
+Benchmark  | Vitis Single FPGA baseline | 2 FPGAs | 3 FPGAs | 4 FPGAs|
+------------- | -------------
+Stencil  | 1x | 1.7x | 2.4x| 3.0x|
+PageRank  | 1x | 2.6x | 4.3x | 6.0x |
+KNN | 1x | 1.2x | 1.7x| 2.5x| 3.6x|
+CNN | 1x | 1.4x| 2.0x| 2.54x|
 
 ## TAPA-CS Publications
 + Neha Prakriya, Yuze Chi, Suhail Basalama, Linghao Song, and Jason Cong. 2024. TAPA-CS: Enabling Scalable Accelerator Design on Distributed HBM-FPGAs. In Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3 (ASPLOS '24), Vol. 3. Association for Computing Machinery, New York, NY, USA, 966–980. https://doi.org/10.1145/3620666.3651347.
